@@ -4,6 +4,6 @@
 
 
 ![PKHarsimran's GitHub stats](https://github-readme-stats-sigma-five.vercel.app/api?username=PKHarsimran&show_icons=true&theme=radical)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=PKHarsimran&layout=compact)](https://github.com/PKHarsimran/github-readme-stats)
+[![Top Langs](https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=PKHarsimran&layout=compact)](https://github.com/PKHarsimran/github-readme-stats)
 
 
