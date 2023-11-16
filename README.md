@@ -19,4 +19,4 @@ Feel free to ask me about coding, cybersecurity, and any tech-related queries yo
 
 ### 📊 More Metrics
 ![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=PKHarsimran&theme=radical&background=0D1117)
-![GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=PKHarsimran&bg_color=0D1117&color=5bcdec&line=5bcdec&point=FFFFFF&area=true&hide_border=true)
+[![GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=PKHarsimran&theme=github)](https://github.com/PKHarsimran)
