@@ -26,7 +26,7 @@ Feel free to ask me about coding, cybersecurity, and any tech-related queries yo
 [![Top Langs](https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=PKHarsimran&layout=compact)](https://github.com/PKHarsimran/github-readme-stats)
 
 <div id="header" align="center">
-  <img src="https://komarev.com/ghpvc/?username=sammorozov&style=for-the-badge&color=orange" alt=""/>
+  <img src="https://komarev.com/ghpvc/?username=pkharsimran&style=for-the-badge&color=orange" alt=""/>
 </div>
 
 ### 📊 More Metrics
