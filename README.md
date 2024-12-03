@@ -15,7 +15,7 @@ Feel free to ask me about coding, cybersecurity, and any tech-related queries yo
 
 ### Languages
 [![Python](https://img.shields.io/badge/python-black?style=for-the-badge&logo=python)](https://github.com/PKHarsimran)
-[![C++](https://img.shields.io/badge/c++-black?style=for-the-badge&logo=cplusplus)](https://github.com/PKHarsimran)
+[![C++](https://img.shields.io/badge/c++-black?style=for-the-badge&logo=cplusplus)](https://codered.eccouncil.org/certificate/3cea88bb-f984-4120-b6c0-46e3930311f0?logged=false)
 [![Bash](https://img.shields.io/badge/bash-black?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://hub.docker.com/u/pkvirus)
 
 ### Tech
