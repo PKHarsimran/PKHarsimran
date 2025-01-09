@@ -6,6 +6,7 @@
 
 ### 🌱 Currently Learning
 - **Docker**: Diving into containerization to streamline development and deployment processes.
+- **Ansible**: Exploring automation to manage infrastructure more effectively
 - **OpenCTI (Cyber Threat Intelligence)**: Expanding my knowledge in cybersecurity, focusing on threat intelligence platforms.
 
 ### 💬 Ask me about
