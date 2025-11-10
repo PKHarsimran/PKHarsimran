@@ -58,7 +58,7 @@ Hey there! I'm a passionate **Cybersecurity Analyst** and **developer** who love
 ### 🌐 Connect & Explore  
 <p align="center">
   <a href="https://harsim.ca"><img src="https://img.shields.io/badge/Website-harsim.ca-blue?style=for-the-badge&logo=google-chrome&logoColor=white" /></a>
-  <a href="https://linkedin.com/in/harsimran-sidhu"><img src="https://img.shields.io/badge/LinkedIn-Harsimran_Sidhu-blue?style=for-the-badge&logo=linkedin" /></a>
+  <a href="https://www.linkedin.com/in/harsimransidhu/"><img src="https://img.shields.io/badge/LinkedIn-Harsimran_Sidhu-blue?style=for-the-badge&logo=linkedin" /></a>
   <a href="https://hub.docker.com/u/pkvirus"><img src="https://img.shields.io/badge/DockerHub-pkvirus-0db7ed?style=for-the-badge&logo=docker" /></a>
   <a href="https://github.com/PKHarsimran"><img src="https://img.shields.io/badge/GitHub-PKHarsimran-black?style=for-the-badge&logo=github" /></a>
 </p>
