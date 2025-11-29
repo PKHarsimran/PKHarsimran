@@ -9,7 +9,7 @@
 ### 👨‍💻 About Me  
 Hey there! I'm a passionate **Cybersecurity Analyst** and **developer** who loves building automation tools, dashboards, and open-source projects that make security smarter and faster.  
 
-🔹 Currently strengthening detection engineering and threat intelligence pipelines using **Splunk**, **Cortex XDR**, and **AbuseIPDB**  
+🔹 Currently strengthening detection engineering and threat intelligence pipelines using **Splunk**, **Cortex XDR**, and **Cisco AMP**  
 🔹 Exploring automation with **Python**, **Docker**, and **Ansible**  
 🔹 Building tools that merge **security analytics** with **developer efficiency**
 
