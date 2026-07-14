@@ -42,7 +42,7 @@ I'm a **Cybersecurity Analyst** and **developer** who loves building automation 
 <a href="https://github.com/PKHarsimran/website-downloader">
   <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=PKHarsimran&repo=website-downloader&theme=radical" />
 </a>
-<a href="https://github.com/PKHarsimran/parsedmarc-dockerized">
+<a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector">
   <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=PKHarsimran&repo=parsedmarc-dockerized&theme=radical" />
 </a>
 
