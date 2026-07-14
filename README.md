@@ -43,12 +43,10 @@ I'm a **Cybersecurity Analyst** and **developer** who loves building automation 
   <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=PKHarsimran&repo=website-downloader&theme=radical" />
 </a>
 <a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=PKHarsimran&repo=parsedmarc-dockerized&theme=radical" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=PKHarsimran&repo=SwiftIOC-Automated-Threat-Intelligence-Collector&theme=radical" />
 </a>
 
 </div>
-
-> ⚠️ Swap the repo names above for whichever projects you want to showcase — the pin cards update automatically with stars, forks, and description.
 
 ---
 
