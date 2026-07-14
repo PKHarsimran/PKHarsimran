@@ -2,7 +2,7 @@
 
 <!-- Animated typing header -->
 <a href="https://harsim.ca">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=00D4AA&center=true&vCenter=true&width=700&lines=Hi%2C+I'm+Harsimran+Sidhu+%F0%9F%91%8B;Cybersecurity+Analyst+%7C+SOC+%26+Threat+Intel;Automation+Enthusiast+%7C+Developer+at+Heart;Building+tools+that+make+security+smarter" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=00D4AA&center=true&vCenter=true&width=1000&lines=Hi%2C+I'm+Harsimran+Sidhu+%F0%9F%91%8B;Cybersecurity+Analyst+%7C+SOC+%26+Threat+Intel;Automation+Enthusiast+%7C+Developer+at+Heart;Building+tools+that+make+security+smarter" alt="Typing SVG" />
 </a>
 
 <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="60">
