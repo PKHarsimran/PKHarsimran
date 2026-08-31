@@ -76,30 +76,20 @@ I'm a **Cybersecurity Analyst** and **developer** who loves building automation 
 
 <div align="center">
 
-<img height="170" src="./profile/stats.svg" />
+<img src="./profile/stats.svg" height="170" />
+<img src="./profile/top-langs.svg" height="170" />
 
-<img height="170" src="./profile/top-langs.svg" />
+<br><br>
+
+<img src="https://streak-stats.demolab.com?user=PKHarsimran&theme=radical&background=0D1117"
+alt="GitHub Streak" />
 
 <br><br>
 
 <img
-src="https://streak-stats.demolab.com?user=PKHarsimran&theme=radical&background=0D1117"
-alt="GitHub Streak"
-/>
-
-<br><br>
-
-<img
-src="https://github-readme-activity-graph.vercel.app/graph?username=PKHarsimran&theme=react-dark&bg_color=0D1117&color=00D4AA&line=00D4AA&point=FFFFFF&area=true&hide_border=true"
+src="./profile-summary-card-output/radical/0-profile-details.svg"
 width="95%"
-alt="Contribution Graph"
-/>
-
-<br><br>
-
-<img
-src="https://github-profile-trophy.vercel.app/?username=PKHarsimran&theme=radical&no-frame=true&no-bg=true&row=1&column=7"
-alt="GitHub Trophies"
+alt="GitHub Contribution Activity"
 />
 
 </div>
