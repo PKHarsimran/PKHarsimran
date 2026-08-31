@@ -40,10 +40,11 @@ I'm a **Cybersecurity Analyst** and **developer** who loves building automation 
 <div align="center">
 
 <a href="https://github.com/PKHarsimran/website-downloader">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=PKHarsimran&repo=website-downloader&theme=radical" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=PKHarsimran&repo=website-downloader&theme=radical" />
 </a>
+
 <a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=PKHarsimran&repo=SwiftIOC-Automated-Threat-Intelligence-Collector&theme=radical" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=PKHarsimran&repo=SwiftIOC-Automated-Threat-Intelligence-Collector&theme=radical" />
 </a>
 
 </div>
@@ -75,22 +76,27 @@ I'm a **Cybersecurity Analyst** and **developer** who loves building automation 
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats-sigma-five.vercel.app/api?username=PKHarsimran&show_icons=true&theme=radical&include_all_commits=true&count_private=true&rank_icon=github" />
-<img height="170" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=PKHarsimran&layout=compact&theme=radical&langs_count=8" />
+<img height="170"
+src="https://github-readme-stats.vercel.app/api?username=PKHarsimran&show_icons=true&theme=radical&include_all_commits=true&count_private=true&rank_icon=github" />
+
+<img height="170"
+src="https://github-readme-stats.vercel.app/api/top-langs/?username=PKHarsimran&layout=compact&theme=radical&langs_count=8" />
 
 <br><br>
 
-<img src="https://streak-stats.demolab.com?user=PKHarsimran&theme=radical&background=0D1117" alt="GitHub Streak" />
+<img src="https://streak-stats.demolab.com?user=PKHarsimran&theme=radical&background=0D1117"
+alt="GitHub Streak" />
 
 <br><br>
 
-<!-- Contribution activity graph -->
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=PKHarsimran&theme=react-dark&bg_color=0D1117&color=00D4AA&line=00D4AA&point=FFFFFF&area=true&hide_border=true" width="95%" alt="Contribution Graph" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=PKHarsimran&theme=react-dark&bg_color=0D1117&color=00D4AA&line=00D4AA&point=FFFFFF&area=true&hide_border=true"
+width="95%"
+alt="Contribution Graph" />
 
 <br><br>
 
-<!-- Trophies -->
-<img src="https://github-profile-trophy.vercel.app/?username=PKHarsimran&theme=radical&no-frame=true&no-bg=true&row=1&column=7" alt="GitHub Trophies" />
+<img src="https://github-profile-trophy.vercel.app/?username=PKHarsimran&theme=radical&no-frame=true&no-bg=true&row=1&column=7"
+alt="GitHub Trophies" />
 
 </div>
 
