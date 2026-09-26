@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Harsimran Sidhu&#39;s GitHub Stats, Rank: A</title>
-        <desc id="descId">Total Stars Earned: 231, Total Commits  : 3568, Total PRs: 192, Total Issues: 11, Contributed to (last year): 2</desc>
+        <desc id="descId">Total Stars Earned: 230, Total Commits  : 3577, Total PRs: 192, Total Issues: 11, Contributed to (last year): 2</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 61.451946559208295;
+        stroke-dashoffset: 61.48322005009694;
       }
     }
   
@@ -169,7 +169,7 @@
         x="224.01"
         y="12.5"
         data-testid="stars"
-      >231</text>
+      >230</text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
