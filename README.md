@@ -1,3 +1,5 @@
+<a name="mission-control"></a>
+
 <div align="center">
 
 <a href="https://harsim.ca">
@@ -16,9 +18,20 @@
 </picture>
 </a>
 
-[Website ↗](https://harsim.ca) · [LinkedIn ↗](https://www.linkedin.com/in/harsimransidhu/) · [Docker Hub ↗](https://hub.docker.com/u/pkvirus)
+<!-- buttons:hero:start -->
+<p align="center">
+  <a href="https://harsim.ca"><img src="./profile/buttons/website.svg" alt="Visit website" width="150" height="44" /></a>
+  <a href="https://www.linkedin.com/in/harsimransidhu/"><img src="./profile/buttons/linkedin.svg" alt="LinkedIn" width="150" height="44" /></a>
+</p>
+<!-- buttons:hero:end -->
 
-[👋 Operator](#-operator-profile) · [🚀 Projects](#-selected-builds) · [🏠 Homelab](#-inside-the-lab) · [🚧 Now building](#-now-building) · [🧰 Toolkit](#-toolkit) · [📊 Activity](#-activity-log)
+<!-- buttons:navigation:start -->
+<p align="center">
+  <a href="#-selected-builds"><img src="./profile/buttons/projects.svg" alt="Projects" width="100" height="36" /></a>
+  <a href="#-inside-the-lab"><img src="./profile/buttons/homelab.svg" alt="Homelab" width="102" height="36" /></a>
+  <a href="#-activity-log"><img src="./profile/buttons/activity.svg" alt="Activity" width="100" height="36" /></a>
+</p>
+<!-- buttons:navigation:end -->
 
 </div>
 
@@ -36,6 +49,8 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 ## 🚀 Selected builds
 
+Threat intelligence, document triage, and a little web archaeology.
+
 [01 / SwiftIOC](#01--swiftioc) · [02 / IOC Inspector](#02--ioc-inspector) · [03 / Website Downloader](#03--website-downloader)
 
 ### 01 / SwiftIOC
@@ -49,7 +64,12 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 **Collect → normalize → investigate.** A Python pipeline turns IOC feeds and vulnerability reports into source-aware records. The browser dashboard brings the evidence together for review and export.
 
-[🛰️ Open dashboard ↗](https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/) · [Source ↗](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector)
+<!-- buttons:swift:start -->
+<p align="left">
+  <a href="https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/"><img src="./profile/buttons/dashboard.svg" alt="Open dashboard" width="166" height="44" /></a>
+  <a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector"><img src="./profile/buttons/source.svg" alt="View source" width="140" height="44" /></a>
+</p>
+<!-- buttons:swift:end -->
 
 <a href="./profile/intel-conveyor.md">
 <picture>
@@ -59,7 +79,6 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 </a>
 
 <sub>Real collection data, illustrated. Counts describe the retained feed and one collection interval. [Open the snapshot](./profile/intel-conveyor.md).</sub>
-
 
 <details>
 <summary><strong>🎬 Watch a 12-second evidence review</strong></summary>
@@ -84,6 +103,8 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 </details>
 
+---
+
 ### 02 / IOC Inspector
 
 <a href="https://github.com/PKHarsimran/IOC-Inspector">
@@ -95,7 +116,12 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 **Inspect → extract → report.** Triage PDFs and Office files with static analysis, IOC extraction, and optional threat enrichment. Export the findings as Markdown, JSON, or CSV.
 
-[Source ↗](https://github.com/PKHarsimran/IOC-Inspector)
+<!-- buttons:inspector:start -->
+<p align="left">
+  <a href="https://github.com/PKHarsimran/IOC-Inspector#-quick-start"><img src="./profile/buttons/quick-start.svg" alt="Quick start" width="150" height="44" /></a>
+  <a href="https://github.com/PKHarsimran/IOC-Inspector"><img src="./profile/buttons/source.svg" alt="View source" width="140" height="44" /></a>
+</p>
+<!-- buttons:inspector:end -->
 
 <picture>
   <source media="(max-width: 600px)" srcset="./profile/case-file-mobile.svg">
@@ -123,6 +149,7 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 </details>
 
+---
 
 ### 03 / Website Downloader
 
@@ -135,7 +162,12 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 **Capture → rewrite → browse offline.** Mirror websites, bring their assets along, and rewrite links for offline browsing. Update existing copies or use optional Playwright rendering for pages that need JavaScript.
 
-[📖 Field guide ↗](https://github.com/PKHarsimran/website-downloader/wiki) · [Source ↗](https://github.com/PKHarsimran/website-downloader)
+<!-- buttons:downloader:start -->
+<p align="left">
+  <a href="https://github.com/PKHarsimran/website-downloader/wiki"><img src="./profile/buttons/field-guide.svg" alt="Field guide" width="150" height="44" /></a>
+  <a href="https://github.com/PKHarsimran/website-downloader"><img src="./profile/buttons/source.svg" alt="View source" width="140" height="44" /></a>
+</p>
+<!-- buttons:downloader:end -->
 
 <details>
 <summary><strong>🎬 Watch the CLI turn a site into an offline copy</strong></summary>
@@ -148,6 +180,12 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 <sub>Automatically recorded from the released CLI against an owned local site. The source server stops before the offline links are checked. [Run results](./profile/downloader-demo.json) · [Recording provenance](./profile/demo-provenance.json).</sub>
 
 </details>
+
+<!-- buttons:return:start -->
+<p align="left">
+  <a href="#mission-control"><img src="./profile/buttons/back-top.svg" alt="Back to top" width="126" height="36" /></a>
+</p>
+<!-- buttons:return:end -->
 
 ## 🏠 Inside the lab
 
@@ -189,6 +227,12 @@ My **Zima homelab** runs on **Docker Compose**. Media, photos, books, dashboards
 
 </details>
 
+<!-- buttons:return:start -->
+<p align="left">
+  <a href="#mission-control"><img src="./profile/buttons/back-top.svg" alt="Back to top" width="126" height="36" /></a>
+</p>
+<!-- buttons:return:end -->
+
 ## 🚧 Now building
 
 <img src="./profile/mission-now.svg" alt="Now building: a modular Docker Compose home-server starter kit with guided setup and connected services. Next checkpoint: independent fresh-install validation using the documentation." width="100%" />
@@ -202,13 +246,24 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
   <img src="./profile/mission-toolkit.svg" alt="Code: Python, Bash, C++. Security: Splunk, Cortex XDR, Kibana, F5 BIG-IP. Infrastructure: Docker, Ansible, Raspberry Pi. Observability: Grafana, InfluxDB, MQTT." width="100%">
 </picture>
 
+<!-- buttons:containers:start -->
+<p align="left">
+  <a href="https://hub.docker.com/u/pkvirus"><img src="./profile/buttons/docker.svg" alt="Container images" width="188" height="44" /></a>
+</p>
+<!-- buttons:containers:end -->
+
 ## 📊 Activity log
 
 ### 📡 Public build radar
 
 <a href="./profile/public-pulse.md"><img src="./profile/public-pulse.svg" alt="Daily public build radar: CI status, latest release, stars, and default-branch commit date for SwiftIOC, IOC Inspector, and Website Downloader." width="100%" /></a>
 
-[Read the snapshot](./profile/public-pulse.md) · [Watch the generator run ↗](https://github.com/PKHarsimran/PKHarsimran/actions/workflows/profile-lab.yml)
+<!-- buttons:radar:start -->
+<p align="left">
+  <a href="./profile/public-pulse.md"><img src="./profile/buttons/snapshot.svg" alt="Read snapshot" width="160" height="44" /></a>
+  <a href="https://github.com/PKHarsimran/PKHarsimran/actions/workflows/profile-lab.yml"><img src="./profile/buttons/workflow.svg" alt="Workflow" width="138" height="44" /></a>
+</p>
+<!-- buttons:radar:end -->
 
 <details>
 <summary><strong>💓 Open live checks & release links</strong></summary>
@@ -237,10 +292,10 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 
 </details>
 
-<div align="center">
-  <img src="./profile/stats.svg" alt="Harsimran's GitHub activity statistics" width="54%" align="top" />
-  <img src="./profile/top-langs.svg" alt="Most-used languages across Harsimran's GitHub repositories" width="39%" align="top" />
-</div>
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/activity-summary-mobile.svg">
+  <img src="./profile/activity-summary.svg" alt="GitHub activity statistics and repository language mix. The cards stack vertically on smaller screens." width="100%">
+</picture>
 
 ### 🐍 Even the snake has a backlog
 
@@ -269,13 +324,23 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 
 </details>
 
+<!-- buttons:return:start -->
+<p align="left">
+  <a href="#mission-control"><img src="./profile/buttons/back-top.svg" alt="Back to top" width="126" height="36" /></a>
+</p>
+<!-- buttons:return:end -->
+
 ---
 
 <div align="center">
 
 **Security workflows, useful tools, or a self-hosting rabbit hole? Let's talk.**
 
-[Say hello on LinkedIn ↗](https://www.linkedin.com/in/harsimransidhu/) · [Explore harsim.ca ↗](https://harsim.ca)
+<!-- buttons:footer:start -->
+<p align="center">
+  <a href="https://www.linkedin.com/in/harsimransidhu/"><img src="./profile/buttons/contact.svg" alt="Let&#x27;s connect" width="160" height="44" /></a>
+</p>
+<!-- buttons:footer:end -->
 
 <sub>Build with curiosity. Leave something useful behind.</sub>
 
