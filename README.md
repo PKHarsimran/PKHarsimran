@@ -18,7 +18,7 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 | 🛡️ In the SOC | 🔭 On the workbench | 🏠 In the lab |
 | :--- | :--- | :--- |
-| WAF tuning, endpoint investigations, detection engineering | Threat intelligence with **Splunk Enterprise**, exploring **OpenCTI** | Monitoring stacks, **Raspberry Pi**, and **Ansible** automation |
+| WAF tuning, endpoint investigations, detection engineering | Threat intelligence with **Splunk Enterprise**, exploring **OpenCTI** | A **Docker Compose** home server for media, photos, books, and monitoring |
 
 > My favourite kind of side project? A repetitive task that doesn't need to be repetitive anymore.
 
@@ -50,11 +50,17 @@ Create browsable offline mirrors of websites you're authorized to archive. Rewri
 
 ## 🏠 Inside the lab
 
-Where the side quests happen. A map of the tools I experiment with:
+My **Zima homelab** is a connected **Docker Compose** home server I've built for media, photos, books, and everyday self-hosting—with the dashboards and automation to keep it manageable.
 
-<img src="./profile/mission-homelab.svg" alt="Homelab tool map: collect with Fluentd and MQTT; store with InfluxDB; visualize with Grafana; automate with Ansible and Semaphore; experiment with Raspberry Pi." width="100%" />
+<img src="./profile/mission-homelab.svg" alt="Zima homelab service map: Jellyfin and Jellyseerr with Radarr, Sonarr, Prowlarr and Bazarr; Transmission with Gluetun; PhotoPrism; Shelfmark and Audiobookshelf; Homepage, Portainer and custom flow dashboards; Uptime Kuma, Glances, Dozzle and ntfy. Connected using Docker Compose." width="100%" />
 
-**The loop:** build something → watch the logs → learn something → automate it. 🔁
+- 🎬 **Connected media workflows:** requests, library automation, VPN-routed downloads, and Jellyfin playback.
+- 🖼️ **Personal libraries:** photo management with PhotoPrism, plus books and audiobooks with Shelfmark and Audiobookshelf.
+- 🧭 **A view of the whole stack:** custom Homepage and flow dashboards, service health checks, logs, and notifications.
+
+I'm also turning what I've learned into a **modular Compose starter kit**, with guided setup and connected services so others can build their own home server.
+
+**The fun part:** getting the containers to work together, then automating the bits in between. ⚙️
 
 ## 🧰 Toolkit
 
@@ -111,3 +117,4 @@ Where the side quests happen. A map of the tools I experiment with:
 <sub>Build with curiosity. Leave something useful behind.</sub>
 
 </div>
+
