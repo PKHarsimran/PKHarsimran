@@ -4,12 +4,10 @@
 
 <a href="https://harsim.ca">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/mission-banner-orbital-mobile.svg">
-  <img src="./profile/mission-banner-orbital.svg" alt="Harsimran Sidhu — turning curiosity into automation. Cybersecurity, threat intelligence, and automation." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-hero-mobile.svg">
+  <img src="./profile/studio-hero.svg" alt="Harsimran Sidhu. Security instincts. Builder energy. Cybersecurity, open source and self-hosting." width="100%" />
 </picture>
 </a>
-
-**Cybersecurity analyst · Open-source builder · Homelab tinkerer**
 
 <a href="https://harsim.ca">
 <picture>
@@ -27,28 +25,18 @@
 
 <!-- buttons:navigation:start -->
 <p align="center">
-  <a href="#-selected-builds"><img src="./profile/buttons/projects.svg" alt="Projects" width="100" height="36" /></a>
-  <a href="#-inside-the-lab"><img src="./profile/buttons/homelab.svg" alt="Homelab" width="102" height="36" /></a>
-  <a href="#-activity-log"><img src="./profile/buttons/activity.svg" alt="Activity" width="100" height="36" /></a>
+  <a href="#selected-builds"><img src="./profile/buttons/projects.svg" alt="Projects" width="100" height="36" /></a>
+  <a href="#homelab"><img src="./profile/buttons/homelab.svg" alt="Homelab" width="102" height="36" /></a>
+  <a href="#activity"><img src="./profile/buttons/activity.svg" alt="Activity" width="100" height="36" /></a>
 </p>
 <!-- buttons:navigation:end -->
 
-<!-- visitors:start -->
-<picture>
-  <source media="(max-width: 600px)" srcset="./profile/mission-visitors-mobile.svg" />
-  <img src="./profile/mission-visitors.svg" alt="Hey, curious human. Welcome to the lab! A waving pixel visitor and an animated orbital arrival stamp." width="100%" />
-</picture>
-
-<p align="center">
-  <a href="https://hits.sh/github.com/PKHarsimran/"><img src="https://hits.sh/github.com/PKHarsimran.svg?style=for-the-badge&amp;label=LAB+PAGE+HITS&amp;color=a995ff&amp;labelColor=34445c" alt="Lab page hits — public profile view counter, not unique visitors" height="28" /></a>
-</p>
-
-<sub>Thanks for dropping into my corner of the internet. ✨<br />Page hits, not unique visitors · <a href="https://github.com/silentsoft/hits#statistics">About the counter</a></sub>
-<!-- visitors:end -->
-
 </div>
 
-## 👋 Operator profile
+I work in **cybersecurity** and build tools for clearer investigations, better dashboards, and fewer repetitive steps. The side quests usually end up in my **Zima homelab**.
+
+<details>
+<summary><strong>🧠 Behind the builds / current focus</strong></summary>
 
 I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy security data into something useful: clearer investigations, better dashboards, and fewer repetitive steps.
 
@@ -60,7 +48,11 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 > My favourite kind of side project? A repetitive task that doesn't need to be repetitive anymore.
 
-## 🚀 Selected builds
+</details>
+
+<a name="selected-builds"></a>
+
+## Selected builds
 
 Threat intelligence, document triage, and a little web archaeology.
 
@@ -70,8 +62,8 @@ Threat intelligence, document triage, and a little web archaeology.
 
 <a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/mission-swiftioc-mobile.svg">
-  <img src="./profile/mission-swiftioc.svg" alt="SwiftIOC — follow the indicator, keep the evidence. Python threat intelligence and analyst workflows." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-swiftioc-mobile.svg">
+  <img src="./profile/studio-swiftioc.svg" alt="SwiftIOC — follow the indicator, keep the evidence. Python threat intelligence and analyst workflows." width="100%" />
 </picture>
 </a>
 
@@ -122,8 +114,8 @@ Threat intelligence, document triage, and a little web archaeology.
 
 <a href="https://github.com/PKHarsimran/IOC-Inspector">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/mission-inspector-mobile.svg">
-  <img src="./profile/mission-inspector.svg" alt="IOC Inspector — suspicious documents, useful answers. Python static analysis and structured reports." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-inspector-mobile.svg">
+  <img src="./profile/studio-inspector.svg" alt="IOC Inspector — suspicious documents, useful answers. Python static analysis and structured reports." width="100%" />
 </picture>
 </a>
 
@@ -168,8 +160,8 @@ Threat intelligence, document triage, and a little web archaeology.
 
 <a href="https://github.com/PKHarsimran/website-downloader">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/mission-downloader-mobile.svg">
-  <img src="./profile/mission-downloader.svg" alt="Website Downloader — take a little piece of the web offline. Python web archiving with optional Playwright rendering." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-downloader-mobile.svg">
+  <img src="./profile/studio-downloader.svg" alt="Website Downloader — take a little piece of the web offline. Python web archiving with optional Playwright rendering." width="100%" />
 </picture>
 </a>
 
@@ -200,7 +192,9 @@ Threat intelligence, document triage, and a little web archaeology.
 </p>
 <!-- buttons:return:end -->
 
-## 🏠 Inside the lab
+<a name="homelab"></a>
+
+## Inside the lab
 
 My **Zima homelab** runs on **Docker Compose**. Media, photos, books, dashboards, and monitoring share a home; I build the workflows and automation that connect them.
 
@@ -246,7 +240,7 @@ My **Zima homelab** runs on **Docker Compose**. Media, photos, books, dashboards
 </p>
 <!-- buttons:return:end -->
 
-## 🚧 Now building
+## On the workbench
 
 <picture>
   <source media="(max-width: 600px)" srcset="./profile/mission-now-mobile.svg" />
@@ -255,7 +249,7 @@ My **Zima homelab** runs on **Docker Compose**. Media, photos, books, dashboards
 
 Turning lessons from the Zima lab into a **modular Compose starter kit**. The test: someone else can follow the docs, choose their services, and bring the stack online.
 
-## 🧰 Toolkit
+## Toolkit
 
 <picture>
   <source media="(max-width: 600px)" srcset="./profile/mission-toolkit-icons-mobile.svg">
@@ -268,9 +262,11 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 </p>
 <!-- buttons:containers:end -->
 
-## 📊 Activity log
+<a name="activity"></a>
 
-### 📡 Public build radar
+## Build signals
+
+### Public build radar
 
 <a href="./profile/public-pulse.md"><img src="./profile/public-pulse.svg" alt="Daily public build radar: CI status, latest release, stars, and default-branch commit date for SwiftIOC, IOC Inspector, and Website Downloader." width="100%" /></a>
 
@@ -350,7 +346,20 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 
 <div align="center">
 
-**Security workflows, useful tools, or a self-hosting rabbit hole? Let's talk.**
+<!-- visitors:start -->
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/studio-guestbook-mobile.svg" />
+  <img src="./profile/studio-guestbook.svg" alt="Still curious? A waving pixel mascot signs off from an animated orbital guestbook." width="100%" />
+</picture>
+
+<p align="center">
+  <a href="https://hits.sh/github.com/PKHarsimran/"><img src="https://hits.sh/github.com/PKHarsimran.svg?style=for-the-badge&amp;label=LAB+PAGE+HITS&amp;color=a995ff&amp;labelColor=34445c" alt="Lab page hits — public profile view counter, not unique visitors" height="28" /></a>
+</p>
+
+<sub>Page hits, not unique visitors · <a href="https://github.com/silentsoft/hits#statistics">About the counter</a></sub>
+<!-- visitors:end -->
+
+**Have a useful problem to solve? Let’s talk.**
 
 <!-- buttons:footer:start -->
 <p align="center">

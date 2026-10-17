@@ -1,0 +1,96 @@
+"""A shared art direction for the profile hero and featured project covers."""
+from html import escape
+from pathlib import Path
+import re
+import xml.etree.ElementTree as ET
+from profile_art import art_style, visitor_pass
+from profile_theme import PROJECT_MOTION
+
+OUT=Path(__file__).resolve().parents[1]/'profile'
+SVG='http://www.w3.org/2000/svg'
+TEXT,MUTED,MINT,VIOLET,PINK='#EFF4FC','#B8C6DB','#43E6C5','#A995FF','#F36BAA'
+PROJECTS=(
+    ('swiftioc','01','SwiftIOC','Threat intelligence','Follow the indicator. Keep the evidence.','PYTHON / THREAT INTEL / ANALYST WORKFLOWS',MINT),
+    ('inspector','02','IOC Inspector','Document triage','Suspicious documents. Useful answers.','PYTHON / STATIC ANALYSIS / REPORTS',VIOLET),
+    ('downloader','03','Website Downloader','Web archiving','A little piece of the web, offline.','PYTHON / WEB ARCHIVING / PLAYWRIGHT',PINK),
+)
+
+
+def text(x,y,label,size=18,color=TEXT,weight=400,extra=''):
+    return f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{weight}" fill="{color}" {extra}>{escape(label)}</text>'
+
+
+def group(name,original,replacement):
+    root=ET.parse(OUT/name)
+    node=root.find('.//{'+SVG+'}g[@transform="'+original+'"]')
+    if node is None:raise ValueError('Missing source illustration: '+name)
+    node.set('transform',replacement)
+    return ET.tostring(node,encoding='unicode')
+
+
+def panel(w,h,title,desc):
+    return [f'<svg xmlns="{SVG}" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc"><title id="title">{escape(title)}</title><desc id="desc">{escape(desc)}</desc>',
+            '<defs><linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#141C29"/><stop offset="1" stop-color="#0B0F16"/></linearGradient></defs>',
+            f'<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="{w-2}" height="{h-2}" rx="24" fill="url(#surface)" stroke="#29364B"/>']
+
+
+def hero(mobile=False):
+    w,h=(600,460) if mobile else (1000,374)
+    source=(OUT/'mission-banner-orbital.svg').read_text(encoding='utf-8')
+    motion=re.search(r'<style>.*?</style>',source,re.S).group()
+    p=panel(w,h,'Harsimran Sidhu / Security instincts. Builder energy.','Cybersecurity, open source and self-hosting. Original orbital line art, a radar and a floating pixel mascot. Decorative motion respects reduced-motion preferences.')
+    p += [motion,art_style(),f'<path d="M25 1H{210 if mobile else 310}" stroke="{MINT}" stroke-width="2"/>',
+          group('mission-banner-orbital.svg','translate(620 55)','translate(383 68) scale(.58)' if mobile else 'translate(617 46)'),
+          group('mission-banner-orbital.svg','translate(801 164)','translate(487 171) scale(.66)' if mobile else 'translate(809 163) scale(.9)'),
+          group('mission-banner-orbital.svg','translate(916 258)','translate(521 358) scale(1.12)' if mobile else 'translate(911 274) scale(1.15)')]
+    if mobile:
+        p += [text(28,36,'PKHARSIMRAN / SECURITY + CODE',15,MINT,500),
+              text(28,124,'Harsimran',66,TEXT,700),text(28,201,'Sidhu.',66,TEXT,700),
+              text(30,262,'Security instincts.',27,MUTED),text(30,300,'Builder energy.',27,MINT),
+              '<path d="M28 339H572" stroke="#29364B"/>',
+              text(28,378,'CYBERSECURITY / OPEN SOURCE',15,MUTED,500),text(28,408,'SELF-HOSTING / ALWAYS LEARNING',15,MUTED,500),
+              text(28,440,'CURIOUS BY DESIGN.',12,VIOLET,500)]
+    else:
+        p += [text(40,36,'PKHARSIMRAN / SECURITY + CODE',13,MINT,500),
+              text(40,139,'Harsimran',82,TEXT,700),text(40,231,'Sidhu.',82,TEXT,700),
+              text(44,283,'Security instincts. Builder energy.',26,MINT),
+              '<path d="M40 319H960" stroke="#29364B"/>',
+              text(40,349,'CYBERSECURITY / OPEN SOURCE / SELF-HOSTING',13,MUTED,500),
+              text(746,349,'ALWAYS LEARNING ↗',13,VIOLET,500)]
+    return ''.join(p+['</g></svg>\n'])
+
+
+def project(item,mobile=False):
+    kind,number,name,area,tagline,tags,color=item
+    w,h=(600,260) if mobile else (1000,194)
+    p=panel(w,h,name,tagline+' '+tags)
+    p += [PROJECT_MOTION,f'<path class="edge-breathe" d="M24 1H{w*.34:.0f}" stroke="{color}" stroke-width="2"/>']
+    if not mobile:
+        p += [text(738,157,number,146,color,700,'opacity=".035"'),
+              f'<circle cx="890" cy="93" r="64" fill="{color}" fill-opacity=".035" stroke="{color}" stroke-opacity=".16"/>',
+              group('mission-'+kind+'.svg','translate(891 101)','translate(890 93) scale(.92)'),
+              text(30,32,number+' / '+area.upper(),12,color,500),
+              text(28,91,name,43,TEXT,700),text(30,125,tagline,20,MUTED),text(30,169,tags,12,color,500),
+              text(947,170,'↗',22,color)]
+    else:
+        p += [text(28,36,number+' / '+area.upper(),14,color,500),
+              group('mission-'+kind+'.svg','translate(891 101)','translate(548 37) scale(.35)'),
+              text(26,109,name,39,TEXT,700),text(28,157,tagline,23,MUTED),
+              '<path d="M28 190H572" stroke="#29364B"/>',text(28,228,tags,14,color,500)]
+    return ''.join(p+['</g></svg>\n'])
+
+
+def outro(mobile=False):
+    root=ET.fromstring(visitor_pass(mobile))
+    replacements={
+        'Hey, curious human. Welcome to the lab.':'Thanks for exploring the lab.',
+        'VISITOR ARRIVALS / WELCOME TO THE LAB':'GUESTBOOK / THANKS FOR DROPPING IN',
+        'Hey, curious human.':'Still curious?',
+        'Welcome to my corner of the internet.':'There’s always another rabbit hole to explore.',
+        'Hey, curious':'Stay', 'human.':'curious.',
+        'Welcome to my corner':'Come back for the tools.',
+        'of the internet.':'Stay for the side quests.',
+    }
+    for node in root.iter():
+        if node.text in replacements:node.text=replacements[node.text]
+    return ET.tostring(root,encoding='unicode')+'\n'

@@ -6,6 +6,7 @@ import xml.etree.ElementTree as ET
 from profile_theme import apply_theme, animate_project, PROJECT_MOTION
 from profile_art import header_art, art_style, visitor_pass, orbit_divider
 from vendor_tool_icons import ICONS
+import profile_studio
 
 OUT = Path(__file__).resolve().parents[1] / "profile"
 TEXT, MUTED, BORDER = "#EFF4FC", "#A7B6CE", "#29364B"
@@ -166,5 +167,11 @@ if __name__ == "__main__":
     assets['mission-visitors.svg']=visitor_pass()
     assets['mission-visitors-mobile.svg']=visitor_pass(True)
     assets['mission-orbit-divider.svg']=orbit_divider()
+    for mobile in (False,True):
+        suffix='-mobile' if mobile else ''
+        assets['studio-hero'+suffix+'.svg']=profile_studio.hero(mobile)
+        assets['studio-guestbook'+suffix+'.svg']=profile_studio.outro(mobile)
+        for project in profile_studio.PROJECTS:
+            assets['studio-'+project[0]+suffix+'.svg']=profile_studio.project(project,mobile)
     for name, content in assets.items():
         (OUT / name).write_text(apply_theme(content,'terminal' if 'typing' in name else 'panel'), encoding="utf-8")

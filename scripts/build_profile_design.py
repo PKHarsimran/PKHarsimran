@@ -27,7 +27,7 @@ BUTTONS={
 }
 GROUPS={
     'hero':[('website','https://harsim.ca'),('linkedin','https://www.linkedin.com/in/harsimransidhu/')],
-    'navigation':[('projects','#-selected-builds'),('homelab','#-inside-the-lab'),('activity','#-activity-log')],
+    'navigation':[('projects','#selected-builds'),('homelab','#homelab'),('activity','#activity')],
     'swift':[('dashboard','https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/'),('source','https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector')],
     'inspector':[('quick-start','https://github.com/PKHarsimran/IOC-Inspector#-quick-start'),('source','https://github.com/PKHarsimran/IOC-Inspector')],
     'downloader':[('field-guide','https://github.com/PKHarsimran/website-downloader/wiki'),('source','https://github.com/PKHarsimran/website-downloader')],
