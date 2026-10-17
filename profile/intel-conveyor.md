@@ -1,6 +1,6 @@
 # SwiftIOC intelligence conveyor
 
-Collection: 2026-10-17T21:56:30Z. Observed: 2026-10-17T22:00:51Z.
+Collection: 2026-10-17T21:56:30Z. Observed: 2026-10-17T22:46:30Z.
 
 - Retained observables: 6,878
 - Retained CVEs: 3,122
