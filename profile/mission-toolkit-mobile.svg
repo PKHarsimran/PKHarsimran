@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="606" viewBox="0 0 600 606" role="img" aria-labelledby="title desc">
+<title id="title">Operator toolkit</title><desc id="desc">Code: Python, Bash, C++. Security: Splunk, Cortex XDR, Kibana, F5 BIG-IP. Infrastructure: Docker, Ansible, Raspberry Pi. Observability: Grafana, InfluxDB, MQTT.</desc>
+<defs><linearGradient id="surface" x2="1" y2="1"><stop stop-color="#152133"/><stop offset="1" stop-color="#0D1117"/></linearGradient></defs>
+<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="598" height="604" rx="22" fill="url(#surface)" stroke="#29364B"/>
+<text x="28" y="34" fill="#43E6C5" font-size="13" font-weight="600" letter-spacing="1.3">OPERATOR TOOLKIT / EQUIPPED TO BUILD</text>
+<text x="28" y="87" fill="#43E6C5" font-size="13" font-family="monospace">01</text>
+<text x="64" y="87" fill="#EFF4FC" font-size="21" font-weight="600">Code &amp; scripts</text>
+<rect x="28" y="106" width="99" height="37" rx="9" fill="#43E6C5" fill-opacity=".07" stroke="#43E6C5" stroke-opacity=".3"/>
+<text x="45" y="131" fill="#43E6C5" font-size="20" font-weight="500">Python</text>
+<rect x="137" y="106" width="77" height="37" rx="9" fill="#43E6C5" fill-opacity=".07" stroke="#43E6C5" stroke-opacity=".3"/>
+<text x="154" y="131" fill="#43E6C5" font-size="20" font-weight="500">Bash</text>
+<rect x="224" y="106" width="66" height="37" rx="9" fill="#43E6C5" fill-opacity=".07" stroke="#43E6C5" stroke-opacity=".3"/>
+<text x="241" y="131" fill="#43E6C5" font-size="20" font-weight="500">C++</text>
+<path d="M28 174H572" stroke="#29364B" stroke-opacity=".6"/>
+<text x="28" y="217" fill="#A995FF" font-size="13" font-family="monospace">02</text>
+<text x="64" y="217" fill="#EFF4FC" font-size="21" font-weight="600">Security &amp; detection</text>
+<rect x="28" y="236" width="99" height="37" rx="9" fill="#A995FF" fill-opacity=".07" stroke="#A995FF" stroke-opacity=".3"/>
+<text x="45" y="261" fill="#A995FF" font-size="20" font-weight="500">Splunk</text>
+<rect x="137" y="236" width="142" height="37" rx="9" fill="#A995FF" fill-opacity=".07" stroke="#A995FF" stroke-opacity=".3"/>
+<text x="154" y="261" fill="#A995FF" font-size="20" font-weight="500">Cortex XDR</text>
+<rect x="289" y="236" width="99" height="37" rx="9" fill="#A995FF" fill-opacity=".07" stroke="#A995FF" stroke-opacity=".3"/>
+<text x="306" y="261" fill="#A995FF" font-size="20" font-weight="500">Kibana</text>
+<rect x="398" y="236" width="131" height="37" rx="9" fill="#A995FF" fill-opacity=".07" stroke="#A995FF" stroke-opacity=".3"/>
+<text x="415" y="261" fill="#A995FF" font-size="20" font-weight="500">F5 BIG-IP</text>
+<path d="M28 304H572" stroke="#29364B" stroke-opacity=".6"/>
+<text x="28" y="347" fill="#F36BAA" font-size="13" font-family="monospace">03</text>
+<text x="64" y="347" fill="#EFF4FC" font-size="21" font-weight="600">Automation &amp; infrastructure</text>
+<rect x="28" y="366" width="99" height="37" rx="9" fill="#F36BAA" fill-opacity=".07" stroke="#F36BAA" stroke-opacity=".3"/>
+<text x="45" y="391" fill="#F36BAA" font-size="20" font-weight="500">Docker</text>
+<rect x="137" y="366" width="110" height="37" rx="9" fill="#F36BAA" fill-opacity=".07" stroke="#F36BAA" stroke-opacity=".3"/>
+<text x="154" y="391" fill="#F36BAA" font-size="20" font-weight="500">Ansible</text>
+<rect x="257" y="366" width="164" height="37" rx="9" fill="#F36BAA" fill-opacity=".07" stroke="#F36BAA" stroke-opacity=".3"/>
+<text x="274" y="391" fill="#F36BAA" font-size="20" font-weight="500">Raspberry Pi</text>
+<path d="M28 434H572" stroke="#29364B" stroke-opacity=".6"/>
+<text x="28" y="477" fill="#69B9FF" font-size="13" font-family="monospace">04</text>
+<text x="64" y="477" fill="#EFF4FC" font-size="21" font-weight="600">Observability</text>
+<rect x="28" y="496" width="110" height="37" rx="9" fill="#69B9FF" fill-opacity=".07" stroke="#69B9FF" stroke-opacity=".3"/>
+<text x="45" y="521" fill="#69B9FF" font-size="20" font-weight="500">Grafana</text>
+<rect x="148" y="496" width="120" height="37" rx="9" fill="#69B9FF" fill-opacity=".07" stroke="#69B9FF" stroke-opacity=".3"/>
+<text x="165" y="521" fill="#69B9FF" font-size="20" font-weight="500">InfluxDB</text>
+<rect x="278" y="496" width="77" height="37" rx="9" fill="#69B9FF" fill-opacity=".07" stroke="#69B9FF" stroke-opacity=".3"/>
+<text x="295" y="521" fill="#69B9FF" font-size="20" font-weight="500">MQTT</text>
+<text x="28" y="582" fill="#A7B6CE" font-size="12" letter-spacing="1">FAVOURITE SHORTCUT: AUTOMATE THE BORING BITS.</text>
+</g></svg>

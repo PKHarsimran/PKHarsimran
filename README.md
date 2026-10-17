@@ -4,7 +4,7 @@
 
 **Cybersecurity analyst · Open-source builder · Homelab tinkerer**
 
-<a href="https://harsim.ca"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=500&amp;size=20&amp;duration=2800&amp;pause=1500&amp;color=43E6C5&amp;center=true&amp;vCenter=true&amp;width=780&amp;height=38&amp;lines=Follow+the+evidence.;Automate+the+boring+bits.;Always+one+more+thing+to+build." alt="Follow the evidence. Automate the boring bits. Always one more thing to build." width="780" /></a>
+<a href="https://harsim.ca"><img src="./profile/mission-typing.svg" alt="Follow the evidence. Automate the boring bits. Always one more thing to build." width="780" /></a>
 
 [Website ↗](https://harsim.ca) · [LinkedIn ↗](https://www.linkedin.com/in/harsimransidhu/) · [Docker Hub ↗](https://hub.docker.com/u/pkvirus)
 
@@ -57,7 +57,7 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 <summary><strong>🎬 Watch a 12-second evidence review</strong></summary>
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="./profile/swift-demo.png">
+  <source media="(prefers-reduced-motion: reduce)" srcset="./profile/swift-demo.webp">
   <img src="./profile/swift-demo.gif" alt="SwiftIOC walkthrough: open the public dashboard, review a CVE, inspect CISA evidence, and compare NVD details." width="100%">
 </picture>
 
@@ -76,12 +76,11 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 </details>
 
-
 ### 02 / IOC Inspector
 
 <a href="https://github.com/PKHarsimran/IOC-Inspector"><img src="./profile/mission-inspector.svg" alt="IOC Inspector — suspicious documents, useful answers. Python static analysis and structured reports." width="100%" /></a>
 
-**Give suspicious documents a closer look.** Triage PDFs and Office files with static analysis, IOC extraction, and optional threat enrichment. Export findings in Markdown, JSON, or CSV for the next step of the investigation.
+**Suspicious documents, useful answers.** Triage PDFs and Office files with static analysis, IOC extraction, and optional threat enrichment. Export Markdown, JSON, or CSV for the next step of the investigation.
 
 [Source ↗](https://github.com/PKHarsimran/IOC-Inspector)
 
@@ -97,14 +96,13 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 <summary><strong>🎬 Watch the CLI turn a site into an offline copy</strong></summary>
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="./profile/cli-demo.png">
+  <source media="(prefers-reduced-motion: reduce)" srcset="./profile/cli-demo.webp">
   <img src="./profile/cli-demo.gif" alt="Website Downloader walkthrough: recorded CLI output from an owned local demo site, followed by the generated offline mirror. Three HTML pages, CSS and an SVG asset; relative links verified." width="100%">
 </picture>
 
 <sub>A replay of real CLI output, followed by the generated mirror. Recorded October 17, 2026, using an owned local fixture; the localhost address is part of the demo.</sub>
 
 </details>
-
 
 ## 🏠 Inside the lab
 
@@ -130,9 +128,7 @@ My **Zima homelab** brings media, photos, books, and everyday self-hosting toget
 
 </details>
 
-I'm also turning what I've learned into a **modular Compose starter kit**, with guided setup and connected services so others can build their own home server.
-
-**The fun part:** making the containers work together, then automating the bits in between. ⚙️
+**The fun part:** teaching the containers to work together, then automating the bits in between. ⚙️
 
 <details>
 <summary><strong>🧠 Build story: a server, not just a list of containers</strong></summary>
@@ -143,47 +139,18 @@ I'm also turning what I've learned into a **modular Compose starter kit**, with 
 
 </details>
 
-
 ## 🚧 Now building
 
 <img src="./profile/mission-now.svg" alt="Now building: a modular Docker Compose home-server starter kit with guided setup and connected services. Next checkpoint: independent fresh-install validation using the documentation." width="100%" />
 
-The next checkpoint is making the setup understandable to someone who wasn't there when it was built: follow the docs, choose service groups, and get a connected server running.
+Turning lessons from the Zima lab into a **modular Compose starter kit**. The test: someone else can follow the docs, choose their services, and bring the stack online.
 
 ## 🧰 Toolkit
 
-### 🐍 Code & scripts
-
-<p>
-<img src="https://img.shields.io/badge/Python-0D1117?style=for-the-badge&amp;logo=python&amp;logoColor=FFD43B" alt="Python" />
-<img src="https://img.shields.io/badge/Bash-0D1117?style=for-the-badge&amp;logo=gnubash&amp;logoColor=00D4AA" alt="Bash" />
-<img src="https://img.shields.io/badge/C++-0D1117?style=for-the-badge&amp;logo=cplusplus&amp;logoColor=659AD2" alt="C++" />
-</p>
-
-### 🛡️ Security & detection
-
-<p>
-<img src="https://img.shields.io/badge/Splunk-0D1117?style=for-the-badge&amp;logo=splunk&amp;logoColor=00D4AA" alt="Splunk" />
-<img src="https://img.shields.io/badge/Cortex%20XDR-0D1117?style=for-the-badge&amp;logo=paloaltonetworks&amp;logoColor=F04E23" alt="Cortex XDR" />
-<img src="https://img.shields.io/badge/Kibana-0D1117?style=for-the-badge&amp;logo=kibana&amp;logoColor=F04E98" alt="Kibana" />
-<img src="https://img.shields.io/badge/F5%20BIG--IP-0D1117?style=for-the-badge&amp;logo=f5&amp;logoColor=E4002B" alt="F5 BIG-IP" />
-</p>
-
-### ⚙️ Automation & infrastructure
-
-<p>
-<img src="https://img.shields.io/badge/Docker-0D1117?style=for-the-badge&amp;logo=docker&amp;logoColor=2496ED" alt="Docker" />
-<img src="https://img.shields.io/badge/Ansible-0D1117?style=for-the-badge&amp;logo=ansible&amp;logoColor=EE0000" alt="Ansible" />
-<img src="https://img.shields.io/badge/Raspberry%20Pi-0D1117?style=for-the-badge&amp;logo=raspberrypi&amp;logoColor=A22846" alt="Raspberry Pi" />
-</p>
-
-### 📡 Observability
-
-<p>
-<img src="https://img.shields.io/badge/Grafana-0D1117?style=for-the-badge&amp;logo=grafana&amp;logoColor=F46800" alt="Grafana" />
-<img src="https://img.shields.io/badge/InfluxDB-0D1117?style=for-the-badge&amp;logo=influxdb&amp;logoColor=22ADF6" alt="InfluxDB" />
-<img src="https://img.shields.io/badge/MQTT-0D1117?style=for-the-badge&amp;logo=mqtt&amp;logoColor=B47BFF" alt="MQTT" />
-</p>
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/mission-toolkit-mobile.svg">
+  <img src="./profile/mission-toolkit.svg" alt="Code: Python, Bash, C++. Security: Splunk, Cortex XDR, Kibana, F5 BIG-IP. Infrastructure: Docker, Ansible, Raspberry Pi. Observability: Grafana, InfluxDB, MQTT." width="100%">
+</picture>
 
 ## 📊 Activity log
 
@@ -219,4 +186,3 @@ The next checkpoint is making the setup understandable to someone who wasn't the
 <sub>Build with curiosity. Leave something useful behind.</sub>
 
 </div>
-

@@ -71,6 +71,19 @@ class ProfileLabTests(unittest.TestCase):
         self.assertIn('0 active days',svg)
         self.assertIn('prefers-reduced-motion',svg)
 
+    def test_compact_calendar_preserves_every_day_and_level(self):
+        days = [{"date":f"2026-10-{n+12}","level":n} for n in range(5)]
+        tree = ET.fromstring(lab.render_patrol({"generated_at":"2026-10-17T12:00:00Z","days":days}))
+        ns = {"s":"http://www.w3.org/2000/svg"}
+        groups = tree.findall('.//s:g[@class="calendar"]/s:g', ns)
+        self.assertEqual(len(groups), 5)
+        for day, group in zip(days, groups):
+            rect = group.find('s:rect', ns)
+            self.assertEqual(rect.find('s:title', ns).text, f'{day["date"]}: activity level {day["level"]} of 4')
+            self.assertIn('x', rect.attrib)
+            self.assertIn('y', rect.attrib)
+            self.assertIn('fill', group.attrib)
+
 
 if __name__=="__main__":
     unittest.main()

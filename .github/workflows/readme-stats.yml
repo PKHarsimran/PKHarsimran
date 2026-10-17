@@ -8,16 +8,23 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: readme-stats
+  cancel-in-progress: false
+
 jobs:
   update-stats:
     runs-on: ubuntu-latest
+    timeout-minutes: 8
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
 
       - name: Generate GitHub stats
-        uses: stats-organization/github-readme-stats-action@v2
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
         with:
           card: stats
           options: username=PKHarsimran&show_icons=true&theme=radical&include_all_commits=true&rank_icon=github&bg_color=0D1117&title_color=43E6C5&text_color=A7B6CE&icon_color=A995FF&ring_color=F36BAA&border_color=29364B&border_radius=18
@@ -25,27 +32,11 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate top languages
-        uses: stats-organization/github-readme-stats-action@v2
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
         with:
           card: top-langs
           options: username=PKHarsimran&layout=compact&theme=radical&langs_count=8&bg_color=0D1117&title_color=43E6C5&text_color=A7B6CE&border_color=29364B&border_radius=18
           path: profile/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate Website Downloader card
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: pin
-          options: username=PKHarsimran&repo=website-downloader&theme=radical
-          path: profile/website-downloader.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate SwiftIOC card
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: pin
-          options: username=PKHarsimran&repo=SwiftIOC-Automated-Threat-Intelligence-Collector&theme=radical
-          path: profile/swiftioc.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit updated cards
@@ -53,7 +44,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add profile/*.svg
-          git commit -m "Update GitHub README stats" || exit 0
-          git push
+          git add -- profile/stats.svg profile/top-langs.svg
+          if git diff --cached --quiet; then
+            echo "GitHub stats are unchanged."
+            exit 0
+          fi
+          git commit -m "Update GitHub README stats"
+          git pull --rebase origin main
+          git push origin HEAD:main
 

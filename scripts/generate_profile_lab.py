@@ -149,6 +149,7 @@ def render_patrol(calendar):
     start = date.fromisoformat(days[0]["date"])
     start -= timedelta(days=(start.weekday()+1) % 7)
     points = []
+    cells = [[] for _ in range(5)]
     colors = ["#17212E", "#174B45", "#217466", "#2DAA92", "#43E6C5"]
     p = surface(1000, 340, "Contribution patrol", "A decorative pixel ship patrols active days from the public GitHub profile calendar. Colors show GitHub activity levels, not security detections. Reduced motion preserves the static calendar.")
     stamp = calendar["generated_at"][:10]
@@ -162,9 +163,13 @@ def render_patrol(calendar):
         if day.month != last_month:
             p += [txt(x,87,day.strftime("%b"),11,MUTED)]
             last_month = day.month
-        p += [f'<rect x="{x}" y="{y}" width="13" height="13" rx="3" fill="{colors[d["level"]]}"><title>{d["date"]}: activity level {d["level"]} of 4</title></rect>']
+        cells[d["level"]].append(f'<rect x="{x}" y="{y}"><title>{d["date"]}: activity level {d["level"]} of 4</title></rect>')
         if d["level"]:
             points.append((x+6.5,y+6.5))
+    # Shared geometry and colour keep all dates accessible without repeating attributes.
+    p += ['<style>.calendar rect{width:13px;height:13px;rx:3px}</style><g class="calendar">']
+    p += [f'<g fill="{color}">'+''.join(group)+'</g>' for color,group in zip(colors,cells) if group]
+    p += ['</g>']
     chosen = [points[round(i*(len(points)-1)/(min(8,len(points))-1))] for i in range(min(8,len(points)))] if len(points)>1 else points
     animation = ['@keyframes ship{']
     if chosen:
