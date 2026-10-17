@@ -4,9 +4,9 @@ The invoice with two destinations
 
 Owned harmless training PDF. Static analysis; external reputation lookups disabled. The tool verdict is not a security guarantee.
 
-Released source: [v0.1.0](https://github.com/PKHarsimran/IOC-Inspector/tree/df4e2cc2266b337a8994c4d10e3accb7333dba1b). Fixture SHA-256: `b28f3a9dc54d06ac1528f86560d121cc6da247c2d4ef21a79ae5e1ed711c46e6`.
+Released source: [v0.1.0](https://github.com/PKHarsimran/IOC-Inspector/tree/df4e2cc2266b337a8994c4d10e3accb7333dba1b). Fixture SHA-256: `fd5a1dec960ed6b3cde4b61924912cf33856398a030e428a280dce1cc2272c47`.
 
-Actual tool verdict: **benign**, score **0**. 3 unique URLs and 1 IPs.
+Actual tool verdict: **benign**, score **0**. 3 unique URLs and 1 IP.
 
 - `hxxp://192[.]0[.]2[.]42/receipt`
 - `hxxps://example[.]org/help`

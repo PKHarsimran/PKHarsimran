@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" role="img" aria-labelledby="title desc"><title id="title">IOC Inspector / 2026-W42</title><desc id="desc">Owned harmless training PDF. Static analysis; external reputation lookups disabled. The tool verdict is not a security guarantee.</desc>
 <defs><linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#152133"/><stop offset="1" stop-color="#0D1117"/></linearGradient></defs>
 <g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="598" height="398" rx="22" fill="url(#surface)" stroke="#29364B"/>
-<style>.scan{animation:scan 4s ease-in-out infinite}@keyframes scan{50%{opacity:.25}}@media(prefers-reduced-motion:reduce){.scan{animation:none}}</style>
+<style>.scan{animation:scan 4s ease-in-out infinite}.scan-line{animation:sweep 4s ease-in-out infinite}@keyframes scan{50%{opacity:.25}}@keyframes sweep{0%,100%{transform:translateY(-24px)}50%{transform:translateY(24px)}}@media(prefers-reduced-motion:reduce){.scan,.scan-line{animation:none}}</style>
 <text x="28" y="34" fill="#A995FF" font-size="15" font-weight="600" >IOC INSPECTOR / 2026-W42</text>
-<text x="28" y="80" fill="#EFF4FC" font-size="26" font-weight="600" >3 unique URLs / 1 IPs</text>
+<text x="28" y="80" fill="#EFF4FC" font-size="26" font-weight="600" >3 unique URLs / 1 IP</text>
 <text x="28" y="121" fill="#43E6C5" font-size="18" font-weight="400" >hxxp://192[.]0[.]2[.]42/receipt</text>
 <text x="28" y="153" fill="#43E6C5" font-size="18" font-weight="400" >hxxps://example[.]org/help</text>
 <text x="28" y="185" fill="#43E6C5" font-size="18" font-weight="400" >hxxps://portal[.]example[.]com/invoice</text>
