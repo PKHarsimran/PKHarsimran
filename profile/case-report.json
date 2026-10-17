@@ -3,7 +3,7 @@
   "title": "The invoice with two destinations",
   "prompt": "Which links and IPs survive static triage?",
   "fixture": "invoice.pdf",
-  "fixture_sha256": "fd5a1dec960ed6b3cde4b61924912cf33856398a030e428a280dce1cc2272c47",
+  "fixture_sha256": "cc2c53e0300f4b1bef8101e1a77acd6a71ef1be06935fc885a514f6490f98010",
   "source": {
     "repo": "IOC-Inspector",
     "tag": "v0.1.0",

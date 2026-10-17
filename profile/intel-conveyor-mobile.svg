@@ -12,7 +12,7 @@
 <path class="packet" d="M300 290V306" stroke="#A995FF" stroke-width="3" stroke-dasharray="4 5" />
 <rect x="28" y="202" width="544" height="88" rx="14" fill="#121A26" stroke="#29364B" />
 <text x="44" y="227" fill="#A995FF" font-size="13" font-weight="500" font-family="ProfileMono,Consolas,monospace">02 / NORMALIZE</text>
-<text x="44" y="255" fill="#EFF4FC" font-size="22" font-weight="700" font-family="ProfileDisplay,Segoe UI,Arial,sans-serif" letter-spacing="-.3">5,653 duplicates</text>
+<text x="44" y="255" fill="#EFF4FC" font-size="22" font-weight="700" font-family="ProfileDisplay,Segoe UI,Arial,sans-serif" letter-spacing="-.3">5,641 duplicates</text>
 <text x="44" y="278" fill="#B8C6DB" font-size="16" font-weight="400">Removed during collection</text>
 <path class="packet" d="M300 394V410" stroke="#F36BAA" stroke-width="3" stroke-dasharray="4 5" />
 <rect x="28" y="306" width="544" height="88" rx="14" fill="#121A26" stroke="#29364B" />
@@ -24,7 +24,7 @@
 <text x="44" y="463" fill="#EFF4FC" font-size="22" font-weight="700" font-family="ProfileDisplay,Segoe UI,Arial,sans-serif" letter-spacing="-.3">Source-aware records</text>
 <text x="44" y="486" fill="#B8C6DB" font-size="16" font-weight="400">Open the analyst dashboard</text>
 <text x="28" y="538" fill="#43E6C5" font-size="21" font-weight="600">6,878 observables  /  3,122 CVEs</text>
-<text x="28" y="568" fill="#B8C6DB" font-size="17" font-weight="400">Last interval: +278 added / 262 updated / 278 removed</text>
-<text x="28" y="600" fill="#B8C6DB" font-size="14" font-weight="500" font-family="ProfileMono,Consolas,monospace">COLLECTION / 17 Oct 2026 / 18:06 UTC</text>
+<text x="28" y="568" fill="#B8C6DB" font-size="17" font-weight="400">Last interval: +361 added / 61 updated / 361 removed</text>
+<text x="28" y="600" fill="#B8C6DB" font-size="14" font-weight="500" font-family="ProfileMono,Consolas,monospace">COLLECTION / 17 Oct 2026 / 21:56 UTC</text>
 <text x="28" y="664" fill="#B8C6DB" font-size="14" font-weight="500" font-family="ProfileMono,Consolas,monospace">Retained records, not local detections. Open the snapshot for context.</text>
 </g></svg>
