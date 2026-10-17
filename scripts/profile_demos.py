@@ -107,7 +107,8 @@ def inspector():
     if set(raw['ips'])!=ips: raise ValueError('Extracted IPs did not match fixture')
     record={'week':plan()['week'],'title':case['title'],'prompt':case['prompt'],'fixture':case['file'],'fixture_sha256':hashlib.sha256((WORK/case['file']).read_bytes()).hexdigest(),'source':source,'findings':raw,'scope':'Owned harmless training PDF. Static analysis; external reputation lookups disabled. The tool verdict is not a security guarantee.'}
     save('case-report.json',record)
-    print(f'Extracted: {len(raw["urls"])} unique URLs / {len(raw["ips"])} IPs',flush=True)
+    ip_label='IP' if len(raw['ips'])==1 else 'IPs'
+    print(f'Extracted: {len(raw["urls"])} unique URLs / {len(raw["ips"])} {ip_label}',flush=True)
     for url in raw['urls']: print('  '+url.replace('http','hxxp').replace('.','[.]'),flush=True)
     print(f'Actual heuristic output: score={raw["score"]} / verdict={raw["verdict"]}',flush=True)
     print('JSON + Markdown reports generated. CASE VERIFIED',flush=True)
@@ -156,7 +157,8 @@ def downloader():
     command=[python_for('downloader'),'-m','website_downloader','--url',f'http://127.0.0.1:{server.server_port}/index.html','--destination',target,'--max-pages','3','--respect-robots']
     source=plan()['sources']['downloader']
     print('Website Downloader '+source['tag']+' / owned local fixture',flush=True)
-    print('$ website-downloader --url <local fixture> --destination mirror --max-pages 3 --respect-robots',flush=True)
+    print('$ website-downloader --url <local fixture> --max-pages 3',flush=True)
+    print('    --destination mirror --respect-robots',flush=True)
     try:
         result=run(command,cwd=WORK/'downloader',capture_output=True,text=True,encoding='utf-8',timeout=90)
     finally:
@@ -174,15 +176,18 @@ def case_art(record,mobile=False,findings=False):
     w,h=(600,370) if mobile else (1000,270)
     if findings: w,h=600,400
     p=surface(w,h,'IOC Inspector / '+record['week'],record['scope'])
-    p += ['<style>.scan{animation:scan 4s ease-in-out infinite}@keyframes scan{50%{opacity:.25}}@media(prefers-reduced-motion:reduce){.scan{animation:none}}</style>',txt(28,34,'IOC INSPECTOR / '+record['week'],15,'#A995FF',600)]
+    p += ['<style>.scan{animation:scan 4s ease-in-out infinite}.scan-line{animation:sweep 4s ease-in-out infinite}@keyframes scan{50%{opacity:.25}}@keyframes sweep{0%,100%{transform:translateY(-24px)}50%{transform:translateY(24px)}}@media(prefers-reduced-motion:reduce){.scan,.scan-line{animation:none}}</style>',txt(28,34,'IOC INSPECTOR / '+record['week'],15,'#A995FF',600)]
     if findings:
         raw=record['findings']
-        p += [txt(28,80,f'{len(raw["urls"])} unique URLs / {len(raw["ips"])} IPs',26,TEXT,600)]
+        ip_label='IP' if len(raw['ips'])==1 else 'IPs'
+        p += [txt(28,80,f'{len(raw["urls"])} unique URLs / {len(raw["ips"])} {ip_label}',26,TEXT,600)]
         for i,url in enumerate(raw['urls']):
             p += [txt(28,121+i*32,url.replace('http','hxxp').replace('.','[.]'),18,'#43E6C5')]
         p += [txt(28,253,f'Actual tool output: {raw["verdict"]} / score {raw["score"]}',20,'#A995FF',600),txt(28,290,'0 embedded files / 0 JavaScript objects',18,MUTED),txt(28,335,'Static result on a known harmless fixture.',18,MUTED),txt(28,368,'A heuristic verdict is not a security guarantee.',16,MUTED)]
     else:
         p += [txt(28,83,'A small document. A few clues.',28,TEXT,600),txt(28,126,record['title'],21,MUTED),txt(28,170 if not mobile else 176,record['prompt'],20,'#43E6C5'),txt(28,h-30,'EXPAND “REVEAL THE FINDINGS” BELOW',14,'#A995FF',600),f'<path class="scan" d="M28 {h-76}H{w-28}" stroke="#A995FF" stroke-width="2" stroke-dasharray="8 10"/>']
+        x,y=(300,262) if mobile else (867,128)
+        p += [f'<g transform="translate({x} {y})" fill="#121A26" stroke="#A995FF" stroke-width="2"><path d="M-32-43H12L32-23V43H-32Z"/><path d="M12-43V-23H32M-19-8H17M-19 5H8M-19 18H13" fill="none" stroke-opacity=".5"/><path class="scan-line" d="M-39 0H39" stroke="#43E6C5" stroke-width="3"/><circle cx="26" cy="27" r="15" fill="#121A26" stroke="#43E6C5"/><path d="M37 38L49 50" stroke="#43E6C5"/></g>']
     return '\n'.join(p+['</g></svg>\n'])
 
 
@@ -203,7 +208,8 @@ def finish():
     raw=record['findings']
     md=f'# IOC Inspector case file / {record["week"]}\n\n{record["title"]}\n\n{record["scope"]}\n\n'
     md+=f'Released source: [{record["source"]["tag"]}](https://github.com/PKHarsimran/IOC-Inspector/tree/{record["source"]["sha"]}). Fixture SHA-256: `{record["fixture_sha256"]}`.\n\n'
-    md+=f'Actual tool verdict: **{raw["verdict"]}**, score **{raw["score"]}**. {len(raw["urls"])} unique URLs and {len(raw["ips"])} IPs.\n\n'
+    ip_label='IP' if len(raw['ips'])==1 else 'IPs'
+    md+=f'Actual tool verdict: **{raw["verdict"]}**, score **{raw["score"]}**. {len(raw["urls"])} unique URLs and {len(raw["ips"])} {ip_label}.\n\n'
     md+='\n'.join('- `'+u.replace('http','hxxp').replace('.','[.]')+'`' for u in raw['urls'])+'\n\n[Raw findings](./case-report.json) · [Reproducible fixture recipe](../demos/cases.json)\n'
     save('case-report.md',md)
     save('demo-provenance.json',{**plan(),'recorded_at':datetime.now(timezone.utc).isoformat(),'method':'VHS recorded executions of released CLIs on owned fixtures; assertions passed.','reels':{name:hashlib.sha256((OUT/(name+'-demo.gif')).read_bytes()).hexdigest() for name in ('inspector','downloader')}})

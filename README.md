@@ -51,6 +51,16 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 [🛰️ Open dashboard ↗](https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/) · [Source ↗](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector)
 
+<a href="./profile/intel-conveyor.md">
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/intel-conveyor-mobile.svg">
+  <img src="./profile/intel-conveyor.svg" alt="Workflow-generated SwiftIOC conveyor: collect, normalize, publish and investigate. Real retained observable and CVE counts, deduplication, last-interval changes and collection timestamp from the public diagnostics." width="100%">
+</picture>
+</a>
+
+<sub>Real collection data, illustrated. Counts describe the retained feed and one collection interval. [Open the snapshot](./profile/intel-conveyor.md).</sub>
+
+
 <details>
 <summary><strong>🎬 Watch a 12-second evidence review</strong></summary>
 
@@ -87,6 +97,33 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 [Source ↗](https://github.com/PKHarsimran/IOC-Inspector)
 
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/case-file-mobile.svg">
+  <img src="./profile/case-file.svg" alt="IOC Inspector case of the week: an owned, harmless PDF with a few clues. The released CLI generates the findings; expand the answer below." width="100%">
+</picture>
+
+<details>
+<summary><strong>🕵️ Reveal the findings</strong></summary>
+
+<img src="./profile/case-findings.svg" alt="Actual extracted URLs, IP count, heuristic verdict and score from the weekly harmless training PDF. External reputation lookups are disabled; a heuristic verdict is not a security guarantee." width="600">
+
+[Read the case file](./profile/case-report.md) · [Raw tool findings](./profile/case-report.json) · [Fixture recipe](./demos/cases.json)
+
+</details>
+
+<details>
+<summary><strong>🎬 Watch the released scanner work the case</strong></summary>
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="./profile/inspector-demo.webp">
+  <img src="./profile/inspector-demo.gif" alt="VHS recording of the demo runner invoking the released IOC Inspector CLI on the weekly owned PDF and verifying its actual JSON findings." width="100%">
+</picture>
+
+<sub>The workflow records a real CLI execution. Reserved example domains and documentation IPs keep the fixture harmless. [Recording provenance](./profile/demo-provenance.json).</sub>
+
+</details>
+
+
 ### 03 / Website Downloader
 
 <a href="https://github.com/PKHarsimran/website-downloader">
@@ -104,11 +141,11 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 <summary><strong>🎬 Watch the CLI turn a site into an offline copy</strong></summary>
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="./profile/cli-demo.webp">
-  <img src="./profile/cli-demo.gif" alt="Website Downloader walkthrough: recorded CLI output from an owned local demo site, followed by the generated offline mirror. Three HTML pages, CSS and an SVG asset; relative links verified." width="100%">
+  <source media="(prefers-reduced-motion: reduce)" srcset="./profile/downloader-demo.webp">
+  <img src="./profile/downloader-demo.gif" alt="VHS recording of the demo runner invoking the released Website Downloader CLI, stopping the owned local source server, and verifying all links and assets in the three-page offline mirror." width="100%">
 </picture>
 
-<sub>A replay of real CLI output, followed by the generated mirror. Recorded October 17, 2026, using an owned local fixture; the localhost address is part of the demo.</sub>
+<sub>Automatically recorded from the released CLI against an owned local site. The source server stops before the offline links are checked. [Run results](./profile/downloader-demo.json) · [Recording provenance](./profile/demo-provenance.json).</sub>
 
 </details>
 
@@ -117,9 +154,11 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 My **Zima homelab** runs on **Docker Compose**. Media, photos, books, dashboards, and monitoring share a home; I build the workflows and automation that connect them.
 
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/mission-homelab-mobile.svg">
-  <img src="./profile/mission-homelab.svg" alt="Zima homelab service map: Jellyfin and Jellyseerr with Radarr, Sonarr, Prowlarr and Bazarr; Transmission with Gluetun; PhotoPrism; Shelfmark and Audiobookshelf; Homepage, Portainer and custom flow dashboards; Uptime Kuma, Glances, Dozzle and ntfy. Connected using Docker Compose." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/homelab-flow-mobile.svg">
+  <img src="./profile/homelab-flow.svg" alt="Zima homelab flow theatre: Jellyseerr requests, Radarr/Sonarr/Prowlarr/Bazarr automation, Transmission with Gluetun, and Jellyfin playback. Photo and book libraries, operations and monitoring share the stack. Illustrated handoffs from a curated service manifest; no live telemetry." width="100%" />
 </picture>
+
+<sub>Animated from the [public service manifest](./profile/lab-services.json). Illustrated handoffs; the service inventory below has the full cast.</sub>
 
 - 🎬 **Connect the workflow:** requests → library automation → VPN-routed downloads → Jellyfin playback.
 - 🖼️ **Bring the libraries together:** photo management, books, and audiobooks in one self-hosted stack.
@@ -184,6 +223,20 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 
 </details>
 
+<details>
+<summary><strong>🏅 Open the release mission-patch cabinet</strong></summary>
+
+<a href="./profile/release-patches.md">
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/release-patches-mobile.svg">
+  <img src="./profile/release-patches.svg" alt="Collectible mission patches generated from real public release versions and publication dates, showing up to two recent stable releases for each selected project." width="100%">
+</picture>
+</a>
+
+[Open the release log](./profile/release-patches.md)
+
+</details>
+
 <div align="center">
   <img src="./profile/stats.svg" alt="Harsimran's GitHub activity statistics" width="54%" align="top" />
   <img src="./profile/top-langs.svg" alt="Most-used languages across Harsimran's GitHub repositories" width="39%" align="top" />
@@ -202,6 +255,17 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 <img src="./profile/contribution-patrol.svg" alt="A pixel ship patrols active days from Harsimran's public GitHub contribution calendar. Every square is a real calendar day; colours are GitHub activity levels. Animation respects reduced-motion preferences." width="100%" />
 
 <sub>Every square is a day; colour is GitHub's activity level. Generated daily from the [public calendar](https://github.com/PKHarsimran). [Read the calendar snapshot](./profile/contribution-patrol.json).</sub>
+
+</details>
+
+<details>
+<summary><strong>⚙️ How the profile builds itself</strong></summary>
+
+- **Daily:** read public SwiftIOC diagnostics and public release metadata; regenerate the conveyor, homelab flow and release patches.
+- **Weekly, or when releases/recipes change:** rotate the harmless case, run the released CLIs, verify their output, and record fresh demo reels.
+- **Every build:** keep collection timestamps and source provenance, support reduced motion, and publish only after the checks pass.
+
+[Watch the workflow ↗](https://github.com/PKHarsimran/PKHarsimran/actions/workflows/living-profile.yml) · [Reproduce the exhibits](./demos/README.md)
 
 </details>
 

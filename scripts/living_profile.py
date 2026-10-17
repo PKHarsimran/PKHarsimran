@@ -148,8 +148,17 @@ def patches(data,mobile=False):
         p += [txt(28,130,'No stable public releases found.',22,MUTED)]
     for i,r in enumerate(data):
         x,y=(28,96+i*184) if mobile else (28+(i%3)*324,96+(i//3)*218)
+        if not mobile:
+            row_count=min(3,len(data)-(i//3)*3)
+            x=(1000-(row_count*296+(row_count-1)*28))//2+(i%3)*324
         cw,ch=(544,168) if mobile else (296,198)
-        p += [f'<rect x="{x}" y="{y}" width="{cw}" height="{ch}" rx="16" fill="#121A26" stroke="{BORDER}"/>',f'<g transform="translate({x+58} {y+62})" fill="none" stroke="{r["color"]}" stroke-width="2"><path d="M0-35L30-17V17L0 35L-30 17V-17Z"/><path d="M-13 0L-3 10L16-12"/><circle r="44" stroke-opacity=".2" stroke-dasharray="3 6"/></g>',txt(x+(122 if mobile else 118),y+47,r['name'],22 if mobile else 17,TEXT,600),txt(x+(122 if mobile else 118),y+78,r['tag'][:18],25 if mobile else 20,r['color'],650),txt(x+22,y+(132 if mobile else 145),'RELEASED / '+r['published_at'][:10],15 if mobile else 13,MUTED),txt(x+22,y+ch-17,'PUBLIC RELEASE / MISSION COMPLETE',12,r['color'],500)]
+        if r.get('repo')=='IOC-Inspector':
+            emblem='<path d="M-16-20H4L14-10V8M4-20V-10H14M-16-20V18H-5M-8-2H2"/><rect x="0" y="2" width="16" height="16"/><path d="M16 18L22 24"/>'
+        elif r.get('repo')=='website-downloader':
+            emblem='<path d="M-4-21H4V-3H14L0 11L-14-3H-4Z"/><path d="M-19 16V23H19V16"/>'
+        else:
+            emblem='<path d="M-14-12L12-5L3 17Z" stroke-opacity=".5"/><g fill="'+r['color']+'" stroke="none"><rect x="-19" y="-17" width="10" height="10"/><rect x="7" y="-10" width="10" height="10"/><rect x="-2" y="12" width="10" height="10"/></g>'
+        p += [f'<rect x="{x}" y="{y}" width="{cw}" height="{ch}" rx="16" fill="#121A26" stroke="{BORDER}"/>',f'<g transform="translate({x+58} {y+62})" fill="none" stroke="{r["color"]}" stroke-width="2"><path d="M0-35L30-17V17L0 35L-30 17V-17Z"/>'+emblem+'<circle r="44" stroke-opacity=".2" stroke-dasharray="3 6"/></g>',txt(x+(122 if mobile else 118),y+47,r['name'],22 if mobile else 17,TEXT,600),txt(x+(122 if mobile else 118),y+78,r['tag'][:18],25 if mobile else 20,r['color'],650),txt(x+22,y+(132 if mobile else 145),'RELEASED / '+r['published_at'][:10],15 if mobile else 13,MUTED),txt(x+22,y+ch-17,'PUBLIC RELEASE / MISSION COMPLETE',12,r['color'],500)]
     p += ['</g></svg>\n']
     return '\n'.join(p)
 

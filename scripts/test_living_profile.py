@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 import xml.etree.ElementTree as ET
 
 import living_profile as living
@@ -39,6 +40,15 @@ class LivingProfileTests(unittest.TestCase):
 
     def test_released_demo_tags_cannot_be_shell_options(self):
         with self.assertRaises(ValueError): living.resolve_tag('IOC-Inspector','--upload-pack=anything')
+
+    def test_demo_cache_is_stable_within_a_week_and_rotates_next_week(self):
+        releases=[{'repo':repo,'tag':'v1.0.0'} for repo in living.DEMO_REPOS.values()]
+        with patch.object(living,'resolve_tag',return_value='a'*40):
+            first=living.demo_plan(releases,datetime(2026,10,17,tzinfo=timezone.utc))
+            same=living.demo_plan(releases,datetime(2026,10,18,tzinfo=timezone.utc))
+            next_week=living.demo_plan(releases,datetime(2026,10,19,tzinfo=timezone.utc))
+        self.assertEqual(first['fingerprint'],same['fingerprint'])
+        self.assertNotEqual(first['fingerprint'],next_week['fingerprint'])
 
     def test_mirror_rejects_external_and_missing_links(self):
         with tempfile.TemporaryDirectory() as name:
