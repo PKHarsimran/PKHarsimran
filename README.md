@@ -1,4 +1,4 @@
-<a name="mission-control"></a>
+<a id="mission-control" name="mission-control"></a>
 
 <div align="center">
 
@@ -192,7 +192,7 @@ Threat intelligence, document triage, and a little web archaeology.
 </p>
 <!-- buttons:return:end -->
 
-<a name="homelab"></a>
+<a id="homelab" name="homelab"></a>
 
 ## Inside the lab
 
@@ -262,7 +262,7 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 </p>
 <!-- buttons:containers:end -->
 
-<a name="activity"></a>
+<a id="activity" name="activity"></a>
 
 ## Build signals
 
