@@ -387,7 +387,7 @@
 <rect x="928" y="153" width="13" height="13" rx="3" fill="#174B45"><title>2026-10-14: activity level 1 of 4</title></rect>
 <rect x="928" y="170" width="13" height="13" rx="3" fill="#174B45"><title>2026-10-15: activity level 1 of 4</title></rect>
 <rect x="928" y="187" width="13" height="13" rx="3" fill="#217466"><title>2026-10-16: activity level 2 of 4</title></rect>
-<rect x="928" y="204" width="13" height="13" rx="3" fill="#217466"><title>2026-10-17: activity level 2 of 4</title></rect>
+<rect x="928" y="204" width="13" height="13" rx="3" fill="#2DAA92"><title>2026-10-17: activity level 3 of 4</title></rect>
 <g class="motion shot0" style="opacity:0;animation:shot0 32s linear infinite"><path d="M50.5 250V210.5" stroke="#43E6C5" stroke-width="2" stroke-opacity=".65"/><circle cx="50.5" cy="210.5" r="10" fill="none" stroke="#F36BAA" stroke-width="2"/></g>
 <g class="motion shot1" style="opacity:0;animation:shot1 32s linear infinite"><path d="M220.5 250V159.5" stroke="#43E6C5" stroke-width="2" stroke-opacity=".65"/><circle cx="220.5" cy="159.5" r="10" fill="none" stroke="#F36BAA" stroke-width="2"/></g>
 <g class="motion shot2" style="opacity:0;animation:shot2 32s linear infinite"><path d="M339.5 250V176.5" stroke="#43E6C5" stroke-width="2" stroke-opacity=".65"/><circle cx="339.5" cy="176.5" r="10" fill="none" stroke="#F36BAA" stroke-width="2"/></g>
