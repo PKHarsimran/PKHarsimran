@@ -2,6 +2,7 @@
 from html import escape
 from pathlib import Path
 import re
+from profile_theme import apply_theme
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'profile/buttons'
@@ -60,13 +61,14 @@ def button(name):
     label_x=32 if variant=='nav' else 43
     p=[f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(label)}">',f'<title>{escape(label)}</title><rect x="1" y="1" width="{width-2}" height="{height-2}" rx="{9 if variant=="nav" else 11}" fill="{fill}" stroke="{border}"/>']
     if variant=='primary':
+        p += ['<style>.cta-icon{animation:invite 9s ease-in-out infinite}@keyframes invite{0%,75%,100%{transform:translateX(0)}82%,91%{transform:translateX(2px)}86%{transform:translateX(0)}}@media(prefers-reduced-motion:reduce){.cta-icon{animation:none}}</style>']
         p += [f'<path d="M13 2H{width-13}" stroke="#FFFFFF" stroke-opacity=".35"/>']
     if icon in ('01','02','03'):
         p += [f'<text x="10" y="23" font-family="Consolas,monospace" font-size="11" fill="{icon_color}">{icon}</text>']
     else:
-        p += [f'<g transform="translate({icon_x} {height/2}) scale({.75 if variant=="nav" else .8})" fill="none" stroke="{icon_color}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">{ICONS[icon]}</g>']
+        p += [f'<g class="{"cta-icon" if variant=="primary" else "icon"}"><g transform="translate({icon_x} {height/2}) scale({.75 if variant=="nav" else .8})" fill="none" stroke="{icon_color}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">{ICONS[icon]}</g></g>']
     p += [f'<text x="{label_x}" y="{height/2+5}" font-family="Segoe UI,Arial,sans-serif" font-size="{13 if variant=="nav" else 15}" font-weight="600" fill="{foreground}">{escape(label)}</text>','</svg>\n']
-    return ''.join(p)
+    return apply_theme(''.join(p),'button')
 
 
 def group(name):

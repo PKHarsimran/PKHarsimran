@@ -1,0 +1,20 @@
+{
+  "space-grotesk-700.woff2": {
+    "family": "ProfileDisplay",
+    "source": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf",
+    "source_sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
+    "subset_sha256": "99bf80657f097e9c16db49a7f85a468feef8759c6f6a59f4ceaedda8a01f1ba4"
+  },
+  "space-grotesk-buttons-600.woff2": {
+    "family": "ProfileButton",
+    "source": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf",
+    "source_sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
+    "subset_sha256": "6f63c64f8e1fc719fb71d903e048c78736ca7e8356c86e012c14e4d62a3fe023"
+  },
+  "ibm-plex-mono-500.woff2": {
+    "family": "ProfileMono",
+    "source": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/ibmplexmono/IBMPlexMono-Medium.ttf",
+    "source_sha256": "a9b4c49bb299e05b5f6c481e7fb5e78943d2793249a0c8874ab574a2d1ea6755",
+    "subset_sha256": "68ba6f90195c23f229f0dd1e250c002a6b330c4ad0c75e8acd6a821877e8b81f"
+  }
+}

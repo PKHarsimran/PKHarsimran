@@ -235,7 +235,10 @@ My **Zima homelab** runs on **Docker Compose**. Media, photos, books, dashboards
 
 ## 🚧 Now building
 
-<img src="./profile/mission-now.svg" alt="Now building: a modular Docker Compose home-server starter kit with guided setup and connected services. Next checkpoint: independent fresh-install validation using the documentation." width="100%" />
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/mission-now-mobile.svg" />
+  <img src="./profile/mission-now.svg" alt="Now building: a modular Docker Compose home-server starter kit with guided setup and connected services. Next checkpoint: independent fresh-install validation using the documentation." width="100%" />
+</picture>
 
 Turning lessons from the Zima lab into a **modular Compose starter kit**. The test: someone else can follow the docs, choose their services, and bring the stack online.
 

@@ -1,5 +1,6 @@
 """Public-data artwork and release-pinned demo planning. Standard library only."""
 from __future__ import annotations
+from profile_theme import apply_theme
 
 import argparse
 from datetime import datetime, timezone
@@ -25,6 +26,7 @@ STYLE = '<style>.packet{animation:packet 8s linear infinite}.scan{animation:scan
 def write(name, value):
     OUT.mkdir(exist_ok=True)
     text = json.dumps(value, indent=2, ensure_ascii=False)+'\n' if not isinstance(value, str) else value
+    if name.endswith('.svg'): text=apply_theme(text)
     target = OUT/name
     temporary = target.with_suffix(target.suffix+'.tmp')
     temporary.write_text(text, encoding='utf-8')
@@ -182,7 +184,8 @@ def demo_plan(release_data,now):
         sources[name]={'repo':repo,'tag':release['tag'],'sha':resolve_tag(repo,release['tag'])}
     week=now.strftime('%G-W%V')
     recipes={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'demos').rglob('*')) if p.is_file()}
-    recipes['scripts/profile_demos.py']=hashlib.sha256((ROOT/'scripts/profile_demos.py').read_bytes()).hexdigest()
+    for path in [ROOT/'scripts/profile_demos.py', ROOT/'scripts/profile_theme.py', *sorted((ROOT/'fonts').glob('*.woff2'))]:
+        recipes[path.relative_to(ROOT).as_posix()]=hashlib.sha256(path.read_bytes()).hexdigest()
     signature={'week':week,'sources':sources,'recipes':recipes}
     fingerprint=hashlib.sha256(json.dumps(signature,sort_keys=True).encode()).hexdigest()
     return {**signature,'fingerprint':fingerprint}

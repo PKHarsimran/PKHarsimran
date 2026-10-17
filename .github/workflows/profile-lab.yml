@@ -10,6 +10,8 @@ on:
       - ".github/workflows/profile-lab.yml"
       - "scripts/generate_profile_lab.py"
       - "scripts/test_generate_profile_lab.py"
+      - "scripts/profile_theme.py"
+      - "fonts/**"
 
 permissions:
   contents: write

@@ -3,6 +3,7 @@
 Standard library only. No private-repository discovery, analytics, or write API calls.
 """
 from __future__ import annotations
+from profile_theme import apply_theme
 
 import argparse
 from datetime import date, datetime, timedelta, timezone
@@ -111,7 +112,7 @@ def render_radar(snapshot):
         star_label = "STAR" if item["stars"] == 1 else "STARS"
         p += [f'<rect x="30" y="{y}" width="642" height="104" rx="14" fill="{PANEL}" stroke="{BORDER}"/>', f'<rect x="30" y="{y+18}" width="3" height="68" rx="1.5" fill="{item["color"]}"/>', txt(50, y+34, item["name"], 27, TEXT, 650), f'<rect x="525" y="{y+15}" width="126" height="27" rx="13" fill="{state_color}" fill-opacity=".07" stroke="{state_color}" stroke-opacity=".35"/>', txt(588, y+34, item["ci"], 12, state_color, 650, 'text-anchor="middle"'), txt(52, y+64, f'RELEASE {display_release}  ·  {item["stars"]:,} {star_label}', 16, item["color"], 500), txt(52, y+87, f'Latest {item["default_branch"]} commit: {last}', 13, MUTED)]
     p += ['<g transform="translate(824 245)"><circle r="120" fill="#43E6C5" fill-opacity=".018" stroke="#29364B"/><circle r="80" fill="none" stroke="#29364B" stroke-dasharray="3 8"/><circle r="40" fill="none" stroke="#29364B"/><path d="M-120 0H120M0-120V120" stroke="#29364B"/><g class="sweep"><path d="M0 0L-60-103A119 119 0 0 1 0-119Z" fill="#43E6C5" fill-opacity=".08"/><path d="M0 0V-119" stroke="#43E6C5" stroke-opacity=".5"/></g><path d="M-14-9L0-22L14-9V11L0 22L-14 11Z" fill="#121A26" stroke="#43E6C5" stroke-width="2"/>', '<circle class="blip" cx="-70" cy="-62" r="5" fill="#43E6C5"/><circle class="blip" cx="62" cy="-17" r="5" fill="#A995FF"/><circle class="blip" cx="-18" cy="86" r="5" fill="#F36BAA"/>', txt(-70,-77,"01",11,"#43E6C5",600,'text-anchor="middle"'),txt(62,-32,"02",11,"#A995FF",600,'text-anchor="middle"'),txt(-18,110,"03",11,"#F36BAA",600,'text-anchor="middle"'),'</g>', txt(824, 406, "PUBLIC REPOSITORIES ONLY", 11, MUTED, 500, 'text-anchor="middle" letter-spacing="1"'), txt(30, 465, "SNAPSHOT / " + stamp, 12, MUTED, 500),txt(30,487,"Daily refresh · Commit activity includes automation · Open the snapshot for source links",11,MUTED),'</g></svg>\n']
-    return "\n".join(p)
+    return apply_theme("\n".join(p))
 
 
 class CalendarParser(HTMLParser):
@@ -185,7 +186,7 @@ def render_patrol(calendar):
         animation += [f'@keyframes shot{i}{{0%,{t+4:.3f}%,{min(t+7,99.9):.3f}%,100%{{opacity:0}}{t+5:.3f}%{{opacity:.75}}}}']
         p += [f'<g class="motion shot{i}" style="opacity:0;animation:shot{i} 32s linear infinite"><path d="M{x} 250V{y}" stroke="#43E6C5" stroke-width="2" stroke-opacity=".65"/><circle cx="{x}" cy="{y}" r="10" fill="none" stroke="#F36BAA" stroke-width="2"/></g>']
     p += ['<style>'+''.join(animation)+'.ship{transform:translate(500px,267px);animation:ship 32s linear infinite}@media(prefers-reduced-motion:reduce){.motion{display:none}.ship{animation:none}}</style>', '<g class="ship" shape-rendering="crispEdges"><path d="M-3-14H3V-8H7V-2H13V10H5V6H-5V10H-13V-2H-7V-8H-3Z" fill="#A995FF"/><path d="M-3-3H3V5H-3Z" fill="#43E6C5"/><path d="M-2 10H2V17H-2Z" fill="#F36BAA"/></g>', txt(30,315,f'{len(points)} active days in the displayed calendar · Color = GitHub activity level · Generated daily',12,MUTED),'</g></svg>\n']
-    return "\n".join(p)
+    return apply_theme("\n".join(p))
 
 
 def report_markdown(snapshot):

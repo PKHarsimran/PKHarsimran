@@ -11,6 +11,8 @@ on:
       - "scripts/living_profile.py"
       - "scripts/profile_demos.py"
       - "scripts/test_living_profile.py"
+      - "scripts/profile_theme.py"
+      - "fonts/**"
       - "demos/**"
       - "profile/lab-services.json"
 

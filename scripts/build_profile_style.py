@@ -3,6 +3,7 @@ from html import escape
 from pathlib import Path
 import re
 import xml.etree.ElementTree as ET
+from profile_theme import apply_theme, animate_project, PROJECT_MOTION
 
 OUT = Path(__file__).resolve().parents[1] / "profile"
 TEXT, MUTED, BORDER = "#EFF4FC", "#A7B6CE", "#29364B"
@@ -22,11 +23,12 @@ def toolkit(mobile=False):
     width, height = (600, 606) if mobile else (1000, 348)
     p = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">',
          '<title id="title">Operator toolkit</title><desc id="desc">Code: Python, Bash, C++. Security: Splunk, Cortex XDR, Kibana, F5 BIG-IP. Infrastructure: Docker, Ansible, Raspberry Pi. Observability: Grafana, InfluxDB, MQTT.</desc>',
-         '<defs><linearGradient id="surface" x2="1" y2="1"><stop stop-color="#152133"/><stop offset="1" stop-color="#0D1117"/></linearGradient></defs>',
+         '<defs><linearGradient id="surface" x2="1" y2="1"><stop stop-color="#152133"/><stop offset="1" stop-color="#0D1117"/></linearGradient></defs><style>.tool-led{animation:equipped 12s ease-in-out infinite}@keyframes equipped{0%,16%,100%{opacity:.3}8%{opacity:1}}@media(prefers-reduced-motion:reduce){.tool-led{animation:none;opacity:1}}</style>',
          f'<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="{width-2}" height="{height-2}" rx="22" fill="url(#surface)" stroke="{BORDER}"/>',
          text(28, 34, "OPERATOR TOOLKIT / EQUIPPED TO BUILD", 13, "#43E6C5", 'font-weight="600" letter-spacing="1.3"')]
     for i, (number, label, color, tools) in enumerate(TOOLS):
         y = 70 + i * (130 if mobile else 67)
+        p += [f'<circle class="tool-led" cx="{width-32}" cy="{y+10}" r="3" fill="{color}" style="animation-delay:{i*3}s"/>']
         p += [text(28, y+17, number, 13, color, 'font-family="monospace"'),
               text(64, y+17, label, 21 if mobile else 18, TEXT, 'font-weight="600"')]
         x, chip_y = (28, y+36) if mobile else (370, y-6)
@@ -95,12 +97,28 @@ def mobile_banner():
 
 def mobile_project(kind, number, name, tagline, tags, color):
     p = panel(600,264,name,tagline+' '+tags)
-    p += [f'<path d="M2 28V234" stroke="{color}" stroke-width="4"/>',
+    p += [PROJECT_MOTION, f'<path class="edge-breathe" d="M2 28V234" stroke="{color}" stroke-width="4"/>',
           text(28,37,f'PROJECT / {number}',15,color,'font-weight="600" letter-spacing="1.5"'),
           artwork_group(f'mission-{kind}.svg','translate(891 101)','translate(545 43) scale(.38)'),
           text(28,104,name,39,TEXT,'font-weight="700" letter-spacing="-1"'),
           text(30,149,tagline,23,MUTED),text(30,215,tags,15,color,'font-weight="600"'),
           text(543,235,'↗',25,color),'</g></svg>\n']
+    return '\n'.join(p)
+
+
+def mobile_now():
+    p=panel(600,414,'Now building — the Compose starter kit','In development: modular home-server services and guided setup. Next checkpoint: independent fresh-install validation using the documentation.')
+    p += ['<style>.rack-led{animation:rack 5s ease-in-out infinite}@keyframes rack{0%,70%,100%{opacity:.35}25%{opacity:1}}@media(prefers-reduced-motion:reduce){.rack-led{animation:none}}</style>',
+          text(28,36,'NOW BUILDING / IN DEVELOPMENT',15,'#F36BAA','font-weight="600"'),
+          text(28,100,'The Compose',37,TEXT,'font-weight="700"'),
+          text(28,145,'starter kit',37,TEXT,'font-weight="700"'),
+          artwork_group('mission-now.svg','translate(822 70)','translate(456 76) scale(.64)'),
+          text(28,199,'Modular services. Guided setup.',23,MUTED),
+          text(28,233,'Connections included.',23,MUTED),
+          f'<path d="M28 264H572" stroke="{BORDER}"/>',
+          text(28,300,'NEXT CHECKPOINT',15,'#A995FF','font-weight="600"'),
+          text(28,343,'An independent fresh install,',23,'#43E6C5'),
+          text(28,377,'using only the docs.',23,'#43E6C5'),'</g></svg>\n']
     return '\n'.join(p)
 
 
@@ -122,9 +140,16 @@ def mobile_homelab():
 
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
+    for name in ('mission-banner.svg','mission-now.svg','mission-swiftioc.svg','mission-inspector.svg','mission-downloader.svg'):
+        path=OUT/name
+        content=path.read_text(encoding='utf-8')
+        if name in ('mission-swiftioc.svg','mission-inspector.svg','mission-downloader.svg'):
+            content=animate_project(content,name.removeprefix('mission-').removesuffix('.svg'))
+        path.write_text(apply_theme(content),encoding='utf-8')
     terminal=typing()
     assets={"mission-typing.svg":terminal,"mission-typing-mobile.svg":terminal.replace('width="780" height="44" viewBox="0 0 780 44"','width="512" height="44" viewBox="134 0 512 44"'),"mission-toolkit.svg":toolkit(),"mission-toolkit-mobile.svg":toolkit(True),"mission-banner-mobile.svg":mobile_banner(),"mission-homelab-mobile.svg":mobile_homelab()}
     for kind,number,name,tagline,tags,color in [('swiftioc','01','SwiftIOC','Follow the indicator. Keep the evidence.','PYTHON / THREAT INTEL / ANALYST WORKFLOWS','#43E6C5'),('inspector','02','IOC Inspector','Suspicious documents. Useful answers.','PYTHON / STATIC ANALYSIS / REPORTS','#A995FF'),('downloader','03','Website Downloader','Take a little piece of the web offline.','PYTHON / WEB ARCHIVING / PLAYWRIGHT','#F36BAA')]:
         assets[f'mission-{kind}-mobile.svg']=mobile_project(kind,number,name,tagline,tags,color)
+    assets['mission-now-mobile.svg']=mobile_now()
     for name, content in assets.items():
-        (OUT / name).write_text(content, encoding="utf-8")
+        (OUT / name).write_text(apply_theme(content,'terminal' if 'typing' in name else 'panel'), encoding="utf-8")

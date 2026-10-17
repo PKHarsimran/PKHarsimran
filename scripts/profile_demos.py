@@ -1,5 +1,6 @@
 """Run released CLIs on owned fixtures; record verified output and provenance."""
 from __future__ import annotations
+from profile_theme import apply_theme
 
 import argparse
 from datetime import datetime, timezone
@@ -45,6 +46,7 @@ def run(args,**kwargs):
 def save(name,data):
     target=OUT/name
     content=json.dumps(data,indent=2,ensure_ascii=False)+'\n' if not isinstance(data,str) else data
+    if name.endswith('.svg'): content=apply_theme(content)
     target.write_text(content,encoding='utf-8')
 
 
