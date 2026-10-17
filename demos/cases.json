@@ -1,0 +1,5 @@
+[
+  {"slug":"invoice","title":"The invoice with two destinations","prompt":"Which links and IPs survive static triage?","urls":["https://portal.example.com/invoice","http://192.0.2.42/receipt"],"hidden":"https://example.org/help"},
+  {"slug":"delivery","title":"The delivery note with a repeated link","prompt":"Does repeating a link create another finding?","urls":["https://example.com/parcel","https://example.com/parcel","http://198.51.100.23/tracking"],"hidden":null},
+  {"slug":"meeting","title":"The meeting invite with a quiet hyperlink","prompt":"Can static inspection find a link behind ordinary text?","urls":["https://example.org/agenda"],"hidden":"http://203.0.113.17/meeting"}
+]

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "label": "Zima homelab",
+  "scope": "Public service overview; illustrative handoffs, no live telemetry",
+  "media_flow": [
+    {"title": "Request", "services": ["Jellyseerr"], "detail": "Choose the next watch"},
+    {"title": "Automate", "services": ["Radarr", "Sonarr", "Prowlarr", "Bazarr"], "detail": "Coordinate the library"},
+    {"title": "Download", "services": ["Transmission", "Gluetun"], "detail": "VPN-routed transfers"},
+    {"title": "Watch", "services": ["Jellyfin"], "detail": "Bring the library home"}
+  ],
+  "libraries": ["PhotoPrism", "Shelfmark", "Audiobookshelf"],
+  "operations": ["Homepage", "Portainer", "Custom flow dashboards"],
+  "monitoring": ["Uptime Kuma", "Glances", "Dozzle", "ntfy"]
+}
