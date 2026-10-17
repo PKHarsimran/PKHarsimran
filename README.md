@@ -24,7 +24,7 @@
 
 ---
 
-## 🧑‍💻 The human behind the terminal
+## 👋 The human behind the terminal
 
 <img align="right" src="https://media.giphy.com/media/jpVuGo0JkAXJiuNNK7/giphy.gif" alt="Animated coding companion" width="180" />
 
