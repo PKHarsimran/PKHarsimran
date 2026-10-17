@@ -26,7 +26,14 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 ## 🚀 Selected builds
 
-### 💓 Project heartbeat
+### 📡 Public build radar
+
+<a href="./profile/public-pulse.md"><img src="./profile/public-pulse.svg" alt="Daily public build radar: CI status, latest release, stars, and default-branch commit date for SwiftIOC, IOC Inspector, and Website Downloader." width="100%" /></a>
+
+[Read the snapshot](./profile/public-pulse.md) · [Watch the generator run ↗](https://github.com/PKHarsimran/PKHarsimran/actions/workflows/profile-lab.yml)
+
+<details>
+<summary><strong>💓 Open live checks & release links</strong></summary>
 
 | Public project | Checks | Latest release |
 | :--- | :--- | :--- |
@@ -35,6 +42,8 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 | [Website Downloader](https://github.com/PKHarsimran/website-downloader) | [![Website Downloader CI](https://github.com/PKHarsimran/website-downloader/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/PKHarsimran/website-downloader/actions/workflows/python-app.yml) | [![Website Downloader release](https://img.shields.io/github/v/release/PKHarsimran/website-downloader?label=release&color=A995FF)](https://github.com/PKHarsimran/website-downloader/releases/latest) |
 
 <sub>Badges may be cached; open one for the underlying workflow or release.</sub>
+
+</details>
 
 ### 01 / SwiftIOC
 
@@ -190,6 +199,15 @@ The next checkpoint is making the setup understandable to someone who wasn't the
   <img src="https://raw.githubusercontent.com/PKHarsimran/PKHarsimran/output/github-contribution-grid-snake.svg" alt="Animated snake tracing Harsimran's GitHub contribution grid" width="100%">
 </picture>
 
+<details>
+<summary><strong>🚀 Launch contribution patrol</strong></summary>
+
+<img src="./profile/contribution-patrol.svg" alt="A pixel ship patrols active days from Harsimran's public GitHub contribution calendar. Every square is a real calendar day; colours are GitHub activity levels. Animation respects reduced-motion preferences." width="100%" />
+
+<sub>Every square is a day; colour is GitHub's activity level. Generated daily from the [public calendar](https://github.com/PKHarsimran). [Read the calendar snapshot](./profile/contribution-patrol.json).</sub>
+
+</details>
+
 ---
 
 <div align="center">
@@ -201,3 +219,4 @@ The next checkpoint is making the setup understandable to someone who wasn't the
 <sub>Build with curiosity. Leave something useful behind.</sub>
 
 </div>
+

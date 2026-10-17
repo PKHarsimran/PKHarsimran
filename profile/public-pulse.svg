@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="508" viewBox="0 0 1000 508" role="img" aria-labelledby="title desc"><title id="title">Public build radar</title><desc id="desc">SwiftIOC: PASSING, release v0.1.0, 16 stars; IOC Inspector: PASSING, release v0.1.0, 1 stars; Website Downloader: PASSING, release v2.6.1, 214 stars. Snapshot 17 Oct 2026 · 19:34 UTC</desc>
+<defs><linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#152133"/><stop offset="1" stop-color="#0D1117"/></linearGradient></defs>
+<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="998" height="506" rx="22" fill="url(#surface)" stroke="#29364B"/>
+<style>.sweep{animation:sweep 18s linear infinite}.blip{animation:blip 3s ease-in-out infinite}@keyframes sweep{to{transform:rotate(360deg)}}@keyframes blip{50%{opacity:.35}}@media(prefers-reduced-motion:reduce){.sweep,.blip{animation:none}}</style>
+<text x="30" y="34" fill="#43E6C5" font-size="12" font-weight="600" letter-spacing="1.5">PUBLIC BUILD RADAR / WORKFLOW GENERATED</text>
+<text x="30" y="64" fill="#EFF4FC" font-size="22" font-weight="600" >Three projects. Real signals. One small mission control.</text>
+<rect x="30" y="86" width="642" height="104" rx="14" fill="#121A26" stroke="#29364B"/>
+<rect x="30" y="104" width="3" height="68" rx="1.5" fill="#43E6C5"/>
+<text x="50" y="120" fill="#EFF4FC" font-size="27" font-weight="650" >SwiftIOC</text>
+<rect x="525" y="101" width="126" height="27" rx="13" fill="#43E6C5" fill-opacity=".07" stroke="#43E6C5" stroke-opacity=".35"/>
+<text x="588" y="120" fill="#43E6C5" font-size="12" font-weight="650" text-anchor="middle">PASSING</text>
+<text x="52" y="150" fill="#43E6C5" font-size="16" font-weight="500" >RELEASE v0.1.0  ·  16 STARS</text>
+<text x="52" y="173" fill="#A7B6CE" font-size="13" font-weight="400" >Latest main commit: 2026-10-17</text>
+<rect x="30" y="202" width="642" height="104" rx="14" fill="#121A26" stroke="#29364B"/>
+<rect x="30" y="220" width="3" height="68" rx="1.5" fill="#A995FF"/>
+<text x="50" y="236" fill="#EFF4FC" font-size="27" font-weight="650" >IOC Inspector</text>
+<rect x="525" y="217" width="126" height="27" rx="13" fill="#43E6C5" fill-opacity=".07" stroke="#43E6C5" stroke-opacity=".35"/>
+<text x="588" y="236" fill="#43E6C5" font-size="12" font-weight="650" text-anchor="middle">PASSING</text>
+<text x="52" y="266" fill="#A995FF" font-size="16" font-weight="500" >RELEASE v0.1.0  ·  1 STAR</text>
+<text x="52" y="289" fill="#A7B6CE" font-size="13" font-weight="400" >Latest main commit: 2026-07-02</text>
+<rect x="30" y="318" width="642" height="104" rx="14" fill="#121A26" stroke="#29364B"/>
+<rect x="30" y="336" width="3" height="68" rx="1.5" fill="#F36BAA"/>
+<text x="50" y="352" fill="#EFF4FC" font-size="27" font-weight="650" >Website Downloader</text>
+<rect x="525" y="333" width="126" height="27" rx="13" fill="#43E6C5" fill-opacity=".07" stroke="#43E6C5" stroke-opacity=".35"/>
+<text x="588" y="352" fill="#43E6C5" font-size="12" font-weight="650" text-anchor="middle">PASSING</text>
+<text x="52" y="382" fill="#F36BAA" font-size="16" font-weight="500" >RELEASE v2.6.1  ·  214 STARS</text>
+<text x="52" y="405" fill="#A7B6CE" font-size="13" font-weight="400" >Latest main commit: 2026-07-28</text>
+<g transform="translate(824 245)"><circle r="120" fill="#43E6C5" fill-opacity=".018" stroke="#29364B"/><circle r="80" fill="none" stroke="#29364B" stroke-dasharray="3 8"/><circle r="40" fill="none" stroke="#29364B"/><path d="M-120 0H120M0-120V120" stroke="#29364B"/><g class="sweep"><path d="M0 0L-60-103A119 119 0 0 1 0-119Z" fill="#43E6C5" fill-opacity=".08"/><path d="M0 0V-119" stroke="#43E6C5" stroke-opacity=".5"/></g><path d="M-14-9L0-22L14-9V11L0 22L-14 11Z" fill="#121A26" stroke="#43E6C5" stroke-width="2"/>
+<circle class="blip" cx="-70" cy="-62" r="5" fill="#43E6C5"/><circle class="blip" cx="62" cy="-17" r="5" fill="#A995FF"/><circle class="blip" cx="-18" cy="86" r="5" fill="#F36BAA"/>
+<text x="-70" y="-77" fill="#43E6C5" font-size="11" font-weight="600" text-anchor="middle">01</text>
+<text x="62" y="-32" fill="#A995FF" font-size="11" font-weight="600" text-anchor="middle">02</text>
+<text x="-18" y="110" fill="#F36BAA" font-size="11" font-weight="600" text-anchor="middle">03</text>
+</g>
+<text x="824" y="406" fill="#A7B6CE" font-size="11" font-weight="500" text-anchor="middle" letter-spacing="1">PUBLIC REPOSITORIES ONLY</text>
+<text x="30" y="465" fill="#A7B6CE" font-size="12" font-weight="500" >SNAPSHOT / 17 Oct 2026 · 19:34 UTC</text>
+<text x="30" y="487" fill="#A7B6CE" font-size="11" font-weight="400" >Daily refresh · Commit activity includes automation · Open the snapshot for source links</text>
+</g></svg>
