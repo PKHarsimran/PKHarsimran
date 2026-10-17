@@ -1,98 +1,62 @@
 <div align="center">
 
-# Hey, I'm Harsimran 👋
+<a href="https://harsim.ca"><img src="./profile/mission-banner.svg" alt="Harsimran Sidhu — turning curiosity into automation. Cybersecurity, threat intelligence, and automation." width="100%" /></a>
 
-**🛡️ Follow the evidence. ⚙️ Automate the boring bits.**
+**Cybersecurity analyst · Open-source builder · Homelab tinkerer**
 
-<a href="https://harsim.ca">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=24&amp;duration=3000&amp;pause=1000&amp;color=00D4AA&amp;center=true&amp;vCenter=true&amp;width=820&amp;height=55&amp;lines=Cybersecurity+Analyst+%7C+Automation+Builder;Threat+intel.+Useful+tools.+Less+busywork.;Turning+curiosity+into+automation." alt="Cybersecurity Analyst | Automation Builder | Turning curiosity into automation" width="820" />
-</a>
+<a href="https://harsim.ca"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=500&amp;size=20&amp;duration=2800&amp;pause=1500&amp;color=43E6C5&amp;center=true&amp;vCenter=true&amp;width=780&amp;height=38&amp;lines=Follow+the+evidence.;Automate+the+boring+bits.;Always+one+more+thing+to+build." alt="Follow the evidence. Automate the boring bits. Always one more thing to build." width="780" /></a>
 
-<img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" alt="A little animated hello" width="70" />
+[Website ↗](https://harsim.ca) · [LinkedIn ↗](https://www.linkedin.com/in/harsimransidhu/) · [Docker Hub ↗](https://hub.docker.com/u/pkvirus)
 
-<br>
-
-<a href="https://harsim.ca"><img src="https://img.shields.io/badge/Website-harsim.ca-00D4AA?style=for-the-badge" alt="Visit harsim.ca" /></a>
-<a href="https://www.linkedin.com/in/harsimransidhu/"><img src="https://img.shields.io/badge/LinkedIn-Harsimran_Sidhu-0A66C2?style=for-the-badge" alt="Connect with Harsimran Sidhu on LinkedIn" /></a>
-<a href="https://hub.docker.com/u/pkvirus"><img src="https://img.shields.io/badge/Docker_Hub-pkvirus-2496ED?style=for-the-badge&amp;logo=docker&amp;logoColor=white" alt="Explore pkvirus on Docker Hub" /></a>
-
-<br>
-
-[🧑‍💻 About me](#-the-human-behind-the-terminal) · [🚀 Projects](#-things-ive-built) · [🏠 Homelab](#-meanwhile-in-the-homelab) · [🧰 Toolkit](#-my-toolkit) · [📊 Activity](#-the-commit-log) · [🐍 Snake](#-one-more-commit)
+[👋 Operator](#-operator-profile) · [🚀 Projects](#-selected-builds) · [🏠 Homelab](#-inside-the-lab) · [🧰 Toolkit](#-toolkit) · [📊 Activity](#-activity-log)
 
 </div>
 
----
+## 👋 Operator profile
 
-## 👋 The human behind the terminal
+I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy security data into something useful: clearer investigations, better dashboards, and fewer repetitive steps.
 
-<img align="right" src="https://media.giphy.com/media/jpVuGo0JkAXJiuNNK7/giphy.gif" alt="A quick study break" width="180" />
+| 🛡️ In the SOC | 🔭 On the workbench | 🏠 In the lab |
+| :--- | :--- | :--- |
+| WAF tuning, endpoint investigations, detection engineering | Threat intelligence with **Splunk Enterprise**, exploring **OpenCTI** | Monitoring stacks, **Raspberry Pi**, and **Ansible** automation |
 
-I'm **Harsimran Sidhu**, a cybersecurity analyst and developer who likes turning messy security data into useful tools, dashboards, and repeatable workflows.
+> My favourite kind of side project? A repetitive task that doesn't need to be repetitive anymore.
 
-- 🛡️ **In the SOC:** WAF tuning, endpoint investigations, and detection engineering.
-- 🔭 **Building:** threat intelligence workflows with **Splunk Enterprise**.
-- ⚙️ **Automating:** the repetitive bits with **Python, Docker, and Ansible**.
-- 🌱 **Exploring:** **OpenCTI** and ways to put threat data to work.
-- 🏠 **Off the clock:** homelab experiments, monitoring stacks, and Raspberry Pi projects.
-- 💬 **Talk to me about:** SOC automation, Splunk, incident response, or open source.
+## 🚀 Selected builds
 
-> If there's a repetitive task, there's probably a script waiting to happen.
+### 01 / SwiftIOC
 
-<br clear="both" />
-
----
-
-## 🚀 Things I've built
-
-<div align="center">
-  <a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector"><img src="./profile/swiftioc.svg" alt="SwiftIOC repository card" width="48%" /></a>
-  <a href="https://github.com/PKHarsimran/website-downloader"><img src="./profile/website-downloader.svg" alt="Website Downloader repository card" width="48%" /></a>
-</div>
-
-### 🛰️ SwiftIOC — connect the intel
+<a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector"><img src="./profile/mission-swiftioc.svg" alt="SwiftIOC — follow the indicator, keep the evidence. Python threat intelligence and analyst workflows." width="100%" /></a>
 
 A Python collector and browser dashboard for threat intelligence. Collect and normalize IOCs and vulnerability reports, inspect the source evidence, and export useful findings.
 
-**Python · Threat intelligence · Analyst workflows**
+[🛰️ Launch dashboard](https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/) · [View source ↗](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector)
 
-[🔎 Try the live dashboard](https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/) · [🧑‍💻 Explore the code](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector)
+### 02 / IOC Inspector
 
-### 🕵️ IOC Inspector — document detective
+<a href="https://github.com/PKHarsimran/IOC-Inspector"><img src="./profile/mission-inspector.svg" alt="IOC Inspector — suspicious documents, useful answers. Python static analysis and structured reports." width="100%" /></a>
 
 Give suspicious PDFs and Office documents a closer look with static analysis, IOC extraction, and optional threat enrichment. Export findings in Markdown, JSON, or CSV.
 
-**Python · Document analysis · Structured reporting**
+[🕵️ Explore IOC Inspector ↗](https://github.com/PKHarsimran/IOC-Inspector)
 
-[🧑‍💻 Explore the code](https://github.com/PKHarsimran/IOC-Inspector)
+### 03 / Website Downloader
 
-### 🌐 Website Downloader CLI — take the web offline
+<a href="https://github.com/PKHarsimran/website-downloader"><img src="./profile/mission-downloader.svg" alt="Website Downloader — take a little piece of the web offline. Python web archiving with optional Playwright rendering." width="100%" /></a>
 
 Create browsable offline mirrors of websites you're authorized to archive. Rewrites links and assets, supports incremental updates, and offers optional JavaScript rendering with Playwright.
 
-**Python · Web archiving · Playwright**
+[🌐 Read the field guide](https://github.com/PKHarsimran/website-downloader/wiki) · [View source ↗](https://github.com/PKHarsimran/website-downloader)
 
-[📖 Read the guide](https://github.com/PKHarsimran/website-downloader/wiki) · [🧑‍💻 Explore the code](https://github.com/PKHarsimran/website-downloader)
+## 🏠 Inside the lab
 
+Where the side quests happen. A map of the tools I experiment with:
 
----
+<img src="./profile/mission-homelab.svg" alt="Homelab tool map: collect with Fluentd and MQTT; store with InfluxDB; visualize with Grafana; automate with Ansible and Semaphore; experiment with Raspberry Pi." width="100%" />
 
-## 🏠 Meanwhile, in the homelab...
+**The loop:** build something → watch the logs → learn something → automate it. 🔁
 
-```text
-homelab/
-├── 📡 collect      Fluentd + MQTT
-├── 🗃️ store        InfluxDB
-├── 📊 visualize    Grafana
-├── ⚙️ automate     Ansible + Semaphore
-└── 🥧 experiment   Raspberry Pi + whatever comes next
-```
-
-**The loop:** build something → watch the logs → learn something → automate it → repeat. 🔁
-
----
-
-## 🧰 My toolkit
+## 🧰 Toolkit
 
 ### 🐍 Code & scripts
 
@@ -122,36 +86,28 @@ homelab/
 <img src="https://img.shields.io/badge/Raspberry%20Pi-0D1117?style=for-the-badge&amp;logo=raspberrypi&amp;logoColor=A22846" alt="Raspberry Pi" />
 </p>
 
----
-
-## 📊 The commit log
+## 📊 Activity log
 
 <div align="center">
   <img src="./profile/stats.svg" alt="Harsimran's GitHub activity statistics" width="54%" align="top" />
   <img src="./profile/top-langs.svg" alt="Most-used languages across Harsimran's GitHub repositories" width="39%" align="top" />
 </div>
 
-## 🐍 One more commit...
-
-<div align="center">
-
-*Even the snake has a backlog.*
+### 🐍 Even the snake has a backlog
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PKHarsimran/PKHarsimran/output/github-contribution-grid-snake-dark.svg">
   <img src="https://raw.githubusercontent.com/PKHarsimran/PKHarsimran/output/github-contribution-grid-snake.svg" alt="Animated snake tracing Harsimran's GitHub contribution grid" width="100%">
 </picture>
 
-</div>
-
 ---
 
 <div align="center">
 
-**Build. Break. Learn. Automate. Repeat.**
+**Have a security workflow worth automating? Let's talk.**
 
-⚡ *"You have greatness within you."*
+[Say hello on LinkedIn ↗](https://www.linkedin.com/in/harsimransidhu/) · [Explore harsim.ca ↗](https://harsim.ca)
 
-[Say hello on LinkedIn](https://www.linkedin.com/in/harsimransidhu/) · [Explore my corner of the web](https://harsim.ca)
+<sub>Build with curiosity. Leave something useful behind.</sub>
 
 </div>
