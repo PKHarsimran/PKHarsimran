@@ -305,24 +305,34 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 
 </details>
 
-<picture>
-  <source media="(max-width: 600px)" srcset="./profile/activity-summary-mobile.svg">
-  <img src="./profile/activity-summary.svg" alt="GitHub activity statistics and repository language mix. The cards stack vertically on smaller screens." width="100%">
-</picture>
+### Contribution arcade
 
-### 🐍 Even the snake has a backlog
+<a href="./profile/contribution-calendar.json">
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/contribution-arcade-mobile.svg">
+  <img src="./profile/contribution-arcade.svg" alt="Contribution arcade: real GitHub calendar totals, active days and contributions in the last 30 displayed days. A decorative pixel courier follows active dates. The phone layout splits the full calendar into two rows; reduced motion keeps it still." width="100%">
+</picture>
+</a>
+
+<sub>One square, one day. Colour follows GitHub's activity levels. Calendar activity includes automation and any private activity shared publicly. [Read the daily snapshot](./profile/contribution-calendar.json).</sub>
+
+<details>
+<summary><strong>🐍 Bonus round / let the snake loose</strong></summary>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PKHarsimran/PKHarsimran/output/github-contribution-grid-snake-dark.svg">
   <img src="https://raw.githubusercontent.com/PKHarsimran/PKHarsimran/output/github-contribution-grid-snake.svg" alt="Animated snake tracing Harsimran's GitHub contribution grid" width="100%">
 </picture>
 
+</details>
+
 <details>
-<summary><strong>🚀 Launch contribution patrol</strong></summary>
+<summary><strong>📊 Extra stats & language mix</strong></summary>
 
-<img src="./profile/contribution-patrol.svg" alt="A pixel ship patrols active days from Harsimran's public GitHub contribution calendar. Every square is a real calendar day; colours are GitHub activity levels. Animation respects reduced-motion preferences." width="100%" />
-
-<sub>Every square is a day; colour is GitHub's activity level. Generated daily from the [public calendar](https://github.com/PKHarsimran). [Read the calendar snapshot](./profile/contribution-patrol.json).</sub>
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/activity-summary-mobile.svg">
+  <img src="./profile/activity-summary.svg" alt="GitHub activity statistics and repository language mix. The cards stack vertically on smaller screens." width="100%">
+</picture>
 
 </details>
 

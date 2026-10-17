@@ -4,9 +4,10 @@ Standard library only. No private-repository discovery, analytics, or write API 
 """
 from __future__ import annotations
 from profile_theme import apply_theme
+from contribution_arcade import render_contributions
 
 import argparse
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, datetime, timezone
 from html import escape
 from html.parser import HTMLParser
 import json
@@ -147,9 +148,16 @@ class CalendarParser(HTMLParser):
     def __init__(self):
         super().__init__()
         self.days = {}
+        self.cell_dates = {}
+        self.counts = {}
+        self.tooltip_target = None
+        self.tooltip_text = []
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        if tag == "tool-tip":
+            self.tooltip_target = a.get("for")
+            self.tooltip_text = []
         if tag != "td" or "ContributionCalendar-day" not in a.get("class", "").split():
             return
         day = date.fromisoformat(a["data-date"])
@@ -159,12 +167,34 @@ class CalendarParser(HTMLParser):
         if day in self.days and self.days[day] != level:
             raise ValueError("Conflicting calendar cells")
         self.days[day] = level
+        if a.get("id"):
+            self.cell_dates[a["id"]] = day
+
+    def handle_data(self, data):
+        if self.tooltip_target:
+            self.tooltip_text.append(data)
+
+    def handle_endtag(self, tag):
+        if tag != "tool-tip" or not self.tooltip_target:
+            return
+        day = self.cell_dates.get(self.tooltip_target)
+        label = " ".join("".join(self.tooltip_text).split())
+        match = re.fullmatch(r"(No|[0-9]+|[0-9]{1,3}(?:,[0-9]{3})+) contributions? on .+\.", label)
+        if day is not None and match:
+            count = 0 if match[1] == "No" else int(match[1].replace(",", ""))
+            if (count == 0) != (self.days[day] == 0):
+                raise ValueError("Calendar count conflicts with its activity level")
+            if day in self.counts and self.counts[day] != count:
+                raise ValueError("Conflicting calendar contribution counts")
+            self.counts[day] = count
+        self.tooltip_target = None
+        self.tooltip_text = []
 
 
 def parse_calendar(html, today, *, minimum=350):
     parser = CalendarParser()
     parser.feed(html)
-    days = [{"date": day.isoformat(), "level": level} for day, level in sorted(parser.days.items()) if day <= today and (today-day).days < 378]
+    days = [{"date": day.isoformat(), "level": level, **({"count": parser.counts[day]} if day in parser.counts else {})} for day, level in sorted(parser.days.items()) if day <= today and (today-day).days < 378]
     if len(days) < minimum:
         raise ValueError("Public contribution calendar is incomplete; keeping the last good artwork")
     dates = [date.fromisoformat(d["date"]) for d in days]
@@ -173,57 +203,13 @@ def parse_calendar(html, today, *, minimum=350):
     return days
 
 
-def render_patrol(calendar):
-    days = calendar["days"]
-    start = date.fromisoformat(days[0]["date"])
-    start -= timedelta(days=(start.weekday()+1) % 7)
-    points = []
-    cells = [[] for _ in range(5)]
-    colors = ["#17212E", "#174B45", "#217466", "#2DAA92", "#43E6C5"]
-    p = surface(1000, 340, "Contribution patrol", "A decorative pixel ship patrols active days from the public GitHub profile calendar. Colors show GitHub activity levels, not security detections. Reduced motion preserves the static calendar.")
-    stamp = calendar["generated_at"][:10]
-    p += [txt(30,32,"CONTRIBUTION PATROL / PUBLIC CALENDAR",12,"#43E6C5",600,'letter-spacing="1.5"'), txt(30,59,"A pixel side quest, powered by real calendar activity.",22,TEXT,600), txt(961,32,stamp,12,MUTED,400,'text-anchor="end"')]
-    last_month = None
-    for d in days:
-        day = date.fromisoformat(d["date"])
-        week = (day-start).days // 7
-        row = (day.weekday()+1) % 7
-        x, y = 44+week*17, 102+row*17
-        if day.month != last_month:
-            p += [txt(x,87,day.strftime("%b"),11,MUTED)]
-            last_month = day.month
-        cells[d["level"]].append(f'<rect x="{x}" y="{y}"><title>{d["date"]}: activity level {d["level"]} of 4</title></rect>')
-        if d["level"]:
-            points.append((x+6.5,y+6.5))
-    # Shared geometry and colour keep all dates accessible without repeating attributes.
-    p += ['<style>.calendar rect{width:13px;height:13px;rx:3px}</style><g class="calendar">']
-    p += [f'<g fill="{color}">'+''.join(group)+'</g>' for color,group in zip(colors,cells) if group]
-    p += ['</g>']
-    chosen = [points[round(i*(len(points)-1)/(min(8,len(points))-1))] for i in range(min(8,len(points)))] if len(points)>1 else points
-    animation = ['@keyframes ship{']
-    if chosen:
-        animation += [f'0%{{transform:translate({chosen[0][0]}px,267px)}}']
-        for i,(x,y) in enumerate(chosen):
-            lo,hi = i*100/len(chosen)+2, i*100/len(chosen)+9 if len(chosen)<=8 else i*100/len(chosen)+5
-            hi = min(hi,99)
-            animation += [f'{lo:.3f}%,{hi:.3f}%{{transform:translate({x}px,267px)}}']
-        animation += [f'100%{{transform:translate({chosen[0][0]}px,267px)}}']
-    animation += ['}']
-    for i,(x,y) in enumerate(chosen):
-        t = i*100/len(chosen)
-        animation += [f'@keyframes shot{i}{{0%,{t+4:.3f}%,{min(t+7,99.9):.3f}%,100%{{opacity:0}}{t+5:.3f}%{{opacity:.75}}}}']
-        p += [f'<g class="motion shot{i}" style="opacity:0;animation:shot{i} 32s linear infinite"><path d="M{x} 250V{y}" stroke="#43E6C5" stroke-width="2" stroke-opacity=".65"/><circle cx="{x}" cy="{y}" r="10" fill="none" stroke="#F36BAA" stroke-width="2"/></g>']
-    p += ['<style>'+''.join(animation)+'.ship{transform:translate(500px,267px);animation:ship 32s linear infinite}@media(prefers-reduced-motion:reduce){.motion{display:none}.ship{animation:none}}</style>', '<g class="ship" shape-rendering="crispEdges"><path d="M-3-14H3V-8H7V-2H13V10H5V6H-5V10H-13V-2H-7V-8H-3Z" fill="#A995FF"/><path d="M-3-3H3V5H-3Z" fill="#43E6C5"/><path d="M-2 10H2V17H-2Z" fill="#F36BAA"/></g>', txt(30,315,f'{len(points)} active days in the displayed calendar · Color = GitHub activity level · Generated daily',12,MUTED),'</g></svg>\n']
-    return apply_theme("\n".join(p))
-
-
 def report_markdown(snapshot):
     rows = ["# Public build radar", "", "Generated " + snapshot["generated_at"] + ". This is a snapshot of three explicitly selected public repositories.", "", "| Project | CI run | Latest release | Stars | Default-branch commit |", "| --- | --- | --- | ---: | --- |"]
     for p in snapshot["projects"]:
         tag = p["release"] or p["release_state"]
         safe_tag = tag.replace("|", "\\|").replace("[", "\\[").replace("]", "\\]").replace("\n", " ")
         rows.append(f'| [{p["name"]}]({p["url"]}) | [{p["ci"]}]({p["ci_url"]}) | [{safe_tag}]({p["release_url"]}) | {p["stars"]} | {p["latest_commit_at"] or "unavailable"} |')
-    rows += ["", "Commit activity includes automation and all authors. A CI result describes the latest listed workflow run, not every branch or a security assessment.", "", "The radar sweep and ship are decorative. Calendar intensity comes from the unauthenticated public GitHub calendar; no private repository names or configuration are requested.", "", "[Generator](../scripts/generate_profile_lab.py) · [Daily workflow](../.github/workflows/profile-lab.yml)", ""]
+    rows += ["", "Commit activity includes automation and all authors. A CI result describes the latest listed workflow run, not every branch or a security assessment.", "", "The radar sweep and calendar courier are decorative. Calendar intensity comes from the unauthenticated public GitHub calendar; no private repository names or configuration are requested.", "", "[Generator](../scripts/generate_profile_lab.py) · [Daily workflow](../.github/workflows/profile-lab.yml)", ""]
     return "\n".join(rows)
 
 
@@ -239,7 +225,7 @@ def main():
         html = response.read().decode("utf-8")
     calendar = {"generated_at":stamp,"source":url,"days":parse_calendar(html,now.date())}
     snapshot = {"generated_at":stamp,"scope":"three selected public repositories","projects":projects}
-    files = {"public-pulse.svg":render_radar(snapshot),"public-pulse-mobile.svg":render_radar(snapshot,mobile=True),"public-pulse.json":json.dumps(snapshot,indent=2)+"\n","public-pulse.md":report_markdown(snapshot),"contribution-patrol.svg":render_patrol(calendar),"contribution-patrol.json":json.dumps(calendar,indent=2)+"\n"}
+    files = {"public-pulse.svg":render_radar(snapshot),"public-pulse-mobile.svg":render_radar(snapshot,mobile=True),"public-pulse.json":json.dumps(snapshot,indent=2)+"\n","public-pulse.md":report_markdown(snapshot),"contribution-arcade.svg":render_contributions(calendar),"contribution-arcade-mobile.svg":render_contributions(calendar,mobile=True),"contribution-calendar.json":json.dumps(calendar,indent=2)+"\n"}
     # No output changes until both sources have passed validation.
     args.output.mkdir(parents=True,exist_ok=True)
     for name, content in files.items():

@@ -1,10 +1,11 @@
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 import unittest
 from urllib.error import HTTPError
 import xml.etree.ElementTree as ET
 
 import generate_profile_lab as lab
+from contribution_arcade import calendar_summary
 
 
 class ProfileLabTests(unittest.TestCase):
@@ -65,15 +66,59 @@ class ProfileLabTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             lab.parse_calendar(html,date(2026,10,17),minimum=2)
 
+    def test_calendar_counts_match_cells_by_id_and_allow_comma_totals(self):
+        html='''<td id="day-a" class="ContributionCalendar-day" data-date="2026-10-16" data-level="0"></td>
+        <td id="day-b" class="ContributionCalendar-day" data-date="2026-10-17" data-level="4"></td>
+        <tool-tip for="unrelated">999 contributions on October 17th.</tool-tip>
+        <tool-tip for="day-b">1,234 contributions on October 17th.</tool-tip>
+        <tool-tip for="day-a">No contributions on October 16th.</tool-tip>'''
+        days=lab.parse_calendar(html,date(2026,10,17),minimum=2)
+        self.assertEqual([d['count'] for d in days],[0,1234])
+
+    def test_conflicting_calendar_count_is_rejected(self):
+        html='''<td id="day" class="ContributionCalendar-day" data-date="2026-10-17" data-level="2"></td>
+        <tool-tip for="day">No contributions on October 17th.</tool-tip>'''
+        with self.assertRaises(ValueError):
+            lab.parse_calendar(html,date(2026,10,17),minimum=1)
+
+    def test_unknown_tooltip_format_keeps_count_unavailable(self):
+        html='''<td id="day" class="ContributionCalendar-day" data-date="2026-10-17" data-level="2"></td>
+        <tool-tip for="day">Unexpected calendar format</tool-tip>'''
+        days=lab.parse_calendar(html,date(2026,10,17),minimum=1)
+        summary=calendar_summary({'days':days})
+        self.assertIsNone(summary['total'])
+        self.assertIsNone(summary['recent'])
+        self.assertEqual(summary['active'],1)
+
+    def test_recent_total_is_exactly_the_last_thirty_displayed_days(self):
+        days=[{'date':(date(2026,9,1)+timedelta(days=i)).isoformat(),'level':1,'count':i+1} for i in range(40)]
+        summary=calendar_summary({'days':days})
+        self.assertEqual(summary,{'total':820,'active':40,'recent':765})
+        del days[0]['count']
+        summary=calendar_summary({'days':days})
+        self.assertIsNone(summary['total'])
+        self.assertEqual(summary['recent'],765)
+
+    def test_both_layouts_preserve_every_date_once_without_inventing_counts(self):
+        days=[{'date':(date(2025,10,12)+timedelta(days=i)).isoformat(),'level':i%5,'count':(i%5)*2} for i in range(371)]
+        calendar={'generated_at':'2026-10-17T12:00:00Z','days':days}
+        ns={'s':'http://www.w3.org/2000/svg'}
+        for mobile in (False,True):
+            root=ET.fromstring(lab.render_contributions(calendar,mobile))
+            cells=root.findall('.//s:rect[@data-date]',ns)
+            self.assertEqual(len(cells),len(days))
+            self.assertEqual({c.get('data-date') for c in cells},{d['date'] for d in days})
+            self.assertEqual(root.find('.//s:text[@data-metric="total"]',ns).text,f"{sum(d['count'] for d in days):,}")
+
     def test_empty_activity_keeps_a_valid_static_calendar(self):
-        svg=lab.render_patrol({"generated_at":"2026-10-17T12:00:00Z","days":[{"date":"2026-10-17","level":0}]})
+        svg=lab.render_contributions({"generated_at":"2026-10-17T12:00:00Z","days":[{"date":"2026-10-17","level":0}]})
         ET.fromstring(svg)
-        self.assertIn('0 active days',svg)
+        self.assertIn('0 days with activity',svg)
         self.assertIn('prefers-reduced-motion',svg)
 
     def test_compact_calendar_preserves_every_day_and_level(self):
         days = [{"date":f"2026-10-{n+12}","level":n} for n in range(5)]
-        tree = ET.fromstring(lab.render_patrol({"generated_at":"2026-10-17T12:00:00Z","days":days}))
+        tree = ET.fromstring(lab.render_contributions({"generated_at":"2026-10-17T12:00:00Z","days":days}))
         ns = {"s":"http://www.w3.org/2000/svg"}
         groups = tree.findall('.//s:g[@class="calendar"]/s:g', ns)
         self.assertEqual(len(groups), 5)
