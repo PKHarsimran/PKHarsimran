@@ -90,16 +90,16 @@ def artwork_group(name, transform, replacement):
 
 
 def mobile_banner():
-    source = (OUT/'mission-banner.svg').read_text(encoding='utf-8')
+    source = (OUT/'mission-banner-orbital.svg').read_text(encoding='utf-8')
     p = panel(600,440,'Harsimran Sidhu — mission control','Cybersecurity, threat intelligence, automation. A radar and floating pixel robot decorate the panel. Animation respects reduced motion.')
-    p += [art_style(),artwork_group('mission-banner.svg','translate(620 55)','translate(389 104) scale(.55)'),re.search(r'<style>.*?</style>',source,re.S).group(),
+    p += [art_style(),artwork_group('mission-banner-orbital.svg','translate(620 55)','translate(389 104) scale(.55)'),re.search(r'<style>.*?</style>',source,re.S).group(),
           text(28,34,'PKHARSIMRAN / MISSION CONTROL',15,MUTED,'font-weight="600" letter-spacing="1.2"'),
           text(28,116,'HARSIMRAN',56,TEXT,'font-weight="750" textLength="343" lengthAdjust="spacingAndGlyphs"'),
           text(28,181,'SIDHU',56,TEXT,'font-weight="750"'),
           text(30,238,'Turning curiosity',27,'#43E6C5','font-weight="500"'),
           text(30,273,'into automation.',27,'#43E6C5','font-weight="500"'),
-          artwork_group('mission-banner.svg','translate(801 164)','translate(479 218) scale(.76)'),
-          artwork_group('mission-banner.svg','translate(916 258)','translate(518 365) scale(1.05)')]
+          artwork_group('mission-banner-orbital.svg','translate(801 164)','translate(479 218) scale(.76)'),
+          artwork_group('mission-banner-orbital.svg','translate(916 258)','translate(518 365) scale(1.05)')]
     for x,label,color,width in [(30,'SECURITY','#43E6C5',125),(165,'THREAT INTEL','#A995FF',167),(342,'AUTOMATION','#F36BAA',159)]:
         p += [f'<rect x="{x}" y="316" width="{width}" height="34" rx="17" fill="{color}" fill-opacity=".07" stroke="{color}" stroke-opacity=".3"/>', text(x+13,339,label,15,color,'font-weight="600"')]
     p += [text(30,400,'BUILD / INVESTIGATE / LEARN / REPEAT',14,MUTED,'letter-spacing="1"'),'</g></svg>\n']
@@ -151,15 +151,15 @@ def mobile_homelab():
 
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
-    for name in ('mission-banner.svg','mission-now.svg','mission-swiftioc.svg','mission-inspector.svg','mission-downloader.svg'):
+    for name in ('mission-banner-orbital.svg','mission-now.svg','mission-swiftioc.svg','mission-inspector.svg','mission-downloader.svg'):
         path=OUT/name
         content=path.read_text(encoding='utf-8')
-        if name=='mission-banner.svg':content=header_art(content)
+        if name=='mission-banner-orbital.svg':content=header_art(content)
         if name in ('mission-swiftioc.svg','mission-inspector.svg','mission-downloader.svg'):
             content=animate_project(content,name.removeprefix('mission-').removesuffix('.svg'))
         path.write_text(apply_theme(content),encoding='utf-8')
     terminal=typing()
-    assets={"mission-typing.svg":terminal,"mission-typing-mobile.svg":terminal.replace('width="780" height="44" viewBox="0 0 780 44"','width="512" height="44" viewBox="134 0 512 44"'),"mission-toolkit.svg":toolkit(),"mission-toolkit-mobile.svg":toolkit(True),"mission-banner-mobile.svg":mobile_banner(),"mission-homelab-mobile.svg":mobile_homelab()}
+    assets={"mission-typing.svg":terminal,"mission-typing-mobile.svg":terminal.replace('width="780" height="44" viewBox="0 0 780 44"','width="512" height="44" viewBox="134 0 512 44"'),"mission-toolkit-icons.svg":toolkit(),"mission-toolkit-icons-mobile.svg":toolkit(True),"mission-banner-orbital-mobile.svg":mobile_banner(),"mission-homelab-mobile.svg":mobile_homelab()}
     for kind,number,name,tagline,tags,color in [('swiftioc','01','SwiftIOC','Follow the indicator. Keep the evidence.','PYTHON / THREAT INTEL / ANALYST WORKFLOWS','#43E6C5'),('inspector','02','IOC Inspector','Suspicious documents. Useful answers.','PYTHON / STATIC ANALYSIS / REPORTS','#A995FF'),('downloader','03','Website Downloader','Take a little piece of the web offline.','PYTHON / WEB ARCHIVING / PLAYWRIGHT','#F36BAA')]:
         assets[f'mission-{kind}-mobile.svg']=mobile_project(kind,number,name,tagline,tags,color)
     assets['mission-now-mobile.svg']=mobile_now()
