@@ -66,7 +66,7 @@ def stamp(value):
 
 
 def conveyor(data, mobile=False):
-    w,h = (600,686) if mobile else (1000,366)
+    w,h = (600,686) if mobile else (1000,390)
     p=surface(w,h,'SwiftIOC intelligence conveyor','Animated illustration of the collection pipeline. All counts come from the published diagnostics. '+data['scope'])
     p += [STYLE,txt(28,34,'SWIFTIOC / INTELLIGENCE CONVEYOR',14,COLORS[0],600),txt(28,74,'Follow the data. Keep the evidence.',26,TEXT,600)]
     stages=[('COLLECT','Public feeds','Retrieve source records'),('NORMALIZE',f'{data["duplicates_removed"]:,} duplicates','Removed during collection'),('PUBLISH',f'{data["retained"]:,} retained','Bounded snapshot'),('INVESTIGATE','Source-aware records','Open the analyst dashboard')]

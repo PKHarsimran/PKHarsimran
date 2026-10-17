@@ -15,5 +15,5 @@ Enter
 Show
 Type "python3 scripts/profile_demos.py downloader"
 Enter
-Wait /OFFLINE MIRROR VERIFIED/
+Wait+Screen /OFFLINE MIRROR VERIFIED/
 Sleep 4s

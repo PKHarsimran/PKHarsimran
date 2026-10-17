@@ -15,5 +15,5 @@ Enter
 Show
 Type "python3 scripts/profile_demos.py inspector"
 Enter
-Wait /CASE VERIFIED/
+Wait+Screen /CASE VERIFIED/
 Sleep 4s
