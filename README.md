@@ -4,8 +4,8 @@
 
 <a href="https://harsim.ca">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/mission-banner-mobile.svg">
-  <img src="./profile/mission-banner.svg" alt="Harsimran Sidhu — turning curiosity into automation. Cybersecurity, threat intelligence, and automation." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/mission-banner-mobile.svg?v=orbital-1">
+  <img src="./profile/mission-banner.svg?v=orbital-1" alt="Harsimran Sidhu — turning curiosity into automation. Cybersecurity, threat intelligence, and automation." width="100%" />
 </picture>
 </a>
 
@@ -258,8 +258,8 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 ## 🧰 Toolkit
 
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/mission-toolkit-mobile.svg">
-  <img src="./profile/mission-toolkit.svg" alt="Code: Python, Bash, C++. Security: Splunk, Cortex XDR, Kibana, F5 BIG-IP. Infrastructure: Docker, Ansible, Raspberry Pi. Observability: Grafana, InfluxDB, MQTT." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/mission-toolkit-mobile.svg?v=icons-1">
+  <img src="./profile/mission-toolkit.svg?v=icons-1" alt="Code: Python, Bash, C++. Security: Splunk, Cortex XDR, Kibana, F5 BIG-IP. Infrastructure: Docker, Ansible, Raspberry Pi. Observability: Grafana, InfluxDB, MQTT." width="100%">
 </picture>
 
 <!-- buttons:containers:start -->
