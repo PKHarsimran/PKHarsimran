@@ -1,6 +1,7 @@
 """Public-data artwork and release-pinned demo planning. Standard library only."""
 from __future__ import annotations
 from profile_theme import apply_theme
+from profile_motion import animate_lab
 
 import argparse
 from datetime import datetime, timezone
@@ -125,7 +126,7 @@ def lab_flow(data,mobile=False):
         text=' · '.join(data[key])
         p += [txt(28,y+i*(56 if mobile else 31),label,13,COLORS[i],600),txt(28 if mobile else 154,y+(24 if mobile else 0)+i*(56 if mobile else 31),text,17 if mobile else 16,MUTED)]
     p += [txt(28,h-22,'Illustrated handoffs / Curated service list / No live telemetry',14 if mobile else 12,MUTED),'</g></svg>\n']
-    return '\n'.join(p)
+    return animate_lab('\n'.join(p))
 
 
 def releases():
@@ -212,7 +213,7 @@ def main():
     for mobile in (False,True):
         suffix='-mobile' if mobile else ''
         write('intel-conveyor'+suffix+'.svg',conveyor(intel,mobile))
-        write('homelab-flow'+suffix+'.svg',lab_flow(lab,mobile))
+        write('homelab-flow-motion'+suffix+'.svg',lab_flow(lab,mobile))
         write('release-patches'+suffix+'.svg',patches(release_data,mobile))
     write('intel-conveyor.json',intel)
     write('intel-conveyor.md',f'# SwiftIOC intelligence conveyor\n\nCollection: {intel["collection_at"]}. Observed: {intel["observed_at"]}.\n\n'+f'- Retained observables: {intel["observables"]:,}\n- Retained CVEs: {intel["vulnerabilities"]:,}\n- Duplicates removed in collection: {intel["duplicates_removed"]:,}\n- Last interval: {intel["delta"]}\n- Latest collection attempt: {intel["latest_attempt"]} at {intel["attempt_at"]}\n\n'+intel['scope']+' Removed means absent from the retained feed, not benign. Counts do not establish compromise. The conveyor is an illustration.\n\n'+f'[Published diagnostics]({intel["source"]}) · [Latest attempt]({SWIFT}diagnostics/collection-attempt.json)\n')

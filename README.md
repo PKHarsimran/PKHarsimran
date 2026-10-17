@@ -4,8 +4,8 @@
 
 <a href="https://harsim.ca">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/studio-hero-mobile.svg">
-  <img src="./profile/studio-hero.svg" alt="Harsimran Sidhu. Security instincts. Builder energy. Cybersecurity, open source and self-hosting." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-orbit-hero-mobile.svg">
+  <img src="./profile/studio-orbit-hero.svg" alt="Harsimran Sidhu. Security instincts. Builder energy. Cybersecurity, open source and self-hosting." width="100%" />
 </picture>
 </a>
 
@@ -58,8 +58,8 @@ I work in **cybersecurity** and build tools for clearer investigations, better d
 
 <a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/studio-swiftioc-cover-mobile.svg">
-  <img src="./profile/studio-swiftioc-cover.svg" alt="SwiftIOC — follow the indicator, keep the evidence. Python threat intelligence and analyst workflows." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-swiftioc-motion-mobile.svg">
+  <img src="./profile/studio-swiftioc-motion.svg" alt="SwiftIOC — follow the indicator, keep the evidence. Python threat intelligence and analyst workflows." width="100%" />
 </picture>
 </a>
 
@@ -104,14 +104,14 @@ I work in **cybersecurity** and build tools for clearer investigations, better d
 
 </details>
 
-<p align="center"><img src="./profile/mission-orbit-divider.svg" alt="" width="100%" /></p>
+<p align="center"><img src="./profile/studio-signal-divider.svg" alt="" width="100%" /></p>
 
 ### 02 / IOC Inspector
 
 <a href="https://github.com/PKHarsimran/IOC-Inspector">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/studio-inspector-cover-mobile.svg">
-  <img src="./profile/studio-inspector-cover.svg" alt="IOC Inspector — suspicious documents, useful answers. Python static analysis and structured reports." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-inspector-motion-mobile.svg">
+  <img src="./profile/studio-inspector-motion.svg" alt="IOC Inspector — suspicious documents, useful answers. Python static analysis and structured reports." width="100%" />
 </picture>
 </a>
 
@@ -150,14 +150,14 @@ I work in **cybersecurity** and build tools for clearer investigations, better d
 
 </details>
 
-<p align="center"><img src="./profile/mission-orbit-divider.svg" alt="" width="100%" /></p>
+<p align="center"><img src="./profile/studio-signal-divider.svg" alt="" width="100%" /></p>
 
 ### 03 / Website Downloader
 
 <a href="https://github.com/PKHarsimran/website-downloader">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/studio-downloader-cover-mobile.svg">
-  <img src="./profile/studio-downloader-cover.svg" alt="Website Downloader — take a little piece of the web offline. Python web archiving with optional Playwright rendering." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-downloader-motion-mobile.svg">
+  <img src="./profile/studio-downloader-motion.svg" alt="Website Downloader — take a little piece of the web offline. Python web archiving with optional Playwright rendering." width="100%" />
 </picture>
 </a>
 
@@ -195,8 +195,8 @@ I work in **cybersecurity** and build tools for clearer investigations, better d
 My **Zima homelab** runs on **Docker Compose**. Media, photos, books, dashboards, and monitoring share a home; I build the workflows and automation that connect them.
 
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/homelab-flow-mobile.svg">
-  <img src="./profile/homelab-flow.svg" alt="Zima homelab flow theatre: Jellyseerr requests, Radarr/Sonarr/Prowlarr/Bazarr automation, Transmission with Gluetun, and Jellyfin playback. Photo and book libraries, operations and monitoring share the stack. Illustrated handoffs from a curated service manifest; no live telemetry." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/homelab-flow-motion-mobile.svg">
+  <img src="./profile/homelab-flow-motion.svg" alt="Zima homelab flow theatre: Jellyseerr requests, Radarr/Sonarr/Prowlarr/Bazarr automation, Transmission with Gluetun, and Jellyfin playback. Photo and book libraries, operations and monitoring share the stack. Illustrated handoffs from a curated service manifest; no live telemetry." width="100%" />
 </picture>
 
 <sub>Animated from the [public service manifest](./profile/lab-services.json). Illustrated handoffs; the service inventory below has the full cast.</sub>
@@ -343,14 +343,14 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 </p>
 <!-- buttons:return:end -->
 
-<p align="center"><img src="./profile/mission-orbit-divider.svg" alt="" width="100%" /></p>
+<p align="center"><img src="./profile/studio-signal-divider.svg" alt="" width="100%" /></p>
 
 <div align="center">
 
 <!-- visitors:start -->
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/studio-guestbook-mobile.svg" />
-  <img src="./profile/studio-guestbook.svg" alt="Still curious? A waving pixel mascot signs off from an animated orbital guestbook." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-guestbook-motion-mobile.svg" />
+  <img src="./profile/studio-guestbook-motion.svg" alt="Still curious? A waving pixel mascot signs off from an animated orbital guestbook." width="100%" />
 </picture>
 
 <p align="center">

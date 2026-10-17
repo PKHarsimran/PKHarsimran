@@ -9,6 +9,7 @@ on:
     paths:
       - ".github/workflows/living-profile.yml"
       - "scripts/living_profile.py"
+      - "scripts/profile_motion.py"
       - "scripts/profile_demos.py"
       - "scripts/test_living_profile.py"
       - "scripts/profile_theme.py"
