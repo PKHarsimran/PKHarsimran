@@ -1,0 +1,67 @@
+{
+  "Python": {
+    "file": "python.svg",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/4d29a35c954699b389a834aacc97dd6e7e74143c/icons/python.svg",
+    "sha256": "ad9468e1c4903f73ae7eebfbe980f0f727a10db695be3d914e7d8bd25356a862"
+  },
+  "Bash": {
+    "file": "gnubash.svg",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/4d29a35c954699b389a834aacc97dd6e7e74143c/icons/gnubash.svg",
+    "sha256": "edee96774ff71b672c429c28eb092ab13373677157c86abe7edb0dd699e07986"
+  },
+  "C++": {
+    "file": "cplusplus.svg",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/4d29a35c954699b389a834aacc97dd6e7e74143c/icons/cplusplus.svg",
+    "sha256": "adf33f5026f3f70d54f1068cb5d1a790c37b2105cbe728edd170251759d13f18"
+  },
+  "Splunk": {
+    "file": "splunk.svg",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/4d29a35c954699b389a834aacc97dd6e7e74143c/icons/splunk.svg",
+    "sha256": "dcd1f7c9559d6d6b7c1f4f454e4d23b6beb24f5b51d5c48b7c53d5900a0dfdb1"
+  },
+  "Cortex XDR": {
+    "file": "paloaltonetworks.svg",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/4d29a35c954699b389a834aacc97dd6e7e74143c/icons/paloaltonetworks.svg",
+    "sha256": "47b46a688d2117b938251c0a36568593562a07c221493f9d04bd1e0e536b1456"
+  },
+  "Kibana": {
+    "file": "kibana.svg",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/4d29a35c954699b389a834aacc97dd6e7e74143c/icons/kibana.svg",
+    "sha256": "eac3cd50862291d418991d6f05aae14bf795f6653d6bbcf814ec8240f58b8c9c"
+  },
+  "F5 BIG-IP": {
+    "file": "f5.svg",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/4d29a35c954699b389a834aacc97dd6e7e74143c/icons/f5.svg",
+    "sha256": "4661fd69d282bb1964f3ba25c66cdef33a75f5ea27bba6ee6a23e5b436c1ebeb"
+  },
+  "Docker": {
+    "file": "docker.svg",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/4d29a35c954699b389a834aacc97dd6e7e74143c/icons/docker.svg",
+    "sha256": "65571291c261ef869c31540a38f3ca0f0ee3bb73f179c172211c8860f19a6359"
+  },
+  "Ansible": {
+    "file": "ansible.svg",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/4d29a35c954699b389a834aacc97dd6e7e74143c/icons/ansible.svg",
+    "sha256": "dde263ada8ced6d3ce092f9046fba6224eac3afae87274d912cef45210f8fff6"
+  },
+  "Raspberry Pi": {
+    "file": "raspberrypi.svg",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/4d29a35c954699b389a834aacc97dd6e7e74143c/icons/raspberrypi.svg",
+    "sha256": "ab35cdb6cfd69779dfa54c8f15f0ed3c514ff6c07f1c941dd47a61115a208c59"
+  },
+  "Grafana": {
+    "file": "grafana.svg",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/4d29a35c954699b389a834aacc97dd6e7e74143c/icons/grafana.svg",
+    "sha256": "e6da4ab998d25d509e27ce8a1f1afcb2d549907569b6fb1e4065890877cffefa"
+  },
+  "InfluxDB": {
+    "file": "influxdb.svg",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/4d29a35c954699b389a834aacc97dd6e7e74143c/icons/influxdb.svg",
+    "sha256": "a36a5a68c12e3bf5b7507b0a1165cf04aff12d24a28f14ba95839f964d924d5a"
+  },
+  "MQTT": {
+    "file": "mqtt.svg",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/4d29a35c954699b389a834aacc97dd6e7e74143c/icons/mqtt.svg",
+    "sha256": "076483b7c540780a2d4feabf691dc1612b2e896d736fd153483bff0adfbe11bd"
+  }
+}

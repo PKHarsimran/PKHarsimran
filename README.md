@@ -33,6 +33,19 @@
 </p>
 <!-- buttons:navigation:end -->
 
+<!-- visitors:start -->
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/mission-visitors-mobile.svg" />
+  <img src="./profile/mission-visitors.svg" alt="Hey, curious human. Welcome to the lab! A waving pixel visitor and an animated orbital arrival stamp." width="100%" />
+</picture>
+
+<p align="center">
+  <a href="https://github.com/antonkomarev/github-profile-views-counter#faq"><img src="https://komarev.com/ghpvc/?username=PKHarsimran&amp;label=LAB+PAGE+HITS&amp;color=a995ff&amp;style=for-the-badge" alt="Lab page hits — public profile view counter, not unique visitors" height="28" /></a>
+</p>
+
+<sub>Thanks for dropping into my corner of the internet. ✨<br />Page hits, not unique visitors · <a href="https://github.com/antonkomarev/github-profile-views-counter#faq">About the counter</a></sub>
+<!-- visitors:end -->
+
 </div>
 
 ## 👋 Operator profile
@@ -103,7 +116,7 @@ Threat intelligence, document triage, and a little web archaeology.
 
 </details>
 
----
+<p align="center"><img src="./profile/mission-orbit-divider.svg" alt="" width="100%" /></p>
 
 ### 02 / IOC Inspector
 
@@ -149,7 +162,7 @@ Threat intelligence, document triage, and a little web archaeology.
 
 </details>
 
----
+<p align="center"><img src="./profile/mission-orbit-divider.svg" alt="" width="100%" /></p>
 
 ### 03 / Website Downloader
 
@@ -333,7 +346,7 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 </p>
 <!-- buttons:return:end -->
 
----
+<p align="center"><img src="./profile/mission-orbit-divider.svg" alt="" width="100%" /></p>
 
 <div align="center">
 
