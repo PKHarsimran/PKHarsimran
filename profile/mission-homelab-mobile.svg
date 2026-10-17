@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="856" viewBox="0 0 600 856" role="img" aria-labelledby="title desc"><title id="title">Zima homelab — connected by Compose</title><desc id="desc">The same public service inventory as the desktop panel, arranged vertically for smaller screens. Animated connections are decorative; no network addresses or private configuration are included.</desc>
+<defs><linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#152133"/><stop offset="1" stop-color="#0D1117"/></linearGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#A7B6CE" stroke-opacity=".055"/></pattern></defs>
+<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="598" height="854" rx="22" fill="url(#surface)" stroke="#29364B"/><rect x="2" y="2" width="596" height="852" rx="21" fill="url(#grid)"/>
+<style>.packet{animation:flow 6s linear infinite}@keyframes flow{to{stroke-dashoffset:-54}}@media(prefers-reduced-motion:reduce){.packet{animation:none}}</style>
+<text x="28" y="36" fill="#43E6C5" font-size="16" font-weight="600" letter-spacing="1">ZIMA HOMELAB / DOCKER COMPOSE</text>
+<text x="28" y="76" fill="#EFF4FC" font-size="28" font-weight="600">One server. Connected services.</text>
+<path d="M42 119V779" stroke="#29364B" stroke-width="2"/><path class="packet" d="M42 119V779" stroke="#43E6C5" stroke-width="2" stroke-dasharray="5 22"/>
+<circle cx="42" cy="153" r="6" fill="#43E6C5"/><path d="M48 153H68" stroke="#43E6C5" stroke-opacity=".4"/><rect x="68" y="104" width="504" height="100" rx="13" fill="#121A26" stroke="#29364B"/>
+<text x="86" y="129" fill="#43E6C5" font-size="15" font-weight="600">01 / MEDIA + AUTOMATION</text>
+<text x="86" y="159" fill="#EFF4FC" font-size="23" font-weight="500">Jellyfin · Jellyseerr</text>
+<text x="86" y="185" fill="#A7B6CE" font-size="19" >Radarr · Sonarr · Prowlarr · Bazarr</text>
+<circle cx="42" cy="267" r="6" fill="#A995FF"/><path d="M48 267H68" stroke="#A995FF" stroke-opacity=".4"/><rect x="68" y="218" width="504" height="100" rx="13" fill="#121A26" stroke="#29364B"/>
+<text x="86" y="243" fill="#A995FF" font-size="15" font-weight="600">02 / DOWNLOADS</text>
+<text x="86" y="273" fill="#EFF4FC" font-size="23" font-weight="500">Transmission · Gluetun</text>
+<text x="86" y="299" fill="#A7B6CE" font-size="19" >VPN-routed downloads</text>
+<circle cx="42" cy="381" r="6" fill="#F36BAA"/><path d="M48 381H68" stroke="#F36BAA" stroke-opacity=".4"/><rect x="68" y="332" width="504" height="100" rx="13" fill="#121A26" stroke="#29364B"/>
+<text x="86" y="357" fill="#F36BAA" font-size="15" font-weight="600">03 / PHOTOS</text>
+<text x="86" y="387" fill="#EFF4FC" font-size="23" font-weight="500">PhotoPrism</text>
+<text x="86" y="413" fill="#A7B6CE" font-size="19" >Photo library + indexing</text>
+<circle cx="42" cy="495" r="6" fill="#43E6C5"/><path d="M48 495H68" stroke="#43E6C5" stroke-opacity=".4"/><rect x="68" y="446" width="504" height="100" rx="13" fill="#121A26" stroke="#29364B"/>
+<text x="86" y="471" fill="#43E6C5" font-size="15" font-weight="600">04 / BOOKS + AUDIO</text>
+<text x="86" y="501" fill="#EFF4FC" font-size="23" font-weight="500">Shelfmark · Audiobookshelf</text>
+<text x="86" y="527" fill="#A7B6CE" font-size="19" >Reading + listening libraries</text>
+<circle cx="42" cy="609" r="6" fill="#A995FF"/><path d="M48 609H68" stroke="#A995FF" stroke-opacity=".4"/><rect x="68" y="560" width="504" height="100" rx="13" fill="#121A26" stroke="#29364B"/>
+<text x="86" y="585" fill="#A995FF" font-size="15" font-weight="600">05 / OPERATIONS</text>
+<text x="86" y="615" fill="#EFF4FC" font-size="23" font-weight="500">Homepage · Portainer</text>
+<text x="86" y="641" fill="#A7B6CE" font-size="19" >Custom flow dashboards</text>
+<circle cx="42" cy="723" r="6" fill="#F36BAA"/><path d="M48 723H68" stroke="#F36BAA" stroke-opacity=".4"/><rect x="68" y="674" width="504" height="100" rx="13" fill="#121A26" stroke="#29364B"/>
+<text x="86" y="699" fill="#F36BAA" font-size="15" font-weight="600">06 / MONITORING</text>
+<text x="86" y="729" fill="#EFF4FC" font-size="23" font-weight="500">Uptime Kuma · Glances</text>
+<text x="86" y="755" fill="#A7B6CE" font-size="19" >Dozzle logs + ntfy notifications</text>
+<text x="28" y="826" fill="#A7B6CE" font-size="14" letter-spacing="1">SELF-HOSTING / WORKFLOWS / AUTOMATION</text>
+</g></svg>

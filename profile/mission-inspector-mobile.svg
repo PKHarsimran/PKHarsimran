@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="264" viewBox="0 0 600 264" role="img" aria-labelledby="title desc"><title id="title">IOC Inspector</title><desc id="desc">Suspicious documents. Useful answers. PYTHON / STATIC ANALYSIS / REPORTS</desc>
+<defs><linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#152133"/><stop offset="1" stop-color="#0D1117"/></linearGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#A7B6CE" stroke-opacity=".055"/></pattern></defs>
+<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="598" height="262" rx="22" fill="url(#surface)" stroke="#29364B"/><rect x="2" y="2" width="596" height="260" rx="21" fill="url(#grid)"/>
+<path d="M2 28V234" stroke="#A995FF" stroke-width="4"/>
+<text x="28" y="37" fill="#A995FF" font-size="15" font-weight="600" letter-spacing="1.5">PROJECT / 02</text>
+<g xmlns="http://www.w3.org/2000/svg" transform="translate(545 43) scale(.38)" fill="none" stroke="#A995FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-26-35H9L25-19V4M9-35V-19H25M-26-35V32H-5M-15-7H8M-15 5H0" /><circle cx="17" cy="19" r="17" /><path d="M29 31L41 43" />
+</g>
+
+<text x="28" y="104" fill="#EFF4FC" font-size="39" font-weight="700" letter-spacing="-1">IOC Inspector</text>
+<text x="30" y="149" fill="#A7B6CE" font-size="23" >Suspicious documents. Useful answers.</text>
+<text x="30" y="215" fill="#A995FF" font-size="15" font-weight="600">PYTHON / STATIC ANALYSIS / REPORTS</text>
+<text x="543" y="235" fill="#A995FF" font-size="25" >↗</text>
+</g></svg>

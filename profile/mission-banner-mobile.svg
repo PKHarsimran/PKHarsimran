@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="440" viewBox="0 0 600 440" role="img" aria-labelledby="title desc"><title id="title">Harsimran Sidhu — mission control</title><desc id="desc">Cybersecurity, threat intelligence, automation. A radar and floating pixel robot decorate the panel. Animation respects reduced motion.</desc>
+<defs><linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#152133"/><stop offset="1" stop-color="#0D1117"/></linearGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#A7B6CE" stroke-opacity=".055"/></pattern></defs>
+<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="598" height="438" rx="22" fill="url(#surface)" stroke="#29364B"/><rect x="2" y="2" width="596" height="436" rx="21" fill="url(#grid)"/>
+<style>.pulse{animation:pulse 3s ease-in-out infinite}.radar-motion{animation:radar 18s linear infinite}.bot-float{animation:float 4s ease-in-out infinite}.packet{animation:flow 5s linear infinite}@keyframes pulse{50%{opacity:.35}}@keyframes radar{to{transform:rotate(360deg)}}@keyframes float{50%{transform:translateY(-5px)}}@keyframes flow{from{stroke-dashoffset:54}to{stroke-dashoffset:0}}@media(prefers-reduced-motion:reduce){.pulse,.radar-motion,.bot-float,.packet{animation:none}}</style>
+<text x="28" y="34" fill="#A7B6CE" font-size="15" font-weight="600" letter-spacing="1.2">PKHARSIMRAN / MISSION CONTROL</text>
+<text x="28" y="116" fill="#EFF4FC" font-size="56" font-weight="750" textLength="343" lengthAdjust="spacingAndGlyphs">HARSIMRAN</text>
+<text x="28" y="181" fill="#EFF4FC" font-size="56" font-weight="750">SIDHU</text>
+<text x="30" y="238" fill="#43E6C5" font-size="27" font-weight="500">Turning curiosity</text>
+<text x="30" y="273" fill="#43E6C5" font-size="27" font-weight="500">into automation.</text>
+<g xmlns="http://www.w3.org/2000/svg" transform="translate(479 218) scale(.76)"><circle r="108" fill="#43E6C5" fill-opacity=".025" stroke="#29364B" /><circle r="77" fill="none" stroke="#29364B" stroke-dasharray="3 9" /><circle r="43" fill="none" stroke="#43E6C5" stroke-opacity=".18" /><path d="M-115 0H115M0-115V115" stroke="#29364B" />
+<g class="radar-motion"><path d="M0 0L-58-87A105 105 0 0 1 0-105Z" fill="#43E6C5" fill-opacity=".09" /><path d="M0 0V-105" stroke="#43E6C5" stroke-opacity=".55" /></g>
+<path d="M0-32L29-21V4C29 25 0 40 0 40S-29 25-29 4V-21Z" fill="#121A26" stroke="#43E6C5" stroke-width="2" /><path d="M-12 2L-3 11L15-10" fill="none" stroke="#43E6C5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<circle class="pulse" cx="-72" cy="-44" r="5" fill="#F36BAA" />
+<circle class="pulse" cx="64" cy="49" r="5" fill="#A995FF" />
+<circle class="pulse" cx="20" cy="-81" r="4" fill="#43E6C5" />
+</g>
+
+<g xmlns="http://www.w3.org/2000/svg" transform="translate(518 365) scale(1.05)" shape-rendering="crispEdges"><g class="bot-float"><path d="M12 0H16V8H12ZM0 8H28V32H0ZM4 32H10V38H4ZM18 32H24V38H18Z" fill="#A995FF" /><path d="M4 13H24V24H4Z" fill="#0D1117" /><path d="M7 16H11V20H7ZM17 16H21V20H17Z" fill="#43E6C5" /><rect x="11" y="27" width="6" height="2" fill="#0D1117" /></g></g>
+<rect x="30" y="316" width="125" height="34" rx="17" fill="#43E6C5" fill-opacity=".07" stroke="#43E6C5" stroke-opacity=".3"/>
+<text x="43" y="339" fill="#43E6C5" font-size="15" font-weight="600">SECURITY</text>
+<rect x="165" y="316" width="167" height="34" rx="17" fill="#A995FF" fill-opacity=".07" stroke="#A995FF" stroke-opacity=".3"/>
+<text x="178" y="339" fill="#A995FF" font-size="15" font-weight="600">THREAT INTEL</text>
+<rect x="342" y="316" width="159" height="34" rx="17" fill="#F36BAA" fill-opacity=".07" stroke="#F36BAA" stroke-opacity=".3"/>
+<text x="355" y="339" fill="#F36BAA" font-size="15" font-weight="600">AUTOMATION</text>
+<text x="30" y="400" fill="#A7B6CE" font-size="14" letter-spacing="1">BUILD / INVESTIGATE / LEARN / REPEAT</text>
+</g></svg>

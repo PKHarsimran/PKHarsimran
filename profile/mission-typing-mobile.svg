@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="44" viewBox="134 0 512 44" role="img" aria-labelledby="title desc">
+<title id="title">Follow the evidence. Automate the boring bits. Always one more thing to build.</title>
+<desc id="desc">Three rotating terminal lines. Reduced motion shows the first line.</desc>
+<style>.line{opacity:0;animation:line 15s linear infinite}.second{animation-delay:5s}.third{animation-delay:10s}.reveal{animation:type 5s steps(31,end) infinite}.caret{animation:travel 5s steps(31,end) infinite}.blink{animation:blink 1s steps(2,end) infinite}@keyframes line{0%,32%{opacity:1}33.333%,100%{opacity:0}}@keyframes type{0%{width:0}55%,88%{width:var(--extent)}100%{width:0}}@keyframes travel{0%{transform:translateX(0)}55%,88%{transform:translateX(var(--extent))}100%{transform:translateX(0)}}@keyframes blink{50%{opacity:0}}@media(prefers-reduced-motion:reduce){.line,.reveal,.caret,.blink{animation:none}.first{opacity:1}.reveal{width:var(--extent)}.caret{display:none}}</style>
+<g fill="#43E6C5" font-family="Consolas,monospace" font-size="22">
+<defs><clipPath id="reveal0"><rect class="reveal" width="264.0" height="44" style="--extent:264.0px"/></clipPath></defs>
+<g class="line first" transform="translate(240.0 0)">
+<text x="0" y="29" fill="#A995FF" font-size="22" >&gt;</text>
+<g transform="translate(30 0)" style="--extent:264.0px"><g clip-path="url(#reveal0)">
+<text x="0" y="29" fill="#43E6C5" font-size="22" textLength="264.0" lengthAdjust="spacingAndGlyphs">Follow the evidence.</text>
+</g><g class="caret"><path class="blink" d="M4 11V32" stroke="#A995FF" stroke-width="2"/></g></g></g>
+<defs><clipPath id="reveal1"><rect class="reveal" width="330.0" height="44" style="--extent:330.0px"/></clipPath></defs>
+<g class="line second" transform="translate(207.0 0)">
+<text x="0" y="29" fill="#A995FF" font-size="22" >&gt;</text>
+<g transform="translate(30 0)" style="--extent:330.0px"><g clip-path="url(#reveal1)">
+<text x="0" y="29" fill="#43E6C5" font-size="22" textLength="330.0" lengthAdjust="spacingAndGlyphs">Automate the boring bits.</text>
+</g><g class="caret"><path class="blink" d="M4 11V32" stroke="#A995FF" stroke-width="2"/></g></g></g>
+<defs><clipPath id="reveal2"><rect class="reveal" width="409.2" height="44" style="--extent:409.2px"/></clipPath></defs>
+<g class="line third" transform="translate(167.4 0)">
+<text x="0" y="29" fill="#A995FF" font-size="22" >&gt;</text>
+<g transform="translate(30 0)" style="--extent:409.2px"><g clip-path="url(#reveal2)">
+<text x="0" y="29" fill="#43E6C5" font-size="22" textLength="409.2" lengthAdjust="spacingAndGlyphs">Always one more thing to build.</text>
+</g><g class="caret"><path class="blink" d="M4 11V32" stroke="#A995FF" stroke-width="2"/></g></g></g>
+</g></svg>

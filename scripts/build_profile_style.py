@@ -1,6 +1,8 @@
-"""Build the profile's local typing strip and responsive toolkit panels."""
+"""Build local terminal, toolkit, and phone artwork from the profile's vectors."""
 from html import escape
 from pathlib import Path
+import re
+import xml.etree.ElementTree as ET
 
 OUT = Path(__file__).resolve().parents[1] / "profile"
 TEXT, MUTED, BORDER = "#EFF4FC", "#A7B6CE", "#29364B"
@@ -44,17 +46,85 @@ def typing():
     p = ['<svg xmlns="http://www.w3.org/2000/svg" width="780" height="44" viewBox="0 0 780 44" role="img" aria-labelledby="title desc">',
          '<title id="title">Follow the evidence. Automate the boring bits. Always one more thing to build.</title>',
          '<desc id="desc">Three rotating terminal lines. Reduced motion shows the first line.</desc>',
-         '<defs><clipPath id="reveal"><rect class="reveal" x="130" y="0" width="520" height="44"/></clipPath></defs>',
-         '<style>.line{opacity:0;animation:line 15s linear infinite}.second{animation-delay:5s}.third{animation-delay:10s}.reveal{animation:type 5s steps(31,end) infinite}.cursor{animation:blink 1s steps(2,end) infinite}@keyframes line{0%,32%{opacity:1}33.333%,100%{opacity:0}}@keyframes type{0%{width:0}55%,88%{width:520px}100%{width:0}}@keyframes blink{50%{opacity:0}}@media(prefers-reduced-motion:reduce){.line,.reveal,.cursor{animation:none}.first{opacity:1}.reveal{width:520px}.cursor{display:none}}</style>',
-         '<g fill="#43E6C5" font-family="Consolas,monospace" font-size="22">',
-         text(106, 29, ">", 22, "#A995FF"), '<g clip-path="url(#reveal)">']
-    for cls, phrase in zip(("first", "second", "third"), phrases):
-        p += [text(132, 29, phrase, 22, "#43E6C5", f'class="line {cls}"')]
-    p += ['</g><path class="cursor" d="M660 12V32" stroke="#A995FF" stroke-width="2"/></g></svg>\n']
+         '<style>.line{opacity:0;animation:line 15s linear infinite}.second{animation-delay:5s}.third{animation-delay:10s}.reveal{animation:type 5s steps(31,end) infinite}.caret{animation:travel 5s steps(31,end) infinite}.blink{animation:blink 1s steps(2,end) infinite}@keyframes line{0%,32%{opacity:1}33.333%,100%{opacity:0}}@keyframes type{0%{width:0}55%,88%{width:var(--extent)}100%{width:0}}@keyframes travel{0%{transform:translateX(0)}55%,88%{transform:translateX(var(--extent))}100%{transform:translateX(0)}}@keyframes blink{50%{opacity:0}}@media(prefers-reduced-motion:reduce){.line,.reveal,.caret,.blink{animation:none}.first{opacity:1}.reveal{width:var(--extent)}.caret{display:none}}</style>',
+         '<g fill="#43E6C5" font-family="Consolas,monospace" font-size="22">']
+    for i, (cls, phrase) in enumerate(zip(("first", "second", "third"), phrases)):
+        extent = round(len(phrase)*13.2, 1)
+        x = round((780-extent-36)/2, 1)
+        p += [f'<defs><clipPath id="reveal{i}"><rect class="reveal" width="{extent}" height="44" style="--extent:{extent}px"/></clipPath></defs>',
+              f'<g class="line {cls}" transform="translate({x} 0)">', text(0,29,">",22,"#A995FF"),
+              f'<g transform="translate(30 0)" style="--extent:{extent}px"><g clip-path="url(#reveal{i})">',
+              text(0,29,phrase,22,"#43E6C5",f'textLength="{extent}" lengthAdjust="spacingAndGlyphs"'),
+              '</g><g class="caret"><path class="blink" d="M4 11V32" stroke="#A995FF" stroke-width="2"/></g></g></g>']
+    p += ['</g></svg>\n']
+    return '\n'.join(p)
+
+
+def panel(width, height, title, description):
+    return [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc"><title id="title">{escape(title)}</title><desc id="desc">{escape(description)}</desc>',
+            '<defs><linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#152133"/><stop offset="1" stop-color="#0D1117"/></linearGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#A7B6CE" stroke-opacity=".055"/></pattern></defs>',
+            f'<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="{width-2}" height="{height-2}" rx="22" fill="url(#surface)" stroke="{BORDER}"/><rect x="2" y="2" width="{width-4}" height="{height-4}" rx="21" fill="url(#grid)"/>']
+
+
+def artwork_group(name, transform, replacement):
+    ET.register_namespace('', 'http://www.w3.org/2000/svg')
+    tree = ET.parse(OUT/name)
+    group = tree.find(f'.//{{http://www.w3.org/2000/svg}}g[@transform="{transform}"]')
+    if group is None:
+        raise ValueError(f'Missing source artwork in {name}: {transform}')
+    group.set('transform', replacement)
+    return ET.tostring(group, encoding='unicode')
+
+
+def mobile_banner():
+    source = (OUT/'mission-banner.svg').read_text(encoding='utf-8')
+    p = panel(600,440,'Harsimran Sidhu — mission control','Cybersecurity, threat intelligence, automation. A radar and floating pixel robot decorate the panel. Animation respects reduced motion.')
+    p += [re.search(r'<style>.*?</style>',source,re.S).group(),
+          text(28,34,'PKHARSIMRAN / MISSION CONTROL',15,MUTED,'font-weight="600" letter-spacing="1.2"'),
+          text(28,116,'HARSIMRAN',56,TEXT,'font-weight="750" textLength="343" lengthAdjust="spacingAndGlyphs"'),
+          text(28,181,'SIDHU',56,TEXT,'font-weight="750"'),
+          text(30,238,'Turning curiosity',27,'#43E6C5','font-weight="500"'),
+          text(30,273,'into automation.',27,'#43E6C5','font-weight="500"'),
+          artwork_group('mission-banner.svg','translate(801 164)','translate(479 218) scale(.76)'),
+          artwork_group('mission-banner.svg','translate(916 258)','translate(518 365) scale(1.05)')]
+    for x,label,color,width in [(30,'SECURITY','#43E6C5',125),(165,'THREAT INTEL','#A995FF',167),(342,'AUTOMATION','#F36BAA',159)]:
+        p += [f'<rect x="{x}" y="316" width="{width}" height="34" rx="17" fill="{color}" fill-opacity=".07" stroke="{color}" stroke-opacity=".3"/>', text(x+13,339,label,15,color,'font-weight="600"')]
+    p += [text(30,400,'BUILD / INVESTIGATE / LEARN / REPEAT',14,MUTED,'letter-spacing="1"'),'</g></svg>\n']
+    return '\n'.join(p)
+
+
+def mobile_project(kind, number, name, tagline, tags, color):
+    p = panel(600,264,name,tagline+' '+tags)
+    p += [f'<path d="M2 28V234" stroke="{color}" stroke-width="4"/>',
+          text(28,37,f'PROJECT / {number}',15,color,'font-weight="600" letter-spacing="1.5"'),
+          artwork_group(f'mission-{kind}.svg','translate(891 101)','translate(545 43) scale(.38)'),
+          text(28,104,name,39,TEXT,'font-weight="700" letter-spacing="-1"'),
+          text(30,149,tagline,23,MUTED),text(30,215,tags,15,color,'font-weight="600"'),
+          text(543,235,'↗',25,color),'</g></svg>\n']
+    return '\n'.join(p)
+
+
+def mobile_homelab():
+    p=panel(600,856,'Zima homelab — connected by Compose','The same public service inventory as the desktop panel, arranged vertically for smaller screens. Animated connections are decorative; no network addresses or private configuration are included.')
+    p += ['<style>.packet{animation:flow 6s linear infinite}@keyframes flow{to{stroke-dashoffset:-54}}@media(prefers-reduced-motion:reduce){.packet{animation:none}}</style>',
+          text(28,36,'ZIMA HOMELAB / DOCKER COMPOSE',16,'#43E6C5','font-weight="600" letter-spacing="1"'),
+          text(28,76,'One server. Connected services.',28,TEXT,'font-weight="600"'),
+          '<path d="M42 119V779" stroke="#29364B" stroke-width="2"/><path class="packet" d="M42 119V779" stroke="#43E6C5" stroke-width="2" stroke-dasharray="5 22"/>']
+    rows=[('MEDIA + AUTOMATION','Jellyfin · Jellyseerr','Radarr · Sonarr · Prowlarr · Bazarr','#43E6C5'),('DOWNLOADS','Transmission · Gluetun','VPN-routed downloads','#A995FF'),('PHOTOS','PhotoPrism','Photo library + indexing','#F36BAA'),('BOOKS + AUDIO','Shelfmark · Audiobookshelf','Reading + listening libraries','#43E6C5'),('OPERATIONS','Homepage · Portainer','Custom flow dashboards','#A995FF'),('MONITORING','Uptime Kuma · Glances','Dozzle logs + ntfy notifications','#F36BAA')]
+    for i,(label,services,detail,color) in enumerate(rows):
+        y=104+i*114
+        p += [f'<circle cx="42" cy="{y+49}" r="6" fill="{color}"/><path d="M48 {y+49}H68" stroke="{color}" stroke-opacity=".4"/><rect x="68" y="{y}" width="504" height="100" rx="13" fill="#121A26" stroke="{BORDER}"/>',
+              text(86,y+25,f'0{i+1} / {label}',15,color,'font-weight="600"'),
+              text(86,y+55,services,23,TEXT,'font-weight="500"'),text(86,y+81,detail,19,MUTED)]
+    p += [text(28,826,'SELF-HOSTING / WORKFLOWS / AUTOMATION',14,MUTED,'letter-spacing="1"'),'</g></svg>\n']
     return '\n'.join(p)
 
 
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
-    for name, content in {"mission-typing.svg": typing(), "mission-toolkit.svg": toolkit(), "mission-toolkit-mobile.svg": toolkit(True)}.items():
+    terminal=typing()
+    assets={"mission-typing.svg":terminal,"mission-typing-mobile.svg":terminal.replace('width="780" height="44" viewBox="0 0 780 44"','width="512" height="44" viewBox="134 0 512 44"'),"mission-toolkit.svg":toolkit(),"mission-toolkit-mobile.svg":toolkit(True),"mission-banner-mobile.svg":mobile_banner(),"mission-homelab-mobile.svg":mobile_homelab()}
+    for kind,number,name,tagline,tags,color in [('swiftioc','01','SwiftIOC','Follow the indicator. Keep the evidence.','PYTHON / THREAT INTEL / ANALYST WORKFLOWS','#43E6C5'),('inspector','02','IOC Inspector','Suspicious documents. Useful answers.','PYTHON / STATIC ANALYSIS / REPORTS','#A995FF'),('downloader','03','Website Downloader','Take a little piece of the web offline.','PYTHON / WEB ARCHIVING / PLAYWRIGHT','#F36BAA')]:
+        assets[f'mission-{kind}-mobile.svg']=mobile_project(kind,number,name,tagline,tags,color)
+    for name, content in assets.items():
         (OUT / name).write_text(content, encoding="utf-8")

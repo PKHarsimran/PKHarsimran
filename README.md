@@ -1,10 +1,20 @@
 <div align="center">
 
-<a href="https://harsim.ca"><img src="./profile/mission-banner.svg" alt="Harsimran Sidhu — turning curiosity into automation. Cybersecurity, threat intelligence, and automation." width="100%" /></a>
+<a href="https://harsim.ca">
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/mission-banner-mobile.svg">
+  <img src="./profile/mission-banner.svg" alt="Harsimran Sidhu — turning curiosity into automation. Cybersecurity, threat intelligence, and automation." width="100%" />
+</picture>
+</a>
 
 **Cybersecurity analyst · Open-source builder · Homelab tinkerer**
 
-<a href="https://harsim.ca"><img src="./profile/mission-typing.svg" alt="Follow the evidence. Automate the boring bits. Always one more thing to build." width="780" /></a>
+<a href="https://harsim.ca">
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/mission-typing-mobile.svg">
+  <img src="./profile/mission-typing.svg" alt="Follow the evidence. Automate the boring bits. Always one more thing to build." width="780" />
+</picture>
+</a>
 
 [Website ↗](https://harsim.ca) · [LinkedIn ↗](https://www.linkedin.com/in/harsimransidhu/) · [Docker Hub ↗](https://hub.docker.com/u/pkvirus)
 
@@ -26,30 +36,18 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 ## 🚀 Selected builds
 
-### 📡 Public build radar
-
-<a href="./profile/public-pulse.md"><img src="./profile/public-pulse.svg" alt="Daily public build radar: CI status, latest release, stars, and default-branch commit date for SwiftIOC, IOC Inspector, and Website Downloader." width="100%" /></a>
-
-[Read the snapshot](./profile/public-pulse.md) · [Watch the generator run ↗](https://github.com/PKHarsimran/PKHarsimran/actions/workflows/profile-lab.yml)
-
-<details>
-<summary><strong>💓 Open live checks & release links</strong></summary>
-
-| Public project | Checks | Latest release |
-| :--- | :--- | :--- |
-| [SwiftIOC](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector) | [![SwiftIOC CI](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/actions/workflows/ci.yml) | [![SwiftIOC release](https://img.shields.io/github/v/release/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector?label=release&color=A995FF)](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/releases/latest) |
-| [IOC Inspector](https://github.com/PKHarsimran/IOC-Inspector) | [![IOC Inspector CI](https://github.com/PKHarsimran/IOC-Inspector/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/PKHarsimran/IOC-Inspector/actions/workflows/ci.yml) | [![IOC Inspector release](https://img.shields.io/github/v/release/PKHarsimran/IOC-Inspector?label=release&color=A995FF)](https://github.com/PKHarsimran/IOC-Inspector/releases/latest) |
-| [Website Downloader](https://github.com/PKHarsimran/website-downloader) | [![Website Downloader CI](https://github.com/PKHarsimran/website-downloader/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/PKHarsimran/website-downloader/actions/workflows/python-app.yml) | [![Website Downloader release](https://img.shields.io/github/v/release/PKHarsimran/website-downloader?label=release&color=A995FF)](https://github.com/PKHarsimran/website-downloader/releases/latest) |
-
-<sub>Badges may be cached; open one for the underlying workflow or release.</sub>
-
-</details>
+[01 / SwiftIOC](#01--swiftioc) · [02 / IOC Inspector](#02--ioc-inspector) · [03 / Website Downloader](#03--website-downloader)
 
 ### 01 / SwiftIOC
 
-<a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector"><img src="./profile/mission-swiftioc.svg" alt="SwiftIOC — follow the indicator, keep the evidence. Python threat intelligence and analyst workflows." width="100%" /></a>
+<a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector">
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/mission-swiftioc-mobile.svg">
+  <img src="./profile/mission-swiftioc.svg" alt="SwiftIOC — follow the indicator, keep the evidence. Python threat intelligence and analyst workflows." width="100%" />
+</picture>
+</a>
 
-**Threat intelligence you can trace back to the source.** A Python collector normalizes IOCs and vulnerability reports; the browser dashboard brings the evidence together for investigation and export.
+**Collect → normalize → investigate.** A Python pipeline turns IOC feeds and vulnerability reports into source-aware records. The browser dashboard brings the evidence together for review and export.
 
 [🛰️ Open dashboard ↗](https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/) · [Source ↗](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector)
 
@@ -78,17 +76,27 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 ### 02 / IOC Inspector
 
-<a href="https://github.com/PKHarsimran/IOC-Inspector"><img src="./profile/mission-inspector.svg" alt="IOC Inspector — suspicious documents, useful answers. Python static analysis and structured reports." width="100%" /></a>
+<a href="https://github.com/PKHarsimran/IOC-Inspector">
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/mission-inspector-mobile.svg">
+  <img src="./profile/mission-inspector.svg" alt="IOC Inspector — suspicious documents, useful answers. Python static analysis and structured reports." width="100%" />
+</picture>
+</a>
 
-**Suspicious documents, useful answers.** Triage PDFs and Office files with static analysis, IOC extraction, and optional threat enrichment. Export Markdown, JSON, or CSV for the next step of the investigation.
+**Inspect → extract → report.** Triage PDFs and Office files with static analysis, IOC extraction, and optional threat enrichment. Export the findings as Markdown, JSON, or CSV.
 
 [Source ↗](https://github.com/PKHarsimran/IOC-Inspector)
 
 ### 03 / Website Downloader
 
-<a href="https://github.com/PKHarsimran/website-downloader"><img src="./profile/mission-downloader.svg" alt="Website Downloader — take a little piece of the web offline. Python web archiving with optional Playwright rendering." width="100%" /></a>
+<a href="https://github.com/PKHarsimran/website-downloader">
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/mission-downloader-mobile.svg">
+  <img src="./profile/mission-downloader.svg" alt="Website Downloader — take a little piece of the web offline. Python web archiving with optional Playwright rendering." width="100%" />
+</picture>
+</a>
 
-**An offline copy you can actually browse.** Mirror websites you're authorized to archive, rewrite links and assets, and update existing copies. Optional Playwright rendering handles pages that need JavaScript.
+**Capture → rewrite → browse offline.** Mirror websites, bring their assets along, and rewrite links for offline browsing. Update existing copies or use optional Playwright rendering for pages that need JavaScript.
 
 [📖 Field guide ↗](https://github.com/PKHarsimran/website-downloader/wiki) · [Source ↗](https://github.com/PKHarsimran/website-downloader)
 
@@ -106,9 +114,12 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 ## 🏠 Inside the lab
 
-My **Zima homelab** brings media, photos, books, and everyday self-hosting together with **Docker Compose**. I've built the connections, dashboards, and automation around the services to make the whole stack easier to run.
+My **Zima homelab** runs on **Docker Compose**. Media, photos, books, dashboards, and monitoring share a home; I build the workflows and automation that connect them.
 
-<img src="./profile/mission-homelab.svg" alt="Zima homelab service map: Jellyfin and Jellyseerr with Radarr, Sonarr, Prowlarr and Bazarr; Transmission with Gluetun; PhotoPrism; Shelfmark and Audiobookshelf; Homepage, Portainer and custom flow dashboards; Uptime Kuma, Glances, Dozzle and ntfy. Connected using Docker Compose." width="100%" />
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/mission-homelab-mobile.svg">
+  <img src="./profile/mission-homelab.svg" alt="Zima homelab service map: Jellyfin and Jellyseerr with Radarr, Sonarr, Prowlarr and Bazarr; Transmission with Gluetun; PhotoPrism; Shelfmark and Audiobookshelf; Homepage, Portainer and custom flow dashboards; Uptime Kuma, Glances, Dozzle and ntfy. Connected using Docker Compose." width="100%" />
+</picture>
 
 - 🎬 **Connect the workflow:** requests → library automation → VPN-routed downloads → Jellyfin playback.
 - 🖼️ **Bring the libraries together:** photo management, books, and audiobooks in one self-hosted stack.
@@ -128,7 +139,7 @@ My **Zima homelab** brings media, photos, books, and everyday self-hosting toget
 
 </details>
 
-**The fun part:** teaching the containers to work together, then automating the bits in between. ⚙️
+**Current side quest:** make the stack easier to run, recover, and eventually share. ⚙️
 
 <details>
 <summary><strong>🧠 Build story: a server, not just a list of containers</strong></summary>
@@ -153,6 +164,25 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 </picture>
 
 ## 📊 Activity log
+
+### 📡 Public build radar
+
+<a href="./profile/public-pulse.md"><img src="./profile/public-pulse.svg" alt="Daily public build radar: CI status, latest release, stars, and default-branch commit date for SwiftIOC, IOC Inspector, and Website Downloader." width="100%" /></a>
+
+[Read the snapshot](./profile/public-pulse.md) · [Watch the generator run ↗](https://github.com/PKHarsimran/PKHarsimran/actions/workflows/profile-lab.yml)
+
+<details>
+<summary><strong>💓 Open live checks & release links</strong></summary>
+
+| Public project | Checks | Latest release |
+| :--- | :--- | :--- |
+| [SwiftIOC](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector) | [![SwiftIOC CI](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/actions/workflows/ci.yml) | [![SwiftIOC release](https://img.shields.io/github/v/release/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector?label=release&color=A995FF)](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/releases/latest) |
+| [IOC Inspector](https://github.com/PKHarsimran/IOC-Inspector) | [![IOC Inspector CI](https://github.com/PKHarsimran/IOC-Inspector/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/PKHarsimran/IOC-Inspector/actions/workflows/ci.yml) | [![IOC Inspector release](https://img.shields.io/github/v/release/PKHarsimran/IOC-Inspector?label=release&color=A995FF)](https://github.com/PKHarsimran/IOC-Inspector/releases/latest) |
+| [Website Downloader](https://github.com/PKHarsimran/website-downloader) | [![Website Downloader CI](https://github.com/PKHarsimran/website-downloader/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/PKHarsimran/website-downloader/actions/workflows/python-app.yml) | [![Website Downloader release](https://img.shields.io/github/v/release/PKHarsimran/website-downloader?label=release&color=A995FF)](https://github.com/PKHarsimran/website-downloader/releases/latest) |
+
+<sub>Badges may be cached; open one for the underlying workflow or release.</sub>
+
+</details>
 
 <div align="center">
   <img src="./profile/stats.svg" alt="Harsimran's GitHub activity statistics" width="54%" align="top" />
