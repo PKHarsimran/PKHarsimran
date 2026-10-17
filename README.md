@@ -40,10 +40,10 @@
 </picture>
 
 <p align="center">
-  <a href="https://github.com/antonkomarev/github-profile-views-counter#faq"><img src="https://komarev.com/ghpvc/?username=PKHarsimran&amp;label=LAB+PAGE+HITS&amp;color=a995ff&amp;style=for-the-badge" alt="Lab page hits — public profile view counter, not unique visitors" height="28" /></a>
+  <a href="https://hits.sh/github.com/PKHarsimran/"><img src="https://hits.sh/github.com/PKHarsimran.svg?style=for-the-badge&amp;label=LAB+PAGE+HITS&amp;color=a995ff&amp;labelColor=34445c" alt="Lab page hits — public profile view counter, not unique visitors" height="28" /></a>
 </p>
 
-<sub>Thanks for dropping into my corner of the internet. ✨<br />Page hits, not unique visitors · <a href="https://github.com/antonkomarev/github-profile-views-counter#faq">About the counter</a></sub>
+<sub>Thanks for dropping into my corner of the internet. ✨<br />Page hits, not unique visitors · <a href="https://github.com/silentsoft/hits#statistics">About the counter</a></sub>
 <!-- visitors:end -->
 
 </div>
