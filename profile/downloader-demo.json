@@ -1,0 +1,15 @@
+{
+  "source": {
+    "repo": "website-downloader",
+    "tag": "v2.6.1",
+    "sha": "889580c0cad66c1d36c9a2843bb437d7f7920dce"
+  },
+  "html_pages": 3,
+  "assets": [
+    "CSS",
+    "SVG"
+  ],
+  "local_references_checked": 15,
+  "source_server_stopped_before_validation": true,
+  "scope": "Released CLI run against an owned localhost fixture, not a crawl of an external website."
+}

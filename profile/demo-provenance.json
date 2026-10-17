@@ -1,0 +1,29 @@
+{
+  "week": "2026-W42",
+  "sources": {
+    "inspector": {
+      "repo": "IOC-Inspector",
+      "tag": "v0.1.0",
+      "sha": "df4e2cc2266b337a8994c4d10e3accb7333dba1b"
+    },
+    "downloader": {
+      "repo": "website-downloader",
+      "tag": "v2.6.1",
+      "sha": "889580c0cad66c1d36c9a2843bb437d7f7920dce"
+    }
+  },
+  "recipes": {
+    "demos/README.md": "9dd9b62e2c2dfc19258df3c30261ebe268274b0ab1554a2638e98404e35b752d",
+    "demos/cases.json": "422c7e7b12229ab754b6d806a409981b976d6a8de6e775c2cba6a251106ba223",
+    "demos/downloader.tape": "dbb6a5850ef34e66ff4cb0e3377e14df6127984ed38b5d468cd0e0ba7eeedb65",
+    "demos/inspector.tape": "d7f7cd7b9e4c51720960c471032f635c61db63fc8371309000231d3f6f90bf3b",
+    "scripts/profile_demos.py": "9ce7bf7b9ee14e2e7265aba28986a67d606b78a6482800bc20691957e2365e13"
+  },
+  "fingerprint": "d91cf23f63a7a4f540b971ee4b49a460ec7cc6827a73d61c61c2a2dd59070278",
+  "recorded_at": "2026-10-17T20:36:04.539395+00:00",
+  "method": "VHS recorded executions of released CLIs on owned fixtures; assertions passed.",
+  "reels": {
+    "inspector": "e05daa93114aec6b9cc55134b5d1233c93c2067073dd54059dfc7b71e49230ea",
+    "downloader": "c8e6c3852b4e35c93153b2d8c1c0d11d1d62c8ba716a5d23bb1f35935347ddf2"
+  }
+}

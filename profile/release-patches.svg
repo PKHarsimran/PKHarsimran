@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="546" viewBox="0 0 1000 546" role="img" aria-labelledby="title desc"><title id="title">Release mission patches</title><desc id="desc">A patch for each of up to two recent stable releases per selected public project. Versions and dates are real published release metadata.</desc>
+<defs><linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#152133"/><stop offset="1" stop-color="#0D1117"/></linearGradient></defs>
+<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="998" height="544" rx="22" fill="url(#surface)" stroke="#29364B"/>
+<text x="28" y="34" fill="#A995FF" font-size="14" font-weight="600" >MISSION PATCHES / PUBLIC RELEASES</text>
+<text x="28" y="73" fill="#EFF4FC" font-size="26" font-weight="600" >Small releases. Permanent souvenirs.</text>
+<rect x="28" y="96" width="296" height="198" rx="16" fill="#121A26" stroke="#29364B"/>
+<g transform="translate(86 158)" fill="none" stroke="#43E6C5" stroke-width="2"><path d="M0-35L30-17V17L0 35L-30 17V-17Z"/><path d="M-13 0L-3 10L16-12"/><circle r="44" stroke-opacity=".2" stroke-dasharray="3 6"/></g>
+<text x="146" y="143" fill="#EFF4FC" font-size="17" font-weight="600" >SwiftIOC</text>
+<text x="146" y="174" fill="#43E6C5" font-size="20" font-weight="650" >v0.1.0</text>
+<text x="50" y="241" fill="#A7B6CE" font-size="13" font-weight="400" >RELEASED / 2025-11-10</text>
+<text x="50" y="277" fill="#43E6C5" font-size="12" font-weight="500" >PUBLIC RELEASE / MISSION COMPLETE</text>
+<rect x="352" y="96" width="296" height="198" rx="16" fill="#121A26" stroke="#29364B"/>
+<g transform="translate(410 158)" fill="none" stroke="#A995FF" stroke-width="2"><path d="M0-35L30-17V17L0 35L-30 17V-17Z"/><path d="M-13 0L-3 10L16-12"/><circle r="44" stroke-opacity=".2" stroke-dasharray="3 6"/></g>
+<text x="470" y="143" fill="#EFF4FC" font-size="17" font-weight="600" >IOC Inspector</text>
+<text x="470" y="174" fill="#A995FF" font-size="20" font-weight="650" >v0.1.0</text>
+<text x="374" y="241" fill="#A7B6CE" font-size="13" font-weight="400" >RELEASED / 2025-07-12</text>
+<text x="374" y="277" fill="#A995FF" font-size="12" font-weight="500" >PUBLIC RELEASE / MISSION COMPLETE</text>
+<rect x="676" y="96" width="296" height="198" rx="16" fill="#121A26" stroke="#29364B"/>
+<g transform="translate(734 158)" fill="none" stroke="#F36BAA" stroke-width="2"><path d="M0-35L30-17V17L0 35L-30 17V-17Z"/><path d="M-13 0L-3 10L16-12"/><circle r="44" stroke-opacity=".2" stroke-dasharray="3 6"/></g>
+<text x="794" y="143" fill="#EFF4FC" font-size="17" font-weight="600" >Website Downloader</text>
+<text x="794" y="174" fill="#F36BAA" font-size="20" font-weight="650" >v2.6.1</text>
+<text x="698" y="241" fill="#A7B6CE" font-size="13" font-weight="400" >RELEASED / 2026-07-08</text>
+<text x="698" y="277" fill="#F36BAA" font-size="12" font-weight="500" >PUBLIC RELEASE / MISSION COMPLETE</text>
+<rect x="28" y="314" width="296" height="198" rx="16" fill="#121A26" stroke="#29364B"/>
+<g transform="translate(86 376)" fill="none" stroke="#F36BAA" stroke-width="2"><path d="M0-35L30-17V17L0 35L-30 17V-17Z"/><path d="M-13 0L-3 10L16-12"/><circle r="44" stroke-opacity=".2" stroke-dasharray="3 6"/></g>
+<text x="146" y="361" fill="#EFF4FC" font-size="17" font-weight="600" >Website Downloader</text>
+<text x="146" y="392" fill="#F36BAA" font-size="20" font-weight="650" >v2.6.0</text>
+<text x="50" y="459" fill="#A7B6CE" font-size="13" font-weight="400" >RELEASED / 2026-07-06</text>
+<text x="50" y="495" fill="#F36BAA" font-size="12" font-weight="500" >PUBLIC RELEASE / MISSION COMPLETE</text>
+</g></svg>

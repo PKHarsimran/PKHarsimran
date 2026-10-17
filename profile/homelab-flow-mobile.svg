@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="850" viewBox="0 0 600 850" role="img" aria-labelledby="title desc"><title id="title">Zima homelab flow theatre</title><desc id="desc">Illustrative service handoffs, generated from the curated public service manifest. No live health or network topology is represented.</desc>
+<defs><linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#152133"/><stop offset="1" stop-color="#0D1117"/></linearGradient></defs>
+<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="598" height="848" rx="22" fill="url(#surface)" stroke="#29364B"/>
+<style>.packet{animation:packet 8s linear infinite}.scan{animation:scan 4s ease-in-out infinite}@keyframes packet{to{stroke-dashoffset:-96}}@keyframes scan{50%{opacity:.25}}@media(prefers-reduced-motion:reduce){.packet,.scan{animation:none}}</style>
+<text x="28" y="34" fill="#43E6C5" font-size="14" font-weight="600" >ZIMA HOMELAB / FLOW THEATRE</text>
+<text x="28" y="76" fill="#EFF4FC" font-size="26" font-weight="600" >From “can we watch this?” to play.</text>
+<path class="packet" d="M42 156V280" stroke="#43E6C5" stroke-width="3" stroke-dasharray="5 7"/>
+<circle class="scan" cx="42" cy="156" r="6" fill="#43E6C5"/>
+<rect x="64" y="102" width="508" height="108" rx="14" fill="#121A26" stroke="#29364B"/>
+<text x="80" y="129" fill="#43E6C5" font-size="15" font-weight="600" >01 / REQUEST</text>
+<text x="80" y="162" fill="#EFF4FC" font-size="22" font-weight="600" >Jellyseerr</text>
+<text x="80" y="193" fill="#A7B6CE" font-size="17" font-weight="400" >Choose the next watch</text>
+<path class="packet" d="M42 280V404" stroke="#A995FF" stroke-width="3" stroke-dasharray="5 7"/>
+<circle class="scan" cx="42" cy="280" r="6" fill="#A995FF"/>
+<rect x="64" y="226" width="508" height="108" rx="14" fill="#121A26" stroke="#29364B"/>
+<text x="80" y="253" fill="#A995FF" font-size="15" font-weight="600" >02 / AUTOMATE</text>
+<text x="80" y="286" fill="#EFF4FC" font-size="22" font-weight="600" >Radarr · Sonarr · Prowlarr · Bazarr</text>
+<text x="80" y="317" fill="#A7B6CE" font-size="17" font-weight="400" >Coordinate the library</text>
+<path class="packet" d="M42 404V528" stroke="#F36BAA" stroke-width="3" stroke-dasharray="5 7"/>
+<circle class="scan" cx="42" cy="404" r="6" fill="#F36BAA"/>
+<rect x="64" y="350" width="508" height="108" rx="14" fill="#121A26" stroke="#29364B"/>
+<text x="80" y="377" fill="#F36BAA" font-size="15" font-weight="600" >03 / DOWNLOAD</text>
+<text x="80" y="410" fill="#EFF4FC" font-size="22" font-weight="600" >Transmission · Gluetun</text>
+<text x="80" y="441" fill="#A7B6CE" font-size="17" font-weight="400" >VPN-routed transfers</text>
+<circle class="scan" cx="42" cy="528" r="6" fill="#69B9FF"/>
+<rect x="64" y="474" width="508" height="108" rx="14" fill="#121A26" stroke="#29364B"/>
+<text x="80" y="501" fill="#69B9FF" font-size="15" font-weight="600" >04 / WATCH</text>
+<text x="80" y="534" fill="#EFF4FC" font-size="22" font-weight="600" >Jellyfin</text>
+<text x="80" y="565" fill="#A7B6CE" font-size="17" font-weight="400" >Bring the library home</text>
+<text x="28" y="634" fill="#43E6C5" font-size="13" font-weight="600" >LIBRARIES</text>
+<text x="28" y="658" fill="#A7B6CE" font-size="17" font-weight="400" >PhotoPrism · Shelfmark · Audiobookshelf</text>
+<text x="28" y="690" fill="#A995FF" font-size="13" font-weight="600" >OPERATIONS</text>
+<text x="28" y="714" fill="#A7B6CE" font-size="17" font-weight="400" >Homepage · Portainer · Custom flow dashboards</text>
+<text x="28" y="746" fill="#F36BAA" font-size="13" font-weight="600" >MONITORING</text>
+<text x="28" y="770" fill="#A7B6CE" font-size="17" font-weight="400" >Uptime Kuma · Glances · Dozzle · ntfy</text>
+<text x="28" y="828" fill="#A7B6CE" font-size="14" font-weight="400" >Illustrated handoffs / Curated service list / No live telemetry</text>
+</g></svg>
