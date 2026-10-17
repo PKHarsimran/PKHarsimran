@@ -2,23 +2,23 @@
 
 # Hey, I'm Harsimran 👋
 
-**🛡️ Defend systems. 🧠 Follow the evidence. ⚙️ Automate the boring bits.**
+**🛡️ Follow the evidence. ⚙️ Automate the boring bits.**
 
 <a href="https://harsim.ca">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=24&amp;duration=3000&amp;pause=1000&amp;color=00D4AA&amp;center=true&amp;vCenter=true&amp;width=820&amp;height=55&amp;lines=Cybersecurity+Analyst+%7C+Automation+Builder;Threat+Intel+%E2%86%92+Useful+Tools+%E2%86%92+Less+Busywork;Turning+curiosity+into+automation." alt="Cybersecurity Analyst | Automation Builder | Turning curiosity into automation" width="820" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=24&amp;duration=3000&amp;pause=1000&amp;color=00D4AA&amp;center=true&amp;vCenter=true&amp;width=820&amp;height=55&amp;lines=Cybersecurity+Analyst+%7C+Automation+Builder;Threat+intel.+Useful+tools.+Less+busywork.;Turning+curiosity+into+automation." alt="Cybersecurity Analyst | Automation Builder | Turning curiosity into automation" width="820" />
 </a>
 
 <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" alt="A little animated hello" width="70" />
 
-<br><br>
+<br>
 
 <a href="https://harsim.ca"><img src="https://img.shields.io/badge/Website-harsim.ca-00D4AA?style=for-the-badge" alt="Visit harsim.ca" /></a>
 <a href="https://www.linkedin.com/in/harsimransidhu/"><img src="https://img.shields.io/badge/LinkedIn-Harsimran_Sidhu-0A66C2?style=for-the-badge" alt="Connect with Harsimran Sidhu on LinkedIn" /></a>
 <a href="https://hub.docker.com/u/pkvirus"><img src="https://img.shields.io/badge/Docker_Hub-pkvirus-2496ED?style=for-the-badge&amp;logo=docker&amp;logoColor=white" alt="Explore pkvirus on Docker Hub" /></a>
 
-<br><br>
+<br>
 
-[🧑‍💻 About me](#-the-human-behind-the-terminal) · [🚀 Projects](#-things-ive-built) · [🏠 Homelab](#-meanwhile-in-the-homelab) · [🧰 Toolkit](#-my-toolkit) · [🐍 Snake](#-one-more-commit)
+[🧑‍💻 About me](#-the-human-behind-the-terminal) · [🚀 Projects](#-things-ive-built) · [🏠 Homelab](#-meanwhile-in-the-homelab) · [🧰 Toolkit](#-my-toolkit) · [📊 Activity](#-the-commit-log) · [🐍 Snake](#-one-more-commit)
 
 </div>
 
@@ -26,15 +26,15 @@
 
 ## 👋 The human behind the terminal
 
-<img align="right" src="https://media.giphy.com/media/jpVuGo0JkAXJiuNNK7/giphy.gif" alt="Animated coding companion" width="180" />
+<img align="right" src="https://media.giphy.com/media/jpVuGo0JkAXJiuNNK7/giphy.gif" alt="A quick study break" width="180" />
 
 I'm **Harsimran Sidhu**, a cybersecurity analyst and developer who likes turning messy security data into useful tools, dashboards, and repeatable workflows.
 
-- 🛡️ **On the security side:** WAF detection and tuning, endpoint investigations, and detection engineering.
-- 🔭 **Building out:** cyber threat intelligence workflows with **Splunk Enterprise**.
-- ⚙️ **Automating with:** Python, Docker, and Ansible.
-- 🌱 **Exploring:** OpenCTI and better ways to turn threat data into actionable intelligence.
-- 🏠 **After the dashboards:** homelab experiments, monitoring stacks, and Raspberry Pi projects.
+- 🛡️ **In the SOC:** WAF tuning, endpoint investigations, and detection engineering.
+- 🔭 **Building:** threat intelligence workflows with **Splunk Enterprise**.
+- ⚙️ **Automating:** the repetitive bits with **Python, Docker, and Ansible**.
+- 🌱 **Exploring:** **OpenCTI** and ways to put threat data to work.
+- 🏠 **Off the clock:** homelab experiments, monitoring stacks, and Raspberry Pi projects.
 - 💬 **Talk to me about:** SOC automation, Splunk, incident response, or open source.
 
 > If there's a repetitive task, there's probably a script waiting to happen.
@@ -45,13 +45,26 @@ I'm **Harsimran Sidhu**, a cybersecurity analyst and developer who likes turning
 
 ## 🚀 Things I've built
 
-### 🛰️ SwiftIOC — from threat feeds to investigation
+<div align="center">
+  <a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector"><img src="./profile/swiftioc.svg" alt="SwiftIOC repository card" width="48%" /></a>
+  <a href="https://github.com/PKHarsimran/website-downloader"><img src="./profile/website-downloader.svg" alt="Website Downloader repository card" width="48%" /></a>
+</div>
 
-Collect and normalize indicators of compromise and vulnerability reports, then explore them in a browser dashboard with source evidence and downloadable feeds.
+### 🛰️ SwiftIOC — connect the intel
+
+A Python collector and browser dashboard for threat intelligence. Collect and normalize IOCs and vulnerability reports, inspect the source evidence, and export useful findings.
 
 **Python · Threat intelligence · Analyst workflows**
 
 [🔎 Try the live dashboard](https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/) · [🧑‍💻 Explore the code](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector)
+
+### 🕵️ IOC Inspector — document detective
+
+Give suspicious PDFs and Office documents a closer look with static analysis, IOC extraction, and optional threat enrichment. Export findings in Markdown, JSON, or CSV.
+
+**Python · Document analysis · Structured reporting**
+
+[🧑‍💻 Explore the code](https://github.com/PKHarsimran/IOC-Inspector)
 
 ### 🌐 Website Downloader CLI — take the web offline
 
@@ -61,18 +74,6 @@ Create browsable offline mirrors of websites you're authorized to archive. Rewri
 
 [📖 Read the guide](https://github.com/PKHarsimran/website-downloader/wiki) · [🧑‍💻 Explore the code](https://github.com/PKHarsimran/website-downloader)
 
-<div align="center">
-  <a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector"><img src="./profile/swiftioc.svg" alt="SwiftIOC repository card" width="48%" /></a>
-  <a href="https://github.com/PKHarsimran/website-downloader"><img src="./profile/website-downloader.svg" alt="Website Downloader repository card" width="48%" /></a>
-</div>
-
-### 🕵️ IOC Inspector — give suspicious documents a closer look
-
-Triage PDFs and Office documents with static analysis, IOC extraction, and optional threat enrichment. Export findings in Markdown, JSON, or CSV for investigation notes and downstream workflows.
-
-**Python · Document analysis · Structured reporting**
-
-[🧑‍💻 Explore IOC Inspector](https://github.com/PKHarsimran/IOC-Inspector)
 
 ---
 
@@ -126,8 +127,8 @@ homelab/
 ## 📊 The commit log
 
 <div align="center">
-  <img src="./profile/stats.svg" alt="Harsimran's GitHub activity statistics" width="54%" />
-  <img src="./profile/top-langs.svg" alt="Most-used languages across Harsimran's GitHub repositories" width="39%" />
+  <img src="./profile/stats.svg" alt="Harsimran's GitHub activity statistics" width="54%" align="top" />
+  <img src="./profile/top-langs.svg" alt="Most-used languages across Harsimran's GitHub repositories" width="39%" align="top" />
 </div>
 
 ## 🐍 One more commit...
