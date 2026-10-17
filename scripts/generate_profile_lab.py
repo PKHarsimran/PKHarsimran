@@ -98,7 +98,9 @@ def surface(width, height, title, description):
     return [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc"><title id="title">{escape(title)}</title><desc id="desc">{escape(description)}</desc>', '<defs><linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#152133"/><stop offset="1" stop-color="#0D1117"/></linearGradient></defs>', f'<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="{width-2}" height="{height-2}" rx="22" fill="url(#surface)" stroke="{BORDER}"/>']
 
 
-def render_radar(snapshot):
+def render_radar(snapshot, mobile=False):
+    if mobile:
+        return render_mobile_radar(snapshot)
     stamp = datetime.fromisoformat(snapshot["generated_at"].replace("Z", "+00:00")).strftime("%d %b %Y · %H:%M UTC")
     desc = "; ".join(f'{p["name"]}: {p["ci"]}, release {p["release"] or p["release_state"]}, {p["stars"]} stars' for p in snapshot["projects"])
     p = surface(1000, 508, "Public build radar", desc + ". Snapshot " + stamp)
@@ -113,6 +115,32 @@ def render_radar(snapshot):
         p += [f'<rect x="30" y="{y}" width="642" height="104" rx="14" fill="{PANEL}" stroke="{BORDER}"/>', f'<rect x="30" y="{y+18}" width="3" height="68" rx="1.5" fill="{item["color"]}"/>', txt(50, y+34, item["name"], 27, TEXT, 650), f'<rect x="525" y="{y+15}" width="126" height="27" rx="13" fill="{state_color}" fill-opacity=".07" stroke="{state_color}" stroke-opacity=".35"/>', txt(588, y+34, item["ci"], 12, state_color, 650, 'text-anchor="middle"'), txt(52, y+64, f'RELEASE {display_release}  ·  {item["stars"]:,} {star_label}', 16, item["color"], 500), txt(52, y+87, f'Latest {item["default_branch"]} commit: {last}', 13, MUTED)]
     p += ['<g transform="translate(824 245)"><circle r="120" fill="#43E6C5" fill-opacity=".018" stroke="#29364B"/><circle r="80" fill="none" stroke="#29364B" stroke-dasharray="3 8"/><circle r="40" fill="none" stroke="#29364B"/><path d="M-120 0H120M0-120V120" stroke="#29364B"/><g class="sweep"><path d="M0 0L-60-103A119 119 0 0 1 0-119Z" fill="#43E6C5" fill-opacity=".08"/><path d="M0 0V-119" stroke="#43E6C5" stroke-opacity=".5"/></g><path d="M-14-9L0-22L14-9V11L0 22L-14 11Z" fill="#121A26" stroke="#43E6C5" stroke-width="2"/>', '<circle class="blip" cx="-70" cy="-62" r="5" fill="#43E6C5"/><circle class="blip" cx="62" cy="-17" r="5" fill="#A995FF"/><circle class="blip" cx="-18" cy="86" r="5" fill="#F36BAA"/>', txt(-70,-77,"01",11,"#43E6C5",600,'text-anchor="middle"'),txt(62,-32,"02",11,"#A995FF",600,'text-anchor="middle"'),txt(-18,110,"03",11,"#F36BAA",600,'text-anchor="middle"'),'</g>', txt(824, 406, "PUBLIC REPOSITORIES ONLY", 11, MUTED, 500, 'text-anchor="middle" letter-spacing="1"'), txt(30, 465, "SNAPSHOT / " + stamp, 12, MUTED, 500),txt(30,487,"Daily refresh · Commit activity includes automation · Open the snapshot for source links",11,MUTED),'</g></svg>\n']
     return apply_theme("\n".join(p))
+
+
+def render_mobile_radar(snapshot):
+    stamp=datetime.fromisoformat(snapshot['generated_at'].replace('Z','+00:00')).strftime('%d %b %Y / %H:%M UTC')
+    desc='; '.join(f'{p["name"]}: {p["ci"]}, release {p["release"] or p["release_state"]}, {p["stars"]} stars' for p in snapshot['projects'])
+    p=surface(600,760,'Public build radar / phone layout',desc+'. Snapshot '+stamp+'. Decorative radar motion; the badges show the last observed CI state, not live uptime.')
+    p += ['<style>.sweep{animation:sweep 18s linear infinite}@keyframes sweep{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.sweep{animation:none}}</style>',
+          txt(28,33,'DAILY / PUBLIC REPOSITORIES',14,'#43E6C5',600),
+          txt(28,77,'Public build radar',34,TEXT,700),
+          txt(28,108,'Three projects. Last observed state.',19,MUTED),
+          '<g transform="translate(531 64)"><circle r="40" fill="#43E6C5" fill-opacity=".025" stroke="#29364B"/><circle r="25" fill="none" stroke="#29364B"/><path d="M-40 0H40M0-40V40" stroke="#29364B"/><g class="sweep"><path d="M0 0L-19-33A38 38 0 0 1 0-38Z" fill="#43E6C5" fill-opacity=".15"/><path d="M0 0V-38" stroke="#43E6C5" stroke-opacity=".5"/></g><circle cx="24" cy="13" r="3" fill="#A995FF"/></g>']
+    for i,item in enumerate(snapshot['projects']):
+        y=133+i*175
+        release=item['release'] or item['release_state']
+        release=release if len(release)<=18 else release[:15]+'…'
+        state_color='#43E6C5' if item['ci']=='PASSING' else '#F36BAA' if item['ci'] in ('FAILING','TIMED OUT') else '#A995FF'
+        last=item['latest_commit_at'][:10] if item['latest_commit_at'] else 'unavailable'
+        star_label='star' if item['stars']==1 else 'stars'
+        p += [f'<rect x="28" y="{y}" width="544" height="157" rx="16" fill="{PANEL}" stroke="{BORDER}"/><path d="M29 {y+23}V{y+134}" stroke="{item["color"]}" stroke-width="3"/>',
+              txt(50,y+45,item['name'],28,TEXT,700),
+              f'<rect x="408" y="{y+17}" width="142" height="32" rx="16" fill="{state_color}" fill-opacity=".08" stroke="{state_color}" stroke-opacity=".35"/>',
+              txt(479,y+40,item['ci'],20,state_color,600,'text-anchor="middle"'),
+              txt(50,y+88,f'{release} · {item["stars"]:,} {star_label}',21,item['color'],500),
+              txt(50,y+126,'Latest commit / '+last,18,MUTED)]
+    p += [txt(28,689,stamp,18,MUTED),txt(28,722,'Workflow snapshot / activity includes automation.',16,MUTED),txt(28,746,'Open the snapshot for links and context.',16,MUTED),'</g></svg>\n']
+    return apply_theme('\n'.join(p))
 
 
 class CalendarParser(HTMLParser):
@@ -211,7 +239,7 @@ def main():
         html = response.read().decode("utf-8")
     calendar = {"generated_at":stamp,"source":url,"days":parse_calendar(html,now.date())}
     snapshot = {"generated_at":stamp,"scope":"three selected public repositories","projects":projects}
-    files = {"public-pulse.svg":render_radar(snapshot),"public-pulse.json":json.dumps(snapshot,indent=2)+"\n","public-pulse.md":report_markdown(snapshot),"contribution-patrol.svg":render_patrol(calendar),"contribution-patrol.json":json.dumps(calendar,indent=2)+"\n"}
+    files = {"public-pulse.svg":render_radar(snapshot),"public-pulse-mobile.svg":render_radar(snapshot,mobile=True),"public-pulse.json":json.dumps(snapshot,indent=2)+"\n","public-pulse.md":report_markdown(snapshot),"contribution-patrol.svg":render_patrol(calendar),"contribution-patrol.json":json.dumps(calendar,indent=2)+"\n"}
     # No output changes until both sources have passed validation.
     args.output.mkdir(parents=True,exist_ok=True)
     for name, content in files.items():

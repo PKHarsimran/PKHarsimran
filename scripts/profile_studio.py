@@ -66,17 +66,17 @@ def project(item,mobile=False):
     p=panel(w,h,name,tagline+' '+tags)
     p += [PROJECT_MOTION,f'<path class="edge-breathe" d="M24 1H{w*.34:.0f}" stroke="{color}" stroke-width="2"/>']
     if not mobile:
-        p += [text(738,157,number,146,color,700,'opacity=".035"'),
+        p += [f'<path d="M746 20C803 20 794 159 963 164M765 18C822 21 813 145 964 149M784 18C837 26 829 130 964 134" fill="none" stroke="{color}" stroke-opacity=".065"/>',
               f'<circle cx="890" cy="93" r="64" fill="{color}" fill-opacity=".035" stroke="{color}" stroke-opacity=".16"/>',
               group('mission-'+kind+'.svg','translate(891 101)','translate(890 93) scale(.92)'),
               text(30,32,number+' / '+area.upper(),12,color,500),
               text(28,91,name,43,TEXT,700),text(30,125,tagline,20,MUTED),text(30,169,tags,12,color,500),
               text(947,170,'↗',22,color)]
     else:
-        p += [text(28,36,number+' / '+area.upper(),14,color,500),
+        p += [text(28,36,number+' / '+area.upper(),16,color,500),
               group('mission-'+kind+'.svg','translate(891 101)','translate(548 37) scale(.35)'),
-              text(26,109,name,39,TEXT,700),text(28,157,tagline,23,MUTED),
-              '<path d="M28 190H572" stroke="#29364B"/>',text(28,228,tags,14,color,500)]
+              text(26,109,name,42,TEXT,700),text(28,157,tagline,24,MUTED),
+              '<path d="M28 190H572" stroke="#29364B"/>',text(28,228,tags,16,color,500)]
     return ''.join(p+['</g></svg>\n'])
 
 

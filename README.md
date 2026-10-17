@@ -25,9 +25,9 @@
 
 <!-- buttons:navigation:start -->
 <p align="center">
-  <a href="#user-content-selected-builds"><img src="./profile/buttons/projects.svg" alt="Projects" width="100" height="36" /></a>
-  <a href="#user-content-homelab"><img src="./profile/buttons/homelab.svg" alt="Homelab" width="102" height="36" /></a>
-  <a href="#user-content-activity"><img src="./profile/buttons/activity.svg" alt="Activity" width="100" height="36" /></a>
+  <a href="#user-content-selected-builds"><img src="./profile/buttons/projects-tab.svg" alt="Projects" width="100" height="44" /></a>
+  <a href="#user-content-homelab"><img src="./profile/buttons/homelab-tab.svg" alt="Homelab" width="102" height="44" /></a>
+  <a href="#user-content-activity"><img src="./profile/buttons/activity-tab.svg" alt="Activity" width="100" height="44" /></a>
 </p>
 <!-- buttons:navigation:end -->
 
@@ -37,8 +37,6 @@ I work in **cybersecurity** and build tools for clearer investigations, better d
 
 <details>
 <summary><strong>🧠 Behind the builds / current focus</strong></summary>
-
-I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy security data into something useful: clearer investigations, better dashboards, and fewer repetitive steps.
 
 | Station | What I'm working on |
 | :--- | :--- |
@@ -54,16 +52,14 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 ## Selected builds
 
-Threat intelligence, document triage, and a little web archaeology.
-
-[01 / SwiftIOC](#user-content-01--swiftioc) · [02 / IOC Inspector](#user-content-02--ioc-inspector) · [03 / Website Downloader](#user-content-03--website-downloader)
+**Pick a side quest:** [Investigate threat feeds](#user-content-01--swiftioc) · [Inspect a document](#user-content-02--ioc-inspector) · [Save a site offline](#user-content-03--website-downloader)
 
 ### 01 / SwiftIOC
 
 <a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/studio-swiftioc-mobile.svg">
-  <img src="./profile/studio-swiftioc.svg" alt="SwiftIOC — follow the indicator, keep the evidence. Python threat intelligence and analyst workflows." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-swiftioc-cover-mobile.svg">
+  <img src="./profile/studio-swiftioc-cover.svg" alt="SwiftIOC — follow the indicator, keep the evidence. Python threat intelligence and analyst workflows." width="100%" />
 </picture>
 </a>
 
@@ -114,8 +110,8 @@ Threat intelligence, document triage, and a little web archaeology.
 
 <a href="https://github.com/PKHarsimran/IOC-Inspector">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/studio-inspector-mobile.svg">
-  <img src="./profile/studio-inspector.svg" alt="IOC Inspector — suspicious documents, useful answers. Python static analysis and structured reports." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-inspector-cover-mobile.svg">
+  <img src="./profile/studio-inspector-cover.svg" alt="IOC Inspector — suspicious documents, useful answers. Python static analysis and structured reports." width="100%" />
 </picture>
 </a>
 
@@ -124,7 +120,7 @@ Threat intelligence, document triage, and a little web archaeology.
 <!-- buttons:inspector:start -->
 <p align="left">
   <a href="https://github.com/PKHarsimran/IOC-Inspector#-quick-start"><img src="./profile/buttons/quick-start.svg" alt="Quick start" width="150" height="44" /></a>
-  <a href="https://github.com/PKHarsimran/IOC-Inspector"><img src="./profile/buttons/source.svg" alt="View source" width="140" height="44" /></a>
+  <a href="https://github.com/PKHarsimran/IOC-Inspector"><img src="./profile/buttons/source-inspector.svg" alt="View source" width="140" height="44" /></a>
 </p>
 <!-- buttons:inspector:end -->
 
@@ -160,8 +156,8 @@ Threat intelligence, document triage, and a little web archaeology.
 
 <a href="https://github.com/PKHarsimran/website-downloader">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/studio-downloader-mobile.svg">
-  <img src="./profile/studio-downloader.svg" alt="Website Downloader — take a little piece of the web offline. Python web archiving with optional Playwright rendering." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-downloader-cover-mobile.svg">
+  <img src="./profile/studio-downloader-cover.svg" alt="Website Downloader — take a little piece of the web offline. Python web archiving with optional Playwright rendering." width="100%" />
 </picture>
 </a>
 
@@ -170,7 +166,7 @@ Threat intelligence, document triage, and a little web archaeology.
 <!-- buttons:downloader:start -->
 <p align="left">
   <a href="https://github.com/PKHarsimran/website-downloader/wiki"><img src="./profile/buttons/field-guide.svg" alt="Field guide" width="150" height="44" /></a>
-  <a href="https://github.com/PKHarsimran/website-downloader"><img src="./profile/buttons/source.svg" alt="View source" width="140" height="44" /></a>
+  <a href="https://github.com/PKHarsimran/website-downloader"><img src="./profile/buttons/source-downloader.svg" alt="View source" width="140" height="44" /></a>
 </p>
 <!-- buttons:downloader:end -->
 
@@ -188,7 +184,7 @@ Threat intelligence, document triage, and a little web archaeology.
 
 <!-- buttons:return:start -->
 <p align="left">
-  <a href="#user-content-mission-control"><img src="./profile/buttons/back-top.svg" alt="Back to top" width="126" height="36" /></a>
+  <a href="#user-content-mission-control"><img src="./profile/buttons/back-top-tab.svg" alt="Back to top" width="126" height="44" /></a>
 </p>
 <!-- buttons:return:end -->
 
@@ -236,7 +232,7 @@ My **Zima homelab** runs on **Docker Compose**. Media, photos, books, dashboards
 
 <!-- buttons:return:start -->
 <p align="left">
-  <a href="#user-content-mission-control"><img src="./profile/buttons/back-top.svg" alt="Back to top" width="126" height="36" /></a>
+  <a href="#user-content-mission-control"><img src="./profile/buttons/back-top-tab.svg" alt="Back to top" width="126" height="44" /></a>
 </p>
 <!-- buttons:return:end -->
 
@@ -268,7 +264,12 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 
 ### Public build radar
 
-<a href="./profile/public-pulse.md"><img src="./profile/public-pulse.svg" alt="Daily public build radar: CI status, latest release, stars, and default-branch commit date for SwiftIOC, IOC Inspector, and Website Downloader." width="100%" /></a>
+<a href="./profile/public-pulse.md">
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/public-pulse-mobile.svg">
+  <img src="./profile/public-pulse.svg" alt="Daily public build radar: CI status, latest release, stars, and default-branch commit date for SwiftIOC, IOC Inspector, and Website Downloader." width="100%" />
+</picture>
+</a>
 
 <!-- buttons:radar:start -->
 <p align="left">
@@ -338,7 +339,7 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 
 <!-- buttons:return:start -->
 <p align="left">
-  <a href="#user-content-mission-control"><img src="./profile/buttons/back-top.svg" alt="Back to top" width="126" height="36" /></a>
+  <a href="#user-content-mission-control"><img src="./profile/buttons/back-top-tab.svg" alt="Back to top" width="126" height="44" /></a>
 </p>
 <!-- buttons:return:end -->
 

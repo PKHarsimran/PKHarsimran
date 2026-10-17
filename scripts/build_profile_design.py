@@ -13,28 +13,30 @@ BUTTONS={
     'website':('Visit website',150,MINT,'primary','globe'),
     'linkedin':('LinkedIn',150,VIOLET,'secondary','chat'),
     'contact':("Let's connect",160,VIOLET,'primary','chat'),
-    'projects':('Projects',100,MINT,'nav','01'),
-    'homelab':('Homelab',102,VIOLET,'nav','02'),
-    'activity':('Activity',100,BLUE,'nav','03'),
+    'projects-tab':('Projects',100,MINT,'nav','01'),
+    'homelab-tab':('Homelab',102,VIOLET,'nav','02'),
+    'activity-tab':('Activity',100,BLUE,'nav','03'),
     'dashboard':('Open dashboard',166,MINT,'primary','play'),
     'quick-start':('Quick start',150,VIOLET,'primary','bolt'),
     'field-guide':('Field guide',150,PINK,'primary','book'),
     'source':('View source',140,MINT,'secondary','code'),
+    'source-inspector':('View source',140,VIOLET,'secondary','code'),
+    'source-downloader':('View source',140,PINK,'secondary','code'),
     'snapshot':('Read snapshot',160,MINT,'secondary','report'),
     'workflow':('Workflow',138,VIOLET,'secondary','flow'),
     'docker':('Container images',188,BLUE,'secondary','cube'),
-    'back-top':('Back to top',126,MINT,'nav','up'),
+    'back-top-tab':('Back to top',126,MINT,'nav','up'),
 }
 GROUPS={
     'hero':[('website','https://harsim.ca'),('linkedin','https://www.linkedin.com/in/harsimransidhu/')],
-    'navigation':[('projects','#user-content-selected-builds'),('homelab','#user-content-homelab'),('activity','#user-content-activity')],
+    'navigation':[('projects-tab','#user-content-selected-builds'),('homelab-tab','#user-content-homelab'),('activity-tab','#user-content-activity')],
     'swift':[('dashboard','https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/'),('source','https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector')],
-    'inspector':[('quick-start','https://github.com/PKHarsimran/IOC-Inspector#-quick-start'),('source','https://github.com/PKHarsimran/IOC-Inspector')],
-    'downloader':[('field-guide','https://github.com/PKHarsimran/website-downloader/wiki'),('source','https://github.com/PKHarsimran/website-downloader')],
+    'inspector':[('quick-start','https://github.com/PKHarsimran/IOC-Inspector#-quick-start'),('source-inspector','https://github.com/PKHarsimran/IOC-Inspector')],
+    'downloader':[('field-guide','https://github.com/PKHarsimran/website-downloader/wiki'),('source-downloader','https://github.com/PKHarsimran/website-downloader')],
     'containers':[('docker','https://hub.docker.com/u/pkvirus')],
     'radar':[('snapshot','./profile/public-pulse.md'),('workflow','https://github.com/PKHarsimran/PKHarsimran/actions/workflows/profile-lab.yml')],
     'footer':[('contact','https://www.linkedin.com/in/harsimransidhu/')],
-    'return':[('back-top','#user-content-mission-control')],
+    'return':[('back-top-tab','#user-content-mission-control')],
 }
 ICONS={
     'globe':'<circle cx="0" cy="0" r="8"/><ellipse cx="0" cy="0" rx="3.5" ry="8"/><path d="M-7-3H7M-7 3H7"/>',
@@ -52,7 +54,7 @@ ICONS={
 
 def button(name):
     label,width,color,variant,icon=BUTTONS[name]
-    height=36 if variant=='nav' else 44
+    height=44
     fill=color if variant=='primary' else '#121A26'
     foreground='#0D1117' if variant=='primary' else '#EFF4FC'
     border=color if variant=='primary' else '#34445C'
@@ -64,7 +66,7 @@ def button(name):
         p += ['<style>.cta-icon{animation:invite 9s ease-in-out infinite}@keyframes invite{0%,75%,100%{transform:translateX(0)}82%,91%{transform:translateX(2px)}86%{transform:translateX(0)}}@media(prefers-reduced-motion:reduce){.cta-icon{animation:none}}</style>']
         p += [f'<path d="M13 2H{width-13}" stroke="#FFFFFF" stroke-opacity=".35"/>']
     if icon in ('01','02','03'):
-        p += [f'<text x="10" y="23" font-family="Consolas,monospace" font-size="11" fill="{icon_color}">{icon}</text>']
+        p += [f'<text x="10" y="26" font-family="Consolas,monospace" font-size="11" fill="{icon_color}">{icon}</text>']
     else:
         p += [f'<g class="{"cta-icon" if variant=="primary" else "icon"}"><g transform="translate({icon_x} {height/2}) scale({.75 if variant=="nav" else .8})" fill="none" stroke="{icon_color}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">{ICONS[icon]}</g></g>']
     p += [f'<text x="{label_x}" y="{height/2+5}" font-family="Segoe UI,Arial,sans-serif" font-size="{13 if variant=="nav" else 15}" font-weight="600" fill="{foreground}">{escape(label)}</text>','</svg>\n']
@@ -76,7 +78,7 @@ def group(name):
     links=[]
     for asset,url in GROUPS[name]:
         label,width,_,variant,_=BUTTONS[asset]
-        height=36 if variant=='nav' else 44
+        height=44
         links.append(f'  <a href="{escape(url,quote=True)}"><img src="./profile/buttons/{asset}.svg" alt="{escape(label)}" width="{width}" height="{height}" /></a>')
     return '<p align="'+align+'">\n'+'\n'.join(links)+'\n</p>'
 

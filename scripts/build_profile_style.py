@@ -172,6 +172,6 @@ if __name__ == "__main__":
         assets['studio-hero'+suffix+'.svg']=profile_studio.hero(mobile)
         assets['studio-guestbook'+suffix+'.svg']=profile_studio.outro(mobile)
         for project in profile_studio.PROJECTS:
-            assets['studio-'+project[0]+suffix+'.svg']=profile_studio.project(project,mobile)
+            assets['studio-'+project[0]+'-cover'+suffix+'.svg']=profile_studio.project(project,mobile)
     for name, content in assets.items():
         (OUT / name).write_text(apply_theme(content,'terminal' if 'typing' in name else 'panel'), encoding="utf-8")
