@@ -27,14 +27,14 @@ BUTTONS={
 }
 GROUPS={
     'hero':[('website','https://harsim.ca'),('linkedin','https://www.linkedin.com/in/harsimransidhu/')],
-    'navigation':[('projects','#selected-builds'),('homelab','#homelab'),('activity','#activity')],
+    'navigation':[('projects','#user-content-selected-builds'),('homelab','#user-content-homelab'),('activity','#user-content-activity')],
     'swift':[('dashboard','https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/'),('source','https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector')],
     'inspector':[('quick-start','https://github.com/PKHarsimran/IOC-Inspector#-quick-start'),('source','https://github.com/PKHarsimran/IOC-Inspector')],
     'downloader':[('field-guide','https://github.com/PKHarsimran/website-downloader/wiki'),('source','https://github.com/PKHarsimran/website-downloader')],
     'containers':[('docker','https://hub.docker.com/u/pkvirus')],
     'radar':[('snapshot','./profile/public-pulse.md'),('workflow','https://github.com/PKHarsimran/PKHarsimran/actions/workflows/profile-lab.yml')],
     'footer':[('contact','https://www.linkedin.com/in/harsimransidhu/')],
-    'return':[('back-top','#mission-control')],
+    'return':[('back-top','#user-content-mission-control')],
 }
 ICONS={
     'globe':'<circle cx="0" cy="0" r="8"/><ellipse cx="0" cy="0" rx="3.5" ry="8"/><path d="M-7-3H7M-7 3H7"/>',

@@ -25,9 +25,9 @@
 
 <!-- buttons:navigation:start -->
 <p align="center">
-  <a href="#selected-builds"><img src="./profile/buttons/projects.svg" alt="Projects" width="100" height="36" /></a>
-  <a href="#homelab"><img src="./profile/buttons/homelab.svg" alt="Homelab" width="102" height="36" /></a>
-  <a href="#activity"><img src="./profile/buttons/activity.svg" alt="Activity" width="100" height="36" /></a>
+  <a href="#user-content-selected-builds"><img src="./profile/buttons/projects.svg" alt="Projects" width="100" height="36" /></a>
+  <a href="#user-content-homelab"><img src="./profile/buttons/homelab.svg" alt="Homelab" width="102" height="36" /></a>
+  <a href="#user-content-activity"><img src="./profile/buttons/activity.svg" alt="Activity" width="100" height="36" /></a>
 </p>
 <!-- buttons:navigation:end -->
 
@@ -56,7 +56,7 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 Threat intelligence, document triage, and a little web archaeology.
 
-[01 / SwiftIOC](#01--swiftioc) · [02 / IOC Inspector](#02--ioc-inspector) · [03 / Website Downloader](#03--website-downloader)
+[01 / SwiftIOC](#user-content-01--swiftioc) · [02 / IOC Inspector](#user-content-02--ioc-inspector) · [03 / Website Downloader](#user-content-03--website-downloader)
 
 ### 01 / SwiftIOC
 
@@ -188,7 +188,7 @@ Threat intelligence, document triage, and a little web archaeology.
 
 <!-- buttons:return:start -->
 <p align="left">
-  <a href="#mission-control"><img src="./profile/buttons/back-top.svg" alt="Back to top" width="126" height="36" /></a>
+  <a href="#user-content-mission-control"><img src="./profile/buttons/back-top.svg" alt="Back to top" width="126" height="36" /></a>
 </p>
 <!-- buttons:return:end -->
 
@@ -236,7 +236,7 @@ My **Zima homelab** runs on **Docker Compose**. Media, photos, books, dashboards
 
 <!-- buttons:return:start -->
 <p align="left">
-  <a href="#mission-control"><img src="./profile/buttons/back-top.svg" alt="Back to top" width="126" height="36" /></a>
+  <a href="#user-content-mission-control"><img src="./profile/buttons/back-top.svg" alt="Back to top" width="126" height="36" /></a>
 </p>
 <!-- buttons:return:end -->
 
@@ -338,7 +338,7 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 
 <!-- buttons:return:start -->
 <p align="left">
-  <a href="#mission-control"><img src="./profile/buttons/back-top.svg" alt="Back to top" width="126" height="36" /></a>
+  <a href="#user-content-mission-control"><img src="./profile/buttons/back-top.svg" alt="Back to top" width="126" height="36" /></a>
 </p>
 <!-- buttons:return:end -->
 
