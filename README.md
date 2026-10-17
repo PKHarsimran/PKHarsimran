@@ -8,7 +8,7 @@
 
 [Website ↗](https://harsim.ca) · [LinkedIn ↗](https://www.linkedin.com/in/harsimransidhu/) · [Docker Hub ↗](https://hub.docker.com/u/pkvirus)
 
-[👋 Operator](#-operator-profile) · [🚀 Projects](#-selected-builds) · [🏠 Homelab](#-inside-the-lab) · [🧰 Toolkit](#-toolkit) · [📊 Activity](#-activity-log)
+[👋 Operator](#-operator-profile) · [🚀 Projects](#-selected-builds) · [🏠 Homelab](#-inside-the-lab) · [🚧 Now building](#-now-building) · [🧰 Toolkit](#-toolkit) · [📊 Activity](#-activity-log)
 
 </div>
 
@@ -26,6 +26,16 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 
 ## 🚀 Selected builds
 
+### 💓 Project heartbeat
+
+| Public project | Checks | Latest release |
+| :--- | :--- | :--- |
+| [SwiftIOC](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector) | [![SwiftIOC CI](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/actions/workflows/ci.yml) | [![SwiftIOC release](https://img.shields.io/github/v/release/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector?label=release&color=A995FF)](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/releases/latest) |
+| [IOC Inspector](https://github.com/PKHarsimran/IOC-Inspector) | [![IOC Inspector CI](https://github.com/PKHarsimran/IOC-Inspector/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/PKHarsimran/IOC-Inspector/actions/workflows/ci.yml) | [![IOC Inspector release](https://img.shields.io/github/v/release/PKHarsimran/IOC-Inspector?label=release&color=A995FF)](https://github.com/PKHarsimran/IOC-Inspector/releases/latest) |
+| [Website Downloader](https://github.com/PKHarsimran/website-downloader) | [![Website Downloader CI](https://github.com/PKHarsimran/website-downloader/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/PKHarsimran/website-downloader/actions/workflows/python-app.yml) | [![Website Downloader release](https://img.shields.io/github/v/release/PKHarsimran/website-downloader?label=release&color=A995FF)](https://github.com/PKHarsimran/website-downloader/releases/latest) |
+
+<sub>Badges may be cached; open one for the underlying workflow or release.</sub>
+
 ### 01 / SwiftIOC
 
 <a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector"><img src="./profile/mission-swiftioc.svg" alt="SwiftIOC — follow the indicator, keep the evidence. Python threat intelligence and analyst workflows." width="100%" /></a>
@@ -33,6 +43,30 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 **Threat intelligence you can trace back to the source.** A Python collector normalizes IOCs and vulnerability reports; the browser dashboard brings the evidence together for investigation and export.
 
 [🛰️ Open dashboard ↗](https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/) · [Source ↗](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector)
+
+<details>
+<summary><strong>🎬 Watch a 12-second evidence review</strong></summary>
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="./profile/swift-demo.png">
+  <img src="./profile/swift-demo.gif" alt="SwiftIOC walkthrough: open the public dashboard, review a CVE, inspect CISA evidence, and compare NVD details." width="100%">
+</picture>
+
+<sub>Recorded from the public dashboard on October 17, 2026. The displayed records are a snapshot; use the live dashboard for current data.</sub>
+
+</details>
+
+<details>
+<summary><strong>🧠 Build story: keep the evidence attached</strong></summary>
+
+- **Problem:** scattered feeds make it hard to understand where an indicator came from or what a vulnerability report actually establishes.
+- **Built:** a Python collection and normalization pipeline, source-aware records, downloadable feeds, and a browser workspace for investigation.
+- **Design takeaway:** keep provenance visible and separate indicators from vulnerability evidence. A score helps order review; it doesn't establish compromise.
+
+[Explore how SwiftIOC works ↗](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector#how-the-pieces-fit)
+
+</details>
+
 
 ### 02 / IOC Inspector
 
@@ -49,6 +83,19 @@ I'm **Harsimran Sidhu**. I work in cybersecurity and build tools that turn messy
 **An offline copy you can actually browse.** Mirror websites you're authorized to archive, rewrite links and assets, and update existing copies. Optional Playwright rendering handles pages that need JavaScript.
 
 [📖 Field guide ↗](https://github.com/PKHarsimran/website-downloader/wiki) · [Source ↗](https://github.com/PKHarsimran/website-downloader)
+
+<details>
+<summary><strong>🎬 Watch the CLI turn a site into an offline copy</strong></summary>
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="./profile/cli-demo.png">
+  <img src="./profile/cli-demo.gif" alt="Website Downloader walkthrough: recorded CLI output from an owned local demo site, followed by the generated offline mirror. Three HTML pages, CSS and an SVG asset; relative links verified." width="100%">
+</picture>
+
+<sub>A replay of real CLI output, followed by the generated mirror. Recorded October 17, 2026, using an owned local fixture; the localhost address is part of the demo.</sub>
+
+</details>
+
 
 ## 🏠 Inside the lab
 
@@ -77,6 +124,22 @@ My **Zima homelab** brings media, photos, books, and everyday self-hosting toget
 I'm also turning what I've learned into a **modular Compose starter kit**, with guided setup and connected services so others can build their own home server.
 
 **The fun part:** making the containers work together, then automating the bits in between. ⚙️
+
+<details>
+<summary><strong>🧠 Build story: a server, not just a list of containers</strong></summary>
+
+- **Problem:** a collection of running services still leaves requests, downloads, imports, libraries, and troubleshooting disconnected.
+- **Built:** a Compose-based home server connecting media workflows, photo and book libraries, custom dashboards, health checks, logs, and notifications.
+- **Design takeaway:** the useful work is in the connections: storage paths, permissions, service handoffs, and understandable recovery. More containers alone don't make a better server.
+
+</details>
+
+
+## 🚧 Now building
+
+<img src="./profile/mission-now.svg" alt="Now building: a modular Docker Compose home-server starter kit with guided setup and connected services. Next checkpoint: independent fresh-install validation using the documentation." width="100%" />
+
+The next checkpoint is making the setup understandable to someone who wasn't there when it was built: follow the docs, choose service groups, and get a connected server running.
 
 ## 🧰 Toolkit
 

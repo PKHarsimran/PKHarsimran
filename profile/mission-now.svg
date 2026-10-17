@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="262" viewBox="0 0 1000 262" role="img" aria-labelledby="title desc">
+<title id="title">Now building — a modular Compose starter kit</title><desc id="desc">In development: guided setup and connected home-server services. Next checkpoint: independent fresh-install validation using the documentation. This panel describes a development direction, not a release or completion percentage.</desc>
+<defs><linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#152133"/><stop offset="1" stop-color="#0D1117"/></linearGradient></defs>
+<style>.beacon{animation:beacon 3s ease-in-out infinite}@keyframes beacon{50%{opacity:.35}}@media(prefers-reduced-motion:reduce){.beacon{animation:none}}</style>
+<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="998" height="260" rx="22" fill="url(#surface)" stroke="#29364B"/>
+<circle class="beacon" cx="34" cy="32" r="4" fill="#F36BAA"/><text x="48" y="37" fill="#F36BAA" font-size="12" font-weight="600" letter-spacing="2">NOW BUILDING / IN DEVELOPMENT</text>
+<text x="32" y="96" fill="#EFF4FC" font-size="40" font-weight="700" letter-spacing="-1">The Compose starter kit</text>
+<text x="34" y="132" fill="#A7B6CE" font-size="21">Modular services. Guided setup. Connections included.</text>
+<path d="M34 160H720" stroke="#29364B"/>
+<text x="34" y="192" fill="#A995FF" font-size="12" font-weight="600" letter-spacing="1.5">NEXT CHECKPOINT</text>
+<text x="34" y="224" fill="#43E6C5" font-size="22" font-weight="500">An independent fresh install, using only the docs.</text>
+<g transform="translate(822 70)" fill="#121A26" stroke-width="2"><rect width="126" height="44" rx="9" stroke="#43E6C5"/><rect y="60" width="126" height="44" rx="9" stroke="#A995FF"/><rect y="120" width="126" height="44" rx="9" stroke="#F36BAA"/><path d="M63 44V60M63 104V120" stroke="#A7B6CE"/><g fill="#43E6C5" stroke="none"><circle cx="17" cy="22" r="3"/><circle cx="17" cy="82" r="3"/><circle cx="17" cy="142" r="3"/></g><path d="M34 22H107M34 82H107M34 142H107" stroke="#29364B"/></g></g></svg>
