@@ -1,0 +1,119 @@
+{
+  "schema": 1,
+  "recipe": "signal-heist-v1",
+  "generated_at": "2026-10-18T19:10:00Z",
+  "calendar_observed_at": "2026-10-18T19:10:00Z",
+  "fingerprint": "095241bf5030e20757261947fef4fad64ad9304b953073400c72946b255be7de",
+  "serial": "095241BF",
+  "asset_id": "095241bf5030e207",
+  "retained": [
+    "095241bf5030e207"
+  ],
+  "assets": {
+    "heist": "arcade/heist-095241bf5030e207.svg",
+    "mobile": "arcade/heist-095241bf5030e207-mobile.svg",
+    "relic": "arcade/relic-095241bf5030e207.svg"
+  },
+  "relic_name": "Null Navigator",
+  "gates": [
+    {
+      "id": "A",
+      "label": "RELEASE",
+      "source": "SwiftIOC",
+      "display": "v0.1.0",
+      "hint": "Patch version: ones digit.",
+      "value": 0,
+      "digit": 0
+    },
+    {
+      "id": "B",
+      "label": "CALENDAR",
+      "source": "Days with activity",
+      "display": "346",
+      "hint": "Take the ones digit.",
+      "value": 346,
+      "digit": 6
+    },
+    {
+      "id": "C",
+      "label": "BUILD RADAR",
+      "source": "Passing checks / selected 3",
+      "display": "3",
+      "hint": "Take the ones digit.",
+      "value": 3,
+      "digit": 3
+    }
+  ],
+  "route": [
+    "C",
+    "B",
+    "A"
+  ],
+  "solution": "360",
+  "choices": [
+    "497",
+    "823",
+    "360"
+  ],
+  "tool_url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector",
+  "tool_name": "SwiftIOC",
+  "rewind": {
+    "previous": {
+      "generated_at": "2026-10-18T19:06:00Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-10-18T18:26:46Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-07-02T10:36:39Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.6.1",
+          "ci": "PASSING",
+          "stars": 216,
+          "latest_commit_at": "2026-07-28T19:57:33Z"
+        }
+      ]
+    },
+    "current": {
+      "generated_at": "2026-10-18T19:10:00Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-10-18T18:26:46Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-07-02T10:36:39Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.6.1",
+          "ci": "PASSING",
+          "stars": 216,
+          "latest_commit_at": "2026-07-28T19:57:33Z"
+        }
+      ]
+    },
+    "changes": []
+  },
+  "sources": [
+    "public-pulse.json",
+    "contribution-calendar.json"
+  ]
+}

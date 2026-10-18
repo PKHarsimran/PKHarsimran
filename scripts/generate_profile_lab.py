@@ -5,6 +5,7 @@ Standard library only. No private-repository discovery, analytics, or write API 
 from __future__ import annotations
 from profile_theme import apply_theme
 from contribution_arcade import render_contributions
+from profile_arcade_lab import build_lab, render_heist, render_relic, update_readme, retained_editions, prune_editions
 
 import argparse
 from datetime import date, datetime, timezone
@@ -216,7 +217,12 @@ def report_markdown(snapshot):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, default=Path("profile"))
+    parser.add_argument("--readme", type=Path, help="Update the bounded arcade slot after all inputs validate")
     args = parser.parse_args()
+    previous_path = args.output / 'public-pulse.json'
+    previous = json.loads(previous_path.read_text(encoding='utf-8')) if previous_path.exists() else None
+    history_path = args.output / 'arcade-lab.json'
+    history = json.loads(history_path.read_text(encoding='utf-8')) if history_path.exists() else None
     now = datetime.now(timezone.utc).replace(second=0,microsecond=0)
     stamp = now.isoformat().replace("+00:00", "Z")
     projects = [collect_project(spec) for spec in PROJECTS]
@@ -226,13 +232,21 @@ def main():
     calendar = {"generated_at":stamp,"source":url,"days":parse_calendar(html,now.date())}
     snapshot = {"generated_at":stamp,"scope":"three selected public repositories","projects":projects}
     files = {"public-pulse.svg":render_radar(snapshot),"public-pulse-mobile.svg":render_radar(snapshot,mobile=True),"public-pulse.json":json.dumps(snapshot,indent=2)+"\n","public-pulse.md":report_markdown(snapshot),"contribution-evidence-run.svg":render_contributions(calendar),"contribution-evidence-run-mobile.svg":render_contributions(calendar,mobile=True),"contribution-calendar.json":json.dumps(calendar,indent=2)+"\n"}
+    lab = build_lab(snapshot, calendar, previous)
+    lab['retained'] = retained_editions(history,lab['asset_id'])
+    files.update({lab['assets']['heist']:render_heist(lab),lab['assets']['mobile']:render_heist(lab,mobile=True),lab['assets']['relic']:render_relic(lab),'arcade-lab.json':json.dumps(lab,indent=2)+'\n'})
+    readme = update_readme(args.readme.read_text(encoding='utf-8'),lab) if args.readme else None
     # No output changes until both sources have passed validation.
     args.output.mkdir(parents=True,exist_ok=True)
     for name, content in files.items():
         target=args.output/name
+        target.parent.mkdir(parents=True,exist_ok=True)
         tmp=target.with_suffix(target.suffix+".tmp")
         tmp.write_text(content,encoding="utf-8")
         tmp.replace(target)
+    if readme is not None:
+        args.readme.write_text(readme,encoding='utf-8')
+    prune_editions(args.output/'arcade',lab['retained'])
     print(f"Generated {len(files)} public profile artifacts at {stamp}")
 
 
