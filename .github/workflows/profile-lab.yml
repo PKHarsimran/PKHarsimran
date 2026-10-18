@@ -10,6 +10,7 @@ on:
       - ".github/workflows/profile-lab.yml"
       - "scripts/generate_profile_lab.py"
       - "scripts/contribution_arcade.py"
+      - "scripts/profile_arcade_scene.py"
       - "scripts/test_generate_profile_lab.py"
       - "scripts/profile_theme.py"
       - "fonts/**"
@@ -43,7 +44,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- profile/public-pulse.svg profile/public-pulse-mobile.svg profile/public-pulse.json profile/public-pulse.md profile/contribution-quest.svg profile/contribution-quest-mobile.svg profile/contribution-calendar.json
+          git add -- profile/public-pulse.svg profile/public-pulse-mobile.svg profile/public-pulse.json profile/public-pulse.md profile/contribution-evidence-run.svg profile/contribution-evidence-run-mobile.svg profile/contribution-calendar.json
           if git diff --cached --quiet; then
             echo "Public profile artifacts are unchanged."
             exit 0

@@ -225,7 +225,7 @@ def main():
         html = response.read().decode("utf-8")
     calendar = {"generated_at":stamp,"source":url,"days":parse_calendar(html,now.date())}
     snapshot = {"generated_at":stamp,"scope":"three selected public repositories","projects":projects}
-    files = {"public-pulse.svg":render_radar(snapshot),"public-pulse-mobile.svg":render_radar(snapshot,mobile=True),"public-pulse.json":json.dumps(snapshot,indent=2)+"\n","public-pulse.md":report_markdown(snapshot),"contribution-quest.svg":render_contributions(calendar),"contribution-quest-mobile.svg":render_contributions(calendar,mobile=True),"contribution-calendar.json":json.dumps(calendar,indent=2)+"\n"}
+    files = {"public-pulse.svg":render_radar(snapshot),"public-pulse-mobile.svg":render_radar(snapshot,mobile=True),"public-pulse.json":json.dumps(snapshot,indent=2)+"\n","public-pulse.md":report_markdown(snapshot),"contribution-evidence-run.svg":render_contributions(calendar),"contribution-evidence-run-mobile.svg":render_contributions(calendar,mobile=True),"contribution-calendar.json":json.dumps(calendar,indent=2)+"\n"}
     # No output changes until both sources have passed validation.
     args.output.mkdir(parents=True,exist_ok=True)
     for name, content in files.items():

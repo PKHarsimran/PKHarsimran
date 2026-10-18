@@ -307,14 +307,12 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 
 ### Contribution arcade
 
-<a href="./profile/contribution-calendar.json">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/contribution-quest-mobile.svg">
-  <img src="./profile/contribution-quest.svg" alt="Contribution arcade: real GitHub calendar totals, active days and contributions in the last 30 displayed days. A parcel-carrying pixel bot follows active dates, a mascot waves, and a daily bot message rotates through the week. The phone layout splits the full calendar into two rows; reduced motion keeps it still." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/contribution-evidence-run-mobile.svg">
+  <img src="./profile/contribution-evidence-run.svg" alt="Contribution arcade: real GitHub calendar totals, active days and contributions in the last 30 displayed days. Below the calendar, a pixel bot hops over obstacles, collects clues, passes an inspection station and delivers a parcel through a portal. A bot message rotates daily. The phone layout splits the full calendar into two rows; reduced motion keeps it still." width="100%">
 </picture>
-</a>
 
-<sub>One square, one day. Colour follows GitHub's activity levels. Calendar activity includes automation and any private activity shared publicly. [Read the daily snapshot](./profile/contribution-calendar.json).</sub>
+<sub>One square, one day. Colour follows GitHub's activity levels. The bonus loop is an illustrated side quest. Calendar activity includes automation and any private activity shared publicly. [Read the daily snapshot](./profile/contribution-calendar.json).</sub>
 
 <details>
 <summary><strong>🐍 Bonus round / let the snake loose</strong></summary>
