@@ -3,36 +3,37 @@
   "recipe": "signal-heist-v1",
   "generated_at": "2026-10-18T19:10:00Z",
   "calendar_observed_at": "2026-10-18T19:10:00Z",
-  "fingerprint": "095241bf5030e20757261947fef4fad64ad9304b953073400c72946b255be7de",
-  "serial": "095241BF",
-  "asset_id": "095241bf5030e207",
+  "fingerprint": "ac56e514d59f16a2137bc86922378229470cc22a6980410eecd10418eade4912",
+  "serial": "AC56E514",
+  "asset_id": "ac56e514d59f16a2",
   "retained": [
-    "095241bf5030e207"
+    "095241bf5030e207",
+    "ac56e514d59f16a2"
   ],
   "assets": {
-    "heist": "arcade/heist-095241bf5030e207.svg",
-    "mobile": "arcade/heist-095241bf5030e207-mobile.svg",
-    "relic": "arcade/relic-095241bf5030e207.svg"
+    "heist": "arcade/heist-ac56e514d59f16a2.svg",
+    "mobile": "arcade/heist-ac56e514d59f16a2-mobile.svg",
+    "relic": "arcade/relic-ac56e514d59f16a2.svg"
   },
-  "relic_name": "Null Navigator",
+  "relic_name": "Log Sprite",
   "gates": [
     {
       "id": "A",
       "label": "RELEASE",
-      "source": "SwiftIOC",
+      "source": "IOC Inspector",
       "display": "v0.1.0",
-      "hint": "Patch version: ones digit.",
-      "value": 0,
-      "digit": 0
+      "hint": "Minor version: ones digit.",
+      "value": 1,
+      "digit": 1
     },
     {
       "id": "B",
       "label": "CALENDAR",
-      "source": "Days with activity",
-      "display": "346",
+      "source": "Last 30 days / contributions",
+      "display": "407",
       "hint": "Take the ones digit.",
-      "value": 346,
-      "digit": 6
+      "value": 407,
+      "digit": 7
     },
     {
       "id": "C",
@@ -45,21 +46,21 @@
     }
   ],
   "route": [
-    "C",
     "B",
+    "C",
     "A"
   ],
-  "solution": "360",
+  "solution": "731",
   "choices": [
-    "497",
-    "823",
-    "360"
+    "194",
+    "868",
+    "731"
   ],
-  "tool_url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector",
-  "tool_name": "SwiftIOC",
+  "tool_url": "https://github.com/PKHarsimran/IOC-Inspector",
+  "tool_name": "IOC Inspector",
   "rewind": {
     "previous": {
-      "generated_at": "2026-10-18T19:06:00Z",
+      "generated_at": "2026-10-18T19:10:00Z",
       "projects": [
         {
           "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",

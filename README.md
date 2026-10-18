@@ -319,49 +319,49 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 <summary><strong>🎲 Enter today's Signal Heist</strong></summary>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-095241bf5030e207-mobile.svg">
-  <img src="./profile/arcade/heist-095241bf5030e207.svg" alt="Signal Heist. Route: C, then B, then A. Gate A: SwiftIOC, v0.1.0. Patch version: ones digit. Gate B: Days with activity, 346. Take the ones digit. Gate C: Passing checks / selected 3, 3. Take the ones digit. Choose a three-digit code below." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-ac56e514d59f16a2-mobile.svg">
+  <img src="./profile/arcade/heist-ac56e514d59f16a2.svg" alt="Signal Heist. Route: B, then C, then A. Gate A: IOC Inspector, v0.1.0. Minor version: ones digit. Gate B: Last 30 days / contributions, 407. Take the ones digit. Gate C: Passing checks / selected 3, 3. Take the ones digit. Choose a three-digit code below." width="100%">
 </picture>
 
 **Read the clues, follow the route, pick a hatch.** A correct code unlocks today’s snapshot creature.
 
 <details>
-<summary><strong>Try code 497</strong></summary>
+<summary><strong>Try code 194</strong></summary>
 
 ↺ **Decoy hatch.** Take each clue’s ones digit, then arrange the digits in the printed route order. Try another hatch.
 
 </details>
 
 <details>
-<summary><strong>Try code 823</strong></summary>
+<summary><strong>Try code 868</strong></summary>
 
 ↺ **Decoy hatch.** Take each clue’s ones digit, then arrange the digits in the printed route order. Try another hatch.
 
 </details>
 
 <details>
-<summary><strong>Try code 360</strong></summary>
+<summary><strong>Try code 731</strong></summary>
 
-🔓 **Signal recovered.** C → B → A gives **360**.
+🔓 **Signal recovered.** B → C → A gives **731**.
 
 | Gate | Clue | Digit |
 | --- | --- | ---: |
-| A | SwiftIOC: v0.1.0 · Patch version: ones digit. | 0 |
-| B | Days with activity: 346 · Take the ones digit. | 6 |
+| A | IOC Inspector: v0.1.0 · Minor version: ones digit. | 1 |
+| B | Last 30 days / contributions: 407 · Take the ones digit. | 7 |
 | C | Passing checks / selected 3: 3 · Take the ones digit. | 3 |
 
-**Next side quest:** [Explore SwiftIOC](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector) — the real tool behind gate A.
+**Next side quest:** [Explore IOC Inspector](https://github.com/PKHarsimran/IOC-Inspector) — the real tool behind gate A.
 
-<img src="./profile/arcade/relic-095241bf5030e207.svg" alt="Snapshot relic 095241BF: Null Navigator, a symmetric pixel creature drawn from this public snapshot." width="600">
+<img src="./profile/arcade/relic-ac56e514d59f16a2.svg" alt="Snapshot relic AC56E514: Log Sprite, a symmetric pixel creature drawn from this public snapshot." width="600">
 
-[Open today’s relic](./profile/arcade/relic-095241bf5030e207.svg) · [Read its snapshot fingerprint](./profile/arcade-lab.json)
+[Open today’s relic](./profile/arcade/relic-ac56e514d59f16a2.svg) · [Read its snapshot fingerprint](./profile/arcade-lab.json)
 
 </details>
 
 <details>
 <summary><strong>⏪ Rewind the previous snapshot</strong></summary>
 
-Compared **2026-10-18T19:06:00Z** → **2026-10-18T19:10:00Z** (UTC). These are observed snapshots of the three selected public repositories.
+Compared **2026-10-18T19:10:00Z** → **2026-10-18T19:10:00Z** (UTC). These are observed snapshots of the three selected public repositories.
 
 **Quiet checkpoint.** Release tags, CI states, star counts and latest commit timestamps match the previous snapshot.
 
