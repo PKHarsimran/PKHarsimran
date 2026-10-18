@@ -12,6 +12,7 @@ on:
       - "scripts/contribution_arcade.py"
       - "scripts/profile_arcade_scene.py"
       - "scripts/profile_arcade_lab.py"
+      - "scripts/profile_drawers.py"
       - "scripts/test_profile_arcade_lab.py"
       - "scripts/test_generate_profile_lab.py"
       - "scripts/profile_theme.py"

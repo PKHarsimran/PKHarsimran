@@ -53,7 +53,10 @@ I work in **cybersecurity** and build tools that make investigations clearer and
 <!-- buttons:swift:end -->
 
 <details>
-<summary><strong>🔬 Follow the evidence · feed snapshot & 12-second demo</strong></summary>
+<summary><picture>
+  <source media="(max-width: 600px)" srcset="./profile/drawers/evidence-mobile.svg">
+  <img src="./profile/drawers/evidence.svg" alt="Evidence desk: Real feed snapshot + a 12-second walkthrough" width="94%" align="absmiddle">
+</picture></summary>
 
 <a href="./profile/intel-conveyor.md">
 <picture>
@@ -96,7 +99,10 @@ I work in **cybersecurity** and build tools that make investigations clearer and
 <!-- buttons:inspector:end -->
 
 <details>
-<summary><strong>🕵️ Crack the case of the week</strong></summary>
+<summary><picture>
+  <source media="(max-width: 600px)" srcset="./profile/drawers/case-mobile.svg">
+  <img src="./profile/drawers/case.svg" alt="Case of the week: Spot the clues. Let the scanner check your theory." width="94%" align="absmiddle">
+</picture></summary>
 
 A harmless training PDF, a few hidden clues, and the real scanner. What can you spot?
 
@@ -106,7 +112,7 @@ A harmless training PDF, a few hidden clues, and the real scanner. What can you 
 </picture>
 
 <details>
-<summary><strong>🕵️ Reveal the findings</strong></summary>
+<summary><strong>🔎 Open the evidence envelope</strong> <sub>· reveal the findings</sub></summary>
 
 <img src="./profile/case-findings.svg" alt="Actual extracted URLs, IP count, heuristic verdict and score from the weekly harmless training PDF. External reputation lookups are disabled; a heuristic verdict is not a security guarantee." width="600">
 
@@ -115,7 +121,7 @@ A harmless training PDF, a few hidden clues, and the real scanner. What can you 
 </details>
 
 <details>
-<summary><strong>🎬 Watch the scanner solve it</strong></summary>
+<summary><strong>🎬 Replay the investigation</strong> <sub>· real CLI run</sub></summary>
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="./profile/inspector-demo.webp">
@@ -149,7 +155,10 @@ A harmless training PDF, a few hidden clues, and the real scanner. What can you 
 <!-- buttons:downloader:end -->
 
 <details>
-<summary><strong>🎬 Watch a site go offline</strong></summary>
+<summary><picture>
+  <source media="(max-width: 600px)" srcset="./profile/drawers/offline-mobile.svg">
+  <img src="./profile/drawers/offline.svg" alt="Offline field trip: One site. No server. A real CLI demo." width="94%" align="absmiddle">
+</picture></summary>
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="./profile/downloader-demo.webp">
@@ -174,7 +183,10 @@ My **Zima homelab** is where side projects become everyday tools. **Docker Compo
 <sub>The real service cast, with illustrated handoffs. [Public service manifest](./profile/lab-services.json).</sub>
 
 <details>
-<summary><strong>🧩 Open the service inventory</strong></summary>
+<summary><picture>
+  <source media="(max-width: 600px)" srcset="./profile/drawers/crew-mobile.svg">
+  <img src="./profile/drawers/crew.svg" alt="Meet the service crew: Media, libraries, dashboards &amp; monitoring" width="94%" align="absmiddle">
+</picture></summary>
 
 | Area | Services |
 | :--- | :--- |
@@ -218,7 +230,10 @@ Follow the bot, crack today’s code, or let the snake loose. Your next side que
 
 <!-- arcade-lab:start -->
 <details>
-<summary><strong>🎲 Enter today's Signal Heist</strong></summary>
+<summary><picture>
+  <source media="(max-width: 600px)" srcset="./profile/drawers/heist-mobile.svg">
+  <img src="./profile/drawers/heist.svg" alt="Today&#x27;s Signal Heist: Three clues. One code. A creature to uncover." width="94%" align="absmiddle">
+</picture></summary>
 
 <picture>
   <source media="(max-width: 600px)" srcset="./profile/arcade/heist-bbbbde429a171649-mobile.svg">
@@ -228,7 +243,7 @@ Follow the bot, crack today’s code, or let the snake loose. Your next side que
 **Three clues → one code → a tiny creature.** Take each gate’s digit, follow the printed route, and open a code hatch.
 
 <details>
-<summary><strong>Try code 913</strong></summary>
+<summary><strong>🔐 Hatch 01</strong> · <code>913</code></summary>
 
 🔓 **Signal recovered.** B → A → C gives **913**.
 
@@ -247,21 +262,21 @@ Follow the bot, crack today’s code, or let the snake loose. Your next side que
 </details>
 
 <details>
-<summary><strong>Try code 376</strong></summary>
+<summary><strong>🔐 Hatch 02</strong> · <code>376</code></summary>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
 
 </details>
 
 <details>
-<summary><strong>Try code 050</strong></summary>
+<summary><strong>🔐 Hatch 03</strong> · <code>050</code></summary>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
 
 </details>
 
 <details>
-<summary><strong>⏪ Rewind the previous snapshot</strong></summary>
+<summary><strong>⏪ Checkpoint rewind</strong> <sub>· what changed since last time?</sub></summary>
 
 Snapshots: **2026-10-18 19:12:25** → **2026-10-18 19:57:06** UTC. Comparing the three selected public projects.
 
@@ -275,7 +290,10 @@ Snapshots: **2026-10-18 19:12:25** → **2026-10-18 19:57:06** UTC. Comparing th
 <!-- arcade-lab:end -->
 
 <details>
-<summary><strong>🐍 Bonus round: let the snake loose</strong></summary>
+<summary><picture>
+  <source media="(max-width: 600px)" srcset="./profile/drawers/snake-mobile.svg">
+  <img src="./profile/drawers/snake.svg" alt="Release the snake: A bonus lap around the contribution grid" width="94%" align="absmiddle">
+</picture></summary>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PKHarsimran/PKHarsimran/output/github-contribution-grid-snake-dark.svg">
@@ -285,7 +303,10 @@ Snapshots: **2026-10-18 19:12:25** → **2026-10-18 19:57:06** UTC. Comparing th
 </details>
 
 <details>
-<summary><strong>🛰️ Check the project radar & release patches</strong></summary>
+<summary><picture>
+  <source media="(max-width: 600px)" srcset="./profile/drawers/radar-mobile.svg">
+  <img src="./profile/drawers/radar.svg" alt="Project radar: Build checks, releases &amp; collectible patches" width="94%" align="absmiddle">
+</picture></summary>
 
 <a href="./profile/public-pulse.md">
 <picture>
@@ -302,7 +323,7 @@ Snapshots: **2026-10-18 19:12:25** → **2026-10-18 19:57:06** UTC. Comparing th
 <!-- buttons:radar:end -->
 
 <details>
-<summary><strong>🏅 Open the release patch cabinet</strong></summary>
+<summary><strong>🏅 Browse the patch cabinet</strong> <sub>· earned by real releases</sub></summary>
 
 <a href="./profile/release-patches.md">
 <picture>
@@ -318,7 +339,10 @@ Snapshots: **2026-10-18 19:12:25** → **2026-10-18 19:57:06** UTC. Comparing th
 </details>
 
 <details>
-<summary><strong>⚙️ Peek behind the curtain</strong></summary>
+<summary><picture>
+  <source media="(max-width: 600px)" srcset="./profile/drawers/backstage-mobile.svg">
+  <img src="./profile/drawers/backstage.svg" alt="Behind the curtain: The workflows that keep this profile moving" width="94%" align="absmiddle">
+</picture></summary>
 
 GitHub Actions refresh the public project signals and daily puzzle. Case files and CLI demos refresh weekly or when their recipes change. The artwork keeps its source snapshots close.
 

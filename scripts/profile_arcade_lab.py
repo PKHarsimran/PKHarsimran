@@ -7,6 +7,7 @@ import re
 
 from contribution_arcade import calendar_summary
 from profile_theme import apply_theme
+from profile_drawers import summary
 
 PROJECTS = {
     'SwiftIOC-Automated-Threat-Intelligence-Collector': 'SwiftIOC',
@@ -162,12 +163,12 @@ def md(value):
 
 
 def readme_slot(lab):
-    p = ['<details>',"<summary><strong>🎲 Enter today's Signal Heist</strong></summary>",'',
+    p = ['<details>', summary('heist'), '',
          '<picture>','  <source media="(max-width: 600px)" srcset="./profile/'+lab['assets']['mobile']+'">',
          '  <img src="./profile/'+lab['assets']['heist']+'" alt="'+escape(clue_description(lab),quote=True)+'" width="100%">','</picture>','',
          '**Three clues → one code → a tiny creature.** Take each gate’s digit, follow the printed route, and open a code hatch.','']
-    for choice in lab['choices']:
-        p += ['<details>',f'<summary><strong>Try code {choice}</strong></summary>','']
+    for number, choice in enumerate(lab['choices'], 1):
+        p += ['<details>',f'<summary><strong>🔐 Hatch {number:02}</strong> · <code>{choice}</code></summary>','']
         if choice == lab['solution']:
             p += [f"🔓 **Signal recovered.** {' → '.join(lab['route'])} gives **{choice}**.",'', '| Gate | Clue | Digit |','| --- | --- | ---: |']
             p += [f"| {g['id']} | {md(g['source'])}: {md(g['display'])} | {g['digit']} |" for g in lab['gates']]
@@ -178,7 +179,7 @@ def readme_slot(lab):
             p += ['↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.','']
         p += ['</details>','']
     rewind = lab['rewind']
-    p += ['<details>','<summary><strong>⏪ Rewind the previous snapshot</strong></summary>','']
+    p += ['<details>','<summary><strong>⏪ Checkpoint rewind</strong> <sub>· what changed since last time?</sub></summary>','']
     if rewind['previous']:
         before = md(rewind['previous']['generated_at'].replace('T',' ').removesuffix('Z'))
         now = md(lab['generated_at'].replace('T',' ').removesuffix('Z'))
