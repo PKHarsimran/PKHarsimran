@@ -1,67 +1,68 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-10-18T19:12:25Z",
-  "calendar_observed_at": "2026-10-18T19:12:25Z",
-  "fingerprint": "ca625ef520e8433a159ddfa5825ddba235e7c476a7d57164699bb15674da2dca",
-  "serial": "CA625EF5",
-  "asset_id": "ca625ef520e8433a",
+  "generated_at": "2026-10-18T19:57:06Z",
+  "calendar_observed_at": "2026-10-18T19:57:06Z",
+  "fingerprint": "bbbbde429a17164993fe0d2b16f7c4e3de9392e3fe7bb1ad1d9bb02cb58e975e",
+  "serial": "BBBBDE42",
+  "asset_id": "bbbbde429a171649",
   "retained": [
     "095241bf5030e207",
     "ac56e514d59f16a2",
-    "ca625ef520e8433a"
+    "ca625ef520e8433a",
+    "bbbbde429a171649"
   ],
   "assets": {
-    "heist": "arcade/heist-ca625ef520e8433a.svg",
-    "mobile": "arcade/heist-ca625ef520e8433a-mobile.svg",
-    "relic": "arcade/relic-ca625ef520e8433a.svg"
+    "heist": "arcade/heist-bbbbde429a171649.svg",
+    "mobile": "arcade/heist-bbbbde429a171649-mobile.svg",
+    "relic": "arcade/relic-bbbbde429a171649.svg"
   },
-  "relic_name": "Log Sprite",
+  "relic_name": "Packet Pixie",
   "gates": [
     {
       "id": "A",
       "label": "RELEASE",
-      "source": "SwiftIOC",
-      "display": "v0.1.0",
+      "source": "Website Downloader",
+      "display": "v2.6.1",
       "hint": "Patch version: ones digit.",
-      "value": 0,
-      "digit": 0
+      "value": 1,
+      "digit": 1
     },
     {
       "id": "B",
       "label": "CALENDAR",
-      "source": "Days with activity",
-      "display": "346",
+      "source": "Last 30 days / contributions",
+      "display": "409",
       "hint": "Take the ones digit.",
-      "value": 346,
-      "digit": 6
+      "value": 409,
+      "digit": 9
     },
     {
       "id": "C",
       "label": "BUILD RADAR",
-      "source": "Passing checks / selected 3",
-      "display": "3",
+      "source": "Stars / selected 3 projects",
+      "display": "233",
       "hint": "Take the ones digit.",
-      "value": 3,
+      "value": 233,
       "digit": 3
     }
   ],
   "route": [
-    "C",
     "B",
-    "A"
+    "A",
+    "C"
   ],
-  "solution": "360",
+  "solution": "913",
   "choices": [
-    "360",
-    "823",
-    "497"
+    "913",
+    "376",
+    "050"
   ],
-  "tool_url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector",
-  "tool_name": "SwiftIOC",
+  "tool_url": "https://github.com/PKHarsimran/website-downloader",
+  "tool_name": "Website Downloader",
   "rewind": {
     "previous": {
-      "generated_at": "2026-10-18T19:10:00Z",
+      "generated_at": "2026-10-18T19:12:25Z",
       "projects": [
         {
           "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
@@ -87,7 +88,7 @@
       ]
     },
     "current": {
-      "generated_at": "2026-10-18T19:12:25Z",
+      "generated_at": "2026-10-18T19:57:06Z",
       "projects": [
         {
           "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",

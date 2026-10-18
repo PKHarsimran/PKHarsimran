@@ -221,40 +221,40 @@ Follow the bot, crack today’s code, or let the snake loose. Your next side que
 <summary><strong>🎲 Enter today's Signal Heist</strong></summary>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-ca625ef520e8433a-mobile.svg">
-  <img src="./profile/arcade/heist-ca625ef520e8433a.svg" alt="Signal Heist. Route: C, then B, then A. Gate A: SwiftIOC, v0.1.0. Patch version: ones digit. Gate B: Days with activity, 346. Take the ones digit. Gate C: Passing checks / selected 3, 3. Take the ones digit. Choose a three-digit code below." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-bbbbde429a171649-mobile.svg">
+  <img src="./profile/arcade/heist-bbbbde429a171649.svg" alt="Signal Heist. Route: B, then A, then C. Gate A: Website Downloader, v2.6.1. Patch version: ones digit. Gate B: Last 30 days / contributions, 409. Take the ones digit. Gate C: Stars / selected 3 projects, 233. Take the ones digit. Choose a three-digit code below." width="100%">
 </picture>
 
 **Three clues → one code → a tiny creature.** Take each gate’s digit, follow the printed route, and open a code hatch.
 
 <details>
-<summary><strong>Try code 360</strong></summary>
+<summary><strong>Try code 913</strong></summary>
 
-🔓 **Signal recovered.** C → B → A gives **360**.
+🔓 **Signal recovered.** B → A → C gives **913**.
 
 | Gate | Clue | Digit |
 | --- | --- | ---: |
-| A | SwiftIOC: v0.1.0 | 0 |
-| B | Days with activity: 346 | 6 |
-| C | Passing checks / selected 3: 3 | 3 |
+| A | Website Downloader: v2.6.1 | 1 |
+| B | Last 30 days / contributions: 409 | 9 |
+| C | Stars / selected 3 projects: 233 | 3 |
 
-**Next side quest:** [Explore SwiftIOC](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector) — the real tool behind gate A.
+**Next side quest:** [Explore Website Downloader](https://github.com/PKHarsimran/website-downloader) — the real tool behind gate A.
 
-<img src="./profile/arcade/relic-ca625ef520e8433a.svg" alt="Snapshot relic CA625EF5: Log Sprite, a symmetric pixel creature drawn from this public snapshot." width="600">
+<img src="./profile/arcade/relic-bbbbde429a171649.svg" alt="Snapshot relic BBBBDE42: Packet Pixie, a symmetric pixel creature drawn from this public snapshot." width="600">
 
-[Open your creature art](./profile/arcade/relic-ca625ef520e8433a.svg)
+[Open your creature art](./profile/arcade/relic-bbbbde429a171649.svg)
 
 </details>
 
 <details>
-<summary><strong>Try code 823</strong></summary>
+<summary><strong>Try code 376</strong></summary>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
 
 </details>
 
 <details>
-<summary><strong>Try code 497</strong></summary>
+<summary><strong>Try code 050</strong></summary>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
 
@@ -263,7 +263,7 @@ Follow the bot, crack today’s code, or let the snake loose. Your next side que
 <details>
 <summary><strong>⏪ Rewind the previous snapshot</strong></summary>
 
-Snapshots: **2026-10-18 19:10:00** → **2026-10-18 19:12:25** UTC. Comparing the three selected public projects.
+Snapshots: **2026-10-18 19:12:25** → **2026-10-18 19:57:06** UTC. Comparing the three selected public projects.
 
 **Quiet checkpoint.** No changes in releases, CI, stars, or latest commit times.
 
