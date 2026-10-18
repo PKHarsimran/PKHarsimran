@@ -223,7 +223,7 @@ def main():
     previous = json.loads(previous_path.read_text(encoding='utf-8')) if previous_path.exists() else None
     history_path = args.output / 'arcade-lab.json'
     history = json.loads(history_path.read_text(encoding='utf-8')) if history_path.exists() else None
-    now = datetime.now(timezone.utc).replace(second=0,microsecond=0)
+    now = datetime.now(timezone.utc).replace(microsecond=0)
     stamp = now.isoformat().replace("+00:00", "Z")
     projects = [collect_project(spec) for spec in PROJECTS]
     url = f"https://github.com/users/{OWNER}/contributions"
