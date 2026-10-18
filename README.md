@@ -221,6 +221,14 @@ My **Zima homelab** is where side projects become everyday tools. **Docker Compo
 
 Follow the bot, crack today’s code, or let the snake loose. Your next side quest starts here.
 
+<!-- buttons:live-lab:start -->
+<p align="left">
+  <a href="https://harsim.ca/lab/"><img src="./profile/buttons/live-lab.svg" alt="Enter live lab" width="176" height="44" /></a>
+</p>
+<!-- buttons:live-lab:end -->
+
+<sub>Meet Pixel in the interactive lab: your own callsign, a packet tour, three tiny cases, and a creature badge to keep.</sub>
+
 <picture>
   <source media="(max-width: 600px)" srcset="./profile/contribution-evidence-run-mobile.svg">
   <img src="./profile/contribution-evidence-run.svg" alt="Contribution arcade: real GitHub calendar totals, active days and contributions in the last 30 displayed days. Below the calendar, a pixel bot hops over obstacles, collects clues, passes an inspection station and delivers a parcel through a portal. A bot message rotates daily. The phone layout splits the full calendar into two rows; reduced motion keeps it still." width="100%">

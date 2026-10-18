@@ -25,6 +25,7 @@ BUTTONS={
     'snapshot':('Read snapshot',160,MINT,'secondary','report'),
     'workflow':('Workflow',138,VIOLET,'secondary','flow'),
     'docker':('Container images',188,BLUE,'secondary','cube'),
+    'live-lab':('Enter live lab',176,MINT,'primary','play'),
     'back-top-tab':('Back to top',126,MINT,'nav','up'),
 }
 GROUPS={
@@ -34,6 +35,7 @@ GROUPS={
     'inspector':[('quick-start','https://github.com/PKHarsimran/IOC-Inspector#-quick-start'),('source-inspector','https://github.com/PKHarsimran/IOC-Inspector')],
     'downloader':[('field-guide','https://github.com/PKHarsimran/website-downloader/wiki'),('source-downloader','https://github.com/PKHarsimran/website-downloader')],
     'containers':[('docker','https://hub.docker.com/u/pkvirus')],
+    'live-lab':[('live-lab','https://harsim.ca/lab/')],
     'radar':[('snapshot','./profile/public-pulse.md'),('workflow','https://github.com/PKHarsimran/PKHarsimran/actions/workflows/profile-lab.yml')],
     'footer':[('contact','https://www.linkedin.com/in/harsimransidhu/')],
     'return':[('back-top-tab','#user-content-mission-control')],
