@@ -1,23 +1,24 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-10-18T19:57:06Z",
-  "calendar_observed_at": "2026-10-18T19:57:06Z",
-  "fingerprint": "bbbbde429a17164993fe0d2b16f7c4e3de9392e3fe7bb1ad1d9bb02cb58e975e",
-  "serial": "BBBBDE42",
-  "asset_id": "bbbbde429a171649",
+  "generated_at": "2026-10-18T20:03:58Z",
+  "calendar_observed_at": "2026-10-18T20:03:58Z",
+  "fingerprint": "a8d845b69ffe7ca40471662956e872d5a85c13a68890a660eed288306217852a",
+  "serial": "A8D845B6",
+  "asset_id": "a8d845b69ffe7ca4",
   "retained": [
     "095241bf5030e207",
     "ac56e514d59f16a2",
     "ca625ef520e8433a",
-    "bbbbde429a171649"
+    "bbbbde429a171649",
+    "a8d845b69ffe7ca4"
   ],
   "assets": {
-    "heist": "arcade/heist-bbbbde429a171649.svg",
-    "mobile": "arcade/heist-bbbbde429a171649-mobile.svg",
-    "relic": "arcade/relic-bbbbde429a171649.svg"
+    "heist": "arcade/heist-a8d845b69ffe7ca4.svg",
+    "mobile": "arcade/heist-a8d845b69ffe7ca4-mobile.svg",
+    "relic": "arcade/relic-a8d845b69ffe7ca4.svg"
   },
-  "relic_name": "Packet Pixie",
+  "relic_name": "Byte Moth",
   "gates": [
     {
       "id": "A",
@@ -31,11 +32,11 @@
     {
       "id": "B",
       "label": "CALENDAR",
-      "source": "Last 30 days / contributions",
-      "display": "409",
+      "source": "Days with activity",
+      "display": "346",
       "hint": "Take the ones digit.",
-      "value": 409,
-      "digit": 9
+      "value": 346,
+      "digit": 6
     },
     {
       "id": "C",
@@ -52,17 +53,17 @@
     "A",
     "C"
   ],
-  "solution": "913",
+  "solution": "613",
   "choices": [
-    "913",
-    "376",
-    "050"
+    "750",
+    "613",
+    "076"
   ],
   "tool_url": "https://github.com/PKHarsimran/website-downloader",
   "tool_name": "Website Downloader",
   "rewind": {
     "previous": {
-      "generated_at": "2026-10-18T19:12:25Z",
+      "generated_at": "2026-10-18T19:57:06Z",
       "projects": [
         {
           "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
@@ -88,7 +89,7 @@
       ]
     },
     "current": {
-      "generated_at": "2026-10-18T19:57:06Z",
+      "generated_at": "2026-10-18T20:03:58Z",
       "projects": [
         {
           "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
