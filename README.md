@@ -9,13 +9,6 @@
 </picture>
 </a>
 
-<a href="https://harsim.ca">
-<picture>
-  <source media="(max-width: 600px)" srcset="./profile/mission-typing-mobile.svg">
-  <img src="./profile/mission-typing.svg" alt="Follow the evidence. Automate the boring bits. Always one more thing to build." width="780" />
-</picture>
-</a>
-
 <!-- buttons:hero:start -->
 <p align="center">
   <a href="https://harsim.ca"><img src="./profile/buttons/website.svg" alt="Visit website" width="150" height="44" /></a>
@@ -27,26 +20,13 @@
 <p align="center">
   <a href="#user-content-selected-builds"><img src="./profile/buttons/projects-tab.svg" alt="Projects" width="100" height="44" /></a>
   <a href="#user-content-homelab"><img src="./profile/buttons/homelab-tab.svg" alt="Homelab" width="102" height="44" /></a>
-  <a href="#user-content-activity"><img src="./profile/buttons/activity-tab.svg" alt="Activity" width="100" height="44" /></a>
+  <a href="#user-content-arcade"><img src="./profile/buttons/arcade-tab.svg" alt="Arcade" width="100" height="44" /></a>
 </p>
 <!-- buttons:navigation:end -->
 
 </div>
 
-I work in **cybersecurity** and build tools for clearer investigations, better dashboards, and fewer repetitive steps. The side quests usually end up in my **Zima homelab**.
-
-<details>
-<summary><strong>🧠 Behind the builds / current focus</strong></summary>
-
-| Station | What I'm working on |
-| :--- | :--- |
-| 🛡️ **Defend** | WAF tuning, endpoint investigations, and detection engineering |
-| 🔭 **Investigate** | Threat intelligence with **Splunk Enterprise**, exploring **OpenCTI** |
-| 🏠 **Build** | A **Docker Compose** home server for media, photos, books, and monitoring |
-
-> My favourite kind of side project? A repetitive task that doesn't need to be repetitive anymore.
-
-</details>
+I work in **cybersecurity** and build tools that make investigations clearer and repetitive work shorter. Off the clock, I connect the dots in my **Zima homelab**. There is usually one more side quest. 🛠️
 
 <a name="selected-builds"></a>
 
@@ -63,7 +43,7 @@ I work in **cybersecurity** and build tools for clearer investigations, better d
 </picture>
 </a>
 
-**Collect → normalize → investigate.** A Python pipeline turns IOC feeds and vulnerability reports into source-aware records. The browser dashboard brings the evidence together for review and export.
+**Follow an indicator back to its source.** A Python pipeline collects threat feeds and vulnerability reports; the dashboard keeps their evidence in view.
 
 <!-- buttons:swift:start -->
 <p align="left">
@@ -72,6 +52,9 @@ I work in **cybersecurity** and build tools for clearer investigations, better d
 </p>
 <!-- buttons:swift:end -->
 
+<details>
+<summary><strong>🔬 Follow the evidence · feed snapshot & 12-second demo</strong></summary>
+
 <a href="./profile/intel-conveyor.md">
 <picture>
   <source media="(max-width: 600px)" srcset="./profile/intel-conveyor-mobile.svg">
@@ -79,28 +62,16 @@ I work in **cybersecurity** and build tools for clearer investigations, better d
 </picture>
 </a>
 
-<sub>Real collection data, illustrated. Counts describe the retained feed and one collection interval. [Open the snapshot](./profile/intel-conveyor.md).</sub>
+<sub>Real feed counts, illustrated from a saved collection snapshot. [Read the data](./profile/intel-conveyor.md).</sub>
 
-<details>
-<summary><strong>🎬 Watch a 12-second evidence review</strong></summary>
+**12 seconds at the evidence desk**
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="./profile/swift-demo.webp">
   <img src="./profile/swift-demo.gif" alt="SwiftIOC walkthrough: open the public dashboard, review a CVE, inspect CISA evidence, and compare NVD details." width="100%">
 </picture>
 
-<sub>Recorded from the public dashboard on October 17, 2026. The displayed records are a snapshot; use the live dashboard for current data.</sub>
-
-</details>
-
-<details>
-<summary><strong>🧠 Build story: keep the evidence attached</strong></summary>
-
-- **Problem:** scattered feeds make it hard to understand where an indicator came from or what a vulnerability report actually establishes.
-- **Built:** a Python collection and normalization pipeline, source-aware records, downloadable feeds, and a browser workspace for investigation.
-- **Design takeaway:** keep provenance visible and separate indicators from vulnerability evidence. A score helps order review; it doesn't establish compromise.
-
-[Explore how SwiftIOC works ↗](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector#how-the-pieces-fit)
+<sub>Recorded October 17, 2026. Open the dashboard for current records.</sub>
 
 </details>
 
@@ -115,7 +86,7 @@ I work in **cybersecurity** and build tools for clearer investigations, better d
 </picture>
 </a>
 
-**Inspect → extract → report.** Triage PDFs and Office files with static analysis, IOC extraction, and optional threat enrichment. Export the findings as Markdown, JSON, or CSV.
+**Find the clues in a suspicious document.** Inspect PDFs and Office files, extract IOCs, and export a readable report. Optional threat enrichment adds context.
 
 <!-- buttons:inspector:start -->
 <p align="left">
@@ -123,6 +94,11 @@ I work in **cybersecurity** and build tools for clearer investigations, better d
   <a href="https://github.com/PKHarsimran/IOC-Inspector"><img src="./profile/buttons/source-inspector.svg" alt="View source" width="140" height="44" /></a>
 </p>
 <!-- buttons:inspector:end -->
+
+<details>
+<summary><strong>🕵️ Crack the case of the week</strong></summary>
+
+A harmless training PDF, a few hidden clues, and the real scanner. What can you spot?
 
 <picture>
   <source media="(max-width: 600px)" srcset="./profile/case-file-mobile.svg">
@@ -134,19 +110,21 @@ I work in **cybersecurity** and build tools for clearer investigations, better d
 
 <img src="./profile/case-findings.svg" alt="Actual extracted URLs, IP count, heuristic verdict and score from the weekly harmless training PDF. External reputation lookups are disabled; a heuristic verdict is not a security guarantee." width="600">
 
-[Read the case file](./profile/case-report.md) · [Raw tool findings](./profile/case-report.json) · [Fixture recipe](./demos/cases.json)
+[Read the report](./profile/case-report.md) · [See the extracted data](./profile/case-report.json)
 
 </details>
 
 <details>
-<summary><strong>🎬 Watch the released scanner work the case</strong></summary>
+<summary><strong>🎬 Watch the scanner solve it</strong></summary>
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="./profile/inspector-demo.webp">
   <img src="./profile/inspector-demo.gif" alt="VHS recording of the demo runner invoking the released IOC Inspector CLI on the weekly owned PDF and verifying its actual JSON findings." width="100%">
 </picture>
 
-<sub>The workflow records a real CLI execution. Reserved example domains and documentation IPs keep the fixture harmless. [Recording provenance](./profile/demo-provenance.json).</sub>
+<sub>A real CLI run against an owned training file. [How it was recorded](./profile/demo-provenance.json).</sub>
+
+</details>
 
 </details>
 
@@ -161,7 +139,7 @@ I work in **cybersecurity** and build tools for clearer investigations, better d
 </picture>
 </a>
 
-**Capture → rewrite → browse offline.** Mirror websites, bring their assets along, and rewrite links for offline browsing. Update existing copies or use optional Playwright rendering for pages that need JavaScript.
+**Take a little piece of the web offline.** Save pages and assets with working local links. Add Playwright rendering when a page needs JavaScript.
 
 <!-- buttons:downloader:start -->
 <p align="left">
@@ -171,39 +149,29 @@ I work in **cybersecurity** and build tools for clearer investigations, better d
 <!-- buttons:downloader:end -->
 
 <details>
-<summary><strong>🎬 Watch the CLI turn a site into an offline copy</strong></summary>
+<summary><strong>🎬 Watch a site go offline</strong></summary>
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="./profile/downloader-demo.webp">
   <img src="./profile/downloader-demo.gif" alt="VHS recording of the demo runner invoking the released Website Downloader CLI, stopping the owned local source server, and verifying all links and assets in the three-page offline mirror." width="100%">
 </picture>
 
-<sub>Automatically recorded from the released CLI against an owned local site. The source server stops before the offline links are checked. [Run results](./profile/downloader-demo.json) · [Recording provenance](./profile/demo-provenance.json).</sub>
+<sub>A real CLI run: save an owned test site, stop its server, then check the offline copy. [Run results](./profile/downloader-demo.json).</sub>
 
 </details>
-
-<!-- buttons:return:start -->
-<p align="left">
-  <a href="#user-content-mission-control"><img src="./profile/buttons/back-top-tab.svg" alt="Back to top" width="126" height="44" /></a>
-</p>
-<!-- buttons:return:end -->
 
 <a id="homelab" name="homelab"></a>
 
 ## Inside the lab
 
-My **Zima homelab** runs on **Docker Compose**. Media, photos, books, dashboards, and monitoring share a home; I build the workflows and automation that connect them.
+My **Zima homelab** is where side projects become everyday tools. **Docker Compose** connects media requests, libraries, photos, dashboards, and monitoring.
 
 <picture>
   <source media="(max-width: 600px)" srcset="./profile/homelab-flow-motion-mobile.svg">
   <img src="./profile/homelab-flow-motion.svg" alt="Zima homelab flow theatre: Jellyseerr requests, Radarr/Sonarr/Prowlarr/Bazarr automation, Transmission with Gluetun, and Jellyfin playback. Photo and book libraries, operations and monitoring share the stack. Illustrated handoffs from a curated service manifest; no live telemetry." width="100%" />
 </picture>
 
-<sub>Animated from the [public service manifest](./profile/lab-services.json). Illustrated handoffs; the service inventory below has the full cast.</sub>
-
-- 🎬 **Connect the workflow:** requests → library automation → VPN-routed downloads → Jellyfin playback.
-- 🖼️ **Bring the libraries together:** photo management, books, and audiobooks in one self-hosted stack.
-- 🧭 **See what's happening:** custom Homepage and flow dashboards, health checks, logs, and notifications.
+<sub>The real service cast, with illustrated handoffs. [Public service manifest](./profile/lab-services.json).</sub>
 
 <details>
 <summary><strong>🧩 Open the service inventory</strong></summary>
@@ -219,31 +187,7 @@ My **Zima homelab** runs on **Docker Compose**. Media, photos, books, dashboards
 
 </details>
 
-**Current side quest:** make the stack easier to run, recover, and eventually share. ⚙️
-
-<details>
-<summary><strong>🧠 Build story: a server, not just a list of containers</strong></summary>
-
-- **Problem:** a collection of running services still leaves requests, downloads, imports, libraries, and troubleshooting disconnected.
-- **Built:** a Compose-based home server connecting media workflows, photo and book libraries, custom dashboards, health checks, logs, and notifications.
-- **Design takeaway:** the useful work is in the connections: storage paths, permissions, service handoffs, and understandable recovery. More containers alone don't make a better server.
-
-</details>
-
-<!-- buttons:return:start -->
-<p align="left">
-  <a href="#user-content-mission-control"><img src="./profile/buttons/back-top-tab.svg" alt="Back to top" width="126" height="44" /></a>
-</p>
-<!-- buttons:return:end -->
-
-## On the workbench
-
-<picture>
-  <source media="(max-width: 600px)" srcset="./profile/mission-now-mobile.svg" />
-  <img src="./profile/mission-now.svg" alt="Now building: a modular Docker Compose home-server starter kit with guided setup and connected services. Next checkpoint: independent fresh-install validation using the documentation." width="100%" />
-</picture>
-
-Turning lessons from the Zima lab into a **modular Compose starter kit**. The test: someone else can follow the docs, choose their services, and bring the stack online.
+**Next checkpoint:** turn the lab lessons into a **modular Compose starter kit** that someone else can bring online by following the docs. ⚙️
 
 ## Toolkit
 
@@ -259,10 +203,89 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 <!-- buttons:containers:end -->
 
 <a id="activity" name="activity"></a>
+<a id="arcade" name="arcade"></a>
 
-## Build signals
+## After hours: the arcade
 
-### Public build radar
+Follow the bot, crack today’s code, or let the snake loose. Your next side quest starts here.
+
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/contribution-evidence-run-mobile.svg">
+  <img src="./profile/contribution-evidence-run.svg" alt="Contribution arcade: real GitHub calendar totals, active days and contributions in the last 30 displayed days. Below the calendar, a pixel bot hops over obstacles, collects clues, passes an inspection station and delivers a parcel through a portal. A bot message rotates daily. The phone layout splits the full calendar into two rows; reduced motion keeps it still." width="100%">
+</picture>
+
+<sub>Real GitHub activity; an illustrated bot adventure. Totals include automation and publicly shared private activity. [Daily snapshot](./profile/contribution-calendar.json).</sub>
+
+<!-- arcade-lab:start -->
+<details>
+<summary><strong>🎲 Enter today's Signal Heist</strong></summary>
+
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-ca625ef520e8433a-mobile.svg">
+  <img src="./profile/arcade/heist-ca625ef520e8433a.svg" alt="Signal Heist. Route: C, then B, then A. Gate A: SwiftIOC, v0.1.0. Patch version: ones digit. Gate B: Days with activity, 346. Take the ones digit. Gate C: Passing checks / selected 3, 3. Take the ones digit. Choose a three-digit code below." width="100%">
+</picture>
+
+**Three clues → one code → a tiny creature.** Take each gate’s digit, follow the printed route, and open a code hatch.
+
+<details>
+<summary><strong>Try code 360</strong></summary>
+
+🔓 **Signal recovered.** C → B → A gives **360**.
+
+| Gate | Clue | Digit |
+| --- | --- | ---: |
+| A | SwiftIOC: v0.1.0 | 0 |
+| B | Days with activity: 346 | 6 |
+| C | Passing checks / selected 3: 3 | 3 |
+
+**Next side quest:** [Explore SwiftIOC](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector) — the real tool behind gate A.
+
+<img src="./profile/arcade/relic-ca625ef520e8433a.svg" alt="Snapshot relic CA625EF5: Log Sprite, a symmetric pixel creature drawn from this public snapshot." width="600">
+
+[Open your creature art](./profile/arcade/relic-ca625ef520e8433a.svg)
+
+</details>
+
+<details>
+<summary><strong>Try code 823</strong></summary>
+
+↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
+
+</details>
+
+<details>
+<summary><strong>Try code 497</strong></summary>
+
+↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
+
+</details>
+
+<details>
+<summary><strong>⏪ Rewind the previous snapshot</strong></summary>
+
+Snapshots: **2026-10-18 19:10:00** → **2026-10-18 19:12:25** UTC. Comparing the three selected public projects.
+
+**Quiet checkpoint.** No changes in releases, CI, stars, or latest commit times.
+
+</details>
+
+<sub>A fresh puzzle from public signals each day. [Snapshot & creature fingerprint](./profile/arcade-lab.json).</sub>
+
+</details>
+<!-- arcade-lab:end -->
+
+<details>
+<summary><strong>🐍 Bonus round: let the snake loose</strong></summary>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PKHarsimran/PKHarsimran/output/github-contribution-grid-snake-dark.svg">
+  <img src="https://raw.githubusercontent.com/PKHarsimran/PKHarsimran/output/github-contribution-grid-snake.svg" alt="Animated snake tracing Harsimran's GitHub contribution grid" width="100%">
+</picture>
+
+</details>
+
+<details>
+<summary><strong>🛰️ Check the project radar & release patches</strong></summary>
 
 <a href="./profile/public-pulse.md">
 <picture>
@@ -279,20 +302,7 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 <!-- buttons:radar:end -->
 
 <details>
-<summary><strong>💓 Open live checks & release links</strong></summary>
-
-| Public project | Checks | Latest release |
-| :--- | :--- | :--- |
-| [SwiftIOC](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector) | [![SwiftIOC CI](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/actions/workflows/ci.yml) | [![SwiftIOC release](https://img.shields.io/github/v/release/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector?label=release&color=A995FF)](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/releases/latest) |
-| [IOC Inspector](https://github.com/PKHarsimran/IOC-Inspector) | [![IOC Inspector CI](https://github.com/PKHarsimran/IOC-Inspector/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/PKHarsimran/IOC-Inspector/actions/workflows/ci.yml) | [![IOC Inspector release](https://img.shields.io/github/v/release/PKHarsimran/IOC-Inspector?label=release&color=A995FF)](https://github.com/PKHarsimran/IOC-Inspector/releases/latest) |
-| [Website Downloader](https://github.com/PKHarsimran/website-downloader) | [![Website Downloader CI](https://github.com/PKHarsimran/website-downloader/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/PKHarsimran/website-downloader/actions/workflows/python-app.yml) | [![Website Downloader release](https://img.shields.io/github/v/release/PKHarsimran/website-downloader?label=release&color=A995FF)](https://github.com/PKHarsimran/website-downloader/releases/latest) |
-
-<sub>Badges may be cached; open one for the underlying workflow or release.</sub>
-
-</details>
-
-<details>
-<summary><strong>🏅 Open the release mission-patch cabinet</strong></summary>
+<summary><strong>🏅 Open the release patch cabinet</strong></summary>
 
 <a href="./profile/release-patches.md">
 <picture>
@@ -305,102 +315,14 @@ Turning lessons from the Zima lab into a **modular Compose starter kit**. The te
 
 </details>
 
-### Contribution arcade
-
-<picture>
-  <source media="(max-width: 600px)" srcset="./profile/contribution-evidence-run-mobile.svg">
-  <img src="./profile/contribution-evidence-run.svg" alt="Contribution arcade: real GitHub calendar totals, active days and contributions in the last 30 displayed days. Below the calendar, a pixel bot hops over obstacles, collects clues, passes an inspection station and delivers a parcel through a portal. A bot message rotates daily. The phone layout splits the full calendar into two rows; reduced motion keeps it still." width="100%">
-</picture>
-
-<sub>One square, one day. Colour follows GitHub's activity levels. The bonus loop is an illustrated side quest. Calendar activity includes automation and any private activity shared publicly. [Read the daily snapshot](./profile/contribution-calendar.json).</sub>
-
-<!-- arcade-lab:start -->
-<details>
-<summary><strong>🎲 Enter today's Signal Heist</strong></summary>
-
-<picture>
-  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-ca625ef520e8433a-mobile.svg">
-  <img src="./profile/arcade/heist-ca625ef520e8433a.svg" alt="Signal Heist. Route: C, then B, then A. Gate A: SwiftIOC, v0.1.0. Patch version: ones digit. Gate B: Days with activity, 346. Take the ones digit. Gate C: Passing checks / selected 3, 3. Take the ones digit. Choose a three-digit code below." width="100%">
-</picture>
-
-**Read the clues, follow the route, pick a hatch.** A correct code unlocks today’s snapshot creature.
-
-<details>
-<summary><strong>Try code 360</strong></summary>
-
-🔓 **Signal recovered.** C → B → A gives **360**.
-
-| Gate | Clue | Digit |
-| --- | --- | ---: |
-| A | SwiftIOC: v0.1.0 · Patch version: ones digit. | 0 |
-| B | Days with activity: 346 · Take the ones digit. | 6 |
-| C | Passing checks / selected 3: 3 · Take the ones digit. | 3 |
-
-**Next side quest:** [Explore SwiftIOC](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector) — the real tool behind gate A.
-
-<img src="./profile/arcade/relic-ca625ef520e8433a.svg" alt="Snapshot relic CA625EF5: Log Sprite, a symmetric pixel creature drawn from this public snapshot." width="600">
-
-[Open today’s relic](./profile/arcade/relic-ca625ef520e8433a.svg) · [Read its snapshot fingerprint](./profile/arcade-lab.json)
-
 </details>
 
 <details>
-<summary><strong>Try code 823</strong></summary>
+<summary><strong>⚙️ Peek behind the curtain</strong></summary>
 
-↺ **Decoy hatch.** Take each clue’s ones digit, then arrange the digits in the printed route order. Try another hatch.
+GitHub Actions refresh the public project signals and daily puzzle. Case files and CLI demos refresh weekly or when their recipes change. The artwork keeps its source snapshots close.
 
-</details>
-
-<details>
-<summary><strong>Try code 497</strong></summary>
-
-↺ **Decoy hatch.** Take each clue’s ones digit, then arrange the digits in the printed route order. Try another hatch.
-
-</details>
-
-<details>
-<summary><strong>⏪ Rewind the previous snapshot</strong></summary>
-
-Compared **2026-10-18T19:10:00Z** → **2026-10-18T19:12:25Z** (UTC). These are observed snapshots of the three selected public repositories.
-
-**Quiet checkpoint.** Release tags, CI states, star counts and latest commit timestamps match the previous snapshot.
-
-</details>
-
-<sub>Clues and creatures rotate with the daily public snapshot. [Open the fingerprint and source data](./profile/arcade-lab.json).</sub>
-
-</details>
-<!-- arcade-lab:end -->
-
-<details>
-<summary><strong>🐍 Bonus round / let the snake loose</strong></summary>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PKHarsimran/PKHarsimran/output/github-contribution-grid-snake-dark.svg">
-  <img src="https://raw.githubusercontent.com/PKHarsimran/PKHarsimran/output/github-contribution-grid-snake.svg" alt="Animated snake tracing Harsimran's GitHub contribution grid" width="100%">
-</picture>
-
-</details>
-
-<details>
-<summary><strong>📊 Extra stats & language mix</strong></summary>
-
-<picture>
-  <source media="(max-width: 600px)" srcset="./profile/activity-summary-mobile.svg">
-  <img src="./profile/activity-summary.svg" alt="GitHub activity statistics and repository language mix. The cards stack vertically on smaller screens." width="100%">
-</picture>
-
-</details>
-
-<details>
-<summary><strong>⚙️ How the profile builds itself</strong></summary>
-
-- **Daily arcade:** regenerate the Signal Heist and snapshot creature; compare selected public project signals with the previous snapshot.
-- **Daily:** read public SwiftIOC diagnostics and public release metadata; regenerate the conveyor, homelab flow and release patches.
-- **Weekly, or when releases/recipes change:** rotate the harmless case, run the released CLIs, verify their output, and record fresh demo reels.
-- **Every build:** keep collection timestamps and source provenance, support reduced motion, and publish only after the checks pass.
-
-[Watch the workflow ↗](https://github.com/PKHarsimran/PKHarsimran/actions/workflows/living-profile.yml) · [Reproduce the exhibits](./demos/README.md)
+[Arcade workflow](https://github.com/PKHarsimran/PKHarsimran/actions/workflows/profile-lab.yml) · [Demo workflow](https://github.com/PKHarsimran/PKHarsimran/actions/workflows/living-profile.yml) · [Make your own exhibits](./demos/README.md)
 
 </details>
 
@@ -426,8 +348,6 @@ Compared **2026-10-18T19:10:00Z** → **2026-10-18T19:12:25Z** (UTC). These are 
 
 <sub>Page hits, not unique visitors · <a href="https://github.com/silentsoft/hits#statistics">About the counter</a></sub>
 <!-- visitors:end -->
-
-**Have a useful problem to solve? Let’s talk.**
 
 <!-- buttons:footer:start -->
 <p align="center">

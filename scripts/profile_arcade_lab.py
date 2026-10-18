@@ -165,30 +165,32 @@ def readme_slot(lab):
     p = ['<details>',"<summary><strong>🎲 Enter today's Signal Heist</strong></summary>",'',
          '<picture>','  <source media="(max-width: 600px)" srcset="./profile/'+lab['assets']['mobile']+'">',
          '  <img src="./profile/'+lab['assets']['heist']+'" alt="'+escape(clue_description(lab),quote=True)+'" width="100%">','</picture>','',
-         '**Read the clues, follow the route, pick a hatch.** A correct code unlocks today’s snapshot creature.','']
+         '**Three clues → one code → a tiny creature.** Take each gate’s digit, follow the printed route, and open a code hatch.','']
     for choice in lab['choices']:
         p += ['<details>',f'<summary><strong>Try code {choice}</strong></summary>','']
         if choice == lab['solution']:
             p += [f"🔓 **Signal recovered.** {' → '.join(lab['route'])} gives **{choice}**.",'', '| Gate | Clue | Digit |','| --- | --- | ---: |']
-            p += [f"| {g['id']} | {md(g['source'])}: {md(g['display'])} · {md(g['hint'])} | {g['digit']} |" for g in lab['gates']]
+            p += [f"| {g['id']} | {md(g['source'])}: {md(g['display'])} | {g['digit']} |" for g in lab['gates']]
             p += ['',f"**Next side quest:** [Explore {lab['tool_name']}]({lab['tool_url']}) — the real tool behind gate A.",'',
                   '<img src="./profile/'+lab['assets']['relic']+'" alt="Snapshot relic '+lab['serial']+': '+lab['relic_name']+', a symmetric pixel creature drawn from this public snapshot." width="600">','',
-                  '[Open today’s relic](./profile/'+lab['assets']['relic']+') · [Read its snapshot fingerprint](./profile/arcade-lab.json)','']
+                  '[Open your creature art](./profile/'+lab['assets']['relic']+')','']
         else:
-            p += ['↺ **Decoy hatch.** Take each clue’s ones digit, then arrange the digits in the printed route order. Try another hatch.','']
+            p += ['↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.','']
         p += ['</details>','']
     rewind = lab['rewind']
     p += ['<details>','<summary><strong>⏪ Rewind the previous snapshot</strong></summary>','']
     if rewind['previous']:
-        p += [f"Compared **{md(rewind['previous']['generated_at'])}** → **{md(lab['generated_at'])}** (UTC). These are observed snapshots of the three selected public repositories.",'']
+        before = md(rewind['previous']['generated_at'].replace('T',' ').removesuffix('Z'))
+        now = md(lab['generated_at'].replace('T',' ').removesuffix('Z'))
+        p += [f"Snapshots: **{before}** → **{now}** UTC. Comparing the three selected public projects.",'']
         if rewind['changes']:
             p += ['| Project | Signal | Before | Now |','| --- | --- | --- | --- |']
             p += [f"| {md(c['project'])} | {md(c['field'].replace('_',' '))} | {md(c['before'])} | {md(c['after'])} |" for c in rewind['changes']]
         else:
-            p += ['**Quiet checkpoint.** Release tags, CI states, star counts and latest commit timestamps match the previous snapshot.']
+            p += ['**Quiet checkpoint.** No changes in releases, CI, stars, or latest commit times.']
     else:
         p += ['**First checkpoint saved.** The next refresh can compare the selected public project signals.']
-    p += ['', '</details>', '', '<sub>Clues and creatures rotate with the daily public snapshot. [Open the fingerprint and source data](./profile/arcade-lab.json).</sub>', '', '</details>']
+    p += ['', '</details>', '', '<sub>A fresh puzzle from public signals each day. [Snapshot & creature fingerprint](./profile/arcade-lab.json).</sub>', '', '</details>']
     return '\n'.join(p)
 
 

@@ -15,7 +15,7 @@ BUTTONS={
     'contact':("Let's connect",160,VIOLET,'primary','chat'),
     'projects-tab':('Projects',100,MINT,'nav','01'),
     'homelab-tab':('Homelab',102,VIOLET,'nav','02'),
-    'activity-tab':('Activity',100,BLUE,'nav','03'),
+    'arcade-tab':('Arcade',100,BLUE,'nav','03'),
     'dashboard':('Open dashboard',166,MINT,'primary','play'),
     'quick-start':('Quick start',150,VIOLET,'primary','bolt'),
     'field-guide':('Field guide',150,PINK,'primary','book'),
@@ -29,7 +29,7 @@ BUTTONS={
 }
 GROUPS={
     'hero':[('website','https://harsim.ca'),('linkedin','https://www.linkedin.com/in/harsimransidhu/')],
-    'navigation':[('projects-tab','#user-content-selected-builds'),('homelab-tab','#user-content-homelab'),('activity-tab','#user-content-activity')],
+    'navigation':[('projects-tab','#user-content-selected-builds'),('homelab-tab','#user-content-homelab'),('arcade-tab','#user-content-arcade')],
     'swift':[('dashboard','https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/'),('source','https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector')],
     'inspector':[('quick-start','https://github.com/PKHarsimran/IOC-Inspector#-quick-start'),('source-inspector','https://github.com/PKHarsimran/IOC-Inspector')],
     'downloader':[('field-guide','https://github.com/PKHarsimran/website-downloader/wiki'),('source-downloader','https://github.com/PKHarsimran/website-downloader')],
