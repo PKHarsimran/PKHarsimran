@@ -1,39 +1,40 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-10-18T19:10:00Z",
-  "calendar_observed_at": "2026-10-18T19:10:00Z",
-  "fingerprint": "ac56e514d59f16a2137bc86922378229470cc22a6980410eecd10418eade4912",
-  "serial": "AC56E514",
-  "asset_id": "ac56e514d59f16a2",
+  "generated_at": "2026-10-18T19:12:25Z",
+  "calendar_observed_at": "2026-10-18T19:12:25Z",
+  "fingerprint": "ca625ef520e8433a159ddfa5825ddba235e7c476a7d57164699bb15674da2dca",
+  "serial": "CA625EF5",
+  "asset_id": "ca625ef520e8433a",
   "retained": [
     "095241bf5030e207",
-    "ac56e514d59f16a2"
+    "ac56e514d59f16a2",
+    "ca625ef520e8433a"
   ],
   "assets": {
-    "heist": "arcade/heist-ac56e514d59f16a2.svg",
-    "mobile": "arcade/heist-ac56e514d59f16a2-mobile.svg",
-    "relic": "arcade/relic-ac56e514d59f16a2.svg"
+    "heist": "arcade/heist-ca625ef520e8433a.svg",
+    "mobile": "arcade/heist-ca625ef520e8433a-mobile.svg",
+    "relic": "arcade/relic-ca625ef520e8433a.svg"
   },
   "relic_name": "Log Sprite",
   "gates": [
     {
       "id": "A",
       "label": "RELEASE",
-      "source": "IOC Inspector",
+      "source": "SwiftIOC",
       "display": "v0.1.0",
-      "hint": "Minor version: ones digit.",
-      "value": 1,
-      "digit": 1
+      "hint": "Patch version: ones digit.",
+      "value": 0,
+      "digit": 0
     },
     {
       "id": "B",
       "label": "CALENDAR",
-      "source": "Last 30 days / contributions",
-      "display": "407",
+      "source": "Days with activity",
+      "display": "346",
       "hint": "Take the ones digit.",
-      "value": 407,
-      "digit": 7
+      "value": 346,
+      "digit": 6
     },
     {
       "id": "C",
@@ -46,18 +47,18 @@
     }
   ],
   "route": [
-    "B",
     "C",
+    "B",
     "A"
   ],
-  "solution": "731",
+  "solution": "360",
   "choices": [
-    "194",
-    "868",
-    "731"
+    "360",
+    "823",
+    "497"
   ],
-  "tool_url": "https://github.com/PKHarsimran/IOC-Inspector",
-  "tool_name": "IOC Inspector",
+  "tool_url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector",
+  "tool_name": "SwiftIOC",
   "rewind": {
     "previous": {
       "generated_at": "2026-10-18T19:10:00Z",
@@ -86,7 +87,7 @@
       ]
     },
     "current": {
-      "generated_at": "2026-10-18T19:10:00Z",
+      "generated_at": "2026-10-18T19:12:25Z",
       "projects": [
         {
           "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
