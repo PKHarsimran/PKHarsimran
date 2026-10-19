@@ -23,6 +23,10 @@ STYLE = '''
 .console-two{animation-delay:6s}.console-three{animation-delay:12s}
 .console-reveal{animation:console-type 6s steps(14,end) infinite}
 .portal-patch{animation:portal-patch 18s ease-in-out infinite}
+.cinema-ambient{animation:cinema-ambient 32s ease-in-out infinite}
+.cinema-border{animation:cinema-border 28s linear infinite}
+.cinema-flow-one{opacity:0;animation:cinema-flow-one 12s linear infinite}
+.cinema-flow-two{opacity:0;animation:cinema-flow-two 12s linear infinite}
 @keyframes cinema-ring{to{transform:rotate(360deg)}}
 @keyframes cinema-scan{0%,12%,100%{opacity:0;transform:translateY(-15px)}25%,65%{opacity:.8}78%{opacity:0;transform:translateY(18px)}}
 @keyframes cinema-ink{0%,20%,100%{opacity:.35}45%,78%{opacity:1}}
@@ -34,9 +38,13 @@ STYLE = '''
 @keyframes console-frame{0%,32%{opacity:1}33.333%,100%{opacity:0}}
 @keyframes console-type{0%{width:0}28%,94%{width:var(--line-width)}100%{width:0}}
 @keyframes portal-patch{0%,65%,100%{opacity:.45}76%,91%{opacity:1}}
+@keyframes cinema-ambient{50%{transform:translate(-14px,10px);opacity:.65}}
+@keyframes cinema-border{to{stroke-dashoffset:-1000}}
+@keyframes cinema-flow-one{0%,6%,44%,100%{opacity:0}10%,40%{opacity:1}}
+@keyframes cinema-flow-two{0%,44%,84%,100%{opacity:0}48%,80%{opacity:1}}
 @media(prefers-reduced-motion:reduce){
  .cinema-moving{display:none!important}
- .cinema-ring,.cinema-scan,.cinema-ink,.cinema-blink,.cinema-float,.cinema-wave,.portal-patch{animation:none!important}
+ .cinema-ring,.cinema-scan,.cinema-ink,.cinema-blink,.cinema-float,.cinema-wave,.portal-patch,.cinema-ambient{animation:none!important}
  .cinema-scan{opacity:.5}.cinema-ink,.portal-patch{opacity:1}
  .console-frame{animation:none;opacity:0}.console-one{opacity:1}
  .console-reveal{animation:none;width:var(--line-width)}
@@ -68,6 +76,13 @@ def packet(path, color, delay=0, duration=8):
             f'<animateMotion dur="{duration}s" begin="{delay}s" repeatCount="indefinite" path="{path}"/></g>')
 
 
+def staged_packet(path, color, second=False):
+    times = '0;0.44;0.84;1' if second else '0;0.06;0.44;1'
+    return (f'<g class="cinema-moving cinema-flow-{"two" if second else "one"}" aria-hidden="true">'
+            f'<circle r="6" fill="{color}" fill-opacity=".08"/><circle r="2.4" fill="{color}"/>'
+            f'<animateMotion dur="12s" repeatCount="indefinite" path="{path}" keyPoints="0;0;1;1" keyTimes="{times}" calcMode="linear"/></g>')
+
+
 def project_scene(kind, mobile=False):
     """Three process illustrations; the labels remain readable without animation."""
     width = 544 if mobile else 224
@@ -78,11 +93,12 @@ def project_scene(kind, mobile=False):
               'inspector': ('FILE', 'TRIAGE', 'REPORT'),
               'downloader': ('PAGE', 'SAVE', 'OFFLINE')}[kind]
     p = [f'<g data-cinematic="{kind}" aria-hidden="true">', f'<style>{STYLE}</style>',
-         f'<rect x="0" y="{0 if mobile else 9}" width="{width}" height="{88 if mobile else 143}" rx="14" fill="{color}" fill-opacity=".035" stroke="{color}" stroke-opacity=".12"/>']
+         f'<rect x="0" y="{0 if mobile else 9}" width="{width}" height="{88 if mobile else 143}" rx="14" fill="{color}" fill-opacity=".025" stroke="{color}" stroke-opacity=".12"/>',
+         f'<rect class="cinema-moving cinema-border" x="0" y="{0 if mobile else 9}" width="{width}" height="{88 if mobile else 143}" rx="14" fill="none" stroke="{color}" stroke-opacity=".4" pathLength="1000" stroke-dasharray="22 978"/>']
     for start, end in zip(points, points[1:]):
         route = f'M{start+23} {y}H{end-23}'
         p += [f'<path d="{route}" fill="none" stroke="{color}" stroke-opacity=".25" stroke-dasharray="2 5"/>',
-              packet(route, color, -2 if start == points[0] else -6)]
+              staged_packet(route, color, second=start != points[0])]
     for index, x in enumerate(points):
         p += [f'<g transform="translate({x} {y})" fill="none" stroke="{color}" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">']
         if kind == 'swiftioc':
@@ -121,7 +137,16 @@ def hero_finish(source, mobile=False):
             if child.tag == N+'text' and child.text == 'CURIOUS BY DESIGN':
                 parent.remove(child)
     style = ET.SubElement(root, N+'style', {'id': 'cinematic-style'})
-    style.text = STYLE
+    style.text = STYLE + '.motion-frame{animation-duration:48s}'
+    defs = ET.SubElement(root, N+'defs')
+    for name, color in (('mint',MINT),('violet',VIOLET)):
+        gradient = ET.SubElement(defs, N+'radialGradient', {'id':'cinema-ambient-'+name})
+        ET.SubElement(gradient, N+'stop', {'stop-color':color,'stop-opacity':'.09'})
+        ET.SubElement(gradient, N+'stop', {'offset':'1','stop-color':color,'stop-opacity':'0'})
+    main = root.find(N+'g')
+    cx, cy = (487,171) if mobile else (809,163)
+    glow = f'<g xmlns="{SVG}" class="cinema-ambient" aria-hidden="true"><ellipse cx="{cx}" cy="{cy}" rx="{180 if mobile else 240}" ry="160" fill="url(#cinema-ambient-mint)"/><ellipse cx="{cx+45}" cy="{cy+64}" rx="155" ry="125" fill="url(#cinema-ambient-violet)"/></g>'
+    main.insert(1, ET.fromstring(glow))
     x, y = (406, 39) if mobile else (666, 59)
     ornaments = f'''<g xmlns="{SVG}" aria-hidden="true">
       <g transform="translate({x} {y})"><g class="cinema-moving cinema-comet">

@@ -30,6 +30,24 @@
 
 I work in **cybersecurity** and build tools that make investigations clearer and repetitive work shorter. Off the clock, I connect the dots in my **Zima homelab**. The robot has other plans. 🛠️
 
+<details>
+<summary><picture>
+  <source media="(max-width: 600px)" srcset="./profile/drawers/thread-mobile.svg">
+  <img src="./profile/drawers/thread.svg" alt="Pull the thread: One curiosity. Four builds. Follow the connections." width="94%" align="middle">
+</picture></summary>
+<br>
+
+<p>
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/curiosity-thread-mobile.svg">
+  <img src="./profile/curiosity-thread.svg" alt="Curiosity, carried through. An animated reading route through four independent builds: SwiftIOC collects context, IOC Inspector reads document clues, Website Downloader preserves pages, and the Zima homelab makes tools useful every day." width="100%">
+</picture>
+</p>
+
+**Choose a chapter:**<br>[<sup>01</sup>&nbsp;Signal](#user-content-01--swiftioc) · [<sup>02</sup>&nbsp;Clues](#user-content-02--ioc-inspector) · [<sup>03</sup>&nbsp;Archive](#user-content-03--website-downloader) · [<sup>04</sup>&nbsp;Homelab](#user-content-homelab)
+
+</details>
+
 <a name="selected-builds"></a>
 
 ## Selected builds
@@ -264,7 +282,7 @@ The tools do useful work. Pixel handles the side quests. Follow the bot, crack t
 </p>
 <!-- buttons:live-lab:end -->
 
-<sub>Step inside, press <code>/</code>, and ask Pixel for <code>help</code>. The terminal, saved progress, and collectible patches live in the lab.</sub>
+<sub>Step inside, press <kbd>/</kbd>, and ask Pixel for <code>help</code>. The terminal, saved progress, and collectible patches live in the lab.</sub>
 
 <p>
 <picture>

@@ -11,6 +11,10 @@
 .console-two{animation-delay:6s}.console-three{animation-delay:12s}
 .console-reveal{animation:console-type 6s steps(14,end) infinite}
 .portal-patch{animation:portal-patch 18s ease-in-out infinite}
+.cinema-ambient{animation:cinema-ambient 32s ease-in-out infinite}
+.cinema-border{animation:cinema-border 28s linear infinite}
+.cinema-flow-one{opacity:0;animation:cinema-flow-one 12s linear infinite}
+.cinema-flow-two{opacity:0;animation:cinema-flow-two 12s linear infinite}
 @keyframes cinema-ring{to{transform:rotate(360deg)}}
 @keyframes cinema-scan{0%,12%,100%{opacity:0;transform:translateY(-15px)}25%,65%{opacity:.8}78%{opacity:0;transform:translateY(18px)}}
 @keyframes cinema-ink{0%,20%,100%{opacity:.35}45%,78%{opacity:1}}
@@ -22,9 +26,13 @@
 @keyframes console-frame{0%,32%{opacity:1}33.333%,100%{opacity:0}}
 @keyframes console-type{0%{width:0}28%,94%{width:var(--line-width)}100%{width:0}}
 @keyframes portal-patch{0%,65%,100%{opacity:.45}76%,91%{opacity:1}}
+@keyframes cinema-ambient{50%{transform:translate(-14px,10px);opacity:.65}}
+@keyframes cinema-border{to{stroke-dashoffset:-1000}}
+@keyframes cinema-flow-one{0%,6%,44%,100%{opacity:0}10%,40%{opacity:1}}
+@keyframes cinema-flow-two{0%,44%,84%,100%{opacity:0}48%,80%{opacity:1}}
 @media(prefers-reduced-motion:reduce){
  .cinema-moving{display:none!important}
- .cinema-ring,.cinema-scan,.cinema-ink,.cinema-blink,.cinema-float,.cinema-wave,.portal-patch{animation:none!important}
+ .cinema-ring,.cinema-scan,.cinema-ink,.cinema-blink,.cinema-float,.cinema-wave,.portal-patch,.cinema-ambient{animation:none!important}
  .cinema-scan{opacity:.5}.cinema-ink,.portal-patch{opacity:1}
  .console-frame{animation:none;opacity:0}.console-one{opacity:1}
  .console-reveal{animation:none;width:var(--line-width)}

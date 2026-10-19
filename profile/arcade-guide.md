@@ -4,7 +4,11 @@ The README also has an illustrated door to [Pixel’s live lab](https://harsim.c
 
 The hero constellation and project covers use local SVG paths: feeds become indicators and context, a file passes through triage into a report, and a web page becomes an offline folder. These are process illustrations, separate from the real public snapshots below. Main headings stay still, phone artwork uses its own layout, and reduced-motion preferences show a complete still composition.
 
-Rebuild these ten covers with `python3 scripts/build_readme_art.py`. Run it with `--check` to verify that the committed artwork matches the source vectors and bundled fonts without making changes. The daily profile workflow performs that check before refreshing its public snapshots.
+The “Pull the thread” drawer is an optional illustrated reading route. Native `<details>`, responsive `<picture>` artwork, superscript chapter links and normal section anchors work together directly in the README. The four builds are independent; the light follows a thematic connection rather than representing a running pipeline. The real `/` shortcut is marked with `<kbd>` in the link to the live lab.
+
+Project cards stage their two packet handoffs in order. Drawer icons carry a slow orbital accent, and a soft moving glow sits behind the hero artwork. These effects keep the text steady and respect reduced-motion preferences.
+
+Rebuild the cinematic covers, reading route and drawer labels with `python3 scripts/build_readme_art.py`. Run it with `--check` to verify that the committed artwork matches the source vectors and bundled fonts without making changes. The daily profile workflow performs that check before refreshing its public snapshots.
 
 The public profile lab adds an opt-in README puzzle using the same three repository snapshots and public contribution calendar. The card supplies all three facts and their digit rules. A hash of the recipe version, UTC snapshot date, selected project fields and calendar days determines the route, decoy order, creature name and symmetric pixel pattern. The manifest records the clues, answer and full fingerprint so the result can be reproduced. Code hatches are native Markdown details; they do not submit reader input or record guesses.
 

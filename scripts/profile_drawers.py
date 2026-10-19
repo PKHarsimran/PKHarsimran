@@ -7,6 +7,7 @@ from profile_theme import apply_theme
 
 ROOT = Path(__file__).resolve().parents[1]
 DRAWERS = {
+    'thread': ('Pull the thread', 'One curiosity. Four builds. Follow the connections.', '#43E6C5'),
     'evidence': ('Evidence desk', 'Real feed snapshot + a 12-second walkthrough', '#43E6C5'),
     'case': ('Case of the week', 'Spot the clues. Let the scanner check your theory.', '#A995FF'),
     'offline': ('Offline field trip', 'One site. No server. A real CLI demo.', '#F36BAA'),
@@ -17,6 +18,7 @@ DRAWERS = {
     'backstage': ('Behind the curtain', 'The workflows that keep this profile moving', '#A995FF'),
 }
 ICONS = {
+    'thread': '<path d="M-11 7Q-4-12 2 0T12-7"/><circle cx="-11" cy="7" r="2"/><circle cx="2" cy="0" r="2"/><circle cx="12" cy="-7" r="2"/>',
     'evidence': '<path d="M-9 4L0-8L10 1L3 10Z"/><circle cx="-9" cy="4" r="2"/><circle cx="0" cy="-8" r="2"/><circle cx="10" cy="1" r="2"/><circle cx="3" cy="10" r="2"/>',
     'case': '<path d="M-9-11H3L8-6V-1M3-11V-6H8M-9-11V10H-3"/><circle cx="3" cy="3" r="6"/><path d="M7 7L12 12"/>',
     'offline': '<path d="M-11-9H-2L0-6H11V10H-11ZM0-2V6M-4 2L0 6L4 2"/>',
@@ -42,10 +44,11 @@ def render(name, mobile=False):
     cy, tx = h // 2, 80
     p = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="drawer-title" font-family="Segoe UI,Arial,sans-serif">',
          f'<title id="drawer-title">{escape(title+": "+hint)}</title>',
-         '<style>.drawer-spark{animation:drawer-spark 8s ease-in-out infinite}@keyframes drawer-spark{0%,65%,100%{opacity:.35}78%{opacity:1}}@media(prefers-reduced-motion:reduce){.drawer-spark{animation:none;opacity:.6}}</style>',
+         '<style>.drawer-spark{animation:drawer-spark 12s ease-in-out infinite}.drawer-orbit{transform-box:fill-box;transform-origin:center;animation:drawer-orbit 24s linear infinite}@keyframes drawer-spark{0%,65%,100%{opacity:.35}78%{opacity:1}}@keyframes drawer-orbit{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.drawer-spark,.drawer-orbit{animation:none}.drawer-spark{opacity:.6}}</style>',
          f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="14" fill="#121A26" stroke="#29364B"/>',
          f'<path d="M2 20V{h-20}" stroke="{color}" stroke-width="3" stroke-linecap="round"/>',
          f'<circle cx="40" cy="{cy}" r="24" fill="{color}" fill-opacity=".08"/>',
+         f'<g transform="translate(40 {cy})"><circle class="drawer-orbit" r="20" fill="none" stroke="{color}" stroke-opacity=".35" stroke-width="1" stroke-dasharray="13 113"/></g>',
          f'<g transform="translate(40 {cy})" fill="none" stroke="{color}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{ICONS[name]}</g>',
          f'<text x="{tx}" y="{40 if mobile else 34}" font-size="{30 if mobile else 24}" font-weight="700" fill="#EFF4FC">{escape(title)}</text>']
     lines = wrap(hint, width=44) if mobile else [hint]

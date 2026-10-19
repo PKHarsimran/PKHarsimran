@@ -6,9 +6,8 @@ import xml.etree.ElementTree as ET
 from profile_theme import apply_theme, animate_project, PROJECT_MOTION
 from profile_art import header_art, art_style, visitor_pass, orbit_divider
 from vendor_tool_icons import ICONS
-import profile_studio
 from profile_motion import animate_profile
-from profile_cinematics import hero_finish, portal
+from build_readme_art import assets as readme_assets
 
 OUT = Path(__file__).resolve().parents[1] / "profile"
 TEXT, MUTED, BORDER = "#EFF4FC", "#A7B6CE", "#29364B"
@@ -171,10 +170,7 @@ if __name__ == "__main__":
     assets['studio-signal-divider.svg']=animate_profile(orbit_divider(),'divider')
     for mobile in (False,True):
         suffix='-mobile' if mobile else ''
-        assets['studio-orbit-hero'+suffix+'.svg']=hero_finish(animate_profile(profile_studio.hero(mobile),'hero',mobile),mobile)
-        assets['pixel-portal'+suffix+'.svg']=portal(mobile)
         assets['studio-guestbook-motion'+suffix+'.svg']=animate_profile(profile_studio.outro(mobile),'outro',mobile)
-        for project in profile_studio.PROJECTS:
-            assets['studio-'+project[0]+'-motion'+suffix+'.svg']=animate_profile(profile_studio.project(project,mobile),project[0],mobile)
+    assets.update(readme_assets())
     for name, content in assets.items():
         (OUT / name).write_text(apply_theme(content,'terminal' if 'typing' in name else 'panel'), encoding="utf-8")
