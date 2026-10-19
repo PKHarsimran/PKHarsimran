@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-10-19T13:10:22Z",
-  "calendar_observed_at": "2026-10-19T13:10:22Z",
-  "fingerprint": "7b314533351f04bc29ecc6142f6514ea7c0acaf50cfb51aafa2014b1418aea0b",
-  "serial": "7B314533",
-  "asset_id": "7b314533351f04bc",
+  "generated_at": "2026-10-19T14:45:08Z",
+  "calendar_observed_at": "2026-10-19T14:45:08Z",
+  "fingerprint": "668b90df848ad06b6012b08631f95763e34380cc6f188ea052f934f790b630ba",
+  "serial": "668B90DF",
+  "asset_id": "668b90df848ad06b",
   "retained": [
     "095241bf5030e207",
     "ac56e514d59f16a2",
@@ -13,14 +13,15 @@
     "bbbbde429a171649",
     "a8d845b69ffe7ca4",
     "e6621d3fee9d7121",
-    "7b314533351f04bc"
+    "7b314533351f04bc",
+    "668b90df848ad06b"
   ],
   "assets": {
-    "heist": "arcade/heist-7b314533351f04bc.svg",
-    "mobile": "arcade/heist-7b314533351f04bc-mobile.svg",
-    "relic": "arcade/relic-7b314533351f04bc.svg"
+    "heist": "arcade/heist-668b90df848ad06b.svg",
+    "mobile": "arcade/heist-668b90df848ad06b-mobile.svg",
+    "relic": "arcade/relic-668b90df848ad06b.svg"
   },
-  "relic_name": "Byte Moth",
+  "relic_name": "Port Nomad",
   "gates": [
     {
       "id": "A",
@@ -34,19 +35,19 @@
     {
       "id": "B",
       "label": "CALENDAR",
-      "source": "Days with activity",
-      "display": "347",
+      "source": "Last 30 days / contributions",
+      "display": "400",
       "hint": "Take the ones digit.",
-      "value": 347,
-      "digit": 7
+      "value": 400,
+      "digit": 0
     },
     {
       "id": "C",
       "label": "BUILD RADAR",
-      "source": "Stars / selected 3 projects",
-      "display": "233",
+      "source": "Passing checks / selected 3",
+      "display": "3",
       "hint": "Take the ones digit.",
-      "value": 233,
+      "value": 3,
       "digit": 3
     }
   ],
@@ -55,17 +56,17 @@
     "A",
     "C"
   ],
-  "solution": "713",
+  "solution": "013",
   "choices": [
-    "176",
-    "713",
-    "850"
+    "476",
+    "150",
+    "013"
   ],
   "tool_url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector",
   "tool_name": "SwiftIOC",
   "rewind": {
     "previous": {
-      "generated_at": "2026-10-19T12:53:59Z",
+      "generated_at": "2026-10-19T13:10:22Z",
       "projects": [
         {
           "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
@@ -91,7 +92,7 @@
       ]
     },
     "current": {
-      "generated_at": "2026-10-19T13:10:22Z",
+      "generated_at": "2026-10-19T14:45:08Z",
       "projects": [
         {
           "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
