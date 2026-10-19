@@ -45,7 +45,7 @@ if __name__=='__main__':
     chars=''.join(chr(c) for c in range(32,127))+'·—–“”‘’→↗↑…'
     sources={}
     sources['space-grotesk-700.woff2']=prepare(BASE+'spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf','space-grotesk-700.woff2',chars,700)
-    sources['space-grotesk-buttons-600.woff2']=prepare(BASE+'spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf','space-grotesk-buttons-600.woff2',"Visit websiteLinkedInProjectsHomelabActivityOpen dashboardQuick startField guideView sourceRead snapshotWorkflowContainer imagesBack to topLet's connect0123",600)
+    sources['space-grotesk-buttons-600.woff2']=prepare(BASE+'spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf','space-grotesk-buttons-600.woff2',chars,600)
     sources['ibm-plex-mono-500.woff2']=prepare(BASE+'ibmplexmono/IBMPlexMono-Medium.ttf','ibm-plex-mono-500.woff2',chars)
     for folder,name in [('spacegrotesk','SpaceGrotesk-OFL.txt'),('ibmplexmono','IBMPlexMono-OFL.txt')]:
         (OUT/name).write_bytes(urlopen(BASE+folder+'/OFL.txt',timeout=30).read())

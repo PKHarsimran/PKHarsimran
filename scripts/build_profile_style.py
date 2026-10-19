@@ -30,11 +30,11 @@ def toolkit(mobile=False):
          '<title id="title">Operator toolkit</title><desc id="desc">Code: Python, Bash, C++. Security: Splunk, Cortex XDR, Kibana, F5 BIG-IP. Infrastructure: Docker, Ansible, Raspberry Pi. Observability: Grafana, InfluxDB, MQTT.</desc>',
          '<defs><linearGradient id="surface" x2="1" y2="1"><stop stop-color="#152133"/><stop offset="1" stop-color="#0D1117"/></linearGradient></defs><style>.tool-led{animation:equipped 12s ease-in-out infinite}@keyframes equipped{0%,16%,100%{opacity:.3}8%{opacity:1}}@media(prefers-reduced-motion:reduce){.tool-led{animation:none;opacity:1}}</style>',
          f'<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="{width-2}" height="{height-2}" rx="22" fill="url(#surface)" stroke="{BORDER}"/>',
-         text(28, 34, "OPERATOR TOOLKIT / EQUIPPED TO BUILD", 13, "#43E6C5", 'font-weight="600" letter-spacing="1.3"')]
+         text(28, 34, "OPERATOR TOOLKIT / EQUIPPED TO BUILD", 18 if mobile else 13, "#43E6C5", 'font-weight="600" letter-spacing="1.3" font-family="Consolas,monospace"')]
     y=70
     for i, (number, label, color, tools) in enumerate(TOOLS):
         p += [f'<circle class="tool-led" cx="{width-32}" cy="{y+10}" r="3" fill="{color}" style="animation-delay:{i*3}s"/>']
-        p += [text(28, y+17, number, 13, color, 'font-family="monospace"'),
+        p += [text(28, y+17, number, 18 if mobile else 13, color, 'font-family="monospace"'),
               text(64, y+17, label, 21 if mobile else 18, TEXT, 'font-weight="600"')]
         x, chip_y = (28, y+36) if mobile else (370, y-6)
         wrapped=False
@@ -53,7 +53,7 @@ def toolkit(mobile=False):
         if i < 3:
             p += [f'<path d="M28 {y+(104+(47 if wrapped else 0) if mobile else 47)}H{width-28}" stroke="{BORDER}" stroke-opacity=".6"/>']
         y+=(130+(47 if wrapped else 0)) if mobile else 67
-    p += [text(28, height-24, "FAVOURITE SHORTCUT: AUTOMATE THE BORING BITS.", 12, MUTED, 'letter-spacing="1"'), '</g></svg>\n']
+    p += [text(28, height-24, "FAVOURITE SHORTCUT: AUTOMATE THE BORING BITS.", 18 if mobile else 12, MUTED, 'letter-spacing="1" font-family="Consolas,monospace"'), '</g></svg>\n']
     return '\n'.join(p)
 
 

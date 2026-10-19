@@ -81,7 +81,12 @@ def conveyor(data, mobile=False):
             p += [f'<path class="packet" d="{path}" stroke="{COLORS[i]}" stroke-width="3" stroke-dasharray="4 5"/>']
         p += [f'<rect x="{x}" y="{y}" width="{cw}" height="{ch}" rx="14" fill="#121A26" stroke="{BORDER}"/>',txt(x+16,y+25,f'0{i+1} / {label}',13,COLORS[i],600),txt(x+16,y+53,value,22 if mobile else 19,TEXT,600),txt(x+16,y+76 if mobile else y+91,detail,16 if mobile else 13,MUTED)]
     y=538 if mobile else 272
-    p += [txt(28,y,f'{data["observables"]:,} observables  /  {data["vulnerabilities"]:,} CVEs',21 if mobile else 20,COLORS[0],600),txt(28,y+30,f'Last interval: +{data["delta"]["added"]:,} added / {data["delta"]["updated"]:,} updated / {data["delta"]["removed"]:,} removed',17 if mobile else 15,MUTED),txt(28,y+62,'COLLECTION / '+stamp(data['collection_at']),14 if mobile else 12,MUTED),txt(28,h-22,'Retained records, not local detections. Open the snapshot for context.',14 if mobile else 12,MUTED),'</g></svg>\n']
+    p += [txt(28,y,f'{data["observables"]:,} observables  /  {data["vulnerabilities"]:,} CVEs',21 if mobile else 20,COLORS[0],600),txt(28,y+30,f'Last interval: +{data["delta"]["added"]:,} added / {data["delta"]["updated"]:,} updated / {data["delta"]["removed"]:,} removed',17 if mobile else 15,MUTED),txt(28,y+62,'COLLECTION / '+stamp(data['collection_at']),14 if mobile else 12,MUTED)]
+    if mobile:
+        p += [txt(28,h-51,'Retained records, not local detections.',18,MUTED),txt(28,h-23,'Open the snapshot for context.',18,MUTED)]
+    else:
+        p += [txt(28,h-22,'Retained records, not local detections. Open the snapshot for context.',12,MUTED)]
+    p += ['</g></svg>\n']
     return '\n'.join(p)
 
 

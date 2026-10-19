@@ -164,22 +164,22 @@ def md(value):
 
 def readme_slot(lab):
     p = ['<details>', summary('heist'), '',
-         '<picture>','  <source media="(max-width: 600px)" srcset="./profile/'+lab['assets']['mobile']+'">',
-         '  <img src="./profile/'+lab['assets']['heist']+'" alt="'+escape(clue_description(lab),quote=True)+'" width="100%">','</picture>','',
+         '<p>','<picture>','  <source media="(max-width: 600px)" srcset="./profile/'+lab['assets']['mobile']+'">',
+         '  <img src="./profile/'+lab['assets']['heist']+'" alt="'+escape(clue_description(lab),quote=True)+'" width="100%">','</picture>','</p>','',
          '**Three clues → one code → a tiny creature.** Take each gate’s digit, follow the printed route, and open a code hatch.','']
     for number, choice in enumerate(lab['choices'], 1):
-        p += ['<details>',f'<summary><strong>🔐 Hatch {number:02}</strong> · <code>{choice}</code></summary>','']
+        p += ['<details>',f'<summary><strong>🔐 Hatch {number:02}</strong> · <code>{choice}</code></summary>','<br>','']
         if choice == lab['solution']:
             p += [f"🔓 **Signal recovered.** {' → '.join(lab['route'])} gives **{choice}**.",'', '| Gate | Clue | Digit |','| --- | --- | ---: |']
             p += [f"| {g['id']} | {md(g['source'])}: {md(g['display'])} | {g['digit']} |" for g in lab['gates']]
             p += ['',f"**Next side quest:** [Explore {lab['tool_name']}]({lab['tool_url']}) — the real tool behind gate A.",'',
-                  '<img src="./profile/'+lab['assets']['relic']+'" alt="Snapshot relic '+lab['serial']+': '+lab['relic_name']+', a symmetric pixel creature drawn from this public snapshot." width="600">','',
+                  '<p><img src="./profile/'+lab['assets']['relic']+'" alt="Snapshot relic '+lab['serial']+': '+lab['relic_name']+', a symmetric pixel creature drawn from this public snapshot." width="600"></p>','',
                   '[Open your creature art](./profile/'+lab['assets']['relic']+')','']
         else:
             p += ['↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.','']
         p += ['</details>','']
     rewind = lab['rewind']
-    p += ['<details>','<summary><strong>⏪ Checkpoint rewind</strong> <sub>· what changed since last time?</sub></summary>','']
+    p += ['<details>','<summary><strong>⏪ Checkpoint rewind</strong> <sub>· what changed?</sub></summary>','<br>','']
     if rewind['previous']:
         before = md(rewind['previous']['generated_at'].replace('T',' ').removesuffix('Z'))
         now = md(lab['generated_at'].replace('T',' ').removesuffix('Z'))

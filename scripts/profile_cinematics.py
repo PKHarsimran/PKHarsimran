@@ -71,7 +71,7 @@ def packet(path, color, delay=0, duration=8):
 def project_scene(kind, mobile=False):
     """Three process illustrations; the labels remain readable without animation."""
     width = 544 if mobile else 224
-    points = (30, 272, 514) if mobile else (26, 112, 198)
+    points = (42, 272, 502) if mobile else (30, 112, 194)
     y = 31 if mobile else 65
     color = {'swiftioc': MINT, 'inspector': VIOLET, 'downloader': PINK}[kind]
     labels = {'swiftioc': ('FEEDS', 'IOCs', 'CONTEXT'),
@@ -110,7 +110,7 @@ def project_scene(kind, mobile=False):
                 p += ['<path d="M-20-12H-4L1-6H20V18H-20Z" fill="#121A26"/><path class="cinema-ink" d="M0-2V11M-5 6L0 11L5 6" stroke="#43E6C5"/>']
             else:
                 p += ['<rect x="-18" y="-19" width="36" height="38" rx="4" fill="#121A26"/><path d="M-10-10H10M-10-3V10H-3M-10 2H6M-3 10H7"/><circle cx="11" cy="10" r="6" fill="#121A26" stroke="#43E6C5"/><path d="M8 10L10 12L14 7" stroke="#43E6C5"/>']
-        p += ['</g>', label(x, 76 if mobile else 122, labels[index], 15 if mobile else 10, color, extra='text-anchor="middle"')]
+        p += ['</g>', label(x, 76 if mobile else 122, labels[index], 18 if mobile else 12, color, extra='text-anchor="middle" font-family="Consolas,monospace"')]
     return ''.join(p + ['</g>'])
 
 
@@ -157,10 +157,10 @@ def portal(mobile=False):
          f'<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="{w-2}" height="{h-2}" rx="24" fill="url(#portal-surface)" stroke="#34445C"/>',
          f'<ellipse cx="{px}" cy="{py}" rx="104" ry="92" fill="url(#portal-glow)"/>',
          f'<path d="M25 1H{224 if mobile else 310}" stroke="{MINT}" stroke-width="2"/>',
-         label(28, 34, 'BONUS AREA / PIXEL’S COMMAND DECK', 14 if mobile else 12, MINT),
+         label(28, 34, 'BONUS AREA / PIXEL’S COMMAND DECK', 18 if mobile else 12, MINT, extra='font-family="Consolas,monospace"'),
          label(26, 92 if mobile else 95, 'Psst. There’s a', 42 if mobile else 41, TEXT, 700),
          label(26, 142 if mobile else 146, 'secret terminal.', 42 if mobile else 41, TEXT, 700),
-         label(28, 178 if mobile else 187, 'TINY CASES / FIVE PATCHES / PIXEL', 14 if mobile else 12, MUTED),
+         label(28, 178 if mobile else 187, 'TINY CASES / FIVE PATCHES / PIXEL', 18 if mobile else 12, MUTED, extra='font-family="Consolas,monospace"'),
          pixel(px, py, .78 if mobile else .88)]
     for i, (dx, dy, color) in enumerate(((-39,-39,MINT),(27,-58,PINK),(45,-20,VIOLET),(-27,-61,PINK),(52,-48,MINT))):
         p += [f'<g transform="translate({px+dx} {py+dy})"><path class="cinema-moving cinema-confetti" style="animation-delay:{i*.18}s" d="M0 0L3 5" stroke="{color}" stroke-width="2.5"/></g>']
@@ -168,7 +168,7 @@ def portal(mobile=False):
           f'<path d="M{tx} {ty+34}H{tx+tw}" stroke="#29364B"/>']
     for i, color in enumerate((PINK, VIOLET, MINT)):
         p += [f'<circle cx="{tx+18+i*13}" cy="{ty+17}" r="3" fill="{color}" fill-opacity=".7"/>']
-    p += [label(tx+tw-16, ty+22, 'PIXEL / TOY TERMINAL', 12 if mobile else 10, MUTED, extra='text-anchor="end"')]
+    p += [label(tx+tw-16, ty+22, 'PIXEL / TOY TERMINAL', 18 if mobile else 12, MUTED, extra='text-anchor="end" font-family="Consolas,monospace"')]
     frames = (('one', 'help', 'A route, a hint, or a terrible joke.', 'Try hint. Pixel won’t judge.'),
               ('two', 'party', 'Confetti mode: enthusiastically on.', 'Pixel takes fun very seriously.'),
               ('three', 'patches', 'Five tiny reasons to keep exploring.', 'Earn a little proof of curiosity.'))
@@ -185,7 +185,7 @@ def portal(mobile=False):
         x, y = (40+i*31, 399) if mobile else (532+i*28, 239)
         p += [f'<g transform="translate({x} {y})"><g class="portal-patch" style="animation-delay:{i*.35}s"><path d="M0-10L9-5V5L0 10L-9 5V-5Z" fill="{color}" fill-opacity=".08" stroke="{color}"/><path d="M-3 0L-1 2L4-3" fill="none" stroke="{color}" stroke-width="1.4"/></g></g>']
     if mobile:
-        p += [label(572, 404, 'ENTER THE LIVE LAB ↗', 16, MINT, extra='text-anchor="end"')]
+        p += [label(572, 404, 'ENTER THE LIVE LAB ↗', 18, MINT, extra='text-anchor="end"')]
     else:
         p += [label(28, 240, 'ENTER THE LIVE LAB ↗', 16, MINT),
               label(686, 244, 'FIVE PATCHES. ONE SIDE QUEST AT A TIME.', 11, MUTED)]

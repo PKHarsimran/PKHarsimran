@@ -26,5 +26,6 @@
 <text x="28" y="538" fill="#43E6C5" font-size="21" font-weight="600">7,316 observables  /  2,684 CVEs</text>
 <text x="28" y="568" fill="#B8C6DB" font-size="17" font-weight="400">Last interval: +1,044 added / 147 updated / 1,044 removed</text>
 <text x="28" y="600" fill="#B8C6DB" font-size="14" font-weight="500" font-family="ProfileMono,Consolas,monospace">COLLECTION / 19 Oct 2026 / 09:31 UTC</text>
-<text x="28" y="664" fill="#B8C6DB" font-size="14" font-weight="500" font-family="ProfileMono,Consolas,monospace">Retained records, not local detections. Open the snapshot for context.</text>
+<text x="28" y="635" fill="#B8C6DB" font-size="18" font-weight="400">Retained records, not local detections.</text>
+<text x="28" y="663" fill="#B8C6DB" font-size="18" font-weight="400">Open the snapshot for context.</text>
 </g></svg>

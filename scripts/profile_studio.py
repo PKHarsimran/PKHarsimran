@@ -45,12 +45,12 @@ def hero(mobile=False):
           group('mission-banner-orbital.svg','translate(801 164)','translate(487 171) scale(.66)' if mobile else 'translate(809 163) scale(.9)'),
           group('mission-banner-orbital.svg','translate(916 258)','translate(521 358) scale(1.12)' if mobile else 'translate(911 274) scale(1.15)')]
     if mobile:
-        p += [text(28,36,'PKHARSIMRAN / SECURITY + CODE',15,MINT,500),
+        p += [text(28,36,'PKHARSIMRAN / SECURITY + CODE',18,MINT,500,'font-family="Consolas,monospace"'),
               text(28,124,'Harsimran',66,TEXT,700),text(28,201,'Sidhu.',66,TEXT,700),
               text(30,262,'Security instincts.',27,MUTED),text(30,300,'Builder energy.',27,MINT),
               '<path d="M28 339H572" stroke="#29364B"/>',
-              text(28,378,'CYBERSECURITY / OPEN SOURCE',15,MUTED,500),text(28,408,'SELF-HOSTING / ALWAYS LEARNING',15,MUTED,500),
-              text(28,440,'CURIOUS BY DESIGN.',12,VIOLET,500)]
+              text(28,378,'CYBERSECURITY / OPEN SOURCE',18,MUTED,500,'font-family="Consolas,monospace"'),text(28,408,'SELF-HOSTING / ALWAYS LEARNING',18,MUTED,500,'font-family="Consolas,monospace"'),
+              text(28,440,'CURIOUS BY DESIGN.',18,VIOLET,500,'font-family="Consolas,monospace"')]
     else:
         p += [text(40,36,'PKHARSIMRAN / SECURITY + CODE',13,MINT,500),
               text(40,139,'Harsimran',82,TEXT,700),text(40,231,'Sidhu.',82,TEXT,700),
@@ -73,11 +73,11 @@ def project(item,mobile=False):
               text(28,91,name,43,TEXT,700),text(30,125,tagline,20,MUTED),text(30,169,tags,12,color,500),
               text(947,170,'↗',22,color)]
     else:
-        p += [text(28,36,number+' / '+area.upper(),16,color,500),
+        p += [text(28,36,number+' / '+area.upper(),18,color,500,'font-family="Consolas,monospace"'),
               text(548,38,'↗',24,color),
               text(26,98,name,42,TEXT,700),text(28,143,tagline,24,MUTED),
               '<g transform="translate(28 163)">'+project_scene(kind,True)+'</g>',
-              text(28,286,tags,16,color,500)]
+              text(28,286,tags,18,color,500,'font-family="Consolas,monospace"')]
     return ''.join(p+['</g></svg>\n'])
 
 

@@ -32,8 +32,8 @@ def summary(name):
     title, hint, _ = DRAWERS[name]
     return ('<summary><picture>\n'
             f'  <source media="(max-width: 600px)" srcset="./profile/drawers/{name}-mobile.svg">\n'
-            f'  <img src="./profile/drawers/{name}.svg" alt="{escape(title+": "+hint, quote=True)}" width="94%" align="absmiddle">\n'
-            '</picture></summary>')
+            f'  <img src="./profile/drawers/{name}.svg" alt="{escape(title+": "+hint, quote=True)}" width="94%" align="middle">\n'
+            '</picture></summary>\n<br>')
 
 
 def render(name, mobile=False):
