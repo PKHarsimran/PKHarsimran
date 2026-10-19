@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-10-19T14:45:08Z",
-  "calendar_observed_at": "2026-10-19T14:45:08Z",
-  "fingerprint": "668b90df848ad06b6012b08631f95763e34380cc6f188ea052f934f790b630ba",
-  "serial": "668B90DF",
-  "asset_id": "668b90df848ad06b",
+  "generated_at": "2026-10-19T15:10:47Z",
+  "calendar_observed_at": "2026-10-19T15:10:47Z",
+  "fingerprint": "31e232d40237581557ede0fdaead19c7704c7db3d7ca7c8c7254d988fc8b2297",
+  "serial": "31E232D4",
+  "asset_id": "31e232d402375815",
   "retained": [
     "095241bf5030e207",
     "ac56e514d59f16a2",
@@ -14,19 +14,20 @@
     "a8d845b69ffe7ca4",
     "e6621d3fee9d7121",
     "7b314533351f04bc",
-    "668b90df848ad06b"
+    "668b90df848ad06b",
+    "31e232d402375815"
   ],
   "assets": {
-    "heist": "arcade/heist-668b90df848ad06b.svg",
-    "mobile": "arcade/heist-668b90df848ad06b-mobile.svg",
-    "relic": "arcade/relic-668b90df848ad06b.svg"
+    "heist": "arcade/heist-31e232d402375815.svg",
+    "mobile": "arcade/heist-31e232d402375815-mobile.svg",
+    "relic": "arcade/relic-31e232d402375815.svg"
   },
-  "relic_name": "Port Nomad",
+  "relic_name": "Patch Imp",
   "gates": [
     {
       "id": "A",
       "label": "RELEASE",
-      "source": "SwiftIOC",
+      "source": "IOC Inspector",
       "display": "v0.1.0",
       "hint": "Minor version: ones digit.",
       "value": 1,
@@ -36,37 +37,37 @@
       "id": "B",
       "label": "CALENDAR",
       "source": "Last 30 days / contributions",
-      "display": "400",
+      "display": "401",
       "hint": "Take the ones digit.",
-      "value": 400,
-      "digit": 0
+      "value": 401,
+      "digit": 1
     },
     {
       "id": "C",
       "label": "BUILD RADAR",
-      "source": "Passing checks / selected 3",
-      "display": "3",
+      "source": "Stars / selected 3 projects",
+      "display": "233",
       "hint": "Take the ones digit.",
-      "value": 3,
+      "value": 233,
       "digit": 3
     }
   ],
   "route": [
-    "B",
+    "C",
     "A",
-    "C"
+    "B"
   ],
-  "solution": "013",
+  "solution": "311",
   "choices": [
-    "476",
-    "150",
-    "013"
+    "774",
+    "311",
+    "448"
   ],
-  "tool_url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector",
-  "tool_name": "SwiftIOC",
+  "tool_url": "https://github.com/PKHarsimran/IOC-Inspector",
+  "tool_name": "IOC Inspector",
   "rewind": {
     "previous": {
-      "generated_at": "2026-10-19T13:10:22Z",
+      "generated_at": "2026-10-19T14:45:08Z",
       "projects": [
         {
           "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
@@ -92,7 +93,7 @@
       ]
     },
     "current": {
-      "generated_at": "2026-10-19T14:45:08Z",
+      "generated_at": "2026-10-19T15:10:47Z",
       "projects": [
         {
           "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
