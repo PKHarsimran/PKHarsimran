@@ -4,7 +4,7 @@ The delivery note with a repeated link
 
 Owned harmless training PDF. Static analysis; external reputation lookups disabled. The tool verdict is not a security guarantee.
 
-Released source: [v0.1.0](https://github.com/PKHarsimran/IOC-Inspector/tree/df4e2cc2266b337a8994c4d10e3accb7333dba1b). Fixture SHA-256: `e0d5cd0c6a6d1656295f4777f6fe81bb702a0550fb0ccf0c580be4340c31b485`.
+Released source: [v0.1.0](https://github.com/PKHarsimran/IOC-Inspector/tree/df4e2cc2266b337a8994c4d10e3accb7333dba1b). Fixture SHA-256: `2dc1e5a1bd8cd6862c13d11fad2111d299f54db270a9c1d5373d26b334b3460b`.
 
 Actual tool verdict: **benign**, score **0**. 2 unique URLs and 1 IP.
 

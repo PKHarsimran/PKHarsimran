@@ -21,13 +21,13 @@
     "scripts/profile_theme.py": "e86b3776eb37fc4d50add1b9a3a31abe347f63b87b4e53417e6c9e6bf6551383",
     "fonts/ibm-plex-mono-500.woff2": "68ba6f90195c23f229f0dd1e250c002a6b330c4ad0c75e8acd6a821877e8b81f",
     "fonts/space-grotesk-700.woff2": "99bf80657f097e9c16db49a7f85a468feef8759c6f6a59f4ceaedda8a01f1ba4",
-    "fonts/space-grotesk-buttons-600.woff2": "6f63c64f8e1fc719fb71d903e048c78736ca7e8356c86e012c14e4d62a3fe023"
+    "fonts/space-grotesk-buttons-600.woff2": "3d106765eeb228521ae6077d840e079502bfa7f18946b96160f1e1365cb63f92"
   },
-  "fingerprint": "5b5fd58a9493fdd8deffb7b9dc6da07f756d418931a08bac8302bf683e7154f5",
-  "recorded_at": "2026-10-19T12:54:59.007836+00:00",
+  "fingerprint": "e30fc5359217e496d186153f0ebd0f985e940ad84ac3ce0daa81f209d9ba6c63",
+  "recorded_at": "2026-10-19T13:11:41.508664+00:00",
   "method": "VHS recorded executions of released CLIs on owned fixtures; assertions passed.",
   "reels": {
-    "inspector": "ad2be5b64006e93b7ec7dce94a4f5a2329b392a5c6250f92dc5955f711c7bde0",
-    "downloader": "53ffecae180162767af874aa322b33b0b8b98c0f95827c7e118dc2870317ba46"
+    "inspector": "3141ff325141f0a02009a94abd99973f8ebd511b2e6740e315cd7b2a26413086",
+    "downloader": "bc9422b0c450f1e1ff01c7880a779e184efd1e4c8d4a663e431bd93209f8d3d4"
   }
 }
