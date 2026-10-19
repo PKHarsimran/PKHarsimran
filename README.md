@@ -166,7 +166,7 @@ A harmless training PDF, a few hidden clues, and the real scanner. What can you 
 </picture>
 </p>
 
-<sub>Run → read → verify. A guided recording of the released CLI, with findings from its actual reports. [Behind the replay](./demos/README.md) · [Run provenance](./profile/demo-provenance.json).</sub>
+<sub>Run → read → prove. Findings come from the released CLI’s actual reports. [Read transcript](./profile/inspector-demo.md) · [Behind the replay](./demos/README.md).</sub>
 
 </details>
 
@@ -210,7 +210,7 @@ A harmless training PDF, a few hidden clues, and the real scanner. What can you 
 </picture>
 </p>
 
-<sub>Save → unplug → prove. The released CLI builds the mirror; every local reference is checked with the source server off. [Run results](./profile/downloader-demo.json) · [Behind the replay](./demos/README.md).</sub>
+<sub>Save → unplug → prove. Every local reference is checked with the source server off. [Read transcript](./profile/downloader-demo.md) · [Run results](./profile/downloader-demo.json).</sub>
 
 </details>
 
