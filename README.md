@@ -307,15 +307,35 @@ The tools do useful work. Pixel handles the side quests. Follow the bot, crack t
 
 <p>
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-31e232d402375815-mobile.svg">
-  <img src="./profile/arcade/heist-31e232d402375815.svg" alt="Signal Heist. Route: C, then A, then B. Gate A: IOC Inspector, v0.1.0. Minor version: ones digit. Gate B: Last 30 days / contributions, 401. Take the ones digit. Gate C: Stars / selected 3 projects, 233. Take the ones digit. Choose a three-digit code below." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-53dcf169d52c67bf-mobile.svg">
+  <img src="./profile/arcade/heist-53dcf169d52c67bf.svg" alt="Signal Heist. Route: A, then C, then B. Gate A: IOC Inspector, v0.1.0. Minor version: ones digit. Gate B: Last 30 days / contributions, 402. Take the ones digit. Gate C: Passing checks / selected 3, 3. Take the ones digit. Choose a three-digit code below." width="100%">
 </picture>
 </p>
 
 **Three clues → one code → a tiny creature.** Take each gate’s digit, follow the printed route, and open a code hatch.
 
 <details>
-<summary><strong>🔐 Hatch 01</strong> · <code>774</code></summary>
+<summary><strong>🔐 Hatch 01</strong> · <code>132</code></summary>
+<br>
+
+🔓 **Signal recovered.** A → C → B gives **132**.
+
+| Gate | Clue | Digit |
+| --- | --- | ---: |
+| A | IOC Inspector: v0.1.0 | 1 |
+| B | Last 30 days / contributions: 402 | 2 |
+| C | Passing checks / selected 3: 3 | 3 |
+
+**Next side quest:** [Explore IOC Inspector](https://github.com/PKHarsimran/IOC-Inspector) — the real tool behind gate A.
+
+<p><img src="./profile/arcade/relic-53dcf169d52c67bf.svg" alt="Snapshot relic 53DCF169: Null Navigator, a symmetric pixel creature drawn from this public snapshot." width="600"></p>
+
+[Open your creature art](./profile/arcade/relic-53dcf169d52c67bf.svg)
+
+</details>
+
+<details>
+<summary><strong>🔐 Hatch 02</strong> · <code>595</code></summary>
 <br>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
@@ -323,27 +343,7 @@ The tools do useful work. Pixel handles the side quests. Follow the bot, crack t
 </details>
 
 <details>
-<summary><strong>🔐 Hatch 02</strong> · <code>311</code></summary>
-<br>
-
-🔓 **Signal recovered.** C → A → B gives **311**.
-
-| Gate | Clue | Digit |
-| --- | --- | ---: |
-| A | IOC Inspector: v0.1.0 | 1 |
-| B | Last 30 days / contributions: 401 | 1 |
-| C | Stars / selected 3 projects: 233 | 3 |
-
-**Next side quest:** [Explore IOC Inspector](https://github.com/PKHarsimran/IOC-Inspector) — the real tool behind gate A.
-
-<p><img src="./profile/arcade/relic-31e232d402375815.svg" alt="Snapshot relic 31E232D4: Patch Imp, a symmetric pixel creature drawn from this public snapshot." width="600"></p>
-
-[Open your creature art](./profile/arcade/relic-31e232d402375815.svg)
-
-</details>
-
-<details>
-<summary><strong>🔐 Hatch 03</strong> · <code>448</code></summary>
+<summary><strong>🔐 Hatch 03</strong> · <code>269</code></summary>
 <br>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
@@ -354,7 +354,7 @@ The tools do useful work. Pixel handles the side quests. Follow the bot, crack t
 <summary><strong>⏪ Checkpoint rewind</strong> <sub>· what changed?</sub></summary>
 <br>
 
-Snapshots: **2026-10-19 14:45:08** → **2026-10-19 15:10:47** UTC. Comparing the three selected public projects.
+Snapshots: **2026-10-19 15:10:47** → **2026-10-19 16:29:24** UTC. Comparing the three selected public projects.
 
 **Quiet checkpoint.** No changes in releases, CI, stars, or latest commit times.
 
