@@ -1,7 +1,7 @@
 Output profile/inspector-demo-mobile.gif
-Set Width 600
-Set Height 740
 Source demos/terminal.tape
+Set Columns 34
+Set Rows 24
 Hide
 Type@1ms "export PS1=''; clear"
 Enter

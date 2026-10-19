@@ -253,8 +253,9 @@ def finish():
         gif=OUT/(stem+'.gif')
         with Image.open(gif) as img:
             duration=sum(frame.info.get('duration',0) for frame in __import__('PIL.ImageSequence',fromlist=['Iterator']).Iterator(img))
-            expected_size=(600,740) if name.endswith('-mobile') else (900,700)
-            if img.n_frames<2 or img.size!=expected_size or gif.stat().st_size>4_000_000 or not 1_000<duration<60_000:
+            valid_size=500<=img.width<=1200 and 650<=img.height<=1100
+            if name.endswith('-mobile'): valid_size=valid_size and img.width<img.height
+            if img.n_frames<2 or not valid_size or gif.stat().st_size>4_000_000 or not 1_000<duration<60_000:
                 raise ValueError('Invalid or oversized demo reel')
             img.seek(max(0,img.n_frames-2))
             img.convert('RGB').save(OUT/(stem+'.webp'),'WEBP',lossless=True,method=6)

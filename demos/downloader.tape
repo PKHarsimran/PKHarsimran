@@ -1,7 +1,7 @@
 Output profile/downloader-demo.gif
-Set Width 900
-Set Height 700
 Source demos/terminal.tape
+Set Columns 54
+Set Rows 24
 Hide
 Type@1ms "export PS1=''; clear"
 Enter

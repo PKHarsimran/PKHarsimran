@@ -83,6 +83,15 @@ jobs:
         if: steps.exhibits.outputs.needs_demos == 'true'
         run: .demo-work/inspector-env/bin/python scripts/profile_demos.py finish
 
+      - name: Preserve failed recorder frame for diagnosis
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: recorder-diagnostic
+          retention-days: 1
+          if-no-files-found: ignore
+          path: profile/*-capture.png
+
       - name: Upload verified exhibits
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
