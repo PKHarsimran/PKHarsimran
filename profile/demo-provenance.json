@@ -1,5 +1,5 @@
 {
-  "week": "2026-W42",
+  "week": "2026-W43",
   "sources": {
     "inspector": {
       "repo": "IOC-Inspector",
@@ -23,11 +23,11 @@
     "fonts/space-grotesk-700.woff2": "99bf80657f097e9c16db49a7f85a468feef8759c6f6a59f4ceaedda8a01f1ba4",
     "fonts/space-grotesk-buttons-600.woff2": "6f63c64f8e1fc719fb71d903e048c78736ca7e8356c86e012c14e4d62a3fe023"
   },
-  "fingerprint": "b8d753c1bb46b7a5c26acfd53459c974c263dd3a734ce1b4ac79f609136d0ce5",
-  "recorded_at": "2026-10-17T22:02:06.835585+00:00",
+  "fingerprint": "5b5fd58a9493fdd8deffb7b9dc6da07f756d418931a08bac8302bf683e7154f5",
+  "recorded_at": "2026-10-19T12:54:59.007836+00:00",
   "method": "VHS recorded executions of released CLIs on owned fixtures; assertions passed.",
   "reels": {
-    "inspector": "0424cda7032e45b28edb9c3758bc043871c500b507407fb518bab7044b2c2e59",
-    "downloader": "5ebc321fe6692884b26022a2661094be2c34ba840845a1177530e4befe19a3be"
+    "inspector": "ad2be5b64006e93b7ec7dce94a4f5a2329b392a5c6250f92dc5955f711c7bde0",
+    "downloader": "53ffecae180162767af874aa322b33b0b8b98c0f95827c7e118dc2870317ba46"
   }
 }
