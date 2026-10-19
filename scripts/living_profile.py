@@ -208,6 +208,7 @@ def main():
     previous=json.loads((OUT/'demo-provenance.json').read_text()) if (OUT/'demo-provenance.json').exists() else {}
     required=['inspector-demo.gif','inspector-demo.webp','downloader-demo.gif','downloader-demo.webp','case-file.svg','case-file-mobile.svg','case-findings.svg','case-report.json','case-report.md']
     required += [f'{name}-demo-mobile.{ext}' for name in ('inspector','downloader') for ext in ('gif','webp')]
+    required += [f'{name}-demo.md' for name in ('inspector','downloader')]
     needs=previous.get('fingerprint')!=plan['fingerprint'] or any(not (OUT/f).is_file() for f in required)
     if os.environ.get('GITHUB_OUTPUT'):
         with open(os.environ['GITHUB_OUTPUT'],'a',encoding='utf-8') as f:

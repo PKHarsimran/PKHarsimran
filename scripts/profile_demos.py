@@ -127,11 +127,11 @@ def inspector(record=False, compact=False):
     terminal.line(f'{len(raw["urls"])} UNIQUE URLs / {len(raw["ips"])} {ip_label}', 'mint',True)
     terminal.line()
     for url in sorted(raw['urls']):
-        terminal.line(url.replace('http','hxxp').replace('.','[.]'))
+        terminal.resource(url.replace('http','hxxp').replace('.','[.]'))
         terminal.line()
         terminal.pause(.6)
     terminal.line('Links defanged for display.','muted')
-    terminal.line('Read from the actual JSON report.','muted')
+    terminal.line('Source: generated JSON report.','muted')
     terminal.pause(4)
     terminal.page('IOC Inspector',source['tag'],'03 / CLOSE THE CASE')
     terminal.line(f'[ok] {len(raw["urls"])} URLs / {len(raw["ips"])} {ip_label} verified','mint')
@@ -143,7 +143,7 @@ def inspector(record=False, compact=False):
     terminal.line()
     terminal.line('Owned PDF. Reputation keys off.','muted')
     terminal.line('A verdict is not a guarantee.','muted')
-    terminal.end('CASE VERIFIED')
+    terminal.end('CASE VERIFIED',OUT/'inspector-demo.md')
 
 
 class Links(HTMLParser):
@@ -203,11 +203,12 @@ def downloader(record=False, compact=False):
     finally:
         server.shutdown(); server.server_close()
     # Source is stopped before checking that every HTML dependency resolves locally.
+    terminal.pause(.8)
     terminal.page('Website Downloader',source['tag'],'02 / PULL THE PLUG')
     terminal.line('SOURCE SERVER: OFF','violet',True)
     terminal.line()
     terminal.line('The mirror has to stand alone.')
-    terminal.line('No source server to fall back on.','muted')
+    terminal.line('No server to fall back on.','muted')
     terminal.line()
     terminal.line('index.html / guide.html','mint')
     terminal.line('about.html / CSS / SVG','mint')
@@ -223,7 +224,7 @@ def downloader(record=False, compact=False):
     terminal.line('Every link stays in the mirror.','muted')
     terminal.line()
     terminal.line('A little web, ready to travel.','muted')
-    terminal.end('OFFLINE MIRROR VERIFIED')
+    terminal.end('OFFLINE MIRROR VERIFIED',OUT/'downloader-demo.md')
 
 
 def case_art(record,mobile=False,findings=False):
@@ -248,6 +249,13 @@ def case_art(record,mobile=False,findings=False):
 def finish():
     from PIL import Image
     reels={}
+    transcripts={}
+    for name,marker in (('inspector','CASE VERIFIED'),('downloader','OFFLINE MIRROR VERIFIED')):
+        path=OUT/(name+'-demo.md')
+        content=path.read_text(encoding='utf-8')
+        if marker not in content or len(re.findall(r'^## 0[123] / ',content,re.M))!=3 or '\x1b' in content:
+            raise ValueError('Missing or incomplete CLI transcript')
+        transcripts[name]={'path':path.name,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()}
     for name in ('inspector','inspector-mobile','downloader','downloader-mobile'):
         stem=name.replace('-mobile','-demo-mobile') if name.endswith('-mobile') else name+'-demo'
         gif=OUT/(stem+'.gif')
@@ -271,7 +279,7 @@ def finish():
     md+=f'Actual tool verdict: **{raw["verdict"]}**, score **{raw["score"]}**. {len(raw["urls"])} unique URLs and {len(raw["ips"])} {ip_label}.\n\n'
     md+='\n'.join('- `'+u.replace('http','hxxp').replace('.','[.]')+'`' for u in raw['urls'])+'\n\n[Raw findings](./case-report.json) · [Reproducible fixture recipe](../demos/cases.json)\n'
     save('case-report.md',md)
-    save('demo-provenance.json',{**plan(),'recorded_at':datetime.now(timezone.utc).isoformat(),'method':'VHS records guided terminal presentations of actual released CLI executions. Commands use the isolated venv Python; results come from verified generated files, not canned product output.','reels':reels})
+    save('demo-provenance.json',{**plan(),'recorded_at':datetime.now(timezone.utc).isoformat(),'method':'VHS records guided terminal presentations of actual released CLI executions. Commands use the isolated venv Python; results come from verified generated files, not canned product output.','reels':reels,'transcripts':transcripts})
     print('Demo reels, static posters, case findings, and source provenance verified.')
 
 
