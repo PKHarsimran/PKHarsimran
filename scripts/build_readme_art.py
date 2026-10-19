@@ -3,19 +3,21 @@ import argparse
 
 from profile_cinematics import ROOT, hero_finish, portal
 from profile_motion import animate_profile
-from profile_studio import PROJECTS, hero, project
+from profile_studio import PROJECTS, hero, project, outro
+from profile_mascot import portrait
 from profile_theme import apply_theme
 from profile_thread import thread_story
 from profile_drawers import DRAWERS, render as drawer
 
 
 def assets():
-    result = {}
+    result = {'hacker-bender.svg':portrait(), 'hacker-bender-wave.svg':portrait('wave')}
     for mobile in (False, True):
         suffix = '-mobile' if mobile else ''
         result['studio-orbit-hero'+suffix+'.svg'] = apply_theme(hero_finish(animate_profile(hero(mobile), 'hero', mobile), mobile))
         result['pixel-portal'+suffix+'.svg'] = portal(mobile)
         result['curiosity-thread'+suffix+'.svg'] = thread_story(mobile)
+        result['studio-guestbook-motion'+suffix+'.svg'] = apply_theme(animate_profile(outro(mobile),'outro',mobile))
         for name in DRAWERS:
             result['drawers/'+name+suffix+'.svg'] = drawer(name,mobile)
         for item in PROJECTS:

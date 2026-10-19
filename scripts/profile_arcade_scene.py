@@ -1,5 +1,6 @@
 """A decorative evidence-run diorama. It never modifies contribution data."""
 from html import escape
+from profile_mascot import pixel_bender
 
 MINT, VIOLET, PINK = '#43E6C5', '#A995FF', '#F36BAA'
 SCENE_REDUCED = '.quest-motion{display:none}.quest-static{display:inline}.quest-gate,.quest-foot-a,.quest-foot-b{animation:none}'
@@ -28,16 +29,7 @@ def label(x, y, value, size=12, color='#B8C6DB', anchor='start', weight=500):
 
 
 def runner():
-    return f'''<g shape-rendering="crispEdges">
-      <path d="M-6-15H6V-11H11V3H6V8H-6V3H-11V-11H-6Z" fill="{VIOLET}"/>
-      <path d="M-7-8H7V-1H-7Z" fill="#0B121C"/>
-      <path d="M-4-6H-1V-3H-4ZM2-6H5V-3H2Z" fill="{MINT}"/>
-      <path d="M-2-20H1V-15H-2Z" fill="{VIOLET}"/><path d="M-3-23H2V-19H-3Z" fill="{PINK}"/>
-      <g class="quest-foot-a"><path d="M-8 7H-2V13H-10V10H-8Z" fill="{VIOLET}"/></g>
-      <g class="quest-foot-b"><path d="M3 7H9V10H11V13H3Z" fill="{VIOLET}"/></g>
-      <path d="M10-4H22V9H10Z" fill="{PINK}"/><path d="M15-4H18V1H15Z" fill="#EFF4FC" fill-opacity=".75"/>
-      <path d="M-13-6H-9V3H-13Z" fill="{MINT}"/>
-    </g>'''
+    return pixel_bender()
 
 
 def token(x, y, kind):

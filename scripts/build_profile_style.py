@@ -168,9 +168,6 @@ if __name__ == "__main__":
     assets['mission-visitors.svg']=visitor_pass()
     assets['mission-visitors-mobile.svg']=visitor_pass(True)
     assets['studio-signal-divider.svg']=animate_profile(orbit_divider(),'divider')
-    for mobile in (False,True):
-        suffix='-mobile' if mobile else ''
-        assets['studio-guestbook-motion'+suffix+'.svg']=animate_profile(profile_studio.outro(mobile),'outro',mobile)
     assets.update(readme_assets())
     for name, content in assets.items():
         (OUT / name).write_text(apply_theme(content,'terminal' if 'typing' in name else 'panel'), encoding="utf-8")

@@ -4,6 +4,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 
 from profile_theme import apply_theme
+from profile_mascot import hacker_bender
 
 ROOT = Path(__file__).resolve().parents[1]
 SVG = 'http://www.w3.org/2000/svg'
@@ -79,31 +80,14 @@ SEQUENCE_STYLE = '''
 HERO_STYLE = '''
 .hero-contact{animation:hero-contact 18s ease-out infinite}
 .hero-return{opacity:0;transform-box:fill-box;transform-origin:center;animation:hero-return 18s ease-out infinite}
-.hero-wave{transform-box:fill-box;transform-origin:bottom left;animation:hero-wave 18s ease-in-out infinite}
 @keyframes hero-contact{0%,16%,100%{opacity:.4}2%,5%{opacity:1}}
 @keyframes hero-return{0%{opacity:0;transform:scale(.65)}2%{opacity:.7}13%,100%{opacity:0;transform:scale(2.1)}}
-@keyframes hero-wave{0%,60%,86%,100%{transform:rotate(0)}66%,76%{transform:rotate(-18deg)}71%,81%{transform:rotate(7deg)}}
-@media(prefers-reduced-motion:reduce){.hero-contact,.hero-return,.hero-wave{animation:none}.hero-contact{opacity:.8}.hero-return{display:none}}
+@media(prefers-reduced-motion:reduce){.hero-contact,.hero-return{animation:none}.hero-contact{opacity:.8}.hero-return{display:none}}
 '''
 
 
 def label(x, y, value, size=12, color=MUTED, weight=500, extra=''):
     return f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{weight}" fill="{color}" {extra}>{escape(value)}</text>'
-
-
-def pixel(x, y, scale=1):
-    return f'''<g transform="translate({x} {y}) scale({scale})" aria-hidden="true">
-      <ellipse cy="45" rx="33" ry="5" fill="{VIOLET}" fill-opacity=".12"/>
-      <g class="cinema-float" shape-rendering="crispEdges">
-       <path d="M-2-37H2V-26H-2ZM-22-25H22V12H-22ZM-15 12H-5V28H-15ZM5 12H15V28H5Z" fill="{VIOLET}"/>
-       <path d="M-4-42H4V-36H-4Z" fill="{PINK}"/>
-       <path d="M-16-16H16V1H-16Z" fill="#0B121C"/>
-       <g class="cinema-blink"><path d="M-10-11H-4V-5H-10ZM4-11H10V-5H4Z" fill="{MINT}"/></g>
-       <path d="M-4 5H4V8H-4Z" fill="#0B121C"/>
-       <path d="M-30-8H-22V6H-30Z" fill="{VIOLET}"/>
-       <path class="cinema-wave" d="M22-12H30V-28H38V-4H22Z" fill="{PINK}"/>
-      </g>
-     </g>'''
 
 
 def packet(path, color, delay=0, duration=8):
@@ -190,6 +174,14 @@ def hero_finish(source, mobile=False):
     radar_transform = 'translate(487 171) scale(.66)' if mobile else 'translate(809 163) scale(.9)'
     radar = root.find('.//'+N+'g[@transform="'+radar_transform+'"]')
     if radar is None: raise ValueError('Missing hero radar')
+    # The selected mascot leads the orbital artwork; the shield remains in the
+    # smaller security/code/infrastructure route underneath it.
+    shield_paths = ('M0-32L29-21V4C29 25 0 40 0 40S-29 25-29 4V-21Z',
+                    'M-12 2L-3 11L15-10')
+    for child in list(radar):
+        if child.tag == N+'path' and child.get('d') in shield_paths:
+            radar.remove(child)
+    radar.append(ET.fromstring(hacker_bender(0,4,.98,pose='laptop',key='hero').replace('<g ',f'<g xmlns="{SVG}" ',1)))
     contacts = list(radar.findall(N+'circle[@class="pulse"]'))
     if len(contacts) != 3: raise ValueError('Expected three hero radar contacts')
     for contact, delay in zip(contacts, (10.7, 6.4, .7)):
@@ -198,10 +190,6 @@ def hero_finish(source, mobile=False):
         ring = ET.SubElement(radar, N+'g', {'transform': f'translate({contact.get("cx")} {contact.get("cy")})'})
         ET.SubElement(ring, N+'circle', {'class': 'hero-return', 'r': '7', 'fill': 'none',
                       'stroke': contact.get('fill'), 'stroke-width': '1', 'style': f'animation-delay:{delay}s'})
-    bot = root.find('.//'+N+'g[@class="bot-float"]')
-    if bot is None: raise ValueError('Missing hero mascot')
-    ET.SubElement(bot, N+'path', {'d': 'M-6 17H0V28H-6Z', 'fill': VIOLET})
-    ET.SubElement(bot, N+'path', {'class': 'hero-wave', 'd': 'M28 18H34V9H40V24H28Z', 'fill': PINK})
     cx, cy = (487,171) if mobile else (809,163)
     glow = f'<g xmlns="{SVG}" class="cinema-ambient" aria-hidden="true"><ellipse cx="{cx}" cy="{cy}" rx="{180 if mobile else 240}" ry="160" fill="url(#cinema-ambient-mint)"/><ellipse cx="{cx+45}" cy="{cy+64}" rx="155" ry="125" fill="url(#cinema-ambient-violet)"/></g>'
     main.insert(1, ET.fromstring(glow))
@@ -231,29 +219,29 @@ def hero_finish(source, mobile=False):
 def portal(mobile=False):
     w, h = (600, 428) if mobile else (1000, 276)
     tx, ty, tw = (28, 205, 544) if mobile else (520, 40, 448)
-    px, py = (518, 98) if mobile else (447, 128)
+    px, py = (510, 109) if mobile else (438, 134)
     p = [f'<svg xmlns="{SVG}" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc">',
          '<title id="title">Psst. There’s a secret terminal.</title>',
-         '<desc id="desc">An animated invitation to Pixel’s interactive lab. Preview commands help, party and patches. Click the card to enter the actual terminal, solve tiny cases and earn five mission patches. The README illustration is not a terminal input. Reduced motion shows a complete still preview.</desc>',
+         '<desc id="desc">Hacker Bender holds a tiny laptop beside an animated invitation to the live lab. Preview commands help, party and patches. Click the card to enter the actual terminal, solve tiny cases and earn five mission patches. The README illustration is not a terminal input. Reduced motion shows a complete still preview.</desc>',
          f'<style>{STYLE}</style>',
          '<defs><linearGradient id="portal-surface" x2="1" y2="1"><stop stop-color="#17223A"/><stop offset="1" stop-color="#0B121C"/></linearGradient><radialGradient id="portal-glow"><stop stop-color="#A995FF" stop-opacity=".13"/><stop offset="1" stop-color="#A995FF" stop-opacity="0"/></radialGradient></defs>',
          f'<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="{w-2}" height="{h-2}" rx="24" fill="url(#portal-surface)" stroke="#34445C"/>',
          f'<ellipse cx="{px}" cy="{py}" rx="104" ry="92" fill="url(#portal-glow)"/>',
          f'<path d="M25 1H{224 if mobile else 310}" stroke="{MINT}" stroke-width="2"/>',
-         label(28, 34, 'BONUS AREA / PIXEL’S COMMAND DECK', 18 if mobile else 12, MINT, extra='font-family="Consolas,monospace"'),
+         label(28, 34, 'BONUS AREA / BENDER’S COMMAND DECK', 18 if mobile else 12, MINT, extra='font-family="Consolas,monospace"'),
          label(26, 92 if mobile else 95, 'Psst. There’s a', 42 if mobile else 41, TEXT, 700),
          label(26, 142 if mobile else 146, 'secret terminal.', 42 if mobile else 41, TEXT, 700),
-         label(28, 178 if mobile else 187, 'TINY CASES / FIVE PATCHES / PIXEL', 18 if mobile else 12, MUTED, extra='font-family="Consolas,monospace"'),
-         pixel(px, py, .78 if mobile else .88)]
+         label(28, 178 if mobile else 187, 'TINY CASES / FIVE PATCHES / BENDER', 18 if mobile else 12, MUTED, extra='font-family="Consolas,monospace"'),
+         hacker_bender(px, py, .75 if mobile else .92,pose='laptop',key='portal')]
     for i, (dx, dy, color) in enumerate(((-39,-39,MINT),(27,-58,PINK),(45,-20,VIOLET),(-27,-61,PINK),(52,-48,MINT))):
         p += [f'<g transform="translate({px+dx} {py+dy})"><path class="cinema-moving cinema-confetti" style="animation-delay:{i*.18}s" d="M0 0L3 5" stroke="{color}" stroke-width="2.5"/></g>']
     p += [f'<rect x="{tx}" y="{ty}" width="{tw}" height="168" rx="14" fill="#0A1019" stroke="#34445C"/>',
           f'<path d="M{tx} {ty+34}H{tx+tw}" stroke="#29364B"/>']
     for i, color in enumerate((PINK, VIOLET, MINT)):
         p += [f'<circle cx="{tx+18+i*13}" cy="{ty+17}" r="3" fill="{color}" fill-opacity=".7"/>']
-    p += [label(tx+tw-16, ty+22, 'PIXEL / TOY TERMINAL', 18 if mobile else 12, MUTED, extra='text-anchor="end" font-family="Consolas,monospace"')]
-    frames = (('one', 'help', 'A route, a hint, or a terrible joke.', 'Try hint. Pixel won’t judge.'),
-              ('two', 'party', 'Confetti mode: enthusiastically on.', 'Pixel takes fun very seriously.'),
+    p += [label(tx+tw-16, ty+22, 'LAB / TOY TERMINAL', 18 if mobile else 12, MUTED, extra='text-anchor="end" font-family="Consolas,monospace"')]
+    frames = (('one', 'help', 'A route, a hint, or a terrible joke.', 'Try hint. Curiosity is welcome.'),
+              ('two', 'party', 'Confetti mode: enthusiastically on.', 'A little chaos. Nicely contained.'),
               ('three', 'patches', 'Five tiny reasons to keep exploring.', 'Earn a little proof of curiosity.'))
     for index, (name, command, line, foot) in enumerate(frames):
         extent = len(command)*10.8

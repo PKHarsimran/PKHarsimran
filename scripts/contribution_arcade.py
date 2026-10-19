@@ -4,6 +4,7 @@ from html import escape
 
 from profile_theme import apply_theme
 from profile_arcade_scene import side_quest, SCENE_CSS
+from profile_mascot import hacker_bender
 
 TEXT, MUTED, BORDER = '#EFF4FC', '#B8C6DB', '#29364B'
 MINT, VIOLET, PINK = '#43E6C5', '#A995FF', '#F36BAA'
@@ -64,14 +65,7 @@ def mascot(x, y, scale=1):
     return f'''<g transform="translate({x} {y}) scale({scale})" aria-hidden="true">
       <circle r="40" fill="{VIOLET}" fill-opacity=".035" stroke="{VIOLET}" stroke-opacity=".2"/>
       <path d="M-58 12Q0-38 58-12M-58 12Q0 52 58-12" fill="none" stroke="{MINT}" stroke-opacity=".2"/>
-      <g class="arcade-bot" shape-rendering="crispEdges">
-        <path d="M-4-32H0V-20H20V-10H26V10H18V26H8V16H-8V26H-18V10H-26V-10H-20V-20H-4Z" fill="{VIOLET}"/>
-        <path d="M-15-11H15V7H-15Z" fill="#0D1117"/>
-        <path class="arcade-eyes" d="M-10-5H-4V1H-10ZM4-5H10V1H4Z" fill="{MINT}"/>
-        <path class="arcade-wave" d="M-24-5H-31V-16H-37V2H-24Z" fill="{PINK}"/>
-        <circle cx="-3" cy="-37" r="3" fill="{PINK}"/>
-        <path class="arcade-jet" d="M-13 29H-7L-10 39ZM7 29H13L10 39Z" fill="{MINT}"/>
-      </g>
+      {hacker_bender(0,8,.52,key='calendar')}
       <g class="arcade-orbit"><circle r="3" fill="{PINK}"/><path d="M-10 0H-5" stroke="{PINK}" stroke-opacity=".4"/><animateMotion dur="24s" repeatCount="indefinite" rotate="auto" path="M-53 12A55 21-20 1 1 53-12A55 21-20 1 1-53 12"/></g>
     </g>'''
 

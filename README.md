@@ -5,8 +5,8 @@
 <p>
 <a href="https://harsim.ca">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/studio-orbit-hero-mobile.svg">
-  <img src="./profile/studio-orbit-hero.svg" alt="Harsimran Sidhu. Security instincts. Builder energy. Cybersecurity, open source and self-hosting." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-orbit-hero-mobile.svg?v=hoodie-bender-1">
+  <img src="./profile/studio-orbit-hero.svg?v=hoodie-bender-1" alt="Harsimran Sidhu. Security instincts. Builder energy. Cybersecurity, open source and self-hosting, with cute Hacker Bender holding a tiny laptop inside the orbital artwork." width="100%" />
 </picture>
 </a>
 </p>
@@ -53,7 +53,7 @@ I work in **cybersecurity** and build tools that make investigations clearer and
 | Follow a signal | [Open the live dashboard](https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/) |
 | See a tool in action | [Document investigation](./profile/inspector-demo.md) · [Offline field trip](./profile/downloader-demo.md) |
 | Explore self-hosting | [Inside the Zima homelab](#user-content-homelab) |
-| Bring a little chaos | [Meet Pixel in the live lab](https://harsim.ca/lab/) |
+| Bring a little chaos | [Explore the live lab](https://harsim.ca/lab/) |
 
 </details>
 
@@ -278,13 +278,13 @@ My **Zima homelab** is where side projects become everyday tools. **Docker Compo
 
 ## After hours: the arcade
 
-The tools do useful work. Pixel handles the side quests. Follow the bot, crack today’s code, or find the secret terminal.
+The tools do useful work. Hacker Bender handles the side quests. Crack today’s code, or find the secret terminal.
 
 <p>
 <a href="https://harsim.ca/lab/">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/pixel-portal-mobile.svg">
-  <img src="./profile/pixel-portal.svg" alt="Psst. There’s a secret terminal. Pixel previews help, party and patches with a wave and confetti. Click to enter the interactive lab: tiny cases, five mission patches and a creature badge to keep." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/pixel-portal-mobile.svg?v=hoodie-bender-1">
+  <img src="./profile/pixel-portal.svg?v=hoodie-bender-1" alt="Psst. There’s a secret terminal. Cute Hacker Bender holds a tiny laptop beside previews of help, party and patches. Click to enter the live lab: tiny cases, five mission patches and a creature badge to keep." width="100%">
 </picture>
 </a>
 </p>
@@ -295,12 +295,12 @@ The tools do useful work. Pixel handles the side quests. Follow the bot, crack t
 </p>
 <!-- buttons:live-lab:end -->
 
-<sub>Step inside, press <kbd>/</kbd>, and ask Pixel for <code>help</code>. The terminal, saved progress, and collectible patches live in the lab.</sub>
+<sub>Step inside, press <kbd>/</kbd>, and type <code>help</code>. The terminal, saved progress, and collectible patches live in the lab.</sub>
 
 <p>
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/contribution-evidence-run-mobile.svg">
-  <img src="./profile/contribution-evidence-run.svg" alt="Contribution arcade: real GitHub calendar totals, active days and contributions in the last 30 displayed days. Below the calendar, a pixel bot hops over obstacles, collects clues, passes an inspection station and delivers a parcel through a portal. A bot message rotates daily. The phone layout splits the full calendar into two rows; reduced motion keeps it still." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/contribution-evidence-run-mobile.svg?v=hoodie-bender-1">
+  <img src="./profile/contribution-evidence-run.svg?v=hoodie-bender-1" alt="Contribution arcade: real GitHub calendar totals, active days and contributions in the last 30 displayed days. Hoodie-wearing Hacker Bender waves above the calendar; a matching pixel Bender collects clues, passes inspection and delivers a parcel through a portal below. The phone layout splits the full calendar into two rows; reduced motion keeps it still." width="100%">
 </picture>
 </p>
 
@@ -458,8 +458,8 @@ GitHub Actions refresh the public project signals and daily puzzle. Case files a
 <!-- visitors:start -->
 <p>
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/studio-guestbook-motion-mobile.svg" />
-  <img src="./profile/studio-guestbook-motion.svg" alt="Still curious? A waving pixel mascot signs off from an animated orbital guestbook." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-guestbook-motion-mobile.svg?v=hoodie-bender-1" />
+  <img src="./profile/studio-guestbook-motion.svg?v=hoodie-bender-1" alt="Still curious? Cute Hacker Bender waves goodbye from an animated orbital guestbook, with a silver face and a charcoal hoodie trimmed in mint and pink." width="100%" />
 </picture>
 </p>
 

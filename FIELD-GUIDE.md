@@ -2,7 +2,7 @@
 
 A short, motion-free way into the projects, their working demos, and the Zima homelab.
 
-[Back to the animated profile](./README.md) · [Visit the website](https://harsim.ca) · [Meet Pixel](https://harsim.ca/lab/)
+[Back to the animated profile](./README.md) · [Visit the website](https://harsim.ca) · [Open the live lab](https://harsim.ca/lab/)
 
 ## Find the right tool
 
@@ -37,7 +37,7 @@ The next checkpoint is a modular Compose starter kit, documented so someone else
 
 ## Take the scenic route
 
-- [Enter the live lab](https://harsim.ca/lab/): meet Pixel, solve tiny cases, and collect mission patches. Press <kbd>/</kbd> to open Pixel's terminal.
+- [Enter the live lab](https://harsim.ca/lab/): solve tiny cases and collect mission patches. Press <kbd>/</kbd> to open the terminal.
 - [Check the project radar](./profile/public-pulse.md): real public build checks and releases, with timestamps.
 - [Open the patch cabinet](./profile/release-patches.md): the releases behind the collectible artwork.
 

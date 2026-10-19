@@ -68,11 +68,10 @@ def hero(mobile=False):
     w,h=(600,460) if mobile else (1000,374)
     source=(OUT/'mission-banner-orbital.svg').read_text(encoding='utf-8')
     motion=re.search(r'<style>.*?</style>',source,re.S).group()
-    p=panel(w,h,'Harsimran Sidhu / Security instincts. Builder energy.','Cybersecurity, open source and self-hosting. Angular hacker-inspired name lettering with brief chromatic glitch accents, original orbital line art, a radar and a waving pixel mascot. Text stays readable and reduced-motion preferences keep the design still.')
+    p=panel(w,h,'Harsimran Sidhu / Security instincts. Builder energy.','Cybersecurity, open source and self-hosting. Angular hacker-inspired name lettering, brief chromatic glitch accents, orbital line art, a radar and a cute Hacker Bender mascot with a tiny laptop. Text stays readable and reduced-motion preferences keep the design still.')
     p += [motion,art_style(),NAME_STYLE,f'<path d="M25 1H{210 if mobile else 310}" stroke="{MINT}" stroke-width="2"/>',
           group('mission-banner-orbital.svg','translate(620 55)','translate(383 68) scale(.58)' if mobile else 'translate(617 46)'),
-          group('mission-banner-orbital.svg','translate(801 164)','translate(487 171) scale(.66)' if mobile else 'translate(809 163) scale(.9)'),
-          group('mission-banner-orbital.svg','translate(916 258)','translate(521 358) scale(1.12)' if mobile else 'translate(911 274) scale(1.15)')]
+          group('mission-banner-orbital.svg','translate(801 164)','translate(487 171) scale(.66)' if mobile else 'translate(809 163) scale(.9)')]
     if mobile:
         p += [text(28,36,'PKHARSIMRAN / SECURITY + CODE',18,MINT,500,'font-family="Consolas,monospace"'),
               identity_line(28,124,'HARSIMRAN',64),identity_line(28,201,'SIDHU',64),

@@ -2,6 +2,7 @@
 from html import escape
 import random
 import xml.etree.ElementTree as ET
+from profile_mascot import hacker_bender
 
 SVG='http://www.w3.org/2000/svg'
 MINT,VIOLET,PINK='#43E6C5','#A995FF','#F36BAA'
@@ -45,7 +46,7 @@ def t(x,y,value,size=18,color='#B8C6DB',weight=400):
 def visitor_pass(mobile=False):
     w,h=(600,270) if mobile else (1000,164)
     x,y,scale=(482,117,.82) if mobile else (849,86,1)
-    p=[f'<svg xmlns="{SVG}" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc"><title id="title">Hey, curious human. Welcome to the lab.</title><desc id="desc">A waving pixel visitor and orbital arrival stamp. Decorative animation; the separate live badge below counts page hits, not unique visitors or identities.</desc>',art_style(),
+    p=[f'<svg xmlns="{SVG}" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc"><title id="title">Hey, curious human. Welcome to the lab.</title><desc id="desc">A cute waving Hacker Bender in a charcoal hoodie and an orbital arrival stamp. Decorative animation; the separate live badge below counts page hits, not unique visitors or identities.</desc>',art_style(),
        '<defs><linearGradient id="arrival" x2="1" y2="1"><stop stop-color="#192137"/><stop offset="1" stop-color="#0D1117"/></linearGradient><pattern id="ink" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".6" fill="#A995FF" opacity=".1"/></pattern></defs>',
        f'<g font-family="Segoe UI,Arial,sans-serif"><rect x="1" y="1" width="{w-2}" height="{h-2}" rx="20" fill="url(#arrival)" stroke="#34445C"/><rect x="2" y="2" width="{w-4}" height="{h-4}" rx="19" fill="url(#ink)"/>',
        f'<path d="M2 26V{h-26}" stroke="{PINK}" stroke-width="3"/>',
@@ -58,12 +59,8 @@ def visitor_pass(mobile=False):
           f'<ellipse rx="106" ry="35" transform="rotate(-20)" fill="none" stroke="{MINT}" stroke-opacity=".28"/>',
           f'<circle r="55" fill="#121A26" stroke="{VIOLET}" stroke-opacity=".4"/><circle r="65" fill="none" stroke="{VIOLET}" stroke-opacity=".3" stroke-dasharray="1 6"/>',
           f'<g class="art-orbit"><circle cx="65" r="3" fill="{PINK}"/><path d="M60-5L70 5M60 5L70-5" stroke="{PINK}" stroke-opacity=".4"/></g>',
-          '<g class="visitor-float" shape-rendering="crispEdges">',
-          f'<path d="M-2-33H2V-24H-2ZM-20-23H20V11H-20ZM-14 11H-5V25H-14ZM5 11H14V25H5Z" fill="{VIOLET}"/>',
-          '<path d="M-14-15H14V0H-14Z" fill="#0D1117"/>',
-          f'<path d="M-9-11H-3V-5H-9ZM3-11H9V-5H3Z" fill="{MINT}"/>',
-          f'<path class="visitor-wave" d="M20-12H28V-26H36V-4H20Z" fill="{PINK}"/><path d="M-28-8H-20V5H-28Z" fill="{VIOLET}"/>',
-          '</g>',t(-46,48,'HELLO, WORLD',10,MINT,500),'<g class="art-twinkle">',sparkle(-82,-46,PINK,5),sparkle(88,32,MINT,7),'</g></g></g></svg>\n']
+          hacker_bender(scale=.72,key='guestbook'),
+          t(-46,65,'HELLO, WORLD',10,MINT,500),'<g class="art-twinkle">',sparkle(-82,-46,PINK,5),sparkle(88,32,MINT,7),'</g></g></g></svg>\n']
     return ''.join(p)
 
 
