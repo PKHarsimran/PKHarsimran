@@ -186,7 +186,8 @@ def downloader(record=False, compact=False):
     target=WORK/'mirror'
     # Every invocation uses a fresh destination; the tape never displays cached results.
     target=target/str(os.getpid())
-    url=f'http://127.0.0.1:{server.server_port}'
+    base=f'http://127.0.0.1:{server.server_port}'
+    url=base+'/index.html'
     command=[python_for('downloader'),'-m','website_downloader','--url',url,'--destination',target,'--max-pages','3','--respect-robots']
     source=plan()['sources']['downloader']
     terminal=Terminal(record,compact)
@@ -195,7 +196,7 @@ def downloader(record=False, compact=False):
     terminal.line('Owned localhost fixture','muted')
     terminal.line()
     terminal.pause(1)
-    terminal.command(['$ python -m website_downloader \\','  --url \\',f'  {url} \\',f'  --destination mirror/{os.getpid()} \\','  --max-pages 3 --respect-robots'])
+    terminal.command([f'$ base={base}','$ python -m website_downloader \\','  --url "$base/index.html" \\',f'  --destination mirror/{os.getpid()} \\','  --max-pages 3 --respect-robots'])
     command[6]=Path('mirror')/str(os.getpid())
     try:
         terminal.perform(lambda:run(command,cwd=WORK,capture_output=True,text=True,encoding='utf-8',timeout=90),'Saving the site')
