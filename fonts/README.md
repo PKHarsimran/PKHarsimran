@@ -1,12 +1,12 @@
 # Profile type assets
 
-Space Grotesk 700 supplies display headings; a smaller 600 subset supplies button labels. IBM Plex Mono 500 supplies terminal text and compact metadata. Body prose follows GitHub's native typography.
+Chakra Petch 700 gives the hero name its angular hacker-inspired lettering. Space Grotesk 700 supplies other display headings; a smaller 600 subset supplies button labels. IBM Plex Mono 500 supplies terminal text and compact metadata. Body prose follows GitHub's native typography.
 
-All three subsets cover the printable ASCII alphabet and the profile’s typographic punctuation. Button coverage is not restricted to an old list of labels, so new calls to action retain the same typeface.
+All four WOFF2 subsets cover the printable ASCII alphabet and the profile’s typographic punctuation. Button coverage is not restricted to an old list of labels, so new calls to action retain the same typeface.
 
 The font subsets are embedded as data URLs inside repository-owned SVGs. Browsers need no font installation, Google Fonts request or external font service. Font faces, source revision and SHA-256 hashes are recorded in `sources.json`; the upstream SIL Open Font Licenses are included alongside the subsets.
 
-The modified subsets use the internal names ProfileDisplay, ProfileButton and ProfileMono; upstream copyright and license records are preserved.
+The modified subsets use the internal names ProfileName, ProfileDisplay, ProfileButton and ProfileMono; upstream copyright and license records are preserved.
 
 The TrueType copy of ProfileMono is derived from the same WOFF2 subset for the VHS terminal recordings. Each tape loads it from this repository; no system-font download or silent fallback is needed.
 

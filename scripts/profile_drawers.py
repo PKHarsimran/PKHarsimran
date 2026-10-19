@@ -44,8 +44,10 @@ def render(name, mobile=False):
     cy, tx = h // 2, 80
     p = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="drawer-title" font-family="Segoe UI,Arial,sans-serif">',
          f'<title id="drawer-title">{escape(title+": "+hint)}</title>',
-         '<style>.drawer-spark{animation:drawer-spark 12s ease-in-out infinite}.drawer-orbit{transform-box:fill-box;transform-origin:center;animation:drawer-orbit 24s linear infinite}@keyframes drawer-spark{0%,65%,100%{opacity:.35}78%{opacity:1}}@keyframes drawer-orbit{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.drawer-spark,.drawer-orbit{animation:none}.drawer-spark{opacity:.6}}</style>',
-         f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="14" fill="#121A26" stroke="#29364B"/>',
+         '<defs><linearGradient id="drawer-surface" x2="1" y2="1"><stop stop-color="#172232"/><stop offset="1" stop-color="#101722"/></linearGradient></defs>',
+         '<style>.drawer-spark{animation:drawer-spark 12s ease-in-out infinite}.drawer-orbit{transform-box:fill-box;transform-origin:center;animation:drawer-orbit 18s linear infinite}.drawer-cue{animation:drawer-cue 12s ease-in-out infinite}@keyframes drawer-spark{0%,65%,100%{opacity:.35}78%{opacity:1}}@keyframes drawer-orbit{to{transform:rotate(360deg)}}@keyframes drawer-cue{0%,66%,100%{opacity:.3}78%,86%{opacity:.8}}@media(prefers-reduced-motion:reduce){.drawer-spark,.drawer-orbit,.drawer-cue{animation:none}.drawer-spark,.drawer-cue{opacity:.6}}</style>',
+         f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="14" fill="url(#drawer-surface)" stroke="#34445C"/>',
+         f'<path d="M18 2H{w-18}" stroke="{color}" stroke-opacity=".12" stroke-linecap="round"/>',
          f'<path d="M2 20V{h-20}" stroke="{color}" stroke-width="3" stroke-linecap="round"/>',
          f'<circle cx="40" cy="{cy}" r="24" fill="{color}" fill-opacity=".08"/>',
          f'<g transform="translate(40 {cy})"><circle class="drawer-orbit" r="20" fill="none" stroke="{color}" stroke-opacity=".35" stroke-width="1" stroke-dasharray="13 113"/></g>',
@@ -54,7 +56,7 @@ def render(name, mobile=False):
     lines = wrap(hint, width=44) if mobile else [hint]
     for i, line in enumerate(lines):
         p.append(f'<text x="{tx}" y="{67+i*22 if mobile else 60}" font-size="{22 if mobile else 18}" fill="#B8C6DB">{escape(line)}</text>')
-    p += [f'<path class="drawer-spark" d="M{w-26} 17V25M{w-30} 21H{w-22}" stroke="{color}" stroke-width="1.5" stroke-linecap="round"/>', '</svg>']
+    p += [f'<g class="drawer-cue" fill="none" stroke="{color}"><circle cx="{w-30}" cy="{cy}" r="12" stroke-opacity=".35"/><path d="M{w-30} {cy-4}V{cy+4}M{w-34} {cy}H{w-26}" stroke-width="1.5" stroke-linecap="round"/></g>', '</svg>']
     return apply_theme('\n'.join(p))
 
 

@@ -51,6 +51,41 @@ STYLE = '''
 }
 '''
 
+SEQUENCE_STYLE = '''
+.sequence-intake{animation:sequence-intake 12s ease-in-out infinite}
+.sequence-lens{animation:sequence-lens 12s ease-in-out infinite}
+.sequence-store{animation:sequence-store 12s ease-in-out infinite}
+.sequence-input{animation:sequence-input 12s ease-in-out infinite}
+.sequence-process{animation:sequence-process 12s ease-in-out infinite}
+.sequence-output{animation:sequence-output 12s ease-in-out infinite}
+.sequence-progress{stroke-dasharray:100;stroke-dashoffset:100;animation:sequence-progress 12s linear infinite}
+.sequence-check{stroke-dasharray:100;stroke-dashoffset:100;animation:sequence-check 12s ease-in-out infinite}
+@keyframes sequence-intake{0%,20%,100%{transform:translateY(0)}7%{transform:translateY(-3px)}13%{transform:translateY(1px)}}
+@keyframes sequence-lens{0%,34%,68%,100%{transform:translate(0,0)}44%{transform:translate(3px,-2px)}56%{transform:translate(-2px,2px)}}
+@keyframes sequence-store{0%,42%,68%,100%{transform:translateY(0)}50%,60%{transform:translateY(3px)}55%{transform:translateY(-1px)}}
+@keyframes sequence-input{0%,22%,100%{opacity:.06}6%,13%{opacity:.55}}
+@keyframes sequence-process{0%,32%,66%,100%{opacity:.06}42%,54%{opacity:.55}}
+@keyframes sequence-output{0%,75%,100%{opacity:.06}84%,95%{opacity:.55}}
+@keyframes sequence-progress{0%,5%{stroke-dashoffset:100;opacity:.7}90%,96%{stroke-dashoffset:0;opacity:.7}99%,100%{stroke-dashoffset:0;opacity:0}}
+@keyframes sequence-check{0%,76%{stroke-dashoffset:100;opacity:0}80%{opacity:1}91%,97%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@media(prefers-reduced-motion:reduce){
+ .sequence-intake,.sequence-lens,.sequence-store{animation:none}
+ .sequence-input,.sequence-process,.sequence-output{animation:none;opacity:.18}
+ .sequence-progress{animation:none;stroke-dashoffset:0;opacity:.3}
+ .sequence-check{animation:none;stroke-dashoffset:0;opacity:1}
+}
+'''
+
+HERO_STYLE = '''
+.hero-contact{animation:hero-contact 18s ease-out infinite}
+.hero-return{opacity:0;transform-box:fill-box;transform-origin:center;animation:hero-return 18s ease-out infinite}
+.hero-wave{transform-box:fill-box;transform-origin:bottom left;animation:hero-wave 18s ease-in-out infinite}
+@keyframes hero-contact{0%,16%,100%{opacity:.4}2%,5%{opacity:1}}
+@keyframes hero-return{0%{opacity:0;transform:scale(.65)}2%{opacity:.7}13%,100%{opacity:0;transform:scale(2.1)}}
+@keyframes hero-wave{0%,60%,86%,100%{transform:rotate(0)}66%,76%{transform:rotate(-18deg)}71%,81%{transform:rotate(7deg)}}
+@media(prefers-reduced-motion:reduce){.hero-contact,.hero-return,.hero-wave{animation:none}.hero-contact{opacity:.8}.hero-return{display:none}}
+'''
+
 
 def label(x, y, value, size=12, color=MUTED, weight=500, extra=''):
     return f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{weight}" fill="{color}" {extra}>{escape(value)}</text>'
@@ -92,7 +127,7 @@ def project_scene(kind, mobile=False):
     labels = {'swiftioc': ('FEEDS', 'IOCs', 'CONTEXT'),
               'inspector': ('FILE', 'TRIAGE', 'REPORT'),
               'downloader': ('PAGE', 'SAVE', 'OFFLINE')}[kind]
-    p = [f'<g data-cinematic="{kind}" aria-hidden="true">', f'<style>{STYLE}</style>',
+    p = [f'<g data-cinematic="{kind}" aria-hidden="true">', f'<style>{STYLE+SEQUENCE_STYLE}</style>',
          f'<rect x="0" y="{0 if mobile else 9}" width="{width}" height="{88 if mobile else 143}" rx="14" fill="{color}" fill-opacity=".025" stroke="{color}" stroke-opacity=".12"/>',
          f'<rect class="cinema-moving cinema-border" x="0" y="{0 if mobile else 9}" width="{width}" height="{88 if mobile else 143}" rx="14" fill="none" stroke="{color}" stroke-opacity=".4" pathLength="1000" stroke-dasharray="22 978"/>']
     for start, end in zip(points, points[1:]):
@@ -100,7 +135,11 @@ def project_scene(kind, mobile=False):
         p += [f'<path d="{route}" fill="none" stroke="{color}" stroke-opacity=".25" stroke-dasharray="2 5"/>',
               staged_packet(route, color, second=start != points[0])]
     for index, x in enumerate(points):
-        p += [f'<g transform="translate({x} {y})" fill="none" stroke="{color}" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">']
+        phase = ('input', 'process', 'output')[index]
+        motion = 'sequence-intake' if index == 0 else 'sequence-lens' if kind == 'inspector' and index == 1 else 'sequence-store' if kind == 'downloader' and index == 1 else ''
+        p += [f'<g transform="translate({x} {y})" fill="none" stroke="{color}" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">',
+              f'<circle class="sequence-{phase}" r="27" fill="{color}" fill-opacity=".035" stroke-opacity=".5" stroke-width="1"/>',
+              f'<g class="{motion}">']
         if kind == 'swiftioc':
             if index == 0:
                 p += ['<rect x="-16" y="-20" width="27" height="31" rx="3" opacity=".35"/><rect x="-10" y="-13" width="27" height="31" rx="3" fill="#121A26"/><path d="M-4-5H11M-4 1H6M-4 7H10"/>']
@@ -116,7 +155,8 @@ def project_scene(kind, mobile=False):
                 if index == 0:
                     p += ['<path class="cinema-scan" d="M-18 0H18" stroke="#43E6C5" stroke-width="2"/>']
                 else:
-                    p += ['<path class="cinema-ink" d="M-6 10L-1 15L8 5" stroke="#43E6C5" stroke-width="2"/>']
+                    p += ['<path d="M-6 10L-1 15L8 5" stroke="#43E6C5" stroke-opacity=".3" stroke-width="2"/>',
+                          '<path class="sequence-check" pathLength="100" d="M-6 10L-1 15L8 5" stroke="#43E6C5" stroke-width="2"/>']
             else:
                 p += ['<circle r="15" fill="#121A26"/><circle r="9" opacity=".3"/><path d="M11 11L22 22M-4 0H4M0-4V4"/>']
         else:
@@ -125,8 +165,11 @@ def project_scene(kind, mobile=False):
             elif index == 1:
                 p += ['<path d="M-20-12H-4L1-6H20V18H-20Z" fill="#121A26"/><path class="cinema-ink" d="M0-2V11M-5 6L0 11L5 6" stroke="#43E6C5"/>']
             else:
-                p += ['<rect x="-18" y="-19" width="36" height="38" rx="4" fill="#121A26"/><path d="M-10-10H10M-10-3V10H-3M-10 2H6M-3 10H7"/><circle cx="11" cy="10" r="6" fill="#121A26" stroke="#43E6C5"/><path d="M8 10L10 12L14 7" stroke="#43E6C5"/>']
-        p += ['</g>', label(x, 76 if mobile else 122, labels[index], 18 if mobile else 12, color, extra='text-anchor="middle" font-family="Consolas,monospace"')]
+                p += ['<rect x="-18" y="-19" width="36" height="38" rx="4" fill="#121A26"/><path d="M-10-10H10M-10-3V10H-3M-10 2H6M-3 10H7"/><circle cx="11" cy="10" r="6" fill="#121A26" stroke="#43E6C5"/><path d="M8 10L10 12L14 7" stroke="#43E6C5" stroke-opacity=".3"/><path class="sequence-check" pathLength="100" d="M8 10L10 12L14 7" stroke="#43E6C5"/>']
+        p += ['</g></g>', label(x, 76 if mobile else 122, labels[index], 18 if mobile else 12, color, extra='text-anchor="middle" font-family="Consolas,monospace"')]
+    if not mobile:
+        p += [f'<path d="M16 139H{width-16}" stroke="{color}" stroke-opacity=".1" stroke-linecap="round"/>',
+              f'<path class="sequence-progress" pathLength="100" d="M16 139H{width-16}" stroke="{color}" stroke-width="1.5" stroke-linecap="round"/>']
     return ''.join(p + ['</g>'])
 
 
@@ -137,13 +180,28 @@ def hero_finish(source, mobile=False):
             if child.tag == N+'text' and child.text == 'CURIOUS BY DESIGN':
                 parent.remove(child)
     style = ET.SubElement(root, N+'style', {'id': 'cinematic-style'})
-    style.text = STYLE + '.motion-frame{animation-duration:48s}'
+    style.text = STYLE + HERO_STYLE + '.motion-frame{animation-duration:48s}'
     defs = ET.SubElement(root, N+'defs')
     for name, color in (('mint',MINT),('violet',VIOLET)):
         gradient = ET.SubElement(defs, N+'radialGradient', {'id':'cinema-ambient-'+name})
         ET.SubElement(gradient, N+'stop', {'stop-color':color,'stop-opacity':'.09'})
         ET.SubElement(gradient, N+'stop', {'offset':'1','stop-color':color,'stop-opacity':'0'})
     main = root.find(N+'g')
+    radar_transform = 'translate(487 171) scale(.66)' if mobile else 'translate(809 163) scale(.9)'
+    radar = root.find('.//'+N+'g[@transform="'+radar_transform+'"]')
+    if radar is None: raise ValueError('Missing hero radar')
+    contacts = list(radar.findall(N+'circle[@class="pulse"]'))
+    if len(contacts) != 3: raise ValueError('Expected three hero radar contacts')
+    for contact, delay in zip(contacts, (10.7, 6.4, .7)):
+        contact.set('class', 'hero-contact')
+        contact.set('style', f'animation-delay:{delay}s')
+        ring = ET.SubElement(radar, N+'g', {'transform': f'translate({contact.get("cx")} {contact.get("cy")})'})
+        ET.SubElement(ring, N+'circle', {'class': 'hero-return', 'r': '7', 'fill': 'none',
+                      'stroke': contact.get('fill'), 'stroke-width': '1', 'style': f'animation-delay:{delay}s'})
+    bot = root.find('.//'+N+'g[@class="bot-float"]')
+    if bot is None: raise ValueError('Missing hero mascot')
+    ET.SubElement(bot, N+'path', {'d': 'M-6 17H0V28H-6Z', 'fill': VIOLET})
+    ET.SubElement(bot, N+'path', {'class': 'hero-wave', 'd': 'M28 18H34V9H40V24H28Z', 'fill': PINK})
     cx, cy = (487,171) if mobile else (809,163)
     glow = f'<g xmlns="{SVG}" class="cinema-ambient" aria-hidden="true"><ellipse cx="{cx}" cy="{cy}" rx="{180 if mobile else 240}" ry="160" fill="url(#cinema-ambient-mint)"/><ellipse cx="{cx+45}" cy="{cy+64}" rx="155" ry="125" fill="url(#cinema-ambient-violet)"/></g>'
     main.insert(1, ET.fromstring(glow))

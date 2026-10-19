@@ -9,7 +9,7 @@ SVG='http://www.w3.org/2000/svg'
 ET.register_namespace('',SVG)
 
 
-@lru_cache(maxsize=3)
+@lru_cache(maxsize=4)
 def font(name):
     data=(ROOT/'fonts'/name).read_bytes()
     if data[:4]!=b'wOF2': raise ValueError('Invalid bundled WOFF2 font')
@@ -30,6 +30,8 @@ def apply_theme(source,kind='panel'):
         css=face('ProfileMono','ibm-plex-mono-500.woff2',500)
     else:
         css=face('ProfileDisplay','space-grotesk-700.woff2',700)+face('ProfileMono','ibm-plex-mono-500.woff2',500)
+    if any(node.get('font-family','').startswith('ProfileName') for node in root.iter('{'+SVG+'}text')):
+        css+=face('ProfileName','chakra-petch-name-700.woff2',700)
     for node in root.iter('{'+SVG+'}text'):
         size=float(node.get('font-size','18'))
         weight=float(node.get('font-weight','400'))
@@ -37,6 +39,8 @@ def apply_theme(source,kind='panel'):
         if kind=='button':
             node.set('font-family','ProfileButton,Segoe UI,Arial,sans-serif')
             node.set('font-weight','600')
+        elif family.startswith('ProfileName'):
+            node.set('font-weight','700')
         elif kind=='terminal' or size<=15 or 'mono' in family.lower() or 'consolas' in family.lower():
             node.set('font-family','ProfileMono,Consolas,monospace')
             node.set('font-weight','500')

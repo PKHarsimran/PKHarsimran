@@ -21,6 +21,35 @@ def text(x,y,label,size=18,color=TEXT,weight=400,extra=''):
     return f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{weight}" fill="{color}" {extra}>{escape(label)}</text>'
 
 
+NAME_STYLE = '''<style>
+.name-slice-one,.name-slice-two{opacity:0}
+.name-slice-one{animation:name-slice-one 18s linear infinite}
+.name-slice-two{animation:name-slice-two 18s linear infinite}
+.name-cursor{animation:name-cursor 2.8s steps(1,end) infinite}
+@keyframes name-slice-one{0%,71%,76%,100%{opacity:0;transform:translateX(0)}72%,73%{opacity:.8;transform:translateX(-3px)}74%,75%{opacity:.65;transform:translateX(2px)}}
+@keyframes name-slice-two{0%,71%,76%,100%{opacity:0;transform:translateX(0)}72%,73%{opacity:.6;transform:translateX(3px)}74%,75%{opacity:.8;transform:translateX(-2px)}}
+@keyframes name-cursor{0%,58%,100%{opacity:.85}59%,99%{opacity:.18}}
+@media(prefers-reduced-motion:reduce){.name-slice-one,.name-slice-two{animation:none;display:none}.name-cursor{animation:none;opacity:.7}}
+</style>'''
+
+
+def identity_line(x, y, value, size):
+    """Readable angular lettering with brief, clipped chromatic echoes."""
+    ident = 'name-'+value.lower()
+    extra = 'font-family="ProfileName,Consolas,monospace" letter-spacing=".4"'
+    p = [f'<g transform="translate({x} {y})">',
+         '<defs>',
+         f'<clipPath id="{ident}-upper"><rect x="-5" y="{-size*.69:.1f}" width="580" height="{size*.10:.1f}"/></clipPath>',
+         f'<clipPath id="{ident}-lower"><rect x="-5" y="{-size*.27:.1f}" width="580" height="{size*.07:.1f}"/></clipPath>',
+         '</defs>', text(0,0,value,size,TEXT,700,extra)]
+    for name, color, clip in (('one',MINT,'upper'), ('two',PINK,'lower')):
+        p += [f'<g clip-path="url(#{ident}-{clip})" aria-hidden="true"><g class="name-slice-{name}">',
+              text(0,0,value,size,color,700,extra), '</g></g>']
+    if value == 'SIDHU':
+        p += [f'<rect class="name-cursor" x="{size*3.02+10:.1f}" y="{-size*.13:.1f}" width="{size*.20:.1f}" height="{size*.13:.1f}" fill="{MINT}" aria-hidden="true"/>']
+    return ''.join(p+['</g>'])
+
+
 def group(name,original,replacement):
     root=ET.parse(OUT/name)
     node=root.find('.//{'+SVG+'}g[@transform="'+original+'"]')
@@ -39,21 +68,21 @@ def hero(mobile=False):
     w,h=(600,460) if mobile else (1000,374)
     source=(OUT/'mission-banner-orbital.svg').read_text(encoding='utf-8')
     motion=re.search(r'<style>.*?</style>',source,re.S).group()
-    p=panel(w,h,'Harsimran Sidhu / Security instincts. Builder energy.','Cybersecurity, open source and self-hosting. Original orbital line art, a radar and a floating pixel mascot. Decorative motion respects reduced-motion preferences.')
-    p += [motion,art_style(),f'<path d="M25 1H{210 if mobile else 310}" stroke="{MINT}" stroke-width="2"/>',
+    p=panel(w,h,'Harsimran Sidhu / Security instincts. Builder energy.','Cybersecurity, open source and self-hosting. Angular hacker-inspired name lettering with brief chromatic glitch accents, original orbital line art, a radar and a waving pixel mascot. Text stays readable and reduced-motion preferences keep the design still.')
+    p += [motion,art_style(),NAME_STYLE,f'<path d="M25 1H{210 if mobile else 310}" stroke="{MINT}" stroke-width="2"/>',
           group('mission-banner-orbital.svg','translate(620 55)','translate(383 68) scale(.58)' if mobile else 'translate(617 46)'),
           group('mission-banner-orbital.svg','translate(801 164)','translate(487 171) scale(.66)' if mobile else 'translate(809 163) scale(.9)'),
           group('mission-banner-orbital.svg','translate(916 258)','translate(521 358) scale(1.12)' if mobile else 'translate(911 274) scale(1.15)')]
     if mobile:
         p += [text(28,36,'PKHARSIMRAN / SECURITY + CODE',18,MINT,500,'font-family="Consolas,monospace"'),
-              text(28,124,'Harsimran',66,TEXT,700),text(28,201,'Sidhu.',66,TEXT,700),
+              identity_line(28,124,'HARSIMRAN',64),identity_line(28,201,'SIDHU',64),
               text(30,262,'Security instincts.',27,MUTED),text(30,300,'Builder energy.',27,MINT),
               '<path d="M28 339H572" stroke="#29364B"/>',
               text(28,378,'CYBERSECURITY / OPEN SOURCE',18,MUTED,500,'font-family="Consolas,monospace"'),text(28,408,'SELF-HOSTING / ALWAYS LEARNING',18,MUTED,500,'font-family="Consolas,monospace"'),
               text(28,440,'CURIOUS BY DESIGN.',18,VIOLET,500,'font-family="Consolas,monospace"')]
     else:
         p += [text(40,36,'PKHARSIMRAN / SECURITY + CODE',13,MINT,500),
-              text(40,139,'Harsimran',82,TEXT,700),text(40,231,'Sidhu.',82,TEXT,700),
+              identity_line(40,139,'HARSIMRAN',94),identity_line(40,231,'SIDHU',94),
               text(44,283,'Security instincts. Builder energy.',26,MINT),
               '<path d="M40 319H960" stroke="#29364B"/>',
               text(40,349,'CYBERSECURITY / OPEN SOURCE / SELF-HOSTING',13,MUTED,500),
@@ -71,9 +100,11 @@ def project(item,mobile=False):
               '<g transform="translate(746 14)">'+project_scene(kind)+'</g>',
               text(30,32,number+' / '+area.upper(),12,color,500),
               text(28,91,name,43,TEXT,700),text(30,125,tagline,20,MUTED),text(30,169,tags,12,color,500),
+              f'<circle cx="955" cy="163" r="15" fill="{color}" fill-opacity=".05" stroke="{color}" stroke-opacity=".22"/>',
               text(947,170,'↗',22,color)]
     else:
         p += [text(28,36,number+' / '+area.upper(),18,color,500,'font-family="Consolas,monospace"'),
+              f'<circle cx="555" cy="30" r="17" fill="{color}" fill-opacity=".05" stroke="{color}" stroke-opacity=".22"/>',
               text(548,38,'↗',24,color),
               text(26,98,name,42,TEXT,700),text(28,143,tagline,24,MUTED),
               '<g transform="translate(28 163)">'+project_scene(kind,True)+'</g>',

@@ -66,7 +66,10 @@ def button(name):
     label_x=32 if variant=='nav' else 43
     p=[f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(label)}">',f'<title>{escape(label)}</title><rect x="1" y="1" width="{width-2}" height="{height-2}" rx="{9 if variant=="nav" else 11}" fill="{fill}" stroke="{border}"/>']
     if variant=='primary':
-        p += ['<style>.cta-icon{animation:invite 9s ease-in-out infinite}@keyframes invite{0%,75%,100%{transform:translateX(0)}82%,91%{transform:translateX(2px)}86%{transform:translateX(0)}}@media(prefers-reduced-motion:reduce){.cta-icon{animation:none}}</style>']
+        delay=-(sum(map(ord,name))%7)
+        p += [f'<defs><clipPath id="button-surface"><rect x="1" y="1" width="{width-2}" height="42" rx="11"/></clipPath><linearGradient id="button-glint"><stop stop-color="#FFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFF" stop-opacity=".28"/><stop offset="1" stop-color="#FFF" stop-opacity="0"/></linearGradient></defs>',
+              '<style>.cta-icon{animation:invite 9s ease-in-out infinite}.cta-glint{opacity:0;animation:cta-glint 16s ease-in-out infinite}@keyframes invite{0%,75%,100%{transform:translateX(0)}82%,91%{transform:translateX(2px)}86%{transform:translateX(0)}}@keyframes cta-glint{0%,72%{opacity:0;transform:translateX(0)}74%{opacity:.9}91%{opacity:.9;transform:translateX(var(--travel))}94%,100%{opacity:0;transform:translateX(var(--travel))}}@media(prefers-reduced-motion:reduce){.cta-icon,.cta-glint{animation:none}.cta-glint{display:none}}</style>',
+              f'<g clip-path="url(#button-surface)"><path class="cta-glint" style="--travel:{width+70}px;animation-delay:{delay}s" d="M-55 0H-20L-40 44H-75Z" fill="url(#button-glint)"/></g>']
         p += [f'<path d="M13 2H{width-13}" stroke="#FFFFFF" stroke-opacity=".35"/>']
     if icon in ('01','02','03'):
         p += [f'<text x="10" y="26" font-family="Consolas,monospace" font-size="11" fill="{icon_color}">{icon}</text>']
