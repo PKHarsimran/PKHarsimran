@@ -28,7 +28,6 @@ BUTTONS={
     'docker':('Container images',188,BLUE,'secondary','cube'),
     'live-lab':('Enter live lab',176,MINT,'primary','play'),
     'back-top-tab':('Back to top',126,MINT,'nav','up'),
-    'spin-bender':('Spin Bender',160,BLUE,'primary','cube'),
 }
 GROUPS={
     'hero':[('website','https://harsim.ca'),('linkedin','https://www.linkedin.com/in/harsimransidhu/')],
@@ -41,7 +40,6 @@ GROUPS={
     'radar':[('snapshot','./profile/public-pulse.md'),('workflow','https://github.com/PKHarsimran/PKHarsimran/actions/workflows/profile-lab.yml')],
     'footer':[('contact','https://www.linkedin.com/in/harsimransidhu/')],
     'return':[('back-top-tab','#user-content-mission-control')],
-    'pocket':[('spin-bender','./profile/bender.stl')],
 }
 ICONS={
     'globe':'<circle cx="0" cy="0" r="8"/><ellipse cx="0" cy="0" rx="3.5" ry="8"/><path d="M-7-3H7M-7 3H7"/>',

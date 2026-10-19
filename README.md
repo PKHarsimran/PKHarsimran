@@ -306,31 +306,6 @@ The tools do useful work. Pixel handles the side quests. Follow the bot, crack t
 
 <sub>Real GitHub activity; an illustrated bot adventure. Totals include automation and publicly shared private activity. [Daily snapshot](./profile/contribution-calendar.json).</sub>
 
-<details>
-<summary><strong>🤖 Bender, off the page</strong> <sub>· a 3D keepsake with attitude</sub></summary>
-<br>
-
-<p>
-<a href="./profile/bender.stl">
-<picture>
-  <source media="(max-width: 600px)" srcset="./profile/bender-mobile.svg">
-  <img src="./profile/bender.svg" alt="Bender from Futurama, waving: silver body, antenna, half-lidded eyes, toothy grille, and chest hatch. Open the 3D model to rotate, zoom, or keep a copy." width="100%">
-</picture>
-</a>
-</p>
-
-**A little attitude. A lot of metal.** Bender has entered the arcade. Open him in GitHub's 3D viewer, drag to turn the model, and scroll to zoom.
-
-<!-- buttons:pocket:start -->
-<p align="left">
-  <a href="./profile/bender.stl"><img src="./profile/buttons/spin-bender.svg" alt="Spin Bender" width="160" height="44" /></a>
-</p>
-<!-- buttons:pocket:end -->
-
-<sub>Futurama fan art, built from code. Silver in the preview; shape-only in the STL. Keep a copy from the viewer’s download menu. [Build recipe](./scripts/build_bender_collectible.py).</sub>
-
-</details>
-
 <!-- arcade-lab:start -->
 <details>
 <summary><picture>
