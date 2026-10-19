@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-10-19T19:46:23Z",
-  "calendar_observed_at": "2026-10-19T19:46:23Z",
-  "fingerprint": "708d1fd0174a28378ff267d93f49c4c6797749fc20025bd6e6d0ca433e6445f4",
-  "serial": "708D1FD0",
-  "asset_id": "708d1fd0174a2837",
+  "generated_at": "2026-10-19T22:13:38Z",
+  "calendar_observed_at": "2026-10-19T22:13:38Z",
+  "fingerprint": "174faf400ff1668e1a03ed17570bf4be1350fa2a4fcf6fb1179d7165dc200030",
+  "serial": "174FAF40",
+  "asset_id": "174faf400ff1668e",
   "retained": [
     "095241bf5030e207",
     "ac56e514d59f16a2",
@@ -19,31 +19,32 @@
     "53dcf169d52c67bf",
     "a7df2fc503ad1afb",
     "31b61bc9802a521b",
-    "708d1fd0174a2837"
+    "708d1fd0174a2837",
+    "174faf400ff1668e"
   ],
   "assets": {
-    "heist": "arcade/heist-708d1fd0174a2837.svg",
-    "mobile": "arcade/heist-708d1fd0174a2837-mobile.svg",
-    "relic": "arcade/relic-708d1fd0174a2837.svg"
+    "heist": "arcade/heist-174faf400ff1668e.svg",
+    "mobile": "arcade/heist-174faf400ff1668e-mobile.svg",
+    "relic": "arcade/relic-174faf400ff1668e.svg"
   },
-  "relic_name": "Null Navigator",
+  "relic_name": "Signal Sprout",
   "gates": [
     {
       "id": "A",
       "label": "RELEASE",
-      "source": "Website Downloader",
-      "display": "v2.6.1",
+      "source": "SwiftIOC",
+      "display": "v0.1.0",
       "hint": "Minor version: ones digit.",
-      "value": 6,
-      "digit": 6
+      "value": 1,
+      "digit": 1
     },
     {
       "id": "B",
       "label": "CALENDAR",
-      "source": "Last 30 days / contributions",
-      "display": "407",
+      "source": "Days with activity",
+      "display": "347",
       "hint": "Take the ones digit.",
-      "value": 407,
+      "value": 347,
       "digit": 7
     },
     {
@@ -57,21 +58,21 @@
     }
   ],
   "route": [
-    "A",
     "B",
+    "A",
     "C"
   ],
-  "solution": "673",
+  "solution": "713",
   "choices": [
-    "810",
-    "673",
-    "136"
+    "850",
+    "176",
+    "713"
   ],
-  "tool_url": "https://github.com/PKHarsimran/website-downloader",
-  "tool_name": "Website Downloader",
+  "tool_url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector",
+  "tool_name": "SwiftIOC",
   "rewind": {
     "previous": {
-      "generated_at": "2026-10-19T19:13:33Z",
+      "generated_at": "2026-10-19T19:46:23Z",
       "projects": [
         {
           "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
@@ -97,7 +98,7 @@
       ]
     },
     "current": {
-      "generated_at": "2026-10-19T19:46:23Z",
+      "generated_at": "2026-10-19T22:13:38Z",
       "projects": [
         {
           "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",

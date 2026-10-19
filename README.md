@@ -316,15 +316,15 @@ The tools do useful work. Pixel handles the side quests. Follow the bot, crack t
 
 <p>
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-708d1fd0174a2837-mobile.svg">
-  <img src="./profile/arcade/heist-708d1fd0174a2837.svg" alt="Signal Heist. Route: A, then B, then C. Gate A: Website Downloader, v2.6.1. Minor version: ones digit. Gate B: Last 30 days / contributions, 407. Take the ones digit. Gate C: Passing checks / selected 3, 3. Take the ones digit. Choose a three-digit code below." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-174faf400ff1668e-mobile.svg">
+  <img src="./profile/arcade/heist-174faf400ff1668e.svg" alt="Signal Heist. Route: B, then A, then C. Gate A: SwiftIOC, v0.1.0. Minor version: ones digit. Gate B: Days with activity, 347. Take the ones digit. Gate C: Passing checks / selected 3, 3. Take the ones digit. Choose a three-digit code below." width="100%">
 </picture>
 </p>
 
 **Three clues → one code → a tiny creature.** Take each gate’s digit, follow the printed route, and open a code hatch.
 
 <details>
-<summary><strong>🔐 Hatch 01</strong> · <code>810</code></summary>
+<summary><strong>🔐 Hatch 01</strong> · <code>850</code></summary>
 <br>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
@@ -332,30 +332,30 @@ The tools do useful work. Pixel handles the side quests. Follow the bot, crack t
 </details>
 
 <details>
-<summary><strong>🔐 Hatch 02</strong> · <code>673</code></summary>
+<summary><strong>🔐 Hatch 02</strong> · <code>176</code></summary>
 <br>
 
-🔓 **Signal recovered.** A → B → C gives **673**.
+↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
+
+</details>
+
+<details>
+<summary><strong>🔐 Hatch 03</strong> · <code>713</code></summary>
+<br>
+
+🔓 **Signal recovered.** B → A → C gives **713**.
 
 | Gate | Clue | Digit |
 | --- | --- | ---: |
-| A | Website Downloader: v2.6.1 | 6 |
-| B | Last 30 days / contributions: 407 | 7 |
+| A | SwiftIOC: v0.1.0 | 1 |
+| B | Days with activity: 347 | 7 |
 | C | Passing checks / selected 3: 3 | 3 |
 
-**Next side quest:** [Explore Website Downloader](https://github.com/PKHarsimran/website-downloader) — the real tool behind gate A.
+**Next side quest:** [Explore SwiftIOC](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector) — the real tool behind gate A.
 
-<p><img src="./profile/arcade/relic-708d1fd0174a2837.svg" alt="Snapshot relic 708D1FD0: Null Navigator, a symmetric pixel creature drawn from this public snapshot." width="600"></p>
+<p><img src="./profile/arcade/relic-174faf400ff1668e.svg" alt="Snapshot relic 174FAF40: Signal Sprout, a symmetric pixel creature drawn from this public snapshot." width="600"></p>
 
-[Open your creature art](./profile/arcade/relic-708d1fd0174a2837.svg)
-
-</details>
-
-<details>
-<summary><strong>🔐 Hatch 03</strong> · <code>136</code></summary>
-<br>
-
-↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
+[Open your creature art](./profile/arcade/relic-174faf400ff1668e.svg)
 
 </details>
 
@@ -363,7 +363,7 @@ The tools do useful work. Pixel handles the side quests. Follow the bot, crack t
 <summary><strong>⏪ Checkpoint rewind</strong> <sub>· what changed?</sub></summary>
 <br>
 
-Snapshots: **2026-10-19 19:13:33** → **2026-10-19 19:46:23** UTC. Comparing the three selected public projects.
+Snapshots: **2026-10-19 19:46:23** → **2026-10-19 22:13:38** UTC. Comparing the three selected public projects.
 
 **Quiet checkpoint.** No changes in releases, CI, stars, or latest commit times.
 
