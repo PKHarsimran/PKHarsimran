@@ -3,7 +3,7 @@
   "title": "The delivery note with a repeated link",
   "prompt": "Does repeating a link create another finding?",
   "fixture": "delivery.pdf",
-  "fixture_sha256": "ab3025d459366674c8502e345d5a09dabf438ebdd519b3ed5757f99ef77cb1d7",
+  "fixture_sha256": "fcc6494d4fa517f1160292e9a2d6c3b0cd24b189ecbc10c2ea89dab00ec4d04b",
   "source": {
     "repo": "IOC-Inspector",
     "tag": "v0.1.0",

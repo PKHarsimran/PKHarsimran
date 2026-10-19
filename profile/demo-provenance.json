@@ -15,11 +15,11 @@
   "recipes": {
     "demos/README.md": "ff3e5ae334397b9f9b933c7dd707579796e124e59c58599bd5426e78191483d7",
     "demos/cases.json": "422c7e7b12229ab754b6d806a409981b976d6a8de6e775c2cba6a251106ba223",
-    "demos/downloader-mobile.tape": "60537cdcf6816a5114c49ed8eb3adc5daaf606381fec6f76b92551a130ffbd41",
-    "demos/downloader.tape": "d36202c42f93d52037cc518af3158645ad16ac7b7b9ef7ccefc4c22d3a56dbbb",
-    "demos/inspector-mobile.tape": "74e81ca20f51ddbe7073128897c424e0141be0d74ec7fc4257f2eb76d901f324",
-    "demos/inspector.tape": "a6149f9f4f2c219c650b8ffe06799518f6c79e2c54712178e329618dd49bbbfc",
-    "demos/terminal.tape": "02a6bf895add70d0ddf30c4c2a148b2e4d23f4f430cd49664cfb3299b4732a06",
+    "demos/downloader-mobile.tape": "81a76426ce7d1f66eb92f97a5397635a367902c6c51b41d6546ced3b069dc83d",
+    "demos/downloader.tape": "dd838d7432c3d82845f5e0515fabbc2e91c3ce6fa3a3ef69dcc638d9af5ae2c7",
+    "demos/inspector-mobile.tape": "b37313ffd5d7a95e8b00dccaeaa015b044fbd7b5d4feae3b9e93460aaf47d826",
+    "demos/inspector.tape": "eabe3911743525e2e3827054fe7711ab6c12b416fdc3f37950a87775e1a16b70",
+    "demos/terminal.tape": "da78df70dcf76f8b3b9b5aed2febeae047e9bd6238ced86a9c0bedb948bd9578",
     "scripts/profile_demos.py": "830ccbd72991cad4912d7fa52a0c0fdf61c5d19bef49ca1473fa63430b74759f",
     "scripts/demo_terminal.py": "3a84d31b8b64e548d96c943ab5e11257b59aa9cd1d162281e64d3787e635dd68",
     "scripts/profile_theme.py": "e86b3776eb37fc4d50add1b9a3a31abe347f63b87b4e53417e6c9e6bf6551383",
@@ -28,37 +28,37 @@
     "fonts/space-grotesk-buttons-600.woff2": "3d106765eeb228521ae6077d840e079502bfa7f18946b96160f1e1365cb63f92",
     "fonts/ibm-plex-mono-500.ttf": "fe5309e701fc1820dbe7adf04efc572ef6d4bc01ba45c5c8bc16096ca798cf7a"
   },
-  "fingerprint": "8694be05c0ead117a2397f9a6645d9e035a86551e7cdc21cfc4ae014ee745abc",
-  "recorded_at": "2026-10-19T15:18:22.116505+00:00",
+  "fingerprint": "963563245acbc6d28c4056e4d642fa635f896378d20b6bcdf8ad0910f9a69257",
+  "recorded_at": "2026-10-19T15:22:29.093035+00:00",
   "method": "VHS records guided terminal presentations of actual released CLI executions. Commands use the isolated venv Python; results come from verified generated files, not canned product output.",
   "reels": {
     "inspector": {
-      "sha256": "59ce045179bf9cbc180891de05495407672b0b1d6dfeade84961c0d8804a1d7f",
+      "sha256": "acf24599f94d263f19938a0175ed7b716d0f012d9f437f1379a15ddb35debbaa",
       "width": 964,
-      "height": 1022,
-      "duration_ms": 16800,
-      "bytes": 195175
+      "height": 858,
+      "duration_ms": 13200,
+      "bytes": 192961
     },
     "inspector-mobile": {
-      "sha256": "40c6890c8df38eb9a5508de344cd0a33038b962ca860f6f916fbd6414692d3e7",
+      "sha256": "286a84a31fade0f7cf9e0fb71c55c93a07e159823cc6f4d05f4c697a490103e2",
       "width": 656,
-      "height": 1022,
-      "duration_ms": 13280,
-      "bytes": 190485
+      "height": 858,
+      "duration_ms": 13120,
+      "bytes": 188661
     },
     "downloader": {
-      "sha256": "e4467c0a820296aa6832e5e041242c29876f51f3e233121af021c4ce7631d8c8",
+      "sha256": "d85c5846e78510081a5204b39c37cad6627e3762a90af3cb43579b85d756f8ab",
       "width": 964,
-      "height": 1022,
+      "height": 858,
       "duration_ms": 12800,
-      "bytes": 212769
+      "bytes": 210928
     },
     "downloader-mobile": {
-      "sha256": "cb3f7cce4ab514345874a1a101a91599e6fe2944389f0bfa27c8e521d762b782",
+      "sha256": "d08ae8126a3cc485e8e9998879d7310ee79359f00a230b49469efacfb786ace3",
       "width": 656,
-      "height": 1022,
+      "height": 858,
       "duration_ms": 12800,
-      "bytes": 207196
+      "bytes": 208286
     }
   }
 }
