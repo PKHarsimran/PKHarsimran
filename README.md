@@ -13,22 +13,24 @@
 
 <!-- buttons:hero:start -->
 <p align="center">
-  <a href="https://harsim.ca"><img src="./profile/buttons/website.svg" alt="Visit website" width="150" height="44" /></a>
-  <a href="https://www.linkedin.com/in/harsimransidhu/"><img src="./profile/buttons/linkedin.svg" alt="LinkedIn" width="150" height="44" /></a>
+  <a href="https://harsim.ca"><img src="./profile/buttons/website.svg" alt="Visit website" width="140" height="44" /></a>
+  <a href="https://www.linkedin.com/in/harsimransidhu/"><img src="./profile/buttons/linkedin.svg" alt="LinkedIn" width="124" height="44" /></a>
 </p>
 <!-- buttons:hero:end -->
 
 <!-- buttons:navigation:start -->
 <p align="center">
-  <a href="#user-content-selected-builds"><img src="./profile/buttons/projects-tab.svg" alt="Projects" width="100" height="44" /></a>
-  <a href="#user-content-homelab"><img src="./profile/buttons/homelab-tab.svg" alt="Homelab" width="102" height="44" /></a>
-  <a href="#user-content-arcade"><img src="./profile/buttons/arcade-tab.svg" alt="Arcade" width="100" height="44" /></a>
+  <a href="#user-content-selected-builds"><img src="./profile/buttons/projects-tab.svg" alt="Projects" width="86" height="44" /></a>
+  <a href="#user-content-homelab"><img src="./profile/buttons/homelab-tab.svg" alt="Homelab" width="90" height="44" /></a>
+  <a href="#user-content-arcade"><img src="./profile/buttons/arcade-tab.svg" alt="Arcade" width="78" height="44" /></a>
 </p>
 <!-- buttons:navigation:end -->
 
 </div>
 
 I work in **cybersecurity** and build tools that make investigations clearer and repetitive work shorter. Off the clock, I connect the dots in my **Zima homelab**. The robot has other plans. 🛠️
+
+<sub>New here? [Open the field guide](./FIELD-GUIDE.md) for direct links to live demos, readable replays, and setup docs.</sub>
 
 <details>
 <summary><picture>
@@ -44,7 +46,14 @@ I work in **cybersecurity** and build tools that make investigations clearer and
 </picture>
 </p>
 
-**Choose a chapter:**<br>[<sup>01</sup>&nbsp;Signal](#user-content-01--swiftioc) · [<sup>02</sup>&nbsp;Clues](#user-content-02--ioc-inspector) · [<sup>03</sup>&nbsp;Archive](#user-content-03--website-downloader) · [<sup>04</sup>&nbsp;Homelab](#user-content-homelab)
+**Choose your first stop:**
+
+| Your mission | Follow this thread |
+| :--- | :--- |
+| Follow a signal | [Open the live dashboard](https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/) |
+| See a tool in action | [Document investigation](./profile/inspector-demo.md) · [Offline field trip](./profile/downloader-demo.md) |
+| Explore self-hosting | [Inside the Zima homelab](#user-content-homelab) |
+| Bring a little chaos | [Meet Pixel in the live lab](https://harsim.ca/lab/) |
 
 </details>
 
@@ -52,7 +61,7 @@ I work in **cybersecurity** and build tools that make investigations clearer and
 
 ## Selected builds
 
-**Pick a side quest:** [Investigate&nbsp;threat&nbsp;feeds](#user-content-01--swiftioc) · [Inspect&nbsp;a&nbsp;document](#user-content-02--ioc-inspector) · [Save&nbsp;a&nbsp;site&nbsp;offline](#user-content-03--website-downloader)
+Three public tools: collect context, inspect the clues, and keep a useful page.
 
 ### 01 / SwiftIOC
 
@@ -296,6 +305,31 @@ The tools do useful work. Pixel handles the side quests. Follow the bot, crack t
 </p>
 
 <sub>Real GitHub activity; an illustrated bot adventure. Totals include automation and publicly shared private activity. [Daily snapshot](./profile/contribution-calendar.json).</sub>
+
+<details>
+<summary><strong>🧊 Pixel, off the page</strong> <sub>· a pocket-sized 3D keepsake</sub></summary>
+<br>
+
+<p>
+<a href="./profile/pixel-pocket.stl">
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/pixel-pocket-mobile.svg">
+  <img src="./profile/pixel-pocket.svg" alt="Pocket Pixel: an isometric voxel robot with recessed eyes. Open the real 3D model to rotate, zoom, or download the keepsake." width="100%">
+</picture>
+</a>
+</p>
+
+**A small bot. Another dimension.** Open Pixel in GitHub's 3D viewer, drag to turn the model, and scroll to zoom.
+
+<!-- buttons:pocket:start -->
+<p align="left">
+  <a href="./profile/pixel-pocket.stl"><img src="./profile/buttons/spin-pixel.svg" alt="Spin Pixel" width="144" height="44" /></a>
+</p>
+<!-- buttons:pocket:end -->
+
+<sub>Keep the STL from its download menu. The preview wears Pixel’s colours; the model keeps the shape. [Build recipe](./scripts/build_pixel_collectible.py).</sub>
+
+</details>
 
 <!-- arcade-lab:start -->
 <details>

@@ -1,5 +1,6 @@
 """Build repository-owned navigation and action buttons, then update their README slots."""
 from html import escape
+import argparse
 from pathlib import Path
 import re
 from profile_theme import apply_theme
@@ -10,12 +11,12 @@ MINT,VIOLET,PINK,BLUE='#43E6C5','#A995FF','#F36BAA','#69B9FF'
 
 # label, width, accent, treatment, icon
 BUTTONS={
-    'website':('Visit website',150,MINT,'primary','globe'),
-    'linkedin':('LinkedIn',150,VIOLET,'secondary','chat'),
+    'website':('Visit website',140,MINT,'primary','globe'),
+    'linkedin':('LinkedIn',124,VIOLET,'secondary','chat'),
     'contact':("Let's connect",160,VIOLET,'primary','chat'),
-    'projects-tab':('Projects',100,MINT,'nav','01'),
-    'homelab-tab':('Homelab',102,VIOLET,'nav','02'),
-    'arcade-tab':('Arcade',100,BLUE,'nav','03'),
+    'projects-tab':('Projects',86,MINT,'nav','01'),
+    'homelab-tab':('Homelab',90,VIOLET,'nav','02'),
+    'arcade-tab':('Arcade',78,BLUE,'nav','03'),
     'dashboard':('Open dashboard',166,MINT,'primary','play'),
     'quick-start':('Quick start',150,VIOLET,'primary','bolt'),
     'field-guide':('Field guide',150,PINK,'primary','book'),
@@ -27,6 +28,7 @@ BUTTONS={
     'docker':('Container images',188,BLUE,'secondary','cube'),
     'live-lab':('Enter live lab',176,MINT,'primary','play'),
     'back-top-tab':('Back to top',126,MINT,'nav','up'),
+    'spin-pixel':('Spin Pixel',144,VIOLET,'primary','cube'),
 }
 GROUPS={
     'hero':[('website','https://harsim.ca'),('linkedin','https://www.linkedin.com/in/harsimransidhu/')],
@@ -39,6 +41,7 @@ GROUPS={
     'radar':[('snapshot','./profile/public-pulse.md'),('workflow','https://github.com/PKHarsimran/PKHarsimran/actions/workflows/profile-lab.yml')],
     'footer':[('contact','https://www.linkedin.com/in/harsimransidhu/')],
     'return':[('back-top-tab','#user-content-mission-control')],
+    'pocket':[('spin-pixel','./profile/pixel-pocket.stl')],
 }
 ICONS={
     'globe':'<circle cx="0" cy="0" r="8"/><ellipse cx="0" cy="0" rx="3.5" ry="8"/><path d="M-7-3H7M-7 3H7"/>',
@@ -86,13 +89,25 @@ def group(name):
 
 
 if __name__=='__main__':
-    OUT.mkdir(exist_ok=True)
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--check',action='store_true')
+    args=parser.parse_args()
+    if not args.check:OUT.mkdir(exist_ok=True)
     for name in BUTTONS:
-        (OUT/(name+'.svg')).write_text(button(name),encoding='utf-8')
+        path=OUT/(name+'.svg')
+        content=button(name)
+        if args.check:
+            if not path.exists() or path.read_text(encoding='utf-8')!=content:
+                parser.exit(1,'Rebuild with python scripts/build_profile_design.py: '+name+'\n')
+        else:path.write_text(content,encoding='utf-8')
     path=ROOT/'README.md'
-    source=path.read_text(encoding='utf-8')
+    original=path.read_text(encoding='utf-8')
+    source=original
     for name in GROUPS:
         pattern=rf'<!-- buttons:{name}:start -->.*?<!-- buttons:{name}:end -->'
         source,count=re.subn(pattern,f'<!-- buttons:{name}:start -->\n'+group(name)+f'\n<!-- buttons:{name}:end -->',source,flags=re.S)
         if count<1: raise ValueError('Missing README button slot: '+name)
-    path.write_text(source,encoding='utf-8')
+    if args.check:
+        if source!=original:parser.exit(1,'Rebuild README button slots with python scripts/build_profile_design.py\n')
+    else:path.write_text(source,encoding='utf-8')
+    print(('Verified' if args.check else 'Built')+f' {len(BUTTONS)} action buttons and their README slots.')
