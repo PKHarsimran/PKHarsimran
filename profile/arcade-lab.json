@@ -1,25 +1,26 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-10-19T12:53:59Z",
-  "calendar_observed_at": "2026-10-19T12:53:59Z",
-  "fingerprint": "e6621d3fee9d712118ef72842a85e89438ccf28d98d8b2054b219cdf65eda9d3",
-  "serial": "E6621D3F",
-  "asset_id": "e6621d3fee9d7121",
+  "generated_at": "2026-10-19T13:10:22Z",
+  "calendar_observed_at": "2026-10-19T13:10:22Z",
+  "fingerprint": "7b314533351f04bc29ecc6142f6514ea7c0acaf50cfb51aafa2014b1418aea0b",
+  "serial": "7B314533",
+  "asset_id": "7b314533351f04bc",
   "retained": [
     "095241bf5030e207",
     "ac56e514d59f16a2",
     "ca625ef520e8433a",
     "bbbbde429a171649",
     "a8d845b69ffe7ca4",
-    "e6621d3fee9d7121"
+    "e6621d3fee9d7121",
+    "7b314533351f04bc"
   ],
   "assets": {
-    "heist": "arcade/heist-e6621d3fee9d7121.svg",
-    "mobile": "arcade/heist-e6621d3fee9d7121-mobile.svg",
-    "relic": "arcade/relic-e6621d3fee9d7121.svg"
+    "heist": "arcade/heist-7b314533351f04bc.svg",
+    "mobile": "arcade/heist-7b314533351f04bc-mobile.svg",
+    "relic": "arcade/relic-7b314533351f04bc.svg"
   },
-  "relic_name": "Packet Pixie",
+  "relic_name": "Byte Moth",
   "gates": [
     {
       "id": "A",
@@ -33,63 +34,37 @@
     {
       "id": "B",
       "label": "CALENDAR",
-      "source": "Last 30 days / contributions",
-      "display": "398",
+      "source": "Days with activity",
+      "display": "347",
       "hint": "Take the ones digit.",
-      "value": 398,
-      "digit": 8
+      "value": 347,
+      "digit": 7
     },
     {
       "id": "C",
       "label": "BUILD RADAR",
-      "source": "Passing checks / selected 3",
-      "display": "3",
+      "source": "Stars / selected 3 projects",
+      "display": "233",
       "hint": "Take the ones digit.",
-      "value": 3,
+      "value": 233,
       "digit": 3
     }
   ],
   "route": [
     "B",
-    "C",
-    "A"
+    "A",
+    "C"
   ],
-  "solution": "831",
+  "solution": "713",
   "choices": [
-    "294",
-    "831",
-    "968"
+    "176",
+    "713",
+    "850"
   ],
   "tool_url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector",
   "tool_name": "SwiftIOC",
   "rewind": {
     "previous": {
-      "generated_at": "2026-10-18T20:03:58Z",
-      "projects": [
-        {
-          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 16,
-          "latest_commit_at": "2026-10-18T18:26:46Z"
-        },
-        {
-          "repo": "IOC-Inspector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 1,
-          "latest_commit_at": "2026-07-02T10:36:39Z"
-        },
-        {
-          "repo": "website-downloader",
-          "release": "v2.6.1",
-          "ci": "PASSING",
-          "stars": 216,
-          "latest_commit_at": "2026-07-28T19:57:33Z"
-        }
-      ]
-    },
-    "current": {
       "generated_at": "2026-10-19T12:53:59Z",
       "projects": [
         {
@@ -115,14 +90,33 @@
         }
       ]
     },
-    "changes": [
-      {
-        "project": "SwiftIOC",
-        "field": "latest_commit_at",
-        "before": "2026-10-18T18:26:46Z",
-        "after": "2026-10-19T10:21:31Z"
-      }
-    ]
+    "current": {
+      "generated_at": "2026-10-19T13:10:22Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-10-19T10:21:31Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-07-02T10:36:39Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.6.1",
+          "ci": "PASSING",
+          "stars": 216,
+          "latest_commit_at": "2026-07-28T19:57:33Z"
+        }
+      ]
+    },
+    "changes": []
   },
   "sources": [
     "public-pulse.json",
