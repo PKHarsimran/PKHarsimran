@@ -16,6 +16,12 @@ on:
       - "scripts/test_profile_arcade_lab.py"
       - "scripts/test_generate_profile_lab.py"
       - "scripts/profile_theme.py"
+      - "scripts/profile_cinematics.py"
+      - "scripts/profile_studio.py"
+      - "scripts/profile_motion.py"
+      - "scripts/build_readme_art.py"
+      - "scripts/build_profile_style.py"
+      - "scripts/profile_art.py"
       - "fonts/**"
 
 permissions:
@@ -37,6 +43,9 @@ jobs:
 
       - name: Check public-data boundaries and failure handling
         run: python3 -m unittest discover -s scripts -p 'test_*.py' -v
+
+      - name: Check reproducible README illustrations
+        run: python3 scripts/build_readme_art.py --check
 
       - name: Generate public radar and contribution arcade
         env:

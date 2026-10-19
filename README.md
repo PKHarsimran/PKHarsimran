@@ -26,7 +26,7 @@
 
 </div>
 
-I work in **cybersecurity** and build tools that make investigations clearer and repetitive work shorter. Off the clock, I connect the dots in my **Zima homelab**. There is usually one more side quest. 🛠️
+I work in **cybersecurity** and build tools that make investigations clearer and repetitive work shorter. Off the clock, I connect the dots in my **Zima homelab**. The robot has other plans. 🛠️
 
 <a name="selected-builds"></a>
 
@@ -39,7 +39,7 @@ I work in **cybersecurity** and build tools that make investigations clearer and
 <a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector">
 <picture>
   <source media="(max-width: 600px)" srcset="./profile/studio-swiftioc-motion-mobile.svg">
-  <img src="./profile/studio-swiftioc-motion.svg" alt="SwiftIOC — follow the indicator, keep the evidence. Python threat intelligence and analyst workflows." width="100%" />
+  <img src="./profile/studio-swiftioc-motion.svg" alt="SwiftIOC — follow the indicator, keep the evidence. Animated feed documents flow into indicators and their evidence graph. Python threat intelligence and analyst workflows." width="100%" />
 </picture>
 </a>
 
@@ -85,7 +85,7 @@ I work in **cybersecurity** and build tools that make investigations clearer and
 <a href="https://github.com/PKHarsimran/IOC-Inspector">
 <picture>
   <source media="(max-width: 600px)" srcset="./profile/studio-inspector-motion-mobile.svg">
-  <img src="./profile/studio-inspector-motion.svg" alt="IOC Inspector — suspicious documents, useful answers. Python static analysis and structured reports." width="100%" />
+  <img src="./profile/studio-inspector-motion.svg" alt="IOC Inspector — suspicious documents, useful answers. An illustrated document scan follows clues into a report. Python static analysis and structured reports." width="100%" />
 </picture>
 </a>
 
@@ -141,7 +141,7 @@ A harmless training PDF, a few hidden clues, and the real scanner. What can you 
 <a href="https://github.com/PKHarsimran/website-downloader">
 <picture>
   <source media="(max-width: 600px)" srcset="./profile/studio-downloader-motion-mobile.svg">
-  <img src="./profile/studio-downloader-motion.svg" alt="Website Downloader — take a little piece of the web offline. Python web archiving with optional Playwright rendering." width="100%" />
+  <img src="./profile/studio-downloader-motion.svg" alt="Website Downloader — take a little piece of the web offline. Animated page packets travel into an offline archive with connected files. Python web archiving with optional Playwright rendering." width="100%" />
 </picture>
 </a>
 
@@ -219,7 +219,14 @@ My **Zima homelab** is where side projects become everyday tools. **Docker Compo
 
 ## After hours: the arcade
 
-Follow the bot, crack today’s code, or let the snake loose. Your next side quest starts here.
+The tools do useful work. Pixel handles the side quests. Follow the bot, crack today’s code, or find the secret terminal.
+
+<a href="https://harsim.ca/lab/">
+<picture>
+  <source media="(max-width: 600px)" srcset="./profile/pixel-portal-mobile.svg">
+  <img src="./profile/pixel-portal.svg" alt="Psst. There’s a secret terminal. Pixel previews help, party and patches with a wave and confetti. Click to enter the interactive lab: tiny cases, five mission patches and a creature badge to keep." width="100%">
+</picture>
+</a>
 
 <!-- buttons:live-lab:start -->
 <p align="left">
@@ -227,7 +234,7 @@ Follow the bot, crack today’s code, or let the snake loose. Your next side que
 </p>
 <!-- buttons:live-lab:end -->
 
-<sub>Meet Pixel in the interactive lab: your own callsign, a packet tour, three tiny cases, and a creature badge to keep.</sub>
+<sub>Step inside, press <code>/</code>, and ask Pixel for <code>help</code>. The terminal, saved progress, and collectible patches live in the lab.</sub>
 
 <picture>
   <source media="(max-width: 600px)" srcset="./profile/contribution-evidence-run-mobile.svg">

@@ -5,6 +5,7 @@ import re
 import xml.etree.ElementTree as ET
 from profile_art import art_style, visitor_pass
 from profile_theme import PROJECT_MOTION
+from profile_cinematics import project_scene
 
 OUT=Path(__file__).resolve().parents[1]/'profile'
 SVG='http://www.w3.org/2000/svg'
@@ -62,21 +63,21 @@ def hero(mobile=False):
 
 def project(item,mobile=False):
     kind,number,name,area,tagline,tags,color=item
-    w,h=(600,260) if mobile else (1000,194)
+    w,h=(600,312) if mobile else (1000,194)
     p=panel(w,h,name,tagline+' '+tags)
     p += [PROJECT_MOTION,f'<path class="edge-breathe" d="M24 1H{w*.34:.0f}" stroke="{color}" stroke-width="2"/>']
     if not mobile:
-        p += [f'<path d="M746 20C803 20 794 159 963 164M765 18C822 21 813 145 964 149M784 18C837 26 829 130 964 134" fill="none" stroke="{color}" stroke-opacity=".065"/>',
-              f'<circle cx="890" cy="93" r="64" fill="{color}" fill-opacity=".035" stroke="{color}" stroke-opacity=".16"/>',
-              group('mission-'+kind+'.svg','translate(891 101)','translate(890 93) scale(.92)'),
+        p += ['<path d="M724 28V166" stroke="#29364B"/>',
+              '<g transform="translate(746 14)">'+project_scene(kind)+'</g>',
               text(30,32,number+' / '+area.upper(),12,color,500),
               text(28,91,name,43,TEXT,700),text(30,125,tagline,20,MUTED),text(30,169,tags,12,color,500),
               text(947,170,'↗',22,color)]
     else:
         p += [text(28,36,number+' / '+area.upper(),16,color,500),
-              group('mission-'+kind+'.svg','translate(891 101)','translate(548 37) scale(.35)'),
-              text(26,109,name,42,TEXT,700),text(28,157,tagline,24,MUTED),
-              '<path d="M28 190H572" stroke="#29364B"/>',text(28,228,tags,16,color,500)]
+              text(548,38,'↗',24,color),
+              text(26,98,name,42,TEXT,700),text(28,143,tagline,24,MUTED),
+              '<g transform="translate(28 163)">'+project_scene(kind,True)+'</g>',
+              text(28,286,tags,16,color,500)]
     return ''.join(p+['</g></svg>\n'])
 
 

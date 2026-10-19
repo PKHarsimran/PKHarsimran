@@ -76,6 +76,8 @@ def animate_profile(source,role,mobile=False):
         w,h=(600,460) if mobile else (1000,374)
         node(overlay,'rect',x=1,y=1,width=w-2,height=h-2,rx=24,fill='none',stroke=MINT,stroke_width=1.3,stroke_opacity='.5',pathLength=1000,stroke_dasharray='22 978',**{'class':'motion-only motion-frame'})
     elif role in ('swiftioc','inspector','downloader'):
+        if root.find('.//'+N+'g[@data-cinematic="'+role+'"]') is not None:
+            return ET.tostring(root,encoding='unicode')+'\n'
         transform='translate(548 37) scale(.35)' if mobile else 'translate(890 93) scale(.92)'
         icon=root.find('.//'+N+'g[@transform="'+transform+'"]')
         if icon is None:raise ValueError('Missing project illustration for '+role)
