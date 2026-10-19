@@ -16,5 +16,12 @@
     "source": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/ibmplexmono/IBMPlexMono-Medium.ttf",
     "source_sha256": "a9b4c49bb299e05b5f6c481e7fb5e78943d2793249a0c8874ab574a2d1ea6755",
     "subset_sha256": "68ba6f90195c23f229f0dd1e250c002a6b330c4ad0c75e8acd6a821877e8b81f"
+  },
+  "ibm-plex-mono-500.ttf": {
+    "family": "ProfileMono",
+    "source": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/ibmplexmono/IBMPlexMono-Medium.ttf",
+    "source_sha256": "a9b4c49bb299e05b5f6c481e7fb5e78943d2793249a0c8874ab574a2d1ea6755",
+    "subset_sha256": "fe5309e701fc1820dbe7adf04efc572ef6d4bc01ba45c5c8bc16096ca798cf7a",
+    "derived_from": "ibm-plex-mono-500.woff2"
   }
 }

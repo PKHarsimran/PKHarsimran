@@ -47,6 +47,11 @@ if __name__=='__main__':
     sources['space-grotesk-700.woff2']=prepare(BASE+'spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf','space-grotesk-700.woff2',chars,700)
     sources['space-grotesk-buttons-600.woff2']=prepare(BASE+'spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf','space-grotesk-buttons-600.woff2',chars,600)
     sources['ibm-plex-mono-500.woff2']=prepare(BASE+'ibmplexmono/IBMPlexMono-Medium.ttf','ibm-plex-mono-500.woff2',chars)
+    # VHS/fontconfig reads TrueType; derive the exact same renamed subset.
+    mono=TTFont(OUT/'ibm-plex-mono-500.woff2',recalcTimestamp=False)
+    mono.flavor=None
+    mono.save(OUT/'ibm-plex-mono-500.ttf')
+    sources['ibm-plex-mono-500.ttf']={**sources['ibm-plex-mono-500.woff2'],'derived_from':'ibm-plex-mono-500.woff2','subset_sha256':hashlib.sha256((OUT/'ibm-plex-mono-500.ttf').read_bytes()).hexdigest()}
     for folder,name in [('spacegrotesk','SpaceGrotesk-OFL.txt'),('ibmplexmono','IBMPlexMono-OFL.txt')]:
         (OUT/name).write_bytes(urlopen(BASE+folder+'/OFL.txt',timeout=30).read())
     (OUT/'sources.json').write_text(json.dumps(sources,indent=2)+'\n',encoding='utf-8')

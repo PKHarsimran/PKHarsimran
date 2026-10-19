@@ -11,6 +11,8 @@ on:
       - "scripts/living_profile.py"
       - "scripts/profile_motion.py"
       - "scripts/profile_demos.py"
+      - "scripts/demo_terminal.py"
+      - "scripts/test_demo_terminal.py"
       - "scripts/test_living_profile.py"
       - "scripts/profile_theme.py"
       - "fonts/**"
@@ -53,6 +55,13 @@ jobs:
           python3 scripts/profile_demos.py inspector
           python3 scripts/profile_demos.py downloader
 
+      - name: Install the bundled terminal font
+        if: steps.exhibits.outputs.needs_demos == 'true'
+        run: |
+          install -D fonts/ibm-plex-mono-500.ttf "$HOME/.local/share/fonts/ProfileMono.ttf"
+          fc-cache -f
+          test "$(fc-match -f '%{family}' ProfileMono)" = "ProfileMono"
+
       - name: Record the actual IOC Inspector execution
         if: steps.exhibits.outputs.needs_demos == 'true'
         uses: charmbracelet/vhs-action@f6d7db07a432fcd3b06772628d36a57f96d95dcf # v2
@@ -60,9 +69,15 @@ jobs:
           version: v0.12.1
           path: demos/inspector.tape
 
+      - name: Record the mobile IOC Inspector execution
+        if: steps.exhibits.outputs.needs_demos == 'true'
+        run: vhs demos/inspector-mobile.tape
+
       - name: Record the actual Website Downloader execution
         if: steps.exhibits.outputs.needs_demos == 'true'
-        run: vhs demos/downloader.tape
+        run: |
+          vhs demos/downloader.tape
+          vhs demos/downloader-mobile.tape
 
       - name: Verify recordings and build case findings and static posters
         if: steps.exhibits.outputs.needs_demos == 'true'
@@ -79,8 +94,8 @@ jobs:
             profile/homelab-flow*
             profile/release-patches*
             profile/case-*
-            profile/inspector-demo.*
-            profile/downloader-demo.*
+            profile/inspector-demo*
+            profile/downloader-demo*
             profile/demo-provenance.json
 
   publish:
@@ -106,7 +121,7 @@ jobs:
           cp -R generated/. profile/
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- profile/intel-conveyor* profile/homelab-flow* profile/release-patches* profile/case-* profile/inspector-demo.* profile/downloader-demo.* profile/demo-provenance.json
+          git add -- profile/intel-conveyor* profile/homelab-flow* profile/release-patches* profile/case-* profile/inspector-demo* profile/downloader-demo* profile/demo-provenance.json
           if git diff --cached --quiet; then
             echo "Living profile exhibits are unchanged."
             exit 0

@@ -8,6 +8,8 @@ The font subsets are embedded as data URLs inside repository-owned SVGs. Browser
 
 The modified subsets use the internal names ProfileDisplay, ProfileButton and ProfileMono; upstream copyright and license records are preserved.
 
+The TrueType copy of ProfileMono is derived from the same WOFF2 subset for the VHS terminal recordings. Each tape loads it from this repository; no system-font download or silent fallback is needed.
+
 The optional preparation command requires `fonttools` and `brotli`:
 
 ```sh

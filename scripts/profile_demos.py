@@ -1,6 +1,7 @@
 """Run released CLIs on owned fixtures; record verified output and provenance."""
 from __future__ import annotations
 from profile_theme import apply_theme
+from demo_terminal import Terminal
 
 import argparse
 from datetime import datetime, timezone
@@ -93,27 +94,56 @@ def fixture():
     (WORK/'case.json').write_text(json.dumps({**case,'file':path.name}),encoding='utf-8')
 
 
-def inspector():
+def inspector(record=False, compact=False):
     case=json.loads((WORK/'case.json').read_text())
     source=plan()['sources']['inspector']
     command=[python_for('inspector'),'main.py','--file',WORK/case['file'],'--report','--json']
-    print(f'IOC Inspector {source["tag"]} / {plan()["week"]}',flush=True)
-    print('Owned PDF / static analysis / reputation keys absent',flush=True)
-    print(f'$ python main.py --file {case["file"]} --report --json',flush=True)
-    result=run(command,cwd=WORK/'inspector',capture_output=True,text=True,encoding='utf-8',timeout=90)
+    terminal=Terminal(record,compact)
+    terminal.page('IOC Inspector',source['tag'],'01 / FOLLOW THE CLUES')
+    terminal.line('One PDF. What is hiding inside?')
+    terminal.line('Owned fixture / static analysis','muted')
+    terminal.line()
+    terminal.pause(1)
+    terminal.command(['$ python main.py \\',f'  --file ../{case["file"]} \\','  --report --json'])
+    # Use precisely the relative file argument shown in the recording.
+    command[3]=Path('..')/case['file']
+    for extension in ('json','md'):
+        (WORK/'inspector/reports'/(Path(case['file']).stem+'_report.'+extension)).unlink(missing_ok=True)
+    terminal.perform(lambda:run(command,cwd=WORK/'inspector',capture_output=True,text=True,encoding='utf-8',timeout=90),'Reading the PDF')
     raw=json.loads((WORK/'inspector/reports'/(Path(case['file']).stem+'_report.json')).read_text())
     expected=set(case['urls'])|({case['hidden']} if case['hidden'] else set())
     if set(raw['urls'])!=expected or raw.get('url_rep') or raw.get('ip_rep') or raw['embedded_files']!=0 or raw['js_count']!=0:
         raise ValueError('The released parser did not produce the expected static findings')
     ips={urlsplit(u).hostname for u in expected if re.fullmatch(r'\d+\.\d+\.\d+\.\d+',urlsplit(u).hostname or '')}
     if set(raw['ips'])!=ips: raise ValueError('Extracted IPs did not match fixture')
+    markdown=WORK/'inspector/reports'/(Path(case['file']).stem+'_report.md')
+    if not markdown.is_file() or not markdown.stat().st_size:
+        raise ValueError('The released CLI did not write its Markdown report')
     record={'week':plan()['week'],'title':case['title'],'prompt':case['prompt'],'fixture':case['file'],'fixture_sha256':hashlib.sha256((WORK/case['file']).read_bytes()).hexdigest(),'source':source,'findings':raw,'scope':'Owned harmless training PDF. Static analysis; external reputation lookups disabled. The tool verdict is not a security guarantee.'}
     save('case-report.json',record)
     ip_label='IP' if len(raw['ips'])==1 else 'IPs'
-    print(f'Extracted: {len(raw["urls"])} unique URLs / {len(raw["ips"])} {ip_label}',flush=True)
-    for url in raw['urls']: print('  '+url.replace('http','hxxp').replace('.','[.]'),flush=True)
-    print(f'Actual heuristic output: score={raw["score"]} / verdict={raw["verdict"]}',flush=True)
-    print('JSON + Markdown reports generated. CASE VERIFIED',flush=True)
+    terminal.pause(.6)
+    terminal.page('IOC Inspector',source['tag'],'02 / READ THE FINDINGS')
+    terminal.line(f'{len(raw["urls"])} UNIQUE URLs / {len(raw["ips"])} {ip_label}', 'mint',True)
+    terminal.line()
+    for url in sorted(raw['urls']):
+        terminal.line(url.replace('http','hxxp').replace('.','[.]'))
+        terminal.line()
+        terminal.pause(.6)
+    terminal.line('Links defanged for display.','muted')
+    terminal.line('Read from the actual JSON report.','muted')
+    terminal.pause(4)
+    terminal.page('IOC Inspector',source['tag'],'03 / CLOSE THE CASE')
+    terminal.line(f'[ok] {len(raw["urls"])} URLs / {len(raw["ips"])} {ip_label} verified','mint')
+    terminal.line('[ok] 0 embedded / 0 JavaScript','mint')
+    terminal.line('[ok] JSON + Markdown written','mint')
+    terminal.line()
+    terminal.line(f'Tool verdict: {raw["verdict"]}','violet',True)
+    terminal.line(f'Heuristic score: {raw["score"]}','muted')
+    terminal.line()
+    terminal.line('Owned PDF. Reputation keys off.','muted')
+    terminal.line('A verdict is not a guarantee.','muted')
+    terminal.end('CASE VERIFIED')
 
 
 class Links(HTMLParser):
@@ -142,7 +172,7 @@ def verify_mirror(directory):
     return checked
 
 
-def downloader():
+def downloader(record=False, compact=False):
     site=WORK/'site'; site.mkdir(exist_ok=True)
     (site/'style.css').write_text('body{background:#0d1117;color:#43e6c5;font:22px sans-serif}main{margin:48px}a{color:#a995ff}',encoding='utf-8')
     (site/'mark.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><rect width="64" height="64" rx="12" fill="#43e6c5"/></svg>')
@@ -156,22 +186,43 @@ def downloader():
     target=WORK/'mirror'
     # Every invocation uses a fresh destination; the tape never displays cached results.
     target=target/str(os.getpid())
-    command=[python_for('downloader'),'-m','website_downloader','--url',f'http://127.0.0.1:{server.server_port}/index.html','--destination',target,'--max-pages','3','--respect-robots']
+    url=f'http://127.0.0.1:{server.server_port}'
+    command=[python_for('downloader'),'-m','website_downloader','--url',url,'--destination',target,'--max-pages','3','--respect-robots']
     source=plan()['sources']['downloader']
-    print('Website Downloader '+source['tag']+' / owned local fixture',flush=True)
-    print('$ website-downloader --url <local fixture> --max-pages 3',flush=True)
-    print('    --destination mirror --respect-robots',flush=True)
+    terminal=Terminal(record,compact)
+    terminal.page('Website Downloader',source['tag'],'01 / PACK A PIECE OF THE WEB')
+    terminal.line('Three pages. Take them offline.')
+    terminal.line('Owned localhost fixture','muted')
+    terminal.line()
+    terminal.pause(1)
+    terminal.command(['$ python -m website_downloader \\','  --url \\',f'  {url} \\',f'  --destination mirror/{os.getpid()} \\','  --max-pages 3 --respect-robots'])
+    command[6]=Path('mirror')/str(os.getpid())
     try:
-        result=run(command,cwd=WORK/'downloader',capture_output=True,text=True,encoding='utf-8',timeout=90)
+        terminal.perform(lambda:run(command,cwd=WORK,capture_output=True,text=True,encoding='utf-8',timeout=90),'Saving the site')
     finally:
         server.shutdown(); server.server_close()
     # Source is stopped before checking that every HTML dependency resolves locally.
+    terminal.page('Website Downloader',source['tag'],'02 / PULL THE PLUG')
+    terminal.line('SOURCE SERVER: OFF','violet',True)
+    terminal.line()
+    terminal.line('The mirror has to stand alone.')
+    terminal.line('No source server to fall back on.','muted')
+    terminal.line()
+    terminal.line('index.html / guide.html','mint')
+    terminal.line('about.html / CSS / SVG','mint')
+    terminal.pause(3)
     checked=verify_mirror(target)
-    print('Downloaded: index.html / guide.html / about.html',flush=True)
-    print('Assets: stylesheet + SVG / source server stopped',flush=True)
-    print(f'Checked {checked} local references: all resolve inside the mirror',flush=True)
-    print('OFFLINE MIRROR VERIFIED',flush=True)
     save('downloader-demo.json',{'source':source,'html_pages':3,'assets':['CSS','SVG'],'local_references_checked':checked,'source_server_stopped_before_validation':True,'scope':'Released CLI run against an owned localhost fixture, not a crawl of an external website.'})
+    terminal.page('Website Downloader',source['tag'],'03 / THE OFFLINE PROOF')
+    terminal.line('[ok] 3 HTML pages saved','mint')
+    terminal.line('[ok] CSS + SVG stored locally','mint')
+    terminal.line(f'[ok] {checked} local references resolve','mint')
+    terminal.line()
+    terminal.line('SOURCE SERVER: STILL OFF','violet',True)
+    terminal.line('Every link stays in the mirror.','muted')
+    terminal.line()
+    terminal.line('A little web, ready to travel.','muted')
+    terminal.end('OFFLINE MIRROR VERIFIED')
 
 
 def case_art(record,mobile=False,findings=False):
@@ -195,14 +246,18 @@ def case_art(record,mobile=False,findings=False):
 
 def finish():
     from PIL import Image
-    for name in ('inspector','downloader'):
-        gif=OUT/(name+'-demo.gif')
+    reels={}
+    for name in ('inspector','inspector-mobile','downloader','downloader-mobile'):
+        stem=name.replace('-mobile','-demo-mobile') if name.endswith('-mobile') else name+'-demo'
+        gif=OUT/(stem+'.gif')
         with Image.open(gif) as img:
             duration=sum(frame.info.get('duration',0) for frame in __import__('PIL.ImageSequence',fromlist=['Iterator']).Iterator(img))
-            if img.n_frames<2 or gif.stat().st_size>4_000_000 or not 1_000<duration<60_000:
+            expected_size=(600,740) if name.endswith('-mobile') else (900,700)
+            if img.n_frames<2 or img.size!=expected_size or gif.stat().st_size>4_000_000 or not 1_000<duration<60_000:
                 raise ValueError('Invalid or oversized demo reel')
             img.seek(max(0,img.n_frames-2))
-            img.convert('RGB').save(OUT/(name+'-demo.webp'),'WEBP',lossless=True,method=6)
+            img.convert('RGB').save(OUT/(stem+'.webp'),'WEBP',lossless=True,method=6)
+            reels[name]={'sha256':hashlib.sha256(gif.read_bytes()).hexdigest(),'width':img.width,'height':img.height,'duration_ms':duration,'bytes':gif.stat().st_size}
     record=json.loads((OUT/'case-report.json').read_text())
     save('case-file.svg',case_art(record))
     save('case-file-mobile.svg',case_art(record,True))
@@ -214,11 +269,21 @@ def finish():
     md+=f'Actual tool verdict: **{raw["verdict"]}**, score **{raw["score"]}**. {len(raw["urls"])} unique URLs and {len(raw["ips"])} {ip_label}.\n\n'
     md+='\n'.join('- `'+u.replace('http','hxxp').replace('.','[.]')+'`' for u in raw['urls'])+'\n\n[Raw findings](./case-report.json) · [Reproducible fixture recipe](../demos/cases.json)\n'
     save('case-report.md',md)
-    save('demo-provenance.json',{**plan(),'recorded_at':datetime.now(timezone.utc).isoformat(),'method':'VHS recorded executions of released CLIs on owned fixtures; assertions passed.','reels':{name:hashlib.sha256((OUT/(name+'-demo.gif')).read_bytes()).hexdigest() for name in ('inspector','downloader')}})
+    save('demo-provenance.json',{**plan(),'recorded_at':datetime.now(timezone.utc).isoformat(),'method':'VHS records guided terminal presentations of actual released CLI executions. Commands use the isolated venv Python; results come from verified generated files, not canned product output.','reels':reels})
     print('Demo reels, static posters, case findings, and source provenance verified.')
 
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('command',choices=['prepare','fixture','inspector','downloader','finish'])
-    globals()[parser.parse_args().command]()
+    parser.add_argument('--record',action='store_true',help='Animate the guided terminal presentation when attached to a TTY')
+    parser.add_argument('--compact',action='store_true',help='Use the 32-column mobile layout')
+    args=parser.parse_args()
+    try:
+        if args.command in ('inspector','downloader'):
+            globals()[args.command](args.record,args.compact)
+        else:
+            globals()[args.command]()
+    finally:
+        if args.record and sys.stdout.isatty():
+            print('\x1b[?25h',end='',flush=True)

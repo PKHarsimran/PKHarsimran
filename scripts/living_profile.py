@@ -190,7 +190,7 @@ def demo_plan(release_data,now):
         sources[name]={'repo':repo,'tag':release['tag'],'sha':resolve_tag(repo,release['tag'])}
     week=now.strftime('%G-W%V')
     recipes={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'demos').rglob('*')) if p.is_file()}
-    for path in [ROOT/'scripts/profile_demos.py', ROOT/'scripts/profile_theme.py', *sorted((ROOT/'fonts').glob('*.woff2'))]:
+    for path in [ROOT/'scripts/profile_demos.py', ROOT/'scripts/demo_terminal.py', ROOT/'scripts/profile_theme.py', *sorted((ROOT/'fonts').glob('*.woff2')), *sorted((ROOT/'fonts').glob('*.ttf'))]:
         recipes[path.relative_to(ROOT).as_posix()]=hashlib.sha256(path.read_bytes()).hexdigest()
     signature={'week':week,'sources':sources,'recipes':recipes}
     fingerprint=hashlib.sha256(json.dumps(signature,sort_keys=True).encode()).hexdigest()
@@ -207,6 +207,7 @@ def main():
     (ROOT/'.demo-plan.json').write_text(json.dumps(plan,indent=2)+'\n',encoding='utf-8')
     previous=json.loads((OUT/'demo-provenance.json').read_text()) if (OUT/'demo-provenance.json').exists() else {}
     required=['inspector-demo.gif','inspector-demo.webp','downloader-demo.gif','downloader-demo.webp','case-file.svg','case-file-mobile.svg','case-findings.svg','case-report.json','case-report.md']
+    required += [f'{name}-demo-mobile.{ext}' for name in ('inspector','downloader') for ext in ('gif','webp')]
     needs=previous.get('fingerprint')!=plan['fingerprint'] or any(not (OUT/f).is_file() for f in required)
     if os.environ.get('GITHUB_OUTPUT'):
         with open(os.environ['GITHUB_OUTPUT'],'a',encoding='utf-8') as f:
