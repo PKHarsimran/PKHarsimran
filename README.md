@@ -251,40 +251,40 @@ The tools do useful work. Pixel handles the side quests. Follow the bot, crack t
 </picture></summary>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-a8d845b69ffe7ca4-mobile.svg">
-  <img src="./profile/arcade/heist-a8d845b69ffe7ca4.svg" alt="Signal Heist. Route: B, then A, then C. Gate A: Website Downloader, v2.6.1. Patch version: ones digit. Gate B: Days with activity, 346. Take the ones digit. Gate C: Stars / selected 3 projects, 233. Take the ones digit. Choose a three-digit code below." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-e6621d3fee9d7121-mobile.svg">
+  <img src="./profile/arcade/heist-e6621d3fee9d7121.svg" alt="Signal Heist. Route: B, then C, then A. Gate A: SwiftIOC, v0.1.0. Minor version: ones digit. Gate B: Last 30 days / contributions, 398. Take the ones digit. Gate C: Passing checks / selected 3, 3. Take the ones digit. Choose a three-digit code below." width="100%">
 </picture>
 
 **Three clues → one code → a tiny creature.** Take each gate’s digit, follow the printed route, and open a code hatch.
 
 <details>
-<summary><strong>🔐 Hatch 01</strong> · <code>750</code></summary>
+<summary><strong>🔐 Hatch 01</strong> · <code>294</code></summary>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
 
 </details>
 
 <details>
-<summary><strong>🔐 Hatch 02</strong> · <code>613</code></summary>
+<summary><strong>🔐 Hatch 02</strong> · <code>831</code></summary>
 
-🔓 **Signal recovered.** B → A → C gives **613**.
+🔓 **Signal recovered.** B → C → A gives **831**.
 
 | Gate | Clue | Digit |
 | --- | --- | ---: |
-| A | Website Downloader: v2.6.1 | 1 |
-| B | Days with activity: 346 | 6 |
-| C | Stars / selected 3 projects: 233 | 3 |
+| A | SwiftIOC: v0.1.0 | 1 |
+| B | Last 30 days / contributions: 398 | 8 |
+| C | Passing checks / selected 3: 3 | 3 |
 
-**Next side quest:** [Explore Website Downloader](https://github.com/PKHarsimran/website-downloader) — the real tool behind gate A.
+**Next side quest:** [Explore SwiftIOC](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector) — the real tool behind gate A.
 
-<img src="./profile/arcade/relic-a8d845b69ffe7ca4.svg" alt="Snapshot relic A8D845B6: Byte Moth, a symmetric pixel creature drawn from this public snapshot." width="600">
+<img src="./profile/arcade/relic-e6621d3fee9d7121.svg" alt="Snapshot relic E6621D3F: Packet Pixie, a symmetric pixel creature drawn from this public snapshot." width="600">
 
-[Open your creature art](./profile/arcade/relic-a8d845b69ffe7ca4.svg)
+[Open your creature art](./profile/arcade/relic-e6621d3fee9d7121.svg)
 
 </details>
 
 <details>
-<summary><strong>🔐 Hatch 03</strong> · <code>076</code></summary>
+<summary><strong>🔐 Hatch 03</strong> · <code>968</code></summary>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
 
@@ -293,9 +293,11 @@ The tools do useful work. Pixel handles the side quests. Follow the bot, crack t
 <details>
 <summary><strong>⏪ Checkpoint rewind</strong> <sub>· what changed since last time?</sub></summary>
 
-Snapshots: **2026-10-18 19:57:06** → **2026-10-18 20:03:58** UTC. Comparing the three selected public projects.
+Snapshots: **2026-10-18 20:03:58** → **2026-10-19 12:53:59** UTC. Comparing the three selected public projects.
 
-**Quiet checkpoint.** No changes in releases, CI, stars, or latest commit times.
+| Project | Signal | Before | Now |
+| --- | --- | --- | --- |
+| SwiftIOC | latest commit at | 2026-10-18T18:26:46Z | 2026-10-19T10:21:31Z |
 
 </details>
 
