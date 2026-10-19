@@ -6,7 +6,7 @@ Set Padding 24
 Set Margin 12
 Set MarginFill "#0d1117"
 Set BorderRadius 14
-Set LineHeight 1.15
+Set LineHeight 1.0
 Set Framerate 12
 Set Shell bash
 Set WindowBar Rings

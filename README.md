@@ -154,17 +154,19 @@ A harmless training PDF, a few hidden clues, and the real scanner. What can you 
 </details>
 
 <details>
-<summary><strong>🎬 Replay the investigation</strong> <sub>· real CLI run</sub></summary>
+<summary><strong>🎬 Follow the clues</strong> <sub>· a three-chapter CLI replay</sub></summary>
 <br>
 
 <p>
 <picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="./profile/inspector-demo-mobile.webp">
   <source media="(prefers-reduced-motion: reduce)" srcset="./profile/inspector-demo.webp">
-  <img src="./profile/inspector-demo.gif" alt="VHS recording of the demo runner invoking the released IOC Inspector CLI on the weekly owned PDF and verifying its actual JSON findings." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/inspector-demo-mobile.gif">
+  <img src="./profile/inspector-demo.gif" alt="Guided IOC Inspector CLI replay: run the released tool on an owned PDF, reveal its extracted links, and verify the generated reports." width="100%">
 </picture>
 </p>
 
-<sub>A real CLI run against an owned training file. [How it was recorded](./profile/demo-provenance.json).</sub>
+<sub>Run → read → verify. A guided recording of the released CLI, with findings from its actual reports. [Behind the replay](./demos/README.md) · [Run provenance](./profile/demo-provenance.json).</sub>
 
 </details>
 
@@ -201,12 +203,14 @@ A harmless training PDF, a few hidden clues, and the real scanner. What can you 
 
 <p>
 <picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="./profile/downloader-demo-mobile.webp">
   <source media="(prefers-reduced-motion: reduce)" srcset="./profile/downloader-demo.webp">
-  <img src="./profile/downloader-demo.gif" alt="VHS recording of the demo runner invoking the released Website Downloader CLI, stopping the owned local source server, and verifying all links and assets in the three-page offline mirror." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/downloader-demo-mobile.gif">
+  <img src="./profile/downloader-demo.gif" alt="Guided Website Downloader CLI replay: save three owned pages, stop the source server, and verify every link and asset in the offline mirror." width="100%">
 </picture>
 </p>
 
-<sub>A real CLI run: save an owned test site, stop its server, then check the offline copy. [Run results](./profile/downloader-demo.json).</sub>
+<sub>Save → unplug → prove. The released CLI builds the mirror; every local reference is checked with the source server off. [Run results](./profile/downloader-demo.json) · [Behind the replay](./demos/README.md).</sub>
 
 </details>
 
