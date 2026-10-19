@@ -22,7 +22,7 @@ on:
       - "scripts/profile_motion.py"
       - "scripts/build_readme_art.py"
       - "scripts/build_profile_design.py"
-      - "scripts/build_pixel_collectible.py"
+      - "scripts/build_bender_collectible.py"
       - "scripts/build_profile_style.py"
       - "scripts/profile_art.py"
       - "fonts/**"
@@ -51,7 +51,7 @@ jobs:
         run: |
           python3 scripts/build_readme_art.py --check
           python3 scripts/build_profile_design.py --check
-          python3 scripts/build_pixel_collectible.py --check
+          python3 scripts/build_bender_collectible.py --check
 
       - name: Generate public radar and contribution arcade
         env:

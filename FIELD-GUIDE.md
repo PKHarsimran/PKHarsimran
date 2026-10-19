@@ -38,12 +38,12 @@ The next checkpoint is a modular Compose starter kit, documented so someone else
 ## Take the scenic route
 
 - [Enter the live lab](https://harsim.ca/lab/): meet Pixel, solve tiny cases, and collect mission patches. Press <kbd>/</kbd> to open Pixel's terminal.
-- [Spin pocket Pixel](./profile/pixel-pocket.stl): a small voxel keepsake in GitHub's 3D viewer. Drag to rotate and scroll to zoom.
+- [Spin Bender](./profile/bender.stl): a Futurama fan-art keepsake with an antenna, toothy grille, and waving hand. Drag to rotate and scroll to zoom in GitHub's 3D viewer.
 - [Check the project radar](./profile/public-pulse.md): real public build checks and releases, with timestamps.
 - [Open the patch cabinet](./profile/release-patches.md): the releases behind the collectible artwork.
 
 ## Look behind the curtain
 
-[Daily profile workflow](./.github/workflows/profile-lab.yml) · [Demo workflow](./.github/workflows/living-profile.yml) · [Rebuild the illustrations](./scripts/build_readme_art.py) · [Pocket Pixel recipe](./scripts/build_pixel_collectible.py)
+[Daily profile workflow](./.github/workflows/profile-lab.yml) · [Demo workflow](./.github/workflows/living-profile.yml) · [Rebuild the illustrations](./scripts/build_readme_art.py) · [Bender recipe](./scripts/build_bender_collectible.py)
 
 Build with curiosity. Leave something useful behind.
