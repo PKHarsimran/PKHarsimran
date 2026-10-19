@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-10-19T18:58:22Z",
-  "calendar_observed_at": "2026-10-19T18:58:22Z",
-  "fingerprint": "a7df2fc503ad1afb3da3cca5e329cea97c5a58870caffde6f8e9549ebbe12444",
-  "serial": "A7DF2FC5",
-  "asset_id": "a7df2fc503ad1afb",
+  "generated_at": "2026-10-19T19:13:33Z",
+  "calendar_observed_at": "2026-10-19T19:13:33Z",
+  "fingerprint": "31b61bc9802a521be512c974df96ef103c87af7af12afc36739f69a4220901ac",
+  "serial": "31B61BC9",
+  "asset_id": "31b61bc9802a521b",
   "retained": [
     "095241bf5030e207",
     "ac56e514d59f16a2",
@@ -17,23 +17,24 @@
     "668b90df848ad06b",
     "31e232d402375815",
     "53dcf169d52c67bf",
-    "a7df2fc503ad1afb"
+    "a7df2fc503ad1afb",
+    "31b61bc9802a521b"
   ],
   "assets": {
-    "heist": "arcade/heist-a7df2fc503ad1afb.svg",
-    "mobile": "arcade/heist-a7df2fc503ad1afb-mobile.svg",
-    "relic": "arcade/relic-a7df2fc503ad1afb.svg"
+    "heist": "arcade/heist-31b61bc9802a521b.svg",
+    "mobile": "arcade/heist-31b61bc9802a521b-mobile.svg",
+    "relic": "arcade/relic-31b61bc9802a521b.svg"
   },
   "relic_name": "Port Nomad",
   "gates": [
     {
       "id": "A",
       "label": "RELEASE",
-      "source": "SwiftIOC",
+      "source": "IOC Inspector",
       "display": "v0.1.0",
-      "hint": "Minor version: ones digit.",
-      "value": 1,
-      "digit": 1
+      "hint": "Patch version: ones digit.",
+      "value": 0,
+      "digit": 0
     },
     {
       "id": "B",
@@ -47,54 +48,28 @@
     {
       "id": "C",
       "label": "BUILD RADAR",
-      "source": "Stars / selected 3 projects",
-      "display": "233",
+      "source": "Passing checks / selected 3",
+      "display": "3",
       "hint": "Take the ones digit.",
-      "value": 233,
+      "value": 3,
       "digit": 3
     }
   ],
   "route": [
-    "C",
     "B",
-    "A"
+    "A",
+    "C"
   ],
-  "solution": "371",
+  "solution": "703",
   "choices": [
-    "508",
-    "834",
-    "371"
+    "703",
+    "166",
+    "840"
   ],
-  "tool_url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector",
-  "tool_name": "SwiftIOC",
+  "tool_url": "https://github.com/PKHarsimran/IOC-Inspector",
+  "tool_name": "IOC Inspector",
   "rewind": {
     "previous": {
-      "generated_at": "2026-10-19T16:29:24Z",
-      "projects": [
-        {
-          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 16,
-          "latest_commit_at": "2026-10-19T10:21:31Z"
-        },
-        {
-          "repo": "IOC-Inspector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 1,
-          "latest_commit_at": "2026-07-02T10:36:39Z"
-        },
-        {
-          "repo": "website-downloader",
-          "release": "v2.6.1",
-          "ci": "PASSING",
-          "stars": 216,
-          "latest_commit_at": "2026-07-28T19:57:33Z"
-        }
-      ]
-    },
-    "current": {
       "generated_at": "2026-10-19T18:58:22Z",
       "projects": [
         {
@@ -120,14 +95,33 @@
         }
       ]
     },
-    "changes": [
-      {
-        "project": "SwiftIOC",
-        "field": "latest_commit_at",
-        "before": "2026-10-19T10:21:31Z",
-        "after": "2026-10-19T18:16:24Z"
-      }
-    ]
+    "current": {
+      "generated_at": "2026-10-19T19:13:33Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-10-19T18:16:24Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-07-02T10:36:39Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.6.1",
+          "ci": "PASSING",
+          "stars": 216,
+          "latest_commit_at": "2026-07-28T19:57:33Z"
+        }
+      ]
+    },
+    "changes": []
   },
   "sources": [
     "public-pulse.json",
