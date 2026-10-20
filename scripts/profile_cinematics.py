@@ -72,11 +72,15 @@ SEQUENCE_STYLE = '''
 '''
 
 HERO_STYLE = '''
+.cinema-ambient{animation:cinema-ambient 32s ease-in-out infinite}
+.cinema-comet{opacity:0;animation:cinema-comet 18s ease-out infinite}
 .hero-contact{animation:hero-contact 18s ease-out infinite}
 .hero-return{opacity:0;transform-box:fill-box;transform-origin:center;animation:hero-return 18s ease-out infinite}
+@keyframes cinema-ambient{50%{transform:translate(-14px,10px);opacity:.65}}
+@keyframes cinema-comet{0%,70%,100%{opacity:0;transform:translate(0,0)}74%{opacity:.8}82%{opacity:0;transform:translate(38px,20px)}}
 @keyframes hero-contact{0%,16%,100%{opacity:.4}2%,5%{opacity:1}}
 @keyframes hero-return{0%{opacity:0;transform:scale(.65)}2%{opacity:.7}13%,100%{opacity:0;transform:scale(2.1)}}
-@media(prefers-reduced-motion:reduce){.hero-contact,.hero-return{animation:none}.hero-contact{opacity:.8}.hero-return{display:none}}
+@media(prefers-reduced-motion:reduce){.cinema-moving{display:none!important}.cinema-ambient,.hero-contact,.hero-return{animation:none}.hero-contact{opacity:.8}.hero-return{display:none}}
 '''
 
 
@@ -158,7 +162,8 @@ def hero_finish(source, mobile=False):
             if child.tag == N+'text' and child.text == 'CURIOUS BY DESIGN':
                 parent.remove(child)
     style = ET.SubElement(root, N+'style', {'id': 'cinematic-style'})
-    style.text = STYLE + HERO_STYLE + '.motion-frame{animation-duration:48s}'
+    # The hero does not need the terminal and project-sequence stylesheet.
+    style.text = HERO_STYLE + '.motion-frame{animation-duration:48s}'
     defs = ET.SubElement(root, N+'defs')
     for name, color in (('mint',MINT),('violet',VIOLET)):
         gradient = ET.SubElement(defs, N+'radialGradient', {'id':'cinema-ambient-'+name})

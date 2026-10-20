@@ -22,26 +22,34 @@ def text(x,y,label,size=18,color=TEXT,weight=400,extra=''):
 
 
 NAME_STYLE = '''<style>
+.name-intro{animation:name-resolve .9s cubic-bezier(.16,1,.3,1) both;animation-delay:var(--phase)}
 .name-slice-one,.name-slice-two{opacity:0}
-.name-slice-one{animation:name-slice-one 18s linear infinite}
-.name-slice-two{animation:name-slice-two 18s linear infinite}
-.name-cursor{animation:name-cursor 2.8s steps(1,end) infinite}
-@keyframes name-slice-one{0%,71%,76%,100%{opacity:0;transform:translateX(0)}72%,73%{opacity:.8;transform:translateX(-3px)}74%,75%{opacity:.65;transform:translateX(2px)}}
-@keyframes name-slice-two{0%,71%,76%,100%{opacity:0;transform:translateX(0)}72%,73%{opacity:.6;transform:translateX(3px)}74%,75%{opacity:.8;transform:translateX(-2px)}}
-@keyframes name-cursor{0%,58%,100%{opacity:.85}59%,99%{opacity:.18}}
-@media(prefers-reduced-motion:reduce){.name-slice-one,.name-slice-two{animation:none;display:none}.name-cursor{animation:none;opacity:.7}}
+.name-slice-one{animation:name-slice-one 16s linear infinite}
+.name-slice-two{animation:name-slice-two 16s linear infinite}
+.name-sweep{animation:name-sweep 16s cubic-bezier(.4,0,.2,1) infinite}
+.name-slice-one,.name-slice-two,.name-sweep{animation-delay:var(--phase)}
+.name-cursor{animation:name-cursor 3.2s steps(1,end) infinite}
+@keyframes name-resolve{from{opacity:.45;transform:translateX(-5px)}to{opacity:1;transform:translateX(0)}}
+@keyframes name-sweep{0%,2%{transform:translateX(-100px)}14%,100%{transform:translateX(580px)}}
+@keyframes name-slice-one{0%,13%,15%,100%{opacity:0;transform:translateX(0)}13.4%{opacity:.7;transform:translateX(-3px)}13.8%{opacity:.45;transform:translateX(2px)}14.2%{opacity:.6;transform:translateX(-1px)}}
+@keyframes name-slice-two{0%,13%,15%,100%{opacity:0;transform:translateX(0)}13.6%{opacity:.55;transform:translateX(3px)}14%{opacity:.6;transform:translateX(-2px)}14.4%{opacity:.3;transform:translateX(1px)}}
+@keyframes name-cursor{0%,56%,100%{opacity:.85}57%,99%{opacity:.22}}
+@media(prefers-reduced-motion:reduce){.name-intro,.name-slice-one,.name-slice-two,.name-sweep,.name-cursor{animation:none}.name-slice-one,.name-slice-two,.name-sheen{display:none}.name-cursor{opacity:.7}}
 </style>'''
 
 
 def identity_line(x, y, value, size):
-    """Readable angular lettering with brief, clipped chromatic echoes."""
+    """A soft entrance, a masked light sweep, then a short signal-lock glitch."""
     ident = 'name-'+value.lower()
     extra = 'font-family="ProfileName,Consolas,monospace" letter-spacing=".4"'
-    p = [f'<g transform="translate({x} {y})">',
+    p = [f'<g transform="translate({x} {y})" style="--phase:{".24s" if value == "SIDHU" else "0s"}">',
          '<defs>',
          f'<clipPath id="{ident}-upper"><rect x="-5" y="{-size*.69:.1f}" width="580" height="{size*.10:.1f}"/></clipPath>',
          f'<clipPath id="{ident}-lower"><rect x="-5" y="{-size*.27:.1f}" width="580" height="{size*.07:.1f}"/></clipPath>',
-         '</defs>', text(0,0,value,size,TEXT,700,extra)]
+         f'<linearGradient id="{ident}-light"><stop stop-color="#FFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFF"/><stop offset="1" stop-color="#FFF" stop-opacity="0"/></linearGradient>',
+         f'<mask id="{ident}-sweep" maskUnits="userSpaceOnUse" x="-8" y="{-size}" width="588" height="{size+12}"><rect class="name-sweep" x="0" y="{-size}" width="{size*.9:.1f}" height="{size+12}" fill="url(#{ident}-light)"/></mask>',
+         '</defs>', '<g class="name-intro">', text(0,0,value,size,TEXT,700,extra), '</g>',
+         f'<g class="name-sheen" mask="url(#{ident}-sweep)" aria-hidden="true">',text(0,0,value,size,MINT,700,extra),'</g>']
     for name, color, clip in (('one',MINT,'upper'), ('two',PINK,'lower')):
         p += [f'<g clip-path="url(#{ident}-{clip})" aria-hidden="true"><g class="name-slice-{name}">',
               text(0,0,value,size,color,700,extra), '</g></g>']
@@ -68,7 +76,7 @@ def hero(mobile=False):
     w,h=(600,460) if mobile else (1000,374)
     source=(OUT/'mission-banner-orbital.svg').read_text(encoding='utf-8')
     motion=re.search(r'<style>.*?</style>',source,re.S).group()
-    p=panel(w,h,'Harsimran Sidhu / Security instincts. Builder energy.','Cybersecurity, open source and self-hosting. Angular hacker-inspired name lettering, brief chromatic glitch accents, orbital line art, a radar and a cute Hacker Bender mascot with a tiny laptop. Text stays readable and reduced-motion preferences keep the design still.')
+    p=panel(w,h,'Harsimran Sidhu / Security instincts. Builder energy.','Cybersecurity, open source and self-hosting. Angular hacker-inspired name lettering settles in, catches a soft cyan light sweep and briefly splits into chromatic slices. Orbital line art surrounds cute Hacker Bender with a tiny laptop. Reduced-motion preferences keep the design still.')
     p += [motion,art_style(),NAME_STYLE,f'<path d="M25 1H{210 if mobile else 310}" stroke="{MINT}" stroke-width="2"/>',
           group('mission-banner-orbital.svg','translate(620 55)','translate(383 68) scale(.58)' if mobile else 'translate(617 46)'),
           group('mission-banner-orbital.svg','translate(801 164)','translate(487 171) scale(.66)' if mobile else 'translate(809 163) scale(.9)')]
