@@ -13,21 +13,21 @@ MINT,VIOLET,PINK,BLUE='#43E6C5','#A995FF','#F36BAA','#69B9FF'
 BUTTONS={
     'website':('Visit website',140,MINT,'primary','globe'),
     'linkedin':('LinkedIn',124,VIOLET,'secondary','chat'),
-    'contact':("Let's connect",160,VIOLET,'primary','chat'),
+    'contact':("Let's connect",148,VIOLET,'primary','chat'),
     'projects-tab':('Projects',86,MINT,'nav','01'),
     'homelab-tab':('Homelab',90,VIOLET,'nav','02'),
     'arcade-tab':('Arcade',78,BLUE,'nav','03'),
-    'dashboard':('Open dashboard',166,MINT,'primary','play'),
-    'quick-start':('Quick start',150,VIOLET,'primary','bolt'),
-    'field-guide':('Field guide',150,PINK,'primary','book'),
-    'source':('View source',140,MINT,'secondary','code'),
-    'source-inspector':('View source',140,VIOLET,'secondary','code'),
-    'source-downloader':('View source',140,PINK,'secondary','code'),
-    'snapshot':('Read snapshot',160,MINT,'secondary','report'),
-    'workflow':('Workflow',138,VIOLET,'secondary','flow'),
+    'dashboard':('Dashboard',140,MINT,'primary','play'),
+    'quick-start':('Quick start',140,VIOLET,'primary','bolt'),
+    'field-guide':('Field guide',140,PINK,'primary','book'),
+    'source':('View source',134,MINT,'secondary','code'),
+    'source-inspector':('View source',134,VIOLET,'secondary','code'),
+    'source-downloader':('View source',134,PINK,'secondary','code'),
+    'snapshot':('Snapshot',140,MINT,'secondary','report'),
+    'workflow':('Workflow',134,VIOLET,'secondary','flow'),
     'docker':('Container images',188,BLUE,'secondary','cube'),
     'live-lab':('Enter live lab',176,MINT,'primary','play'),
-    'back-top-tab':('Back to top',126,MINT,'nav','up'),
+    'back-top-tab':('Back to top',116,MINT,'nav','up'),
 }
 GROUPS={
     'hero':[('website','https://harsim.ca'),('linkedin','https://www.linkedin.com/in/harsimransidhu/')],
@@ -38,9 +38,9 @@ GROUPS={
     'containers':[('docker','https://hub.docker.com/u/pkvirus')],
     'live-lab':[('live-lab','https://harsim.ca/lab/')],
     'radar':[('snapshot','./profile/public-pulse.md'),('workflow','https://github.com/PKHarsimran/PKHarsimran/actions/workflows/profile-lab.yml')],
-    'footer':[('contact','https://www.linkedin.com/in/harsimransidhu/')],
-    'return':[('back-top-tab','#user-content-mission-control')],
+    'footer':[('contact','https://www.linkedin.com/in/harsimransidhu/'),('back-top-tab','#user-content-mission-control')],
 }
+COMPACT={'contact','dashboard','quick-start','field-guide','source','source-inspector','source-downloader','snapshot','workflow'}
 ICONS={
     'globe':'<circle cx="0" cy="0" r="8"/><ellipse cx="0" cy="0" rx="3.5" ry="8"/><path d="M-7-3H7M-7 3H7"/>',
     'chat':'<path d="M-8-7H8V5H-2L-7 9V5H-8Z"/><path d="M-4-2H4M-4 1H2"/>',
@@ -62,8 +62,9 @@ def button(name):
     foreground='#0D1117' if variant=='primary' else '#EFF4FC'
     border=color if variant=='primary' else '#34445C'
     icon_color=foreground if variant=='primary' else color
-    icon_x=16 if variant=='nav' else 22
-    label_x=32 if variant=='nav' else 43
+    icon_x=16 if variant=='nav' else 20 if name in COMPACT else 22
+    label_x=32 if variant=='nav' else 40 if name in COMPACT else 43
+    label_size=13 if variant=='nav' else 14 if name in COMPACT else 15
     p=[f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(label)}">',f'<title>{escape(label)}</title><rect x="1" y="1" width="{width-2}" height="{height-2}" rx="{9 if variant=="nav" else 11}" fill="{fill}" stroke="{border}"/>']
     if variant=='primary':
         delay=-(sum(map(ord,name))%7)
@@ -75,7 +76,7 @@ def button(name):
         p += [f'<text x="10" y="26" font-family="Consolas,monospace" font-size="11" fill="{icon_color}">{icon}</text>']
     else:
         p += [f'<g class="{"cta-icon" if variant=="primary" else "icon"}"><g transform="translate({icon_x} {height/2}) scale({.75 if variant=="nav" else .8})" fill="none" stroke="{icon_color}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">{ICONS[icon]}</g></g>']
-    p += [f'<text x="{label_x}" y="{height/2+5}" font-family="Segoe UI,Arial,sans-serif" font-size="{13 if variant=="nav" else 15}" font-weight="600" fill="{foreground}">{escape(label)}</text>','</svg>\n']
+    p += [f'<text x="{label_x}" y="{height/2+5}" font-family="Segoe UI,Arial,sans-serif" font-size="{label_size}" font-weight="600" fill="{foreground}">{escape(label)}</text>','</svg>\n']
     return apply_theme(''.join(p),'button')
 
 
@@ -85,7 +86,7 @@ def group(name):
     for asset,url in GROUPS[name]:
         label,width,_,variant,_=BUTTONS[asset]
         height=44
-        links.append(f'  <a href="{escape(url,quote=True)}"><img src="./profile/buttons/{asset}.svg" alt="{escape(label)}" width="{width}" height="{height}" /></a>')
+        links.append(f'  <a href="{escape(url,quote=True)}"><img src="./profile/buttons/{asset}.svg?v=compact-1" alt="{escape(label)}" width="{width}" height="{height}" align="middle" /></a>')
     return '<p align="'+align+'">\n'+'\n'.join(links)+'\n</p>'
 
 

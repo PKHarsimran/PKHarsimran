@@ -191,7 +191,7 @@ def readme_slot(lab):
             p += ['**Quiet checkpoint.** No changes in releases, CI, stars, or latest commit times.']
     else:
         p += ['**First checkpoint saved.** The next refresh can compare the selected public project signals.']
-    p += ['', '</details>', '', '<sub>A fresh puzzle from public signals each day. [Snapshot & creature fingerprint](./profile/arcade-lab.json).</sub>', '', '</details>']
+    p += ['', '</details>', '', '<p><sub>A fresh puzzle from public signals each day. <a href="./profile/arcade-lab.json">Snapshot &amp; creature fingerprint</a>.</sub></p>', '', '</details>']
     return '\n'.join(p)
 
 

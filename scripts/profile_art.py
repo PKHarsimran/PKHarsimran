@@ -65,7 +65,7 @@ def visitor_pass(mobile=False):
 
 
 def orbit_divider():
-    p=[f'<svg xmlns="{SVG}" width="1000" height="48" viewBox="0 0 1000 48" role="img" aria-label="Orbital constellation divider">',art_style(),
+    p=[f'<svg xmlns="{SVG}" width="1000" height="32" viewBox="0 8 1000 32" role="img" aria-label="Orbital constellation divider">',art_style(),
        '<defs><linearGradient id="ink"><stop stop-color="#43E6C5" stop-opacity="0"/><stop offset=".3" stop-color="#43E6C5" stop-opacity=".35"/><stop offset=".5" stop-color="#A995FF"/><stop offset=".7" stop-color="#F36BAA" stop-opacity=".35"/><stop offset="1" stop-color="#F36BAA" stop-opacity="0"/></linearGradient></defs>',
        '<path d="M0 24C160 9 322 38 467 24M533 24C678 10 843 39 1000 24" fill="none" stroke="url(#ink)"/><path d="M0 29C189 39 335 6 465 26M535 26C682 40 820 5 1000 20" fill="none" stroke="url(#ink)" stroke-opacity=".35"/>',
        '<g transform="translate(500 24)"><ellipse rx="28" ry="10" transform="rotate(-20)" fill="none" stroke="#A995FF" stroke-opacity=".6"/><g class="art-orbit"><circle cx="28" r="2" fill="#43E6C5"/></g>',sparkle(0,0,PINK,7),'</g><g class="art-twinkle">',sparkle(277,24,MINT,3),sparkle(735,24,VIOLET,3),'</g></svg>\n']

@@ -13,16 +13,16 @@
 
 <!-- buttons:hero:start -->
 <p align="center">
-  <a href="https://harsim.ca"><img src="./profile/buttons/website.svg" alt="Visit website" width="140" height="44" /></a>
-  <a href="https://www.linkedin.com/in/harsimransidhu/"><img src="./profile/buttons/linkedin.svg" alt="LinkedIn" width="124" height="44" /></a>
+  <a href="https://harsim.ca"><img src="./profile/buttons/website.svg?v=compact-1" alt="Visit website" width="140" height="44" align="middle" /></a>
+  <a href="https://www.linkedin.com/in/harsimransidhu/"><img src="./profile/buttons/linkedin.svg?v=compact-1" alt="LinkedIn" width="124" height="44" align="middle" /></a>
 </p>
 <!-- buttons:hero:end -->
 
 <!-- buttons:navigation:start -->
 <p align="center">
-  <a href="#user-content-selected-builds"><img src="./profile/buttons/projects-tab.svg" alt="Projects" width="86" height="44" /></a>
-  <a href="#user-content-homelab"><img src="./profile/buttons/homelab-tab.svg" alt="Homelab" width="90" height="44" /></a>
-  <a href="#user-content-arcade"><img src="./profile/buttons/arcade-tab.svg" alt="Arcade" width="78" height="44" /></a>
+  <a href="#user-content-selected-builds"><img src="./profile/buttons/projects-tab.svg?v=compact-1" alt="Projects" width="86" height="44" align="middle" /></a>
+  <a href="#user-content-homelab"><img src="./profile/buttons/homelab-tab.svg?v=compact-1" alt="Homelab" width="90" height="44" align="middle" /></a>
+  <a href="#user-content-arcade"><img src="./profile/buttons/arcade-tab.svg?v=compact-1" alt="Arcade" width="78" height="44" align="middle" /></a>
 </p>
 <!-- buttons:navigation:end -->
 
@@ -30,13 +30,10 @@
 
 I work in **cybersecurity** and build tools that make investigations clearer and repetitive work shorter. Off the clock, I connect the dots in my **Zima homelab**. The robot has other plans. 🛠️
 
-<sub>New here? [Open the field guide](./FIELD-GUIDE.md) for direct links to live demos, readable replays, and setup docs.</sub>
+<p><sub>New here? <a href="./FIELD-GUIDE.md">Open the field guide</a> for direct links to live demos, readable replays, and setup docs.</sub></p>
 
 <details>
-<summary><picture>
-  <source media="(max-width: 600px)" srcset="./profile/drawers/thread-mobile.svg">
-  <img src="./profile/drawers/thread.svg" alt="Pull the thread: One curiosity. Four builds. Follow the connections." width="94%" align="middle">
-</picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/thread-mobile.svg"><img src="./profile/drawers/thread.svg" alt="Pull the thread: One curiosity. Four builds. Follow the connections." width="92%" align="middle"></picture></summary>
 <br>
 
 <p>
@@ -78,16 +75,13 @@ Three public tools: collect context, inspect the clues, and keep a useful page.
 
 <!-- buttons:swift:start -->
 <p align="left">
-  <a href="https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/"><img src="./profile/buttons/dashboard.svg" alt="Open dashboard" width="166" height="44" /></a>
-  <a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector"><img src="./profile/buttons/source.svg" alt="View source" width="140" height="44" /></a>
+  <a href="https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/"><img src="./profile/buttons/dashboard.svg?v=compact-1" alt="Dashboard" width="140" height="44" align="middle" /></a>
+  <a href="https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector"><img src="./profile/buttons/source.svg?v=compact-1" alt="View source" width="134" height="44" align="middle" /></a>
 </p>
 <!-- buttons:swift:end -->
 
 <details>
-<summary><picture>
-  <source media="(max-width: 600px)" srcset="./profile/drawers/evidence-mobile.svg">
-  <img src="./profile/drawers/evidence.svg" alt="Evidence desk: Real feed snapshot + a 12-second walkthrough" width="94%" align="middle">
-</picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/evidence-mobile.svg"><img src="./profile/drawers/evidence.svg" alt="Evidence desk: Real feed snapshot + a 12-second walkthrough" width="92%" align="middle"></picture></summary>
 <br>
 
 <p>
@@ -99,7 +93,7 @@ Three public tools: collect context, inspect the clues, and keep a useful page.
 </a>
 </p>
 
-<sub>Real feed counts, illustrated from a saved collection snapshot. [Read the data](./profile/intel-conveyor.md).</sub>
+<p><sub>Real feed counts, illustrated from a saved collection snapshot. <a href="./profile/intel-conveyor.md">Read the data</a>.</sub></p>
 
 **12 seconds at the evidence desk**
 
@@ -110,11 +104,11 @@ Three public tools: collect context, inspect the clues, and keep a useful page.
 </picture>
 </p>
 
-<sub>Recorded October 17, 2026. Open the dashboard for current records.</sub>
+<p><sub>Recorded October 17, 2026. Open the dashboard for current records.</sub></p>
 
 </details>
 
-<p align="center"><img src="./profile/studio-signal-divider.svg" alt="" width="100%" /></p>
+<p align="center"><img src="./profile/studio-signal-divider.svg?v=compact-1" alt="" width="100%" /></p>
 
 ### 02 / IOC Inspector
 
@@ -131,16 +125,13 @@ Three public tools: collect context, inspect the clues, and keep a useful page.
 
 <!-- buttons:inspector:start -->
 <p align="left">
-  <a href="https://github.com/PKHarsimran/IOC-Inspector#-quick-start"><img src="./profile/buttons/quick-start.svg" alt="Quick start" width="150" height="44" /></a>
-  <a href="https://github.com/PKHarsimran/IOC-Inspector"><img src="./profile/buttons/source-inspector.svg" alt="View source" width="140" height="44" /></a>
+  <a href="https://github.com/PKHarsimran/IOC-Inspector#-quick-start"><img src="./profile/buttons/quick-start.svg?v=compact-1" alt="Quick start" width="140" height="44" align="middle" /></a>
+  <a href="https://github.com/PKHarsimran/IOC-Inspector"><img src="./profile/buttons/source-inspector.svg?v=compact-1" alt="View source" width="134" height="44" align="middle" /></a>
 </p>
 <!-- buttons:inspector:end -->
 
 <details>
-<summary><picture>
-  <source media="(max-width: 600px)" srcset="./profile/drawers/case-mobile.svg">
-  <img src="./profile/drawers/case.svg" alt="Case of the week: Spot the clues. Let the scanner check your theory." width="94%" align="middle">
-</picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/case-mobile.svg?v=case-desk-1"><img src="./profile/drawers/case.svg?v=case-desk-1" alt="Case desk: Weekly case + a three-chapter CLI replay" width="92%" align="middle"></picture></summary>
 <br>
 
 A harmless training PDF, a few hidden clues, and the real scanner. What can you spot?
@@ -175,13 +166,13 @@ A harmless training PDF, a few hidden clues, and the real scanner. What can you 
 </picture>
 </p>
 
-<sub>Run → read → prove. Findings come from the released CLI’s actual reports. [Read transcript](./profile/inspector-demo.md) · [Behind the replay](./demos/README.md).</sub>
+<p><sub>Run → read → prove. Findings come from the released CLI’s actual reports. <a href="./profile/inspector-demo.md">Read transcript</a> · <a href="./demos/README.md">Behind the replay</a>.</sub></p>
 
 </details>
 
 </details>
 
-<p align="center"><img src="./profile/studio-signal-divider.svg" alt="" width="100%" /></p>
+<p align="center"><img src="./profile/studio-signal-divider.svg?v=compact-1" alt="" width="100%" /></p>
 
 ### 03 / Website Downloader
 
@@ -198,16 +189,13 @@ A harmless training PDF, a few hidden clues, and the real scanner. What can you 
 
 <!-- buttons:downloader:start -->
 <p align="left">
-  <a href="https://github.com/PKHarsimran/website-downloader/wiki"><img src="./profile/buttons/field-guide.svg" alt="Field guide" width="150" height="44" /></a>
-  <a href="https://github.com/PKHarsimran/website-downloader"><img src="./profile/buttons/source-downloader.svg" alt="View source" width="140" height="44" /></a>
+  <a href="https://github.com/PKHarsimran/website-downloader/wiki"><img src="./profile/buttons/field-guide.svg?v=compact-1" alt="Field guide" width="140" height="44" align="middle" /></a>
+  <a href="https://github.com/PKHarsimran/website-downloader"><img src="./profile/buttons/source-downloader.svg?v=compact-1" alt="View source" width="134" height="44" align="middle" /></a>
 </p>
 <!-- buttons:downloader:end -->
 
 <details>
-<summary><picture>
-  <source media="(max-width: 600px)" srcset="./profile/drawers/offline-mobile.svg">
-  <img src="./profile/drawers/offline.svg" alt="Offline field trip: One site. No server. A real CLI demo." width="94%" align="middle">
-</picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/offline-mobile.svg"><img src="./profile/drawers/offline.svg" alt="Offline field trip: One site. No server. A real CLI demo." width="92%" align="middle"></picture></summary>
 <br>
 
 <p>
@@ -219,7 +207,7 @@ A harmless training PDF, a few hidden clues, and the real scanner. What can you 
 </picture>
 </p>
 
-<sub>Save → unplug → prove. Every local reference is checked with the source server off. [Read transcript](./profile/downloader-demo.md) · [Run results](./profile/downloader-demo.json).</sub>
+<p><sub>Save → unplug → prove. Every local reference is checked with the source server off. <a href="./profile/downloader-demo.md">Read transcript</a> · <a href="./profile/downloader-demo.json">Run results</a>.</sub></p>
 
 </details>
 
@@ -236,13 +224,10 @@ My **Zima homelab** is where side projects become everyday tools. **Docker Compo
 </picture>
 </p>
 
-<sub>The real service cast, with illustrated handoffs. [Public service manifest](./profile/lab-services.json).</sub>
+<p><sub>The real service cast, with illustrated handoffs. <a href="./profile/lab-services.json">Public service manifest</a>.</sub></p>
 
 <details>
-<summary><picture>
-  <source media="(max-width: 600px)" srcset="./profile/drawers/crew-mobile.svg">
-  <img src="./profile/drawers/crew.svg" alt="Meet the service crew: Media, libraries, dashboards &amp; monitoring" width="94%" align="middle">
-</picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/crew-mobile.svg"><img src="./profile/drawers/crew.svg" alt="Meet the service crew: Media, libraries, dashboards &amp; monitoring" width="92%" align="middle"></picture></summary>
 <br>
 
 | Area | Services |
@@ -269,7 +254,7 @@ My **Zima homelab** is where side projects become everyday tools. **Docker Compo
 
 <!-- buttons:containers:start -->
 <p align="left">
-  <a href="https://hub.docker.com/u/pkvirus"><img src="./profile/buttons/docker.svg" alt="Container images" width="188" height="44" /></a>
+  <a href="https://hub.docker.com/u/pkvirus"><img src="./profile/buttons/docker.svg?v=compact-1" alt="Container images" width="188" height="44" align="middle" /></a>
 </p>
 <!-- buttons:containers:end -->
 
@@ -291,11 +276,11 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 
 <!-- buttons:live-lab:start -->
 <p align="left">
-  <a href="https://harsim.ca/lab/"><img src="./profile/buttons/live-lab.svg" alt="Enter live lab" width="176" height="44" /></a>
+  <a href="https://harsim.ca/lab/"><img src="./profile/buttons/live-lab.svg?v=compact-1" alt="Enter live lab" width="176" height="44" align="middle" /></a>
 </p>
 <!-- buttons:live-lab:end -->
 
-<sub>Step inside, press <kbd>/</kbd>, and type <code>help</code>. The terminal, saved progress, and collectible patches live in the lab.</sub>
+<p><sub>Step inside, press <kbd>/</kbd>, and type <code>help</code>. The terminal, saved progress, and collectible patches live in the lab.</sub></p>
 
 <p>
 <picture>
@@ -304,14 +289,11 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 </picture>
 </p>
 
-<sub>Real GitHub activity; an illustrated bot adventure. Totals include automation and publicly shared private activity. [Daily snapshot](./profile/contribution-calendar.json).</sub>
+<p><sub>Real GitHub activity; an illustrated bot adventure. Totals include automation and publicly shared private activity. <a href="./profile/contribution-calendar.json">Daily snapshot</a>.</sub></p>
 
 <!-- arcade-lab:start -->
 <details>
-<summary><picture>
-  <source media="(max-width: 600px)" srcset="./profile/drawers/heist-mobile.svg">
-  <img src="./profile/drawers/heist.svg" alt="Today&#x27;s Signal Heist: Three clues. One code. A creature to uncover." width="94%" align="middle">
-</picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/heist-mobile.svg"><img src="./profile/drawers/heist.svg" alt="Today&#x27;s Signal Heist: Three clues. One code. A creature to uncover." width="92%" align="middle"></picture></summary>
 <br>
 
 <p>
@@ -372,16 +354,13 @@ Snapshots: **2026-10-19 22:33:12** → **2026-10-20 00:03:59** UTC. Comparing th
 
 </details>
 
-<sub>A fresh puzzle from public signals each day. [Snapshot & creature fingerprint](./profile/arcade-lab.json).</sub>
+<p><sub>A fresh puzzle from public signals each day. <a href="./profile/arcade-lab.json">Snapshot &amp; creature fingerprint</a>.</sub></p>
 
 </details>
 <!-- arcade-lab:end -->
 
 <details>
-<summary><picture>
-  <source media="(max-width: 600px)" srcset="./profile/drawers/snake-mobile.svg">
-  <img src="./profile/drawers/snake.svg" alt="Release the snake: A bonus lap around the contribution grid" width="94%" align="middle">
-</picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/snake-mobile.svg"><img src="./profile/drawers/snake.svg" alt="Release the snake: A bonus lap around the contribution grid" width="92%" align="middle"></picture></summary>
 <br>
 
 <p>
@@ -394,10 +373,7 @@ Snapshots: **2026-10-19 22:33:12** → **2026-10-20 00:03:59** UTC. Comparing th
 </details>
 
 <details>
-<summary><picture>
-  <source media="(max-width: 600px)" srcset="./profile/drawers/radar-mobile.svg">
-  <img src="./profile/drawers/radar.svg" alt="Project radar: Build checks, releases &amp; collectible patches" width="94%" align="middle">
-</picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/radar-mobile.svg"><img src="./profile/drawers/radar.svg" alt="Project radar: Build checks, releases &amp; collectible patches" width="92%" align="middle"></picture></summary>
 <br>
 
 <p>
@@ -411,8 +387,8 @@ Snapshots: **2026-10-19 22:33:12** → **2026-10-20 00:03:59** UTC. Comparing th
 
 <!-- buttons:radar:start -->
 <p align="left">
-  <a href="./profile/public-pulse.md"><img src="./profile/buttons/snapshot.svg" alt="Read snapshot" width="160" height="44" /></a>
-  <a href="https://github.com/PKHarsimran/PKHarsimran/actions/workflows/profile-lab.yml"><img src="./profile/buttons/workflow.svg" alt="Workflow" width="138" height="44" /></a>
+  <a href="./profile/public-pulse.md"><img src="./profile/buttons/snapshot.svg?v=compact-1" alt="Snapshot" width="140" height="44" align="middle" /></a>
+  <a href="https://github.com/PKHarsimran/PKHarsimran/actions/workflows/profile-lab.yml"><img src="./profile/buttons/workflow.svg?v=compact-1" alt="Workflow" width="134" height="44" align="middle" /></a>
 </p>
 <!-- buttons:radar:end -->
 
@@ -436,10 +412,7 @@ Snapshots: **2026-10-19 22:33:12** → **2026-10-20 00:03:59** UTC. Comparing th
 </details>
 
 <details>
-<summary><picture>
-  <source media="(max-width: 600px)" srcset="./profile/drawers/backstage-mobile.svg">
-  <img src="./profile/drawers/backstage.svg" alt="Behind the curtain: The workflows that keep this profile moving" width="94%" align="middle">
-</picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/backstage-mobile.svg"><img src="./profile/drawers/backstage.svg" alt="Behind the curtain: The workflows that keep this profile moving" width="92%" align="middle"></picture></summary>
 <br>
 
 GitHub Actions refresh the public project signals and daily puzzle. Case files and CLI demos refresh weekly or when their recipes change. The artwork keeps its source snapshots close.
@@ -448,13 +421,7 @@ GitHub Actions refresh the public project signals and daily puzzle. Case files a
 
 </details>
 
-<!-- buttons:return:start -->
-<p align="left">
-  <a href="#user-content-mission-control"><img src="./profile/buttons/back-top-tab.svg" alt="Back to top" width="126" height="44" /></a>
-</p>
-<!-- buttons:return:end -->
-
-<p align="center"><img src="./profile/studio-signal-divider.svg" alt="" width="100%" /></p>
+<p align="center"><img src="./profile/studio-signal-divider.svg?v=compact-1" alt="" width="100%" /></p>
 
 <div align="center">
 
@@ -470,15 +437,16 @@ GitHub Actions refresh the public project signals and daily puzzle. Case files a
   <a href="https://hits.sh/github.com/PKHarsimran/"><img src="https://hits.sh/github.com/PKHarsimran.svg?style=for-the-badge&amp;label=LAB+PAGE+HITS&amp;color=a995ff&amp;labelColor=34445c" alt="Lab page hits — public profile view counter, not unique visitors" height="28" /></a>
 </p>
 
-<sub>Page hits, not unique visitors · <a href="https://github.com/silentsoft/hits#statistics">About the counter</a></sub>
+<p><sub>Page hits, not unique visitors · <a href="https://github.com/silentsoft/hits#statistics">About the counter</a></sub></p>
 <!-- visitors:end -->
 
 <!-- buttons:footer:start -->
 <p align="center">
-  <a href="https://www.linkedin.com/in/harsimransidhu/"><img src="./profile/buttons/contact.svg" alt="Let&#x27;s connect" width="160" height="44" /></a>
+  <a href="https://www.linkedin.com/in/harsimransidhu/"><img src="./profile/buttons/contact.svg?v=compact-1" alt="Let&#x27;s connect" width="148" height="44" align="middle" /></a>
+  <a href="#user-content-mission-control"><img src="./profile/buttons/back-top-tab.svg?v=compact-1" alt="Back to top" width="116" height="44" align="middle" /></a>
 </p>
 <!-- buttons:footer:end -->
 
-<sub>Build with curiosity. Leave something useful behind.</sub>
+<p><sub>Build with curiosity. Leave something useful behind.</sub></p>
 
 </div>

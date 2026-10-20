@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DRAWERS = {
     'thread': ('Pull the thread', 'One curiosity. Four builds. Follow the connections.', '#43E6C5'),
     'evidence': ('Evidence desk', 'Real feed snapshot + a 12-second walkthrough', '#43E6C5'),
-    'case': ('Case of the week', 'Spot the clues. Let the scanner check your theory.', '#A995FF'),
+    'case': ('Case desk', 'Weekly case + a three-chapter CLI replay', '#A995FF'),
     'offline': ('Offline field trip', 'One site. No server. A real CLI demo.', '#F36BAA'),
     'crew': ('Meet the service crew', 'Media, libraries, dashboards & monitoring', '#A995FF'),
     'heist': ("Today's Signal Heist", 'Three clues. One code. A creature to uncover.', '#43E6C5'),
@@ -32,9 +32,11 @@ ICONS = {
 
 def summary(name):
     title, hint, _ = DRAWERS[name]
-    return ('<summary><picture>\n'
-            f'  <source media="(max-width: 600px)" srcset="./profile/drawers/{name}-mobile.svg">\n'
-            f'  <img src="./profile/drawers/{name}.svg" alt="{escape(title+": "+hint, quote=True)}" width="94%" align="middle">\n'
+    version = '?v=case-desk-1' if name == 'case' else ''
+    # Keep whitespace out of the inline picture so the native marker has room.
+    return ('<summary><picture>'
+            f'<source media="(max-width: 600px)" srcset="./profile/drawers/{name}-mobile.svg{version}">'
+            f'<img src="./profile/drawers/{name}.svg{version}" alt="{escape(title+": "+hint, quote=True)}" width="92%" align="middle">'
             '</picture></summary>\n<br>')
 
 
