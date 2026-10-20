@@ -1,13 +1,12 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-10-20T13:39:12Z",
-  "calendar_observed_at": "2026-10-20T13:39:12Z",
-  "fingerprint": "b684e62cc55db86ebb08e922dc67bb285dd7ca3e2aec6032245ca4957a06725f",
-  "serial": "B684E62C",
-  "asset_id": "b684e62cc55db86e",
+  "generated_at": "2026-10-20T14:19:28Z",
+  "calendar_observed_at": "2026-10-20T14:19:28Z",
+  "fingerprint": "3d3e797a03feb54feab93e619edbf57d1cd56c99d10a59925892bef82e0c1096",
+  "serial": "3D3E797A",
+  "asset_id": "3d3e797a03feb54f",
   "retained": [
-    "a8d845b69ffe7ca4",
     "e6621d3fee9d7121",
     "7b314533351f04bc",
     "668b90df848ad06b",
@@ -20,59 +19,60 @@
     "11983ad752c1d7f0",
     "40f3f90625fec784",
     "64f6b72b2798e2ee",
-    "b684e62cc55db86e"
+    "b684e62cc55db86e",
+    "3d3e797a03feb54f"
   ],
   "assets": {
-    "heist": "arcade/heist-b684e62cc55db86e.svg",
-    "mobile": "arcade/heist-b684e62cc55db86e-mobile.svg",
-    "relic": "arcade/relic-b684e62cc55db86e.svg"
+    "heist": "arcade/heist-3d3e797a03feb54f.svg",
+    "mobile": "arcade/heist-3d3e797a03feb54f-mobile.svg",
+    "relic": "arcade/relic-3d3e797a03feb54f.svg"
   },
-  "relic_name": "Signal Sprout",
+  "relic_name": "Null Navigator",
   "gates": [
     {
       "id": "A",
       "label": "RELEASE",
-      "source": "Website Downloader",
-      "display": "v2.6.1",
-      "hint": "Minor version: ones digit.",
-      "value": 6,
-      "digit": 6
+      "source": "SwiftIOC",
+      "display": "v0.1.0",
+      "hint": "Patch version: ones digit.",
+      "value": 0,
+      "digit": 0
     },
     {
       "id": "B",
       "label": "CALENDAR",
       "source": "Last 30 days / contributions",
-      "display": "406",
+      "display": "407",
       "hint": "Take the ones digit.",
-      "value": 406,
-      "digit": 6
+      "value": 407,
+      "digit": 7
     },
     {
       "id": "C",
       "label": "BUILD RADAR",
-      "source": "Passing checks / selected 3",
-      "display": "3",
+      "source": "Stars / selected 3 projects",
+      "display": "234",
       "hint": "Take the ones digit.",
-      "value": 3,
-      "digit": 3
+      "value": 234,
+      "digit": 4
     }
   ],
   "route": [
-    "A",
     "C",
+    "A",
     "B"
   ],
-  "solution": "636",
+  "solution": "407",
   "choices": [
-    "636",
-    "099",
-    "773"
+    "870",
+    "544",
+    "407"
   ],
-  "tool_url": "https://github.com/PKHarsimran/website-downloader",
-  "tool_name": "Website Downloader",
+  "tool_url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector",
+  "tool_name": "SwiftIOC",
   "rewind": {
     "previous": {
-      "generated_at": "2026-10-20T13:30:49Z",
+      "generated_at": "2026-10-20T13:39:12Z",
       "projects": [
         {
           "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
@@ -98,7 +98,7 @@
       ]
     },
     "current": {
-      "generated_at": "2026-10-20T13:39:12Z",
+      "generated_at": "2026-10-20T14:19:28Z",
       "projects": [
         {
           "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
