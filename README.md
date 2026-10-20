@@ -5,8 +5,8 @@
 <p>
 <a href="https://harsim.ca">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/studio-orbit-hero-mobile.svg?v=hoodie-bender-1">
-  <img src="./profile/studio-orbit-hero.svg?v=hoodie-bender-1" alt="Harsimran Sidhu. Security instincts. Builder energy. Cybersecurity, open source and self-hosting, with cute Hacker Bender holding a tiny laptop inside the orbital artwork." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-orbit-hero-mobile.svg?v=hoodie-bender-2">
+  <img src="./profile/studio-orbit-hero.svg?v=hoodie-bender-2" alt="Harsimran Sidhu. Security instincts. Builder energy. Cybersecurity, open source and self-hosting, with cute Hacker Bender holding a tiny laptop inside the orbital artwork." width="100%" />
 </picture>
 </a>
 </p>
@@ -283,8 +283,8 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 <p>
 <a href="https://harsim.ca/lab/">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/pixel-portal-mobile.svg?v=hoodie-bender-1">
-  <img src="./profile/pixel-portal.svg?v=hoodie-bender-1" alt="Psst. There’s a secret terminal. Cute Hacker Bender holds a tiny laptop beside previews of help, party and patches. Click to enter the live lab: tiny cases, five mission patches and a creature badge to keep." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/pixel-portal-mobile.svg?v=hoodie-bender-2">
+  <img src="./profile/pixel-portal.svg?v=hoodie-bender-2" alt="Psst. There’s a secret terminal. Cute Hacker Bender holds a tiny laptop beside previews of help, party and patches. Click to enter the live lab: tiny cases, five mission patches and a creature badge to keep." width="100%">
 </picture>
 </a>
 </p>
@@ -299,8 +299,8 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 
 <p>
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/contribution-evidence-run-mobile.svg?v=hoodie-bender-1">
-  <img src="./profile/contribution-evidence-run.svg?v=hoodie-bender-1" alt="Contribution arcade: real GitHub calendar totals, active days and contributions in the last 30 displayed days. Hoodie-wearing Hacker Bender waves above the calendar; a matching pixel Bender collects clues, passes inspection and delivers a parcel through a portal below. The phone layout splits the full calendar into two rows; reduced motion keeps it still." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/contribution-evidence-run-mobile.svg?v=hoodie-bender-2">
+  <img src="./profile/contribution-evidence-run.svg?v=hoodie-bender-2" alt="Contribution arcade: real GitHub calendar totals, active days and contributions in the last 30 displayed days. Hoodie-wearing Hacker Bender waves above the calendar; a matching pixel Bender collects clues, passes inspection and delivers a parcel through a portal below. The phone layout splits the full calendar into two rows; reduced motion keeps it still." width="100%">
 </picture>
 </p>
 
@@ -458,8 +458,8 @@ GitHub Actions refresh the public project signals and daily puzzle. Case files a
 <!-- visitors:start -->
 <p>
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/studio-guestbook-motion-mobile.svg?v=hoodie-bender-1" />
-  <img src="./profile/studio-guestbook-motion.svg?v=hoodie-bender-1" alt="Still curious? Cute Hacker Bender waves goodbye from an animated orbital guestbook, with a silver face and a charcoal hoodie trimmed in mint and pink." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-guestbook-motion-mobile.svg?v=hoodie-bender-2" />
+  <img src="./profile/studio-guestbook-motion.svg?v=hoodie-bender-2" alt="Still curious? Cute Hacker Bender waves goodbye from an animated orbital guestbook, with a silver face and a charcoal hoodie trimmed in mint and pink." width="100%" />
 </picture>
 </p>
 
