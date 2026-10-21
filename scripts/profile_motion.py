@@ -26,6 +26,14 @@ CSS='''
 @media(prefers-reduced-motion:reduce){.motion-only{display:none!important}.motion-eyes{animation:none!important}}
 '''
 
+HERO_CSS='''
+.motion-echo{opacity:0;animation:echo 8s ease-out infinite;transform-origin:0 0}
+.motion-frame{animation:frame-travel 28s linear infinite}
+@keyframes echo{0%,15%{opacity:0;transform:scale(.72)}25%{opacity:.22}70%,100%{opacity:0;transform:scale(1.28)}}
+@keyframes frame-travel{to{stroke-dashoffset:-1000}}
+@media(prefers-reduced-motion:reduce){.motion-only{display:none!important}}
+'''
+
 
 def node(parent,tag,**attrs):
     return ET.SubElement(parent,N+tag,{k.replace('_','-'):str(v) for k,v in attrs.items()})
@@ -38,7 +46,7 @@ def prepare(source,role):
         for child in list(parent):
             if child.get('id') in ('profile-motion-style','profile-motion-overlay','profile-motion-defs','profile-motion-icon'):
                 parent.remove(child)
-    style=node(root,'style',id='profile-motion-style');style.text=CSS
+    style=node(root,'style',id='profile-motion-style');style.text=HERO_CSS if role=='hero' else CSS
     root.set('data-motion-role',role)
     return root,node(root,'g',id='profile-motion-overlay',aria_hidden='true')
 

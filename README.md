@@ -5,8 +5,8 @@
 <p>
 <a href="https://harsim.ca">
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/studio-orbit-hero-mobile.svg?v=identity-motion-3">
-  <img src="./profile/studio-orbit-hero.svg?v=identity-motion-3" alt="Harsimran Sidhu. Security instincts. Builder energy. Cybersecurity, open source and self-hosting, with cute Hacker Bender holding a tiny laptop inside the orbital artwork." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-orbit-hero-mobile.svg?v=identity-motion-4">
+  <img src="./profile/studio-orbit-hero.svg?v=identity-motion-4" alt="Harsimran Sidhu. Security instincts. Builder energy. Cybersecurity, open source and self-hosting, with cute Hacker Bender holding a tiny laptop inside the orbital artwork." width="100%" />
 </picture>
 </a>
 </p>

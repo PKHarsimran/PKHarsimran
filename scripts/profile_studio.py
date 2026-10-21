@@ -22,39 +22,45 @@ def text(x,y,label,size=18,color=TEXT,weight=400,extra=''):
 
 
 NAME_STYLE = '''<style>
-.name-intro{animation:name-resolve .9s cubic-bezier(.16,1,.3,1) both;animation-delay:var(--phase)}
+.name-glyph{animation:name-glyph .72s ease-out both;animation-delay:var(--glyph-delay)}
 .name-slice-one,.name-slice-two{opacity:0}
-.name-slice-one{animation:name-slice-one 16s linear infinite}
-.name-slice-two{animation:name-slice-two 16s linear infinite}
+.name-slice-one{animation:name-slice-one 16s steps(1,end) infinite}
+.name-slice-two{animation:name-slice-two 16s steps(1,end) infinite}
 .name-sweep{animation:name-sweep 16s cubic-bezier(.4,0,.2,1) infinite}
-.name-slice-one,.name-slice-two,.name-sweep{animation-delay:var(--phase)}
-.name-cursor{animation:name-cursor 3.2s steps(1,end) infinite}
-@keyframes name-resolve{from{opacity:.45;transform:translateX(-5px)}to{opacity:1;transform:translateX(0)}}
-@keyframes name-sweep{0%,2%{transform:translateX(-100px)}14%,100%{transform:translateX(580px)}}
-@keyframes name-slice-one{0%,13%,15%,100%{opacity:0;transform:translateX(0)}13.4%{opacity:.7;transform:translateX(-3px)}13.8%{opacity:.45;transform:translateX(2px)}14.2%{opacity:.6;transform:translateX(-1px)}}
-@keyframes name-slice-two{0%,13%,15%,100%{opacity:0;transform:translateX(0)}13.6%{opacity:.55;transform:translateX(3px)}14%{opacity:.6;transform:translateX(-2px)}14.4%{opacity:.3;transform:translateX(1px)}}
-@keyframes name-cursor{0%,56%,100%{opacity:.85}57%,99%{opacity:.22}}
-@media(prefers-reduced-motion:reduce){.name-intro,.name-slice-one,.name-slice-two,.name-sweep,.name-cursor{animation:none}.name-slice-one,.name-slice-two,.name-sheen{display:none}.name-cursor{opacity:.7}}
+.name-cursor{opacity:.3;transform-box:fill-box;transform-origin:left center;animation:name-cursor 16s ease-in-out infinite}
+.name-slice-one,.name-slice-two,.name-sweep,.name-cursor{animation-delay:var(--phase)}
+@keyframes name-glyph{from{opacity:.6;fill:#43E6C5}to{opacity:1;fill:#EFF4FC}}
+@keyframes name-sweep{0%,4%{transform:translateX(0)}19%,100%{transform:translateX(var(--travel))}}
+@keyframes name-slice-one{0%,19%,20.4%,100%{opacity:0;transform:translateX(0)}19.2%{opacity:.65;transform:translateX(-4px)}19.6%{opacity:.35;transform:translateX(2px)}20%{opacity:.5;transform:translateX(-1px)}}
+@keyframes name-slice-two{0%,19.4%,20.6%,100%{opacity:0;transform:translateX(0)}19.5%{opacity:.5;transform:translateX(4px)}19.8%{opacity:.55;transform:translateX(-2px)}20.2%{opacity:.3;transform:translateX(1px)}}
+@keyframes name-cursor{0%,19%,43%,68%,93%,100%{opacity:.3;transform:scaleX(.72)}22%,27%{opacity:1;transform:scaleX(1)}55%,80%{opacity:.75;transform:scaleX(.92)}}
+@media(prefers-reduced-motion:reduce){.name-glyph,.name-slice-one,.name-slice-two,.name-sweep,.name-cursor{animation:none}.name-slice-one,.name-slice-two,.name-sheen{display:none}.name-cursor{opacity:.7;transform:none}}
 </style>'''
 
 
 def identity_line(x, y, value, size):
-    """A soft entrance, a masked light sweep, then a short signal-lock glitch."""
+    """Letter illumination and a sweep fitted to the bundled name font's advances."""
     ident = 'name-'+value.lower()
+    phase = .26 if value == 'SIDHU' else 0
+    # Em advances from the committed Chakra Petch subset, plus letter spacing.
+    advance = {'HARSIMRAN':5.751, 'SIDHU':2.999}[value]*size + .4*(len(value)-1)
+    beam = advance*.16
     extra = 'font-family="ProfileName,Consolas,monospace" letter-spacing=".4"'
-    p = [f'<g transform="translate({x} {y})" style="--phase:{".24s" if value == "SIDHU" else "0s"}">',
+    glyphs = ''.join(f'<tspan class="name-glyph" style="--glyph-delay:{phase+i*.055:.3f}s">{char}</tspan>' for i,char in enumerate(value))
+    base = text(0,0,value,size,TEXT,700,extra).replace('>'+value+'</text>', '>'+glyphs+'</text>')
+    p = [f'<g transform="translate({x} {y})" style="--phase:{phase}s;--travel:{advance+beam*2:.1f}px">',
          '<defs>',
-         f'<clipPath id="{ident}-upper"><rect x="-5" y="{-size*.69:.1f}" width="580" height="{size*.10:.1f}"/></clipPath>',
-         f'<clipPath id="{ident}-lower"><rect x="-5" y="{-size*.27:.1f}" width="580" height="{size*.07:.1f}"/></clipPath>',
+         f'<clipPath id="{ident}-upper"><rect x="-5" y="{-size*.69:.1f}" width="{advance+10:.1f}" height="{size*.08:.1f}"/></clipPath>',
+         f'<clipPath id="{ident}-lower"><rect x="-5" y="{-size*.27:.1f}" width="{advance+10:.1f}" height="{size*.05:.1f}"/></clipPath>',
          f'<linearGradient id="{ident}-light"><stop stop-color="#FFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFF"/><stop offset="1" stop-color="#FFF" stop-opacity="0"/></linearGradient>',
-         f'<mask id="{ident}-sweep" maskUnits="userSpaceOnUse" x="-8" y="{-size}" width="588" height="{size+12}"><rect class="name-sweep" x="0" y="{-size}" width="{size*.9:.1f}" height="{size+12}" fill="url(#{ident}-light)"/></mask>',
-         '</defs>', '<g class="name-intro">', text(0,0,value,size,TEXT,700,extra), '</g>',
+         f'<mask id="{ident}-sweep" maskUnits="userSpaceOnUse" x="-8" y="{-size}" width="{advance+16:.1f}" height="{size+12}"><rect class="name-sweep" x="{-beam:.1f}" y="{-size}" width="{beam:.1f}" height="{size+12}" fill="url(#{ident}-light)"/></mask>',
+         '</defs>', base,
          f'<g class="name-sheen" mask="url(#{ident}-sweep)" aria-hidden="true">',text(0,0,value,size,MINT,700,extra),'</g>']
     for name, color, clip in (('one',MINT,'upper'), ('two',PINK,'lower')):
         p += [f'<g clip-path="url(#{ident}-{clip})" aria-hidden="true"><g class="name-slice-{name}">',
               text(0,0,value,size,color,700,extra), '</g></g>']
     if value == 'SIDHU':
-        p += [f'<rect class="name-cursor" x="{size*3.02+10:.1f}" y="{-size*.13:.1f}" width="{size*.20:.1f}" height="{size*.13:.1f}" fill="{MINT}" aria-hidden="true"/>']
+        p += [f'<rect class="name-cursor" x="{advance+size*.12:.1f}" y="{-size*.13:.1f}" width="{size*.20:.1f}" height="{size*.13:.1f}" fill="{MINT}" aria-hidden="true"/>']
     return ''.join(p+['</g>'])
 
 
@@ -76,7 +82,7 @@ def hero(mobile=False):
     w,h=(600,460) if mobile else (1000,374)
     source=(OUT/'mission-banner-orbital.svg').read_text(encoding='utf-8')
     motion=re.search(r'<style>.*?</style>',source,re.S).group()
-    p=panel(w,h,'Harsimran Sidhu / Security instincts. Builder energy.','Cybersecurity, open source and self-hosting. Angular hacker-inspired name lettering settles in, catches a soft cyan light sweep and briefly splits into chromatic slices. Orbital line art surrounds cute Hacker Bender with a tiny laptop. Reduced-motion preferences keep the design still.')
+    p=panel(w,h,'Harsimran Sidhu / Security instincts. Builder energy.','Cybersecurity, open source and self-hosting. Hacker-inspired letters illuminate in sequence, catch fitted cyan sweeps and settle through fine chromatic cuts into a softly breathing cursor. Orbital line art surrounds cute Hacker Bender with a tiny laptop. Reduced-motion preferences keep the design still.')
     p += [motion,art_style(),NAME_STYLE,f'<path d="M25 1H{210 if mobile else 310}" stroke="{MINT}" stroke-width="2"/>',
           group('mission-banner-orbital.svg','translate(620 55)','translate(383 68) scale(.58)' if mobile else 'translate(617 46)'),
           group('mission-banner-orbital.svg','translate(801 164)','translate(487 171) scale(.66)' if mobile else 'translate(809 163) scale(.9)')]
