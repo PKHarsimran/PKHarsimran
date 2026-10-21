@@ -426,18 +426,20 @@ GitHub Actions refresh the public project signals and daily puzzle. Case files a
 <div align="center">
 
 <!-- visitors:start -->
+<a id="lab-arrivals" name="lab-arrivals"></a>
+
 <p>
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/studio-guestbook-motion-mobile.svg?v=hoodie-bender-2" />
-  <img src="./profile/studio-guestbook-motion.svg?v=hoodie-bender-2" alt="Still curious? Cute Hacker Bender waves goodbye from an animated orbital guestbook, with a silver face and a charcoal hoodie trimmed in mint and pink." width="100%" />
+  <source media="(max-width: 600px)" srcset="./profile/studio-guestbook-motion-mobile.svg?v=checkin-desk-1" />
+  <img src="./profile/studio-guestbook-motion.svg?v=checkin-desk-1" alt="Bender's check-in desk. A waving Hacker Bender welcomes curious humans beside a typing terminal, soft scanline and antenna pings. The badge below shows today's and lifetime page hits." width="100%" />
 </picture>
 </p>
 
 <p align="center">
-  <a href="https://hits.sh/github.com/PKHarsimran/"><img src="https://hits.sh/github.com/PKHarsimran.svg?style=for-the-badge&amp;label=LAB+PAGE+HITS&amp;color=a995ff&amp;labelColor=34445c" alt="Lab page hits — public profile view counter, not unique visitors" height="28" /></a>
+  <a href="https://hits.sh/github.com/PKHarsimran/"><img src="https://hits.sh/github.com/PKHarsimran.svg?view=today-total&amp;style=for-the-badge&amp;label=LAB+HITS&amp;color=6e56a4&amp;labelColor=172232" alt="Lab page hits: today / lifetime total. Approximate page hits, not unique visitors." height="28" /></a>
 </p>
 
-<p><sub>Page hits, not unique visitors · <a href="https://github.com/silentsoft/hits#statistics">About the counter</a></sub></p>
+<p><sub>Today / lifetime · approximate page hits · <a href="https://hits.sh/github.com/PKHarsimran/">Arrival log</a></sub></p>
 <!-- visitors:end -->
 
 <!-- buttons:footer:start -->

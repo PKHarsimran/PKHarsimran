@@ -17,7 +17,7 @@ def assets():
         result['studio-orbit-hero'+suffix+'.svg'] = apply_theme(hero_finish(animate_profile(hero(mobile), 'hero', mobile), mobile))
         result['pixel-portal'+suffix+'.svg'] = portal(mobile)
         result['curiosity-thread'+suffix+'.svg'] = thread_story(mobile)
-        result['studio-guestbook-motion'+suffix+'.svg'] = apply_theme(animate_profile(outro(mobile),'outro',mobile))
+        result['studio-guestbook-motion'+suffix+'.svg'] = apply_theme(outro(mobile))
         for name in DRAWERS:
             result['drawers/'+name+suffix+'.svg'] = drawer(name,mobile)
         for item in PROJECTS:

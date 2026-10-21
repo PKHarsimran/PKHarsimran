@@ -3,7 +3,8 @@ from html import escape
 from pathlib import Path
 import re
 import xml.etree.ElementTree as ET
-from profile_art import art_style, visitor_pass
+from profile_art import art_style
+from profile_checkin import checkin_desk
 from profile_theme import PROJECT_MOTION
 from profile_cinematics import project_scene
 
@@ -126,16 +127,4 @@ def project(item,mobile=False):
 
 
 def outro(mobile=False):
-    root=ET.fromstring(visitor_pass(mobile))
-    replacements={
-        'Hey, curious human. Welcome to the lab.':'Thanks for exploring the lab.',
-        'VISITOR ARRIVALS / WELCOME TO THE LAB':'GUESTBOOK / THANKS FOR DROPPING IN',
-        'Hey, curious human.':'Still curious?',
-        'Welcome to my corner of the internet.':'There’s always another rabbit hole to explore.',
-        'Hey, curious':'Stay', 'human.':'curious.',
-        'Welcome to my corner':'Come back for the tools.',
-        'of the internet.':'Stay for the side quests.',
-    }
-    for node in root.iter():
-        if node.text in replacements:node.text=replacements[node.text]
-    return ET.tostring(root,encoding='unicode')+'\n'
+    return checkin_desk(mobile)

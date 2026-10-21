@@ -19,6 +19,7 @@ on:
       - "scripts/profile_cinematics.py"
       - "scripts/profile_thread.py"
       - "scripts/profile_studio.py"
+      - "scripts/profile_checkin.py"
       - "scripts/profile_motion.py"
       - "scripts/profile_mascot.py"
       - "scripts/build_readme_art.py"
