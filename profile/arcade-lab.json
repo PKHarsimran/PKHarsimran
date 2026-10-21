@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-10-21T10:29:23Z",
-  "calendar_observed_at": "2026-10-21T10:29:23Z",
+  "generated_at": "2026-10-21T14:30:28Z",
+  "calendar_observed_at": "2026-10-21T14:30:28Z",
   "fingerprint": "b190d8f3ec9b0e1dc71a65223b591d782ee498b72c65ad0ac01c99aa7ca97b21",
   "serial": "B190D8F3",
   "asset_id": "b190d8f3ec9b0e1d",
@@ -72,32 +72,6 @@
   "tool_name": "Website Downloader",
   "rewind": {
     "previous": {
-      "generated_at": "2026-10-21T01:21:35Z",
-      "projects": [
-        {
-          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 16,
-          "latest_commit_at": "2026-10-20T22:54:57Z"
-        },
-        {
-          "repo": "IOC-Inspector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 1,
-          "latest_commit_at": "2026-07-02T10:36:39Z"
-        },
-        {
-          "repo": "website-downloader",
-          "release": "v2.6.1",
-          "ci": "PASSING",
-          "stars": 218,
-          "latest_commit_at": "2026-07-28T19:57:33Z"
-        }
-      ]
-    },
-    "current": {
       "generated_at": "2026-10-21T10:29:23Z",
       "projects": [
         {
@@ -123,14 +97,33 @@
         }
       ]
     },
-    "changes": [
-      {
-        "project": "SwiftIOC",
-        "field": "latest_commit_at",
-        "before": "2026-10-20T22:54:57Z",
-        "after": "2026-10-21T09:42:35Z"
-      }
-    ]
+    "current": {
+      "generated_at": "2026-10-21T14:30:28Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-10-21T09:42:35Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-07-02T10:36:39Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.6.1",
+          "ci": "PASSING",
+          "stars": 218,
+          "latest_commit_at": "2026-07-28T19:57:33Z"
+        }
+      ]
+    },
+    "changes": []
   },
   "sources": [
     "public-pulse.json",

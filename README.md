@@ -345,11 +345,9 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 <summary><strong>⏪ Checkpoint rewind</strong> <sub>· what changed?</sub></summary>
 <br>
 
-Snapshots: **2026-10-21 01:21:35** → **2026-10-21 10:29:23** UTC. Comparing the three selected public projects.
+Snapshots: **2026-10-21 10:29:23** → **2026-10-21 14:30:28** UTC. Comparing the three selected public projects.
 
-| Project | Signal | Before | Now |
-| --- | --- | --- | --- |
-| SwiftIOC | latest commit at | 2026-10-20T22:54:57Z | 2026-10-21T09:42:35Z |
+**Quiet checkpoint.** No changes in releases, CI, stars, or latest commit times.
 
 </details>
 
