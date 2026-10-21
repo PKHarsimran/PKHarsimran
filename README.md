@@ -298,15 +298,15 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 
 <p>
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-025ffb85b7793533-mobile.svg">
-  <img src="./profile/arcade/heist-025ffb85b7793533.svg" alt="Signal Heist. Route: C, then B, then A. Gate A: IOC Inspector, v0.1.0. Minor version: ones digit. Gate B: Days with activity, 348. Take the ones digit. Gate C: Stars / selected 3 projects, 235. Take the ones digit. Choose a three-digit code below." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-b190d8f3ec9b0e1d-mobile.svg">
+  <img src="./profile/arcade/heist-b190d8f3ec9b0e1d.svg" alt="Signal Heist. Route: C, then A, then B. Gate A: Website Downloader, v2.6.1. Minor version: ones digit. Gate B: Last 30 days / contributions, 400. Take the ones digit. Gate C: Passing checks / selected 3, 3. Take the ones digit. Choose a three-digit code below." width="100%">
 </picture>
 </p>
 
 **Three clues → one code → a tiny creature.** Take each gate’s digit, follow the printed route, and open a code hatch.
 
 <details>
-<summary><strong>🔐 Hatch 01</strong> · <code>044</code></summary>
+<summary><strong>🔐 Hatch 01</strong> · <code>823</code></summary>
 <br>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
@@ -314,30 +314,30 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 </details>
 
 <details>
-<summary><strong>🔐 Hatch 02</strong> · <code>718</code></summary>
+<summary><strong>🔐 Hatch 02</strong> · <code>360</code></summary>
 <br>
 
-↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
-
-</details>
-
-<details>
-<summary><strong>🔐 Hatch 03</strong> · <code>581</code></summary>
-<br>
-
-🔓 **Signal recovered.** C → B → A gives **581**.
+🔓 **Signal recovered.** C → A → B gives **360**.
 
 | Gate | Clue | Digit |
 | --- | --- | ---: |
-| A | IOC Inspector: v0.1.0 | 1 |
-| B | Days with activity: 348 | 8 |
-| C | Stars / selected 3 projects: 235 | 5 |
+| A | Website Downloader: v2.6.1 | 6 |
+| B | Last 30 days / contributions: 400 | 0 |
+| C | Passing checks / selected 3: 3 | 3 |
 
-**Next side quest:** [Explore IOC Inspector](https://github.com/PKHarsimran/IOC-Inspector) — the real tool behind gate A.
+**Next side quest:** [Explore Website Downloader](https://github.com/PKHarsimran/website-downloader) — the real tool behind gate A.
 
-<p><img src="./profile/arcade/relic-025ffb85b7793533.svg" alt="Snapshot relic 025FFB85: Port Nomad, a symmetric pixel creature drawn from this public snapshot." width="600"></p>
+<p><img src="./profile/arcade/relic-b190d8f3ec9b0e1d.svg" alt="Snapshot relic B190D8F3: Patch Imp, a symmetric pixel creature drawn from this public snapshot." width="600"></p>
 
-[Open your creature art](./profile/arcade/relic-025ffb85b7793533.svg)
+[Open your creature art](./profile/arcade/relic-b190d8f3ec9b0e1d.svg)
+
+</details>
+
+<details>
+<summary><strong>🔐 Hatch 03</strong> · <code>497</code></summary>
+<br>
+
+↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
 
 </details>
 
@@ -345,12 +345,11 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 <summary><strong>⏪ Checkpoint rewind</strong> <sub>· what changed?</sub></summary>
 <br>
 
-Snapshots: **2026-10-20 14:19:28** → **2026-10-21 01:21:35** UTC. Comparing the three selected public projects.
+Snapshots: **2026-10-21 01:21:35** → **2026-10-21 10:29:23** UTC. Comparing the three selected public projects.
 
 | Project | Signal | Before | Now |
 | --- | --- | --- | --- |
-| SwiftIOC | latest commit at | 2026-10-20T09:40:18Z | 2026-10-20T22:54:57Z |
-| Website Downloader | stars | 217 | 218 |
+| SwiftIOC | latest commit at | 2026-10-20T22:54:57Z | 2026-10-21T09:42:35Z |
 
 </details>
 
