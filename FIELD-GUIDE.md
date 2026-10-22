@@ -2,7 +2,7 @@
 
 A short, motion-free way into the projects, their working demos, and the Zima homelab.
 
-[Back to the animated profile](./README.md) · [Visit the website](https://harsim.ca) · [Open the live lab](https://harsim.ca/lab/)
+[Back to the animated profile](./README.md) · [Browse the toolkit](./README.md#user-content-toolkit) · [Visit the website](https://harsim.ca)
 
 ## Find the right tool
 
@@ -31,7 +31,7 @@ The CLI replays use released tools and owned fixtures. The transcripts let you r
 
 The **Zima homelab** connects media requests, libraries, photos, dashboards, and monitoring with Docker Compose. The profile illustrates how those services hand work to each other.
 
-[Meet the service crew](./README.md#user-content-homelab) · [Curated public inventory](./profile/lab-services.json)
+[Meet the service crew](./README.md#user-content-inside-the-lab) · [Curated public inventory](./profile/lab-services.json)
 
 The next checkpoint is a modular Compose starter kit, documented so someone else can bring it online.
 

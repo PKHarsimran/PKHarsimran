@@ -21,8 +21,8 @@
 <!-- buttons:navigation:start -->
 <p align="center">
   <a href="#user-content-selected-builds"><img src="./profile/buttons/projects-tab.svg?v=compact-1" alt="Projects" width="86" height="44" align="middle" /></a>
-  <a href="#user-content-homelab"><img src="./profile/buttons/homelab-tab.svg?v=compact-1" alt="Homelab" width="90" height="44" align="middle" /></a>
-  <a href="#user-content-arcade"><img src="./profile/buttons/arcade-tab.svg?v=compact-1" alt="Arcade" width="78" height="44" align="middle" /></a>
+  <a href="#user-content-inside-the-lab"><img src="./profile/buttons/homelab-tab.svg?v=compact-1" alt="Homelab" width="90" height="44" align="middle" /></a>
+  <a href="#user-content-after-hours-the-arcade"><img src="./profile/buttons/arcade-tab.svg?v=compact-1" alt="Arcade" width="78" height="44" align="middle" /></a>
 </p>
 <!-- buttons:navigation:end -->
 
@@ -30,10 +30,10 @@
 
 I work in **cybersecurity** and build tools that make investigations clearer and repetitive work shorter. Off the clock, I connect the dots in my **Zima homelab**. The robot has other plans. 🛠️
 
-<p><sub>New here? <a href="./FIELD-GUIDE.md">Open the field guide</a> for direct links to live demos, readable replays, and setup docs.</sub></p>
+<p><sub>Quick routes: <a href="./FIELD-GUIDE.md">Field guide</a> · <a href="#user-content-toolkit">Toolkit</a></sub></p>
 
 <details>
-<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/thread-mobile.svg"><img src="./profile/drawers/thread.svg" alt="Pull the thread: One curiosity. Four builds. Follow the connections." width="92%" align="middle"></picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/thread-mobile.svg?v=drawer-polish-3"><img src="./profile/drawers/thread.svg?v=drawer-polish-3" alt="Pull the thread: One curiosity. Four builds. Follow the connections." width="92%" align="middle"></picture></summary>
 <br>
 
 <p>
@@ -49,16 +49,18 @@ I work in **cybersecurity** and build tools that make investigations clearer and
 | :--- | :--- |
 | Follow a signal | [Open the live dashboard](https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/) |
 | See a tool in action | [Document investigation](./profile/inspector-demo.md) · [Offline field trip](./profile/downloader-demo.md) |
-| Explore self-hosting | [Inside the Zima homelab](#user-content-homelab) |
+| Explore self-hosting | [Inside the Zima homelab](#user-content-inside-the-lab) |
 | Bring a little chaos | [Explore the live lab](https://harsim.ca/lab/) |
 
 </details>
 
-<a name="selected-builds"></a>
-
 ## Selected builds
 
-Three public tools: collect context, inspect the clues, and keep a useful page.
+| Mission | Tool |
+| :--- | :--- |
+| Trace an IOC | [SwiftIOC](#user-content-01--swiftioc) |
+| Inspect a file | [IOC Inspector](#user-content-02--ioc-inspector) |
+| Save a page | [Downloader](#user-content-03--website-downloader) |
 
 ### 01 / SwiftIOC
 
@@ -81,7 +83,7 @@ Three public tools: collect context, inspect the clues, and keep a useful page.
 <!-- buttons:swift:end -->
 
 <details>
-<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/evidence-mobile.svg"><img src="./profile/drawers/evidence.svg" alt="Evidence desk: Real feed snapshot + a 12-second walkthrough" width="92%" align="middle"></picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/evidence-mobile.svg?v=drawer-polish-3"><img src="./profile/drawers/evidence.svg?v=drawer-polish-3" alt="Evidence desk: Real feed snapshot + a 12-second walkthrough" width="92%" align="middle"></picture></summary>
 <br>
 
 <p>
@@ -93,7 +95,7 @@ Three public tools: collect context, inspect the clues, and keep a useful page.
 </a>
 </p>
 
-<p><sub>Real feed counts, illustrated from a saved collection snapshot. <a href="./profile/intel-conveyor.md">Read the data</a>.</sub></p>
+<p><sub>Retained records from a saved feed snapshot · <a href="./profile/intel-conveyor.md">Collection details</a></sub></p>
 
 **12 seconds at the evidence desk**
 
@@ -131,7 +133,7 @@ Three public tools: collect context, inspect the clues, and keep a useful page.
 <!-- buttons:inspector:end -->
 
 <details>
-<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/case-mobile.svg?v=case-desk-1"><img src="./profile/drawers/case.svg?v=case-desk-1" alt="Case desk: Weekly case + a three-chapter CLI replay" width="92%" align="middle"></picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/case-mobile.svg?v=drawer-polish-3"><img src="./profile/drawers/case.svg?v=drawer-polish-3" alt="Case desk: Weekly case + a three-chapter CLI replay" width="92%" align="middle"></picture></summary>
 <br>
 
 A harmless training PDF, a few hidden clues, and the real scanner. What can you spot?
@@ -166,7 +168,7 @@ A harmless training PDF, a few hidden clues, and the real scanner. What can you 
 </picture>
 </p>
 
-<p><sub>Run → read → prove. Findings come from the released CLI’s actual reports. <a href="./profile/inspector-demo.md">Read transcript</a> · <a href="./demos/README.md">Behind the replay</a>.</sub></p>
+<p><sub>Run → read → prove. <a href="./profile/inspector-demo.md">Read transcript</a> · <a href="./profile/case-report.md">Sample report</a></sub></p>
 
 </details>
 
@@ -195,7 +197,7 @@ A harmless training PDF, a few hidden clues, and the real scanner. What can you 
 <!-- buttons:downloader:end -->
 
 <details>
-<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/offline-mobile.svg"><img src="./profile/drawers/offline.svg" alt="Offline field trip: One site. No server. A real CLI demo." width="92%" align="middle"></picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/offline-mobile.svg?v=drawer-polish-3"><img src="./profile/drawers/offline.svg?v=drawer-polish-3" alt="Offline field trip: One site. No server. A real CLI demo." width="92%" align="middle"></picture></summary>
 <br>
 
 <p>
@@ -207,7 +209,7 @@ A harmless training PDF, a few hidden clues, and the real scanner. What can you 
 </picture>
 </p>
 
-<p><sub>Save → unplug → prove. Every local reference is checked with the source server off. <a href="./profile/downloader-demo.md">Read transcript</a> · <a href="./profile/downloader-demo.json">Run results</a>.</sub></p>
+<p><sub>Save → unplug → prove. <a href="./profile/downloader-demo.md">Read transcript</a> · <a href="./profile/downloader-demo.json">Offline checks</a></sub></p>
 
 </details>
 
@@ -224,10 +226,10 @@ My **Zima homelab** is where side projects become everyday tools. **Docker Compo
 </picture>
 </p>
 
-<p><sub>The real service cast, with illustrated handoffs. <a href="./profile/lab-services.json">Public service manifest</a>.</sub></p>
+<p><sub>Curated services, illustrated handoffs · <a href="./profile/lab-services.json">Public manifest</a></sub></p>
 
 <details>
-<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/crew-mobile.svg"><img src="./profile/drawers/crew.svg" alt="Meet the service crew: Media, libraries, dashboards &amp; monitoring" width="92%" align="middle"></picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/crew-mobile.svg?v=drawer-polish-3"><img src="./profile/drawers/crew.svg?v=drawer-polish-3" alt="Meet the service crew: Media, libraries, dashboards &amp; monitoring" width="92%" align="middle"></picture></summary>
 <br>
 
 | Area | Services |
@@ -289,11 +291,11 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 </picture>
 </p>
 
-<p><sub>Real GitHub activity; an illustrated bot adventure. Totals include automation and publicly shared private activity. <a href="./profile/contribution-calendar.json">Daily snapshot</a>.</sub></p>
+<p><sub>Calendar totals include automation and publicly shared private activity. <a href="./profile/contribution-calendar.json">Daily snapshot</a></sub></p>
 
 <!-- arcade-lab:start -->
 <details>
-<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/heist-mobile.svg"><img src="./profile/drawers/heist.svg" alt="Today&#x27;s Signal Heist: Three clues. One code. A creature to uncover." width="92%" align="middle"></picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/heist-mobile.svg?v=drawer-polish-3"><img src="./profile/drawers/heist.svg?v=drawer-polish-3" alt="Today&#x27;s Signal Heist: Three clues. One code. A creature to uncover." width="92%" align="middle"></picture></summary>
 <br>
 
 <p>
@@ -359,7 +361,7 @@ Snapshots: **2026-10-21 14:30:28** → **2026-10-22 14:32:03** UTC. Comparing th
 <!-- arcade-lab:end -->
 
 <details>
-<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/snake-mobile.svg"><img src="./profile/drawers/snake.svg" alt="Release the snake: A bonus lap around the contribution grid" width="92%" align="middle"></picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/snake-mobile.svg?v=drawer-polish-3"><img src="./profile/drawers/snake.svg?v=drawer-polish-3" alt="Release the snake: A bonus lap around the contribution grid" width="92%" align="middle"></picture></summary>
 <br>
 
 <p>
@@ -372,7 +374,7 @@ Snapshots: **2026-10-21 14:30:28** → **2026-10-22 14:32:03** UTC. Comparing th
 </details>
 
 <details>
-<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/radar-mobile.svg"><img src="./profile/drawers/radar.svg" alt="Project radar: Build checks, releases &amp; collectible patches" width="92%" align="middle"></picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/radar-mobile.svg?v=drawer-polish-3"><img src="./profile/drawers/radar.svg?v=drawer-polish-3" alt="Project radar: Build checks, releases &amp; collectible patches" width="92%" align="middle"></picture></summary>
 <br>
 
 <p>
@@ -411,7 +413,7 @@ Snapshots: **2026-10-21 14:30:28** → **2026-10-22 14:32:03** UTC. Comparing th
 </details>
 
 <details>
-<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/backstage-mobile.svg"><img src="./profile/drawers/backstage.svg" alt="Behind the curtain: The workflows that keep this profile moving" width="92%" align="middle"></picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="./profile/drawers/backstage-mobile.svg?v=drawer-polish-3"><img src="./profile/drawers/backstage.svg?v=drawer-polish-3" alt="Behind the curtain: The workflows that keep this profile moving" width="92%" align="middle"></picture></summary>
 <br>
 
 GitHub Actions refresh the public project signals and daily puzzle. Case files and CLI demos refresh weekly or when their recipes change. The artwork keeps its source snapshots close.
@@ -436,9 +438,9 @@ GitHub Actions refresh the public project signals and daily puzzle. Case files a
 
 <p align="center">
   <a href="https://hits.sh/github.com/PKHarsimran/"><img src="https://hits.sh/github.com/PKHarsimran.svg?view=today-total&amp;style=for-the-badge&amp;label=LAB+HITS&amp;color=6e56a4&amp;labelColor=172232" alt="Lab page hits: today / lifetime total. Approximate page hits, not unique visitors." height="28" /></a>
+  <br>
+  <sub>Today / lifetime · approximate page hits · <a href="https://hits.sh/github.com/PKHarsimran/">Arrival log</a></sub>
 </p>
-
-<p><sub>Today / lifetime · approximate page hits · <a href="https://hits.sh/github.com/PKHarsimran/">Arrival log</a></sub></p>
 <!-- visitors:end -->
 
 <!-- buttons:footer:start -->

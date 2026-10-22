@@ -31,7 +31,7 @@ BUTTONS={
 }
 GROUPS={
     'hero':[('website','https://harsim.ca'),('linkedin','https://www.linkedin.com/in/harsimransidhu/')],
-    'navigation':[('projects-tab','#user-content-selected-builds'),('homelab-tab','#user-content-homelab'),('arcade-tab','#user-content-arcade')],
+    'navigation':[('projects-tab','#user-content-selected-builds'),('homelab-tab','#user-content-inside-the-lab'),('arcade-tab','#user-content-after-hours-the-arcade')],
     'swift':[('dashboard','https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/'),('source','https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector')],
     'inspector':[('quick-start','https://github.com/PKHarsimran/IOC-Inspector#-quick-start'),('source-inspector','https://github.com/PKHarsimran/IOC-Inspector')],
     'downloader':[('field-guide','https://github.com/PKHarsimran/website-downloader/wiki'),('source-downloader','https://github.com/PKHarsimran/website-downloader')],

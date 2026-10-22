@@ -1,7 +1,6 @@
 """Small, responsive drawer labels that keep GitHub's native disclosure controls."""
 from html import escape
 from pathlib import Path
-from textwrap import wrap
 
 from profile_theme import apply_theme
 
@@ -16,6 +15,17 @@ DRAWERS = {
     'snake': ('Release the snake', 'A bonus lap around the contribution grid', '#43E6C5'),
     'radar': ('Project radar', 'Build checks, releases & collectible patches', '#69B9FF'),
     'backstage': ('Behind the curtain', 'The workflows that keep this profile moving', '#A995FF'),
+}
+MOBILE_HINTS = {
+    'thread': 'One curiosity. Four builds.',
+    'evidence': 'Feed snapshot + dashboard replay',
+    'case': 'Weekly case + CLI replay',
+    'offline': 'Save a site. Unplug. Explore.',
+    'crew': 'Media, libraries + monitoring',
+    'heist': 'Crack the code. Meet a creature.',
+    'snake': 'A bonus lap around the grid',
+    'radar': 'Checks, releases + patches',
+    'backstage': 'Meet the profile workflows',
 }
 ICONS = {
     'thread': '<path d="M-11 7Q-4-12 2 0T12-7"/><circle cx="-11" cy="7" r="2"/><circle cx="2" cy="0" r="2"/><circle cx="12" cy="-7" r="2"/>',
@@ -32,7 +42,7 @@ ICONS = {
 
 def summary(name):
     title, hint, _ = DRAWERS[name]
-    version = '?v=case-desk-1' if name == 'case' else ''
+    version = '?v=drawer-polish-3'
     # Keep whitespace out of the inline picture so the native marker has room.
     return ('<summary><picture>'
             f'<source media="(max-width: 600px)" srcset="./profile/drawers/{name}-mobile.svg{version}">'
@@ -47,7 +57,7 @@ def render(name, mobile=False):
     p = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="drawer-title" font-family="Segoe UI,Arial,sans-serif">',
          f'<title id="drawer-title">{escape(title+": "+hint)}</title>',
          '<defs><linearGradient id="drawer-surface" x2="1" y2="1"><stop stop-color="#172232"/><stop offset="1" stop-color="#101722"/></linearGradient></defs>',
-         '<style>.drawer-spark{animation:drawer-spark 12s ease-in-out infinite}.drawer-orbit{transform-box:fill-box;transform-origin:center;animation:drawer-orbit 18s linear infinite}.drawer-cue{animation:drawer-cue 12s ease-in-out infinite}@keyframes drawer-spark{0%,65%,100%{opacity:.35}78%{opacity:1}}@keyframes drawer-orbit{to{transform:rotate(360deg)}}@keyframes drawer-cue{0%,66%,100%{opacity:.3}78%,86%{opacity:.8}}@media(prefers-reduced-motion:reduce){.drawer-spark,.drawer-orbit,.drawer-cue{animation:none}.drawer-spark,.drawer-cue{opacity:.6}}</style>',
+         '<style>.drawer-orbit{transform-box:fill-box;transform-origin:center;animation:drawer-orbit 18s linear infinite}.drawer-cue{animation:drawer-cue 12s ease-in-out infinite}@keyframes drawer-orbit{to{transform:rotate(360deg)}}@keyframes drawer-cue{0%,66%,100%{opacity:.3}78%,86%{opacity:.8}}@media(prefers-reduced-motion:reduce){.drawer-orbit,.drawer-cue{animation:none}.drawer-cue{opacity:.6}}</style>',
          f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="14" fill="url(#drawer-surface)" stroke="#34445C"/>',
          f'<path d="M18 2H{w-18}" stroke="{color}" stroke-opacity=".12" stroke-linecap="round"/>',
          f'<path d="M2 20V{h-20}" stroke="{color}" stroke-width="3" stroke-linecap="round"/>',
@@ -55,10 +65,9 @@ def render(name, mobile=False):
          f'<g transform="translate(40 {cy})"><circle class="drawer-orbit" r="20" fill="none" stroke="{color}" stroke-opacity=".35" stroke-width="1" stroke-dasharray="13 113"/></g>',
          f'<g transform="translate(40 {cy})" fill="none" stroke="{color}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{ICONS[name]}</g>',
          f'<text x="{tx}" y="{40 if mobile else 34}" font-size="{30 if mobile else 24}" font-weight="700" fill="#EFF4FC">{escape(title)}</text>']
-    lines = wrap(hint, width=44) if mobile else [hint]
-    for i, line in enumerate(lines):
-        p.append(f'<text x="{tx}" y="{67+i*22 if mobile else 60}" font-size="{22 if mobile else 18}" fill="#B8C6DB">{escape(line)}</text>')
-    p += [f'<g class="drawer-cue" fill="none" stroke="{color}"><circle cx="{w-30}" cy="{cy}" r="12" stroke-opacity=".35"/><path d="M{w-30} {cy-4}V{cy+4}M{w-34} {cy}H{w-26}" stroke-width="1.5" stroke-linecap="round"/></g>', '</svg>']
+    p.append(f'<text x="{tx}" y="{78 if mobile else 60}" font-size="{24 if mobile else 18}" fill="#B8C6DB">{escape(MOBILE_HINTS[name] if mobile else hint)}</text>')
+    p += [f'<g class="drawer-cue" fill="{color}">',
+          ''.join(f'<circle cx="{w-30+offset}" cy="{cy}" r="1.8"/>' for offset in (-7,0,7)), '</g></svg>']
     return apply_theme('\n'.join(p))
 
 
