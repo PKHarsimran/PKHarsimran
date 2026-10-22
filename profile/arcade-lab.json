@@ -1,13 +1,12 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-10-21T14:30:28Z",
-  "calendar_observed_at": "2026-10-21T14:30:28Z",
-  "fingerprint": "b190d8f3ec9b0e1dc71a65223b591d782ee498b72c65ad0ac01c99aa7ca97b21",
-  "serial": "B190D8F3",
-  "asset_id": "b190d8f3ec9b0e1d",
+  "generated_at": "2026-10-22T14:32:03Z",
+  "calendar_observed_at": "2026-10-22T14:32:03Z",
+  "fingerprint": "73424358566a1564b9d611a999a593bfb63e3f03646e1e1ae196a997e45e6cac",
+  "serial": "73424358",
+  "asset_id": "73424358566a1564",
   "retained": [
-    "668b90df848ad06b",
     "31e232d402375815",
     "53dcf169d52c67bf",
     "a7df2fc503ad1afb",
@@ -20,14 +19,15 @@
     "b684e62cc55db86e",
     "3d3e797a03feb54f",
     "025ffb85b7793533",
-    "b190d8f3ec9b0e1d"
+    "b190d8f3ec9b0e1d",
+    "73424358566a1564"
   ],
   "assets": {
-    "heist": "arcade/heist-b190d8f3ec9b0e1d.svg",
-    "mobile": "arcade/heist-b190d8f3ec9b0e1d-mobile.svg",
-    "relic": "arcade/relic-b190d8f3ec9b0e1d.svg"
+    "heist": "arcade/heist-73424358566a1564.svg",
+    "mobile": "arcade/heist-73424358566a1564-mobile.svg",
+    "relic": "arcade/relic-73424358566a1564.svg"
   },
-  "relic_name": "Patch Imp",
+  "relic_name": "Byte Moth",
   "gates": [
     {
       "id": "A",
@@ -41,63 +41,37 @@
     {
       "id": "B",
       "label": "CALENDAR",
-      "source": "Last 30 days / contributions",
-      "display": "400",
+      "source": "Days with activity",
+      "display": "350",
       "hint": "Take the ones digit.",
-      "value": 400,
+      "value": 350,
       "digit": 0
     },
     {
       "id": "C",
       "label": "BUILD RADAR",
-      "source": "Passing checks / selected 3",
-      "display": "3",
+      "source": "Stars / selected 3 projects",
+      "display": "235",
       "hint": "Take the ones digit.",
-      "value": 3,
-      "digit": 3
+      "value": 235,
+      "digit": 5
     }
   ],
   "route": [
-    "C",
     "A",
-    "B"
+    "B",
+    "C"
   ],
-  "solution": "360",
+  "solution": "605",
   "choices": [
-    "823",
-    "360",
-    "497"
+    "742",
+    "605",
+    "068"
   ],
   "tool_url": "https://github.com/PKHarsimran/website-downloader",
   "tool_name": "Website Downloader",
   "rewind": {
     "previous": {
-      "generated_at": "2026-10-21T10:29:23Z",
-      "projects": [
-        {
-          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 16,
-          "latest_commit_at": "2026-10-21T09:42:35Z"
-        },
-        {
-          "repo": "IOC-Inspector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 1,
-          "latest_commit_at": "2026-07-02T10:36:39Z"
-        },
-        {
-          "repo": "website-downloader",
-          "release": "v2.6.1",
-          "ci": "PASSING",
-          "stars": 218,
-          "latest_commit_at": "2026-07-28T19:57:33Z"
-        }
-      ]
-    },
-    "current": {
       "generated_at": "2026-10-21T14:30:28Z",
       "projects": [
         {
@@ -123,7 +97,40 @@
         }
       ]
     },
-    "changes": []
+    "current": {
+      "generated_at": "2026-10-22T14:32:03Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-10-22T09:55:54Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-07-02T10:36:39Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.6.1",
+          "ci": "PASSING",
+          "stars": 218,
+          "latest_commit_at": "2026-07-28T19:57:33Z"
+        }
+      ]
+    },
+    "changes": [
+      {
+        "project": "SwiftIOC",
+        "field": "latest_commit_at",
+        "before": "2026-10-21T09:42:35Z",
+        "after": "2026-10-22T09:55:54Z"
+      }
+    ]
   },
   "sources": [
     "public-pulse.json",
