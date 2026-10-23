@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="654.54" viewBox="0 0 600 654.54" role="img" aria-labelledby="activity-title activity-desc"><title id="activity-title">GitHub activity and language mix</title><desc id="activity-desc">The current generated GitHub statistics and language cards, arranged for phone reading.</desc><style>@media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;animation-delay:0ms!important;animation-iteration-count:1!important}}</style><svg width="600.00" height="250.54" viewBox="0 0 467 195" fill="none" role="img" aria-labelledby="stats-descId" x="0.00" y="0.00">
         <title id="stats-titleId">Harsimran Sidhu's GitHub Stats, Rank: A-</title>
-        <desc id="stats-descId">Total Stars Earned: 252, Total Commits  : 3730, Total PRs: 192, Total Issues: 11, Contributed to (last year): 2</desc>
+        <desc id="stats-descId">Total Stars Earned: 254, Total Commits  : 3732, Total PRs: 192, Total Issues: 11, Contributed to (last year): 2</desc>
         <style>
           .stats-header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -64,7 +64,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 65.2769847570875;
+        stroke-dashoffset: 65.1813604447925;
       }
     }
   
@@ -132,7 +132,7 @@
     </svg>
   
       <text class="stats-stat stats-bold" x="25" y="12.5">Total Stars Earned:</text>
-      <text class="stats-stat stats-bold" x="224.01" y="12.5" data-testid="stars">252</text>
+      <text class="stats-stat stats-bold" x="224.01" y="12.5" data-testid="stars">254</text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stats-stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
@@ -284,19 +284,19 @@
         
         <rect mask="url(#langs-rect-mask)" data-testid="lang-progress" x="0" y="0" width="114.1" height="8" fill="#3572A5" />
       
-        <rect mask="url(#langs-rect-mask)" data-testid="lang-progress" x="114.1" y="0" width="80.63" height="8" fill="#f1e05a" />
+        <rect mask="url(#langs-rect-mask)" data-testid="lang-progress" x="114.1" y="0" width="80.62" height="8" fill="#f1e05a" />
       
-        <rect mask="url(#langs-rect-mask)" data-testid="lang-progress" x="194.73" y="0" width="23.25" height="8" fill="#e34c26" />
+        <rect mask="url(#langs-rect-mask)" data-testid="lang-progress" x="194.72" y="0" width="23.24" height="8" fill="#e34c26" />
       
-        <rect mask="url(#langs-rect-mask)" data-testid="lang-progress" x="217.98" y="0" width="18.99" height="8" fill="#663399" />
+        <rect mask="url(#langs-rect-mask)" data-testid="lang-progress" x="217.96" y="0" width="18.98" height="8" fill="#663399" />
       
-        <rect mask="url(#langs-rect-mask)" data-testid="lang-progress" x="236.97" y="0" width="18.05" height="8" fill="#945db7" />
+        <rect mask="url(#langs-rect-mask)" data-testid="lang-progress" x="236.94" y="0" width="18.05" height="8" fill="#945db7" />
       
-        <rect mask="url(#langs-rect-mask)" data-testid="lang-progress" x="245.02" y="0" width="12.53" height="8" fill="#89e051" />
+        <rect mask="url(#langs-rect-mask)" data-testid="lang-progress" x="244.99" y="0" width="12.53" height="8" fill="#89e051" />
       
-        <rect mask="url(#langs-rect-mask)" data-testid="lang-progress" x="247.55" y="0" width="11.34" height="8" fill="#f34b7d" />
+        <rect mask="url(#langs-rect-mask)" data-testid="lang-progress" x="247.52" y="0" width="11.34" height="8" fill="#f34b7d" />
       
-        <rect mask="url(#langs-rect-mask)" data-testid="lang-progress" x="248.89000000000001" y="0" width="11.129999999999999" height="8" fill="#858585" />
+        <rect mask="url(#langs-rect-mask)" data-testid="lang-progress" x="248.86" y="0" width="11.129999999999999" height="8" fill="#858585" />
       
       
     <g transform="translate(0, 25)">
