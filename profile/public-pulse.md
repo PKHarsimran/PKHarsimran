@@ -1,12 +1,12 @@
 # Public build radar
 
-Generated 2026-10-23T14:15:36Z. This is a snapshot of three explicitly selected public repositories.
+Generated 2026-10-24T13:21:04Z. This is a snapshot of three explicitly selected public repositories.
 
 | Project | CI run | Latest release | Stars | Default-branch commit |
 | --- | --- | --- | ---: | --- |
-| [SwiftIOC](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector) | [FAILING](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/actions/runs/39939381958) | [v0.1.0](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/releases/tag/v0.1.0) | 16 | 2026-10-23T10:54:07Z |
+| [SwiftIOC](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector) | [PASSING](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/actions/runs/40041529235) | [v0.1.0](https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/releases/tag/v0.1.0) | 16 | 2026-10-24T09:10:31Z |
 | [IOC Inspector](https://github.com/PKHarsimran/IOC-Inspector) | [PASSING](https://github.com/PKHarsimran/IOC-Inspector/actions/runs/28583705028) | [v0.1.0](https://github.com/PKHarsimran/IOC-Inspector/releases/tag/v0.1.0) | 1 | 2026-07-02T10:36:39Z |
-| [Website Downloader](https://github.com/PKHarsimran/website-downloader) | [PASSING](https://github.com/PKHarsimran/website-downloader/actions/runs/30394200172) | [v2.6.1](https://github.com/PKHarsimran/website-downloader/releases/tag/v2.6.1) | 221 | 2026-07-28T19:57:33Z |
+| [Website Downloader](https://github.com/PKHarsimran/website-downloader) | [PASSING](https://github.com/PKHarsimran/website-downloader/actions/runs/30394200172) | [v2.6.1](https://github.com/PKHarsimran/website-downloader/releases/tag/v2.6.1) | 222 | 2026-07-28T19:57:33Z |
 
 Commit activity includes automation and all authors. A CI result describes the latest listed workflow run, not every branch or a security assessment.
 
