@@ -18,13 +18,13 @@
 <rect x="28" y="464" width="544" height="168" rx="16" fill="#121A26" stroke="#29364B" />
 <g transform="translate(86 526)" fill="none" stroke="#F36BAA" stroke-width="2"><path d="M0-35L30-17V17L0 35L-30 17V-17Z" /><path d="M-4-21H4V-3H14L0 11L-14-3H-4Z" /><path d="M-19 16V23H19V16" /><circle r="44" stroke-opacity=".2" stroke-dasharray="3 6" /></g>
 <text x="150" y="511" fill="#EFF4FC" font-size="22" font-weight="700" font-family="ProfileDisplay,Segoe UI,Arial,sans-serif" letter-spacing="-.3">Website Downloader</text>
-<text x="150" y="542" fill="#F36BAA" font-size="25" font-weight="700" font-family="ProfileDisplay,Segoe UI,Arial,sans-serif" letter-spacing="-.3">v2.6.1</text>
-<text x="50" y="596" fill="#B8C6DB" font-size="15" font-weight="500" font-family="ProfileMono,Consolas,monospace">RELEASED / 2026-07-08</text>
+<text x="150" y="542" fill="#F36BAA" font-size="25" font-weight="700" font-family="ProfileDisplay,Segoe UI,Arial,sans-serif" letter-spacing="-.3">v2.7.0</text>
+<text x="50" y="596" fill="#B8C6DB" font-size="15" font-weight="500" font-family="ProfileMono,Consolas,monospace">RELEASED / 2026-10-25</text>
 <text x="50" y="615" fill="#F36BAA" font-size="12" font-weight="500" font-family="ProfileMono,Consolas,monospace">PUBLIC RELEASE / MISSION COMPLETE</text>
 <rect x="28" y="648" width="544" height="168" rx="16" fill="#121A26" stroke="#29364B" />
 <g transform="translate(86 710)" fill="none" stroke="#F36BAA" stroke-width="2"><path d="M0-35L30-17V17L0 35L-30 17V-17Z" /><path d="M-4-21H4V-3H14L0 11L-14-3H-4Z" /><path d="M-19 16V23H19V16" /><circle r="44" stroke-opacity=".2" stroke-dasharray="3 6" /></g>
 <text x="150" y="695" fill="#EFF4FC" font-size="22" font-weight="700" font-family="ProfileDisplay,Segoe UI,Arial,sans-serif" letter-spacing="-.3">Website Downloader</text>
-<text x="150" y="726" fill="#F36BAA" font-size="25" font-weight="700" font-family="ProfileDisplay,Segoe UI,Arial,sans-serif" letter-spacing="-.3">v2.6.0</text>
-<text x="50" y="780" fill="#B8C6DB" font-size="15" font-weight="500" font-family="ProfileMono,Consolas,monospace">RELEASED / 2026-07-06</text>
+<text x="150" y="726" fill="#F36BAA" font-size="25" font-weight="700" font-family="ProfileDisplay,Segoe UI,Arial,sans-serif" letter-spacing="-.3">v2.6.1</text>
+<text x="50" y="780" fill="#B8C6DB" font-size="15" font-weight="500" font-family="ProfileMono,Consolas,monospace">RELEASED / 2026-07-08</text>
 <text x="50" y="799" fill="#F36BAA" font-size="12" font-weight="500" font-family="ProfileMono,Consolas,monospace">PUBLIC RELEASE / MISSION COMPLETE</text>
 </g></svg>

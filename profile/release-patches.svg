@@ -18,13 +18,13 @@
 <rect x="676" y="96" width="296" height="198" rx="16" fill="#121A26" stroke="#29364B" />
 <g transform="translate(734 158)" fill="none" stroke="#F36BAA" stroke-width="2"><path d="M0-35L30-17V17L0 35L-30 17V-17Z" /><path d="M-4-21H4V-3H14L0 11L-14-3H-4Z" /><path d="M-19 16V23H19V16" /><circle r="44" stroke-opacity=".2" stroke-dasharray="3 6" /></g>
 <text x="794" y="143" fill="#EFF4FC" font-size="17" font-weight="600">Website Downloader</text>
-<text x="794" y="174" fill="#F36BAA" font-size="20" font-weight="650">v2.6.1</text>
-<text x="698" y="241" fill="#B8C6DB" font-size="13" font-weight="500" font-family="ProfileMono,Consolas,monospace">RELEASED / 2026-07-08</text>
+<text x="794" y="174" fill="#F36BAA" font-size="20" font-weight="650">v2.7.0</text>
+<text x="698" y="241" fill="#B8C6DB" font-size="13" font-weight="500" font-family="ProfileMono,Consolas,monospace">RELEASED / 2026-10-25</text>
 <text x="698" y="277" fill="#F36BAA" font-size="12" font-weight="500" font-family="ProfileMono,Consolas,monospace">PUBLIC RELEASE / MISSION COMPLETE</text>
 <rect x="352" y="314" width="296" height="198" rx="16" fill="#121A26" stroke="#29364B" />
 <g transform="translate(410 376)" fill="none" stroke="#F36BAA" stroke-width="2"><path d="M0-35L30-17V17L0 35L-30 17V-17Z" /><path d="M-4-21H4V-3H14L0 11L-14-3H-4Z" /><path d="M-19 16V23H19V16" /><circle r="44" stroke-opacity=".2" stroke-dasharray="3 6" /></g>
 <text x="470" y="361" fill="#EFF4FC" font-size="17" font-weight="600">Website Downloader</text>
-<text x="470" y="392" fill="#F36BAA" font-size="20" font-weight="650">v2.6.0</text>
-<text x="374" y="459" fill="#B8C6DB" font-size="13" font-weight="500" font-family="ProfileMono,Consolas,monospace">RELEASED / 2026-07-06</text>
+<text x="470" y="392" fill="#F36BAA" font-size="20" font-weight="650">v2.6.1</text>
+<text x="374" y="459" fill="#B8C6DB" font-size="13" font-weight="500" font-family="ProfileMono,Consolas,monospace">RELEASED / 2026-07-08</text>
 <text x="374" y="495" fill="#F36BAA" font-size="12" font-weight="500" font-family="ProfileMono,Consolas,monospace">PUBLIC RELEASE / MISSION COMPLETE</text>
 </g></svg>

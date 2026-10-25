@@ -1,8 +1,8 @@
 {
   "source": {
     "repo": "website-downloader",
-    "tag": "v2.6.1",
-    "sha": "889580c0cad66c1d36c9a2843bb437d7f7920dce"
+    "tag": "v2.7.0",
+    "sha": "d21ed149e684b63401ba073f7df776061e83b265"
   },
   "html_pages": 3,
   "assets": [

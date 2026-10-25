@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-24T14:06:26+00:00",
+  "observed_at": "2026-10-25T14:33:02+00:00",
   "releases": [
     {
       "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
@@ -21,17 +21,17 @@
       "repo": "website-downloader",
       "name": "Website Downloader",
       "color": "#F36BAA",
-      "tag": "v2.6.1",
-      "published_at": "2026-07-08T14:28:40Z",
-      "url": "https://github.com/PKHarsimran/website-downloader/releases/tag/v2.6.1"
+      "tag": "v2.7.0",
+      "published_at": "2026-10-25T14:16:02Z",
+      "url": "https://github.com/PKHarsimran/website-downloader/releases/tag/v2.7.0"
     },
     {
       "repo": "website-downloader",
       "name": "Website Downloader",
       "color": "#F36BAA",
-      "tag": "v2.6.0",
-      "published_at": "2026-07-06T20:51:14Z",
-      "url": "https://github.com/PKHarsimran/website-downloader/releases/tag/v2.6.0"
+      "tag": "v2.6.1",
+      "published_at": "2026-07-08T14:28:40Z",
+      "url": "https://github.com/PKHarsimran/website-downloader/releases/tag/v2.6.1"
     }
   ]
 }

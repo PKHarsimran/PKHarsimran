@@ -1,6 +1,6 @@
 # Website Downloader / CLI replay
 
-Released version: `v2.6.1`. Guided presentation of a real run on an owned fixture.
+Released version: `v2.7.0`. Guided presentation of a real run on an owned fixture.
 
 ## 01 / PACK A PIECE OF THE WEB
 
@@ -8,10 +8,10 @@ Released version: `v2.6.1`. Guided presentation of a real run on an owned fixtur
 Three pages. Take them offline.
 Owned localhost fixture
 
-$ base=http://127.0.0.1:42727
+$ base=http://127.0.0.1:41329
 $ python -m website_downloader \
   --url "$base/index.html" \
-  --destination mirror/3854 \
+  --destination mirror/3800 \
   --max-pages 3 --respect-robots
 
 [ok] process exited successfully
