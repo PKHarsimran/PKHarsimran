@@ -1,13 +1,12 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-10-24T13:21:04Z",
-  "calendar_observed_at": "2026-10-24T13:21:04Z",
-  "fingerprint": "b585c3841cb662151c07f81134161960478cbd83f0f336a1f133973d9776e625",
-  "serial": "B585C384",
-  "asset_id": "b585c3841cb66215",
+  "generated_at": "2026-10-25T13:43:37Z",
+  "calendar_observed_at": "2026-10-25T13:43:37Z",
+  "fingerprint": "8c4846f70de30c7b09da3aae80e0164e8fdf81397074e704edcee140d46060ac",
+  "serial": "8C4846F7",
+  "asset_id": "8c4846f70de30c7b",
   "retained": [
-    "31b61bc9802a521b",
     "708d1fd0174a2837",
     "174faf400ff1668e",
     "11983ad752c1d7f0",
@@ -20,14 +19,15 @@
     "73424358566a1564",
     "03497abad1e63e57",
     "95a4b08b07ef5258",
-    "b585c3841cb66215"
+    "b585c3841cb66215",
+    "8c4846f70de30c7b"
   ],
   "assets": {
-    "heist": "arcade/heist-b585c3841cb66215.svg",
-    "mobile": "arcade/heist-b585c3841cb66215-mobile.svg",
-    "relic": "arcade/relic-b585c3841cb66215.svg"
+    "heist": "arcade/heist-8c4846f70de30c7b.svg",
+    "mobile": "arcade/heist-8c4846f70de30c7b-mobile.svg",
+    "relic": "arcade/relic-8c4846f70de30c7b.svg"
   },
-  "relic_name": "Patch Imp",
+  "relic_name": "Port Nomad",
   "gates": [
     {
       "id": "A",
@@ -41,11 +41,11 @@
     {
       "id": "B",
       "label": "CALENDAR",
-      "source": "Days with activity",
-      "display": "352",
+      "source": "Last 30 days / contributions",
+      "display": "357",
       "hint": "Take the ones digit.",
-      "value": 352,
-      "digit": 2
+      "value": 357,
+      "digit": 7
     },
     {
       "id": "C",
@@ -62,42 +62,16 @@
     "B",
     "A"
   ],
-  "solution": "321",
+  "solution": "371",
   "choices": [
-    "458",
-    "321",
-    "784"
+    "371",
+    "508",
+    "834"
   ],
   "tool_url": "https://github.com/PKHarsimran/IOC-Inspector",
   "tool_name": "IOC Inspector",
   "rewind": {
     "previous": {
-      "generated_at": "2026-10-23T14:15:36Z",
-      "projects": [
-        {
-          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
-          "release": "v0.1.0",
-          "ci": "FAILING",
-          "stars": 16,
-          "latest_commit_at": "2026-10-23T10:54:07Z"
-        },
-        {
-          "repo": "IOC-Inspector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 1,
-          "latest_commit_at": "2026-07-02T10:36:39Z"
-        },
-        {
-          "repo": "website-downloader",
-          "release": "v2.6.1",
-          "ci": "PASSING",
-          "stars": 221,
-          "latest_commit_at": "2026-07-28T19:57:33Z"
-        }
-      ]
-    },
-    "current": {
       "generated_at": "2026-10-24T13:21:04Z",
       "projects": [
         {
@@ -123,24 +97,38 @@
         }
       ]
     },
+    "current": {
+      "generated_at": "2026-10-25T13:43:37Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-10-25T09:28:48Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-07-02T10:36:39Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.6.1",
+          "ci": "PASSING",
+          "stars": 222,
+          "latest_commit_at": "2026-07-28T19:57:33Z"
+        }
+      ]
+    },
     "changes": [
       {
         "project": "SwiftIOC",
-        "field": "ci",
-        "before": "FAILING",
-        "after": "PASSING"
-      },
-      {
-        "project": "SwiftIOC",
         "field": "latest_commit_at",
-        "before": "2026-10-23T10:54:07Z",
-        "after": "2026-10-24T09:10:31Z"
-      },
-      {
-        "project": "Website Downloader",
-        "field": "stars",
-        "before": 221,
-        "after": 222
+        "before": "2026-10-24T09:10:31Z",
+        "after": "2026-10-25T09:28:48Z"
       }
     ]
   },
