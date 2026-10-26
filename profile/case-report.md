@@ -1,14 +1,14 @@
-# IOC Inspector case file / 2026-W43
+# IOC Inspector case file / 2026-W44
 
-The delivery note with a repeated link
+The meeting invite with a quiet hyperlink
 
 Owned harmless training PDF. Static analysis; external reputation lookups disabled. The tool verdict is not a security guarantee.
 
-Released source: [v0.1.0](https://github.com/PKHarsimran/IOC-Inspector/tree/df4e2cc2266b337a8994c4d10e3accb7333dba1b). Fixture SHA-256: `63651b7f5968c177741aede04da6f0c924a86e492dd9c57ba84a1ba233e7f73c`.
+Released source: [v0.2.0](https://github.com/PKHarsimran/IOC-Inspector/tree/6a32620ad18f8f254cbd1ce83b2ac83dbedc651b). Fixture SHA-256: `b003f9c60a6ae6b70cc49cdda154f1c40cb39f0a621b3ccdc5e19ccd2f9d75d5`.
 
 Actual tool verdict: **benign**, score **0**. 2 unique URLs and 1 IP.
 
-- `hxxp://198[.]51[.]100[.]23/tracking`
-- `hxxps://example[.]com/parcel`
+- `hxxp://203[.]0[.]113[.]17/meeting`
+- `hxxps://example[.]org/agenda`
 
 [Raw findings](./case-report.json) · [Reproducible fixture recipe](../demos/cases.json)

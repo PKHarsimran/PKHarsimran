@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-25T14:33:02+00:00",
+  "observed_at": "2026-10-26T16:58:02+00:00",
   "releases": [
     {
       "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
@@ -8,6 +8,14 @@
       "tag": "v0.1.0",
       "published_at": "2025-11-10T01:29:38Z",
       "url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/releases/tag/v0.1.0"
+    },
+    {
+      "repo": "IOC-Inspector",
+      "name": "IOC Inspector",
+      "color": "#A995FF",
+      "tag": "v0.2.0",
+      "published_at": "2026-10-25T18:02:13Z",
+      "url": "https://github.com/PKHarsimran/IOC-Inspector/releases/tag/v0.2.0"
     },
     {
       "repo": "IOC-Inspector",
