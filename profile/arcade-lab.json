@@ -1,13 +1,12 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-10-25T13:43:37Z",
-  "calendar_observed_at": "2026-10-25T13:43:37Z",
-  "fingerprint": "8c4846f70de30c7b09da3aae80e0164e8fdf81397074e704edcee140d46060ac",
-  "serial": "8C4846F7",
-  "asset_id": "8c4846f70de30c7b",
+  "generated_at": "2026-10-26T16:08:38Z",
+  "calendar_observed_at": "2026-10-26T16:08:38Z",
+  "fingerprint": "f17e79993fd0e5b2e01a40ab61f0773406eca1b5a72bb2a499a9f0b9f7656dff",
+  "serial": "F17E7999",
+  "asset_id": "f17e79993fd0e5b2",
   "retained": [
-    "708d1fd0174a2837",
     "174faf400ff1668e",
     "11983ad752c1d7f0",
     "40f3f90625fec784",
@@ -20,84 +19,59 @@
     "03497abad1e63e57",
     "95a4b08b07ef5258",
     "b585c3841cb66215",
-    "8c4846f70de30c7b"
+    "8c4846f70de30c7b",
+    "f17e79993fd0e5b2"
   ],
   "assets": {
-    "heist": "arcade/heist-8c4846f70de30c7b.svg",
-    "mobile": "arcade/heist-8c4846f70de30c7b-mobile.svg",
-    "relic": "arcade/relic-8c4846f70de30c7b.svg"
+    "heist": "arcade/heist-f17e79993fd0e5b2.svg",
+    "mobile": "arcade/heist-f17e79993fd0e5b2-mobile.svg",
+    "relic": "arcade/relic-f17e79993fd0e5b2.svg"
   },
-  "relic_name": "Port Nomad",
+  "relic_name": "Log Sprite",
   "gates": [
     {
       "id": "A",
       "label": "RELEASE",
       "source": "IOC Inspector",
-      "display": "v0.1.0",
+      "display": "v0.2.0",
       "hint": "Minor version: ones digit.",
-      "value": 1,
-      "digit": 1
+      "value": 2,
+      "digit": 2
     },
     {
       "id": "B",
       "label": "CALENDAR",
       "source": "Last 30 days / contributions",
-      "display": "357",
+      "display": "370",
       "hint": "Take the ones digit.",
-      "value": 357,
-      "digit": 7
+      "value": 370,
+      "digit": 0
     },
     {
       "id": "C",
       "label": "BUILD RADAR",
-      "source": "Passing checks / selected 3",
-      "display": "3",
+      "source": "Stars / selected 3 projects",
+      "display": "240",
       "hint": "Take the ones digit.",
-      "value": 3,
-      "digit": 3
+      "value": 240,
+      "digit": 0
     }
   ],
   "route": [
-    "C",
+    "A",
     "B",
-    "A"
+    "C"
   ],
-  "solution": "371",
+  "solution": "200",
   "choices": [
-    "371",
-    "508",
-    "834"
+    "200",
+    "663",
+    "337"
   ],
   "tool_url": "https://github.com/PKHarsimran/IOC-Inspector",
   "tool_name": "IOC Inspector",
   "rewind": {
     "previous": {
-      "generated_at": "2026-10-24T13:21:04Z",
-      "projects": [
-        {
-          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 16,
-          "latest_commit_at": "2026-10-24T09:10:31Z"
-        },
-        {
-          "repo": "IOC-Inspector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 1,
-          "latest_commit_at": "2026-07-02T10:36:39Z"
-        },
-        {
-          "repo": "website-downloader",
-          "release": "v2.6.1",
-          "ci": "PASSING",
-          "stars": 222,
-          "latest_commit_at": "2026-07-28T19:57:33Z"
-        }
-      ]
-    },
-    "current": {
       "generated_at": "2026-10-25T13:43:37Z",
       "projects": [
         {
@@ -123,12 +97,68 @@
         }
       ]
     },
+    "current": {
+      "generated_at": "2026-10-26T16:08:38Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-10-26T10:34:50Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.2.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-10-25T18:00:12Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.7.0",
+          "ci": "PASSING",
+          "stars": 223,
+          "latest_commit_at": "2026-10-25T14:52:26Z"
+        }
+      ]
+    },
     "changes": [
       {
         "project": "SwiftIOC",
         "field": "latest_commit_at",
-        "before": "2026-10-24T09:10:31Z",
-        "after": "2026-10-25T09:28:48Z"
+        "before": "2026-10-25T09:28:48Z",
+        "after": "2026-10-26T10:34:50Z"
+      },
+      {
+        "project": "IOC Inspector",
+        "field": "release",
+        "before": "v0.1.0",
+        "after": "v0.2.0"
+      },
+      {
+        "project": "IOC Inspector",
+        "field": "latest_commit_at",
+        "before": "2026-07-02T10:36:39Z",
+        "after": "2026-10-25T18:00:12Z"
+      },
+      {
+        "project": "Website Downloader",
+        "field": "release",
+        "before": "v2.6.1",
+        "after": "v2.7.0"
+      },
+      {
+        "project": "Website Downloader",
+        "field": "stars",
+        "before": 222,
+        "after": 223
+      },
+      {
+        "project": "Website Downloader",
+        "field": "latest_commit_at",
+        "before": "2026-07-28T19:57:33Z",
+        "after": "2026-10-25T14:52:26Z"
       }
     ]
   },

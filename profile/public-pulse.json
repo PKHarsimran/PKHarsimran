@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T13:43:37Z",
+  "generated_at": "2026-10-26T16:08:38Z",
   "scope": "three selected public repositories",
   "projects": [
     {
@@ -9,7 +9,7 @@
       "url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector",
       "default_branch": "main",
       "stars": 16,
-      "latest_commit_at": "2026-10-25T09:28:48Z",
+      "latest_commit_at": "2026-10-26T10:34:50Z",
       "release": "v0.1.0",
       "release_state": "published",
       "release_url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/releases/tag/v0.1.0",
@@ -23,12 +23,12 @@
       "url": "https://github.com/PKHarsimran/IOC-Inspector",
       "default_branch": "main",
       "stars": 1,
-      "latest_commit_at": "2026-07-02T10:36:39Z",
-      "release": "v0.1.0",
+      "latest_commit_at": "2026-10-25T18:00:12Z",
+      "release": "v0.2.0",
       "release_state": "published",
-      "release_url": "https://github.com/PKHarsimran/IOC-Inspector/releases/tag/v0.1.0",
+      "release_url": "https://github.com/PKHarsimran/IOC-Inspector/releases/tag/v0.2.0",
       "ci": "PASSING",
-      "ci_url": "https://github.com/PKHarsimran/IOC-Inspector/actions/runs/28583705028"
+      "ci_url": "https://github.com/PKHarsimran/IOC-Inspector/actions/runs/40219152340"
     },
     {
       "repo": "website-downloader",
@@ -36,13 +36,13 @@
       "color": "#F36BAA",
       "url": "https://github.com/PKHarsimran/website-downloader",
       "default_branch": "main",
-      "stars": 222,
-      "latest_commit_at": "2026-07-28T19:57:33Z",
-      "release": "v2.6.1",
+      "stars": 223,
+      "latest_commit_at": "2026-10-25T14:52:26Z",
+      "release": "v2.7.0",
       "release_state": "published",
-      "release_url": "https://github.com/PKHarsimran/website-downloader/releases/tag/v2.6.1",
+      "release_url": "https://github.com/PKHarsimran/website-downloader/releases/tag/v2.7.0",
       "ci": "PASSING",
-      "ci_url": "https://github.com/PKHarsimran/website-downloader/actions/runs/30394200172"
+      "ci_url": "https://github.com/PKHarsimran/website-downloader/actions/runs/40204274599"
     }
   ]
 }
