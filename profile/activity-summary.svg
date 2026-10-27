@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="248.14" viewBox="0 0 1000 248.14" role="img" aria-labelledby="activity-title activity-desc"><title id="activity-title">GitHub activity and language mix</title><desc id="activity-desc">The current generated GitHub statistics and language cards, arranged for desktop reading.</desc><style>@media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;animation-delay:0ms!important;animation-iteration-count:1!important}}</style><svg width="594.25" height="248.14" viewBox="0 0 467 195" fill="none" role="img" aria-labelledby="stats-descId" x="0.00" y="0.00">
         <title id="stats-titleId">Harsimran Sidhu's GitHub Stats, Rank: A-</title>
-        <desc id="stats-descId">Total Stars Earned: 257, Total Commits  : 3775, Total PRs: 195, Total Issues: 11, Contributed to (last year): 2</desc>
+        <desc id="stats-descId">Total Stars Earned: 257, Total Commits  : 3784, Total PRs: 195, Total Issues: 11, Contributed to (last year): 2</desc>
         <style>
           .stats-header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -64,7 +64,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 64.7754086687703;
+        stroke-dashoffset: 65.03341612592186;
       }
     }
   
