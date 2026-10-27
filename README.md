@@ -300,35 +300,15 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 
 <p>
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-f17e79993fd0e5b2-mobile.svg">
-  <img src="./profile/arcade/heist-f17e79993fd0e5b2.svg" alt="Signal Heist. Route: A, then B, then C. Gate A: IOC Inspector, v0.2.0. Minor version: ones digit. Gate B: Last 30 days / contributions, 370. Take the ones digit. Gate C: Stars / selected 3 projects, 240. Take the ones digit. Choose a three-digit code below." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-683ee8c64ab92614-mobile.svg">
+  <img src="./profile/arcade/heist-683ee8c64ab92614.svg" alt="Signal Heist. Route: A, then B, then C. Gate A: Website Downloader, v2.7.0. Patch version: ones digit. Gate B: Days with activity, 352. Take the ones digit. Gate C: Passing checks / selected 3, 3. Take the ones digit. Choose a three-digit code below." width="100%">
 </picture>
 </p>
 
 **Three clues → one code → a tiny creature.** Take each gate’s digit, follow the printed route, and open a code hatch.
 
 <details>
-<summary><strong>🔐 Hatch 01</strong> · <code>200</code></summary>
-<br>
-
-🔓 **Signal recovered.** A → B → C gives **200**.
-
-| Gate | Clue | Digit |
-| --- | --- | ---: |
-| A | IOC Inspector: v0.2.0 | 2 |
-| B | Last 30 days / contributions: 370 | 0 |
-| C | Stars / selected 3 projects: 240 | 0 |
-
-**Next side quest:** [Explore IOC Inspector](https://github.com/PKHarsimran/IOC-Inspector) — the real tool behind gate A.
-
-<p><img src="./profile/arcade/relic-f17e79993fd0e5b2.svg" alt="Snapshot relic F17E7999: Log Sprite, a symmetric pixel creature drawn from this public snapshot." width="600"></p>
-
-[Open your creature art](./profile/arcade/relic-f17e79993fd0e5b2.svg)
-
-</details>
-
-<details>
-<summary><strong>🔐 Hatch 02</strong> · <code>663</code></summary>
+<summary><strong>🔐 Hatch 01</strong> · <code>160</code></summary>
 <br>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
@@ -336,7 +316,27 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 </details>
 
 <details>
-<summary><strong>🔐 Hatch 03</strong> · <code>337</code></summary>
+<summary><strong>🔐 Hatch 02</strong> · <code>023</code></summary>
+<br>
+
+🔓 **Signal recovered.** A → B → C gives **023**.
+
+| Gate | Clue | Digit |
+| --- | --- | ---: |
+| A | Website Downloader: v2.7.0 | 0 |
+| B | Days with activity: 352 | 2 |
+| C | Passing checks / selected 3: 3 | 3 |
+
+**Next side quest:** [Explore Website Downloader](https://github.com/PKHarsimran/website-downloader) — the real tool behind gate A.
+
+<p><img src="./profile/arcade/relic-683ee8c64ab92614.svg" alt="Snapshot relic 683EE8C6: Byte Moth, a symmetric pixel creature drawn from this public snapshot." width="600"></p>
+
+[Open your creature art](./profile/arcade/relic-683ee8c64ab92614.svg)
+
+</details>
+
+<details>
+<summary><strong>🔐 Hatch 03</strong> · <code>486</code></summary>
 <br>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
@@ -347,16 +347,12 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 <summary><strong>⏪ Checkpoint rewind</strong> <sub>· what changed?</sub></summary>
 <br>
 
-Snapshots: **2026-10-25 13:43:37** → **2026-10-26 16:08:38** UTC. Comparing the three selected public projects.
+Snapshots: **2026-10-26 16:08:38** → **2026-10-27 15:22:47** UTC. Comparing the three selected public projects.
 
 | Project | Signal | Before | Now |
 | --- | --- | --- | --- |
-| SwiftIOC | latest commit at | 2026-10-25T09:28:48Z | 2026-10-26T10:34:50Z |
-| IOC Inspector | release | v0.1.0 | v0.2.0 |
-| IOC Inspector | latest commit at | 2026-07-02T10:36:39Z | 2026-10-25T18:00:12Z |
-| Website Downloader | release | v2.6.1 | v2.7.0 |
-| Website Downloader | stars | 222 | 223 |
-| Website Downloader | latest commit at | 2026-07-28T19:57:33Z | 2026-10-25T14:52:26Z |
+| SwiftIOC | latest commit at | 2026-10-26T10:34:50Z | 2026-10-27T10:06:50Z |
+| Website Downloader | stars | 223 | 224 |
 
 </details>
 
