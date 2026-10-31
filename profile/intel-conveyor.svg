@@ -12,7 +12,7 @@
 <path class="packet" d="M490 171H512" stroke="#A995FF" stroke-width="3" stroke-dasharray="4 5" />
 <rect x="270" y="108" width="220" height="126" rx="14" fill="#121A26" stroke="#29364B" />
 <text x="286" y="133" fill="#A995FF" font-size="13" font-weight="500" font-family="ProfileMono,Consolas,monospace">02 / NORMALIZE</text>
-<text x="286" y="161" fill="#EFF4FC" font-size="19" font-weight="600">6,879 duplicates</text>
+<text x="286" y="161" fill="#EFF4FC" font-size="19" font-weight="600">6,523 duplicates</text>
 <text x="286" y="199" fill="#B8C6DB" font-size="13" font-weight="500" font-family="ProfileMono,Consolas,monospace">Removed during collection</text>
 <path class="packet" d="M732 171H754" stroke="#F36BAA" stroke-width="3" stroke-dasharray="4 5" />
 <rect x="512" y="108" width="220" height="126" rx="14" fill="#121A26" stroke="#29364B" />
@@ -23,8 +23,8 @@
 <text x="770" y="133" fill="#69B9FF" font-size="13" font-weight="500" font-family="ProfileMono,Consolas,monospace">04 / INVESTIGATE</text>
 <text x="770" y="161" fill="#EFF4FC" font-size="19" font-weight="600">Source-aware records</text>
 <text x="770" y="199" fill="#B8C6DB" font-size="13" font-weight="500" font-family="ProfileMono,Consolas,monospace">Open the analyst dashboard</text>
-<text x="28" y="272" fill="#43E6C5" font-size="20" font-weight="600">8,236 observables  /  1,764 CVEs</text>
-<text x="28" y="302" fill="#B8C6DB" font-size="15" font-weight="500" font-family="ProfileMono,Consolas,monospace">Last interval: +2,692 added / 1,063 updated / 2,692 removed</text>
-<text x="28" y="334" fill="#B8C6DB" font-size="12" font-weight="500" font-family="ProfileMono,Consolas,monospace">COLLECTION / 30 Oct 2026 / 14:47 UTC</text>
+<text x="28" y="272" fill="#43E6C5" font-size="20" font-weight="600">8,061 observables  /  1,939 CVEs</text>
+<text x="28" y="302" fill="#B8C6DB" font-size="15" font-weight="500" font-family="ProfileMono,Consolas,monospace">Last interval: +905 added / 364 updated / 905 removed</text>
+<text x="28" y="334" fill="#B8C6DB" font-size="12" font-weight="500" font-family="ProfileMono,Consolas,monospace">COLLECTION / 31 Oct 2026 / 10:07 UTC</text>
 <text x="28" y="368" fill="#B8C6DB" font-size="12" font-weight="500" font-family="ProfileMono,Consolas,monospace">Retained records, not local detections. Open the snapshot for context.</text>
 </g></svg>
