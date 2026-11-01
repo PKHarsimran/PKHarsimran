@@ -1,17 +1,17 @@
 {
-  "observed_at": "2026-10-31T15:51:25Z",
-  "collection_at": "2026-10-31T10:07:52Z",
+  "observed_at": "2026-11-01T16:54:18Z",
+  "collection_at": "2026-11-01T11:03:13Z",
   "source": "https://harsim.ca/SwiftIOC-Automated-Threat-Intelligence-Collector/diagnostics/run.json",
-  "observables": 8061,
-  "vulnerabilities": 1939,
-  "duplicates_removed": 6523,
+  "observables": 7281,
+  "vulnerabilities": 2719,
+  "duplicates_removed": 5896,
   "retained": 10000,
   "delta": {
-    "added": 905,
-    "updated": 364,
-    "removed": 905
+    "added": 1375,
+    "updated": 224,
+    "removed": 1375
   },
   "latest_attempt": "accepted",
-  "attempt_at": "2026-10-31T10:07:42Z",
+  "attempt_at": "2026-11-01T11:03:08Z",
   "scope": "Retained snapshot and one collection interval; not threats detected or local incidents."
 }
