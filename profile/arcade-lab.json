@@ -1,13 +1,12 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-11-03T17:04:45Z",
-  "calendar_observed_at": "2026-11-03T17:04:45Z",
-  "fingerprint": "c1cc091593c3fde77f8573ce8785cf13ac1d8ddcd056399710c02d2e8ea9b4a5",
-  "serial": "C1CC0915",
-  "asset_id": "c1cc091593c3fde7",
+  "generated_at": "2026-11-04T17:16:19Z",
+  "calendar_observed_at": "2026-11-04T17:16:19Z",
+  "fingerprint": "c706a890642148fad5bd5a2d2d0b9ed5e18db35fc94a1ec89fbced4faf71cf98",
+  "serial": "C706A890",
+  "asset_id": "c706a890642148fa",
   "retained": [
-    "73424358566a1564",
     "03497abad1e63e57",
     "95a4b08b07ef5258",
     "b585c3841cb66215",
@@ -20,14 +19,15 @@
     "03c07df03af2a039",
     "8409d10f3b70f011",
     "6a6038814fac3b3e",
-    "c1cc091593c3fde7"
+    "c1cc091593c3fde7",
+    "c706a890642148fa"
   ],
   "assets": {
-    "heist": "arcade/heist-c1cc091593c3fde7.svg",
-    "mobile": "arcade/heist-c1cc091593c3fde7-mobile.svg",
-    "relic": "arcade/relic-c1cc091593c3fde7.svg"
+    "heist": "arcade/heist-c706a890642148fa.svg",
+    "mobile": "arcade/heist-c706a890642148fa-mobile.svg",
+    "relic": "arcade/relic-c706a890642148fa.svg"
   },
-  "relic_name": "Null Navigator",
+  "relic_name": "Log Sprite",
   "gates": [
     {
       "id": "A",
@@ -42,62 +42,36 @@
       "id": "B",
       "label": "CALENDAR",
       "source": "Last 30 days / contributions",
-      "display": "361",
+      "display": "355",
       "hint": "Take the ones digit.",
-      "value": 361,
-      "digit": 1
+      "value": 355,
+      "digit": 5
     },
     {
       "id": "C",
       "label": "BUILD RADAR",
-      "source": "Stars / selected 3 projects",
-      "display": "249",
+      "source": "Passing checks / selected 3",
+      "display": "3",
       "hint": "Take the ones digit.",
-      "value": 249,
-      "digit": 9
+      "value": 3,
+      "digit": 3
     }
   ],
   "route": [
-    "A",
+    "B",
     "C",
-    "B"
+    "A"
   ],
-  "solution": "791",
+  "solution": "537",
   "choices": [
-    "254",
-    "791",
-    "928"
+    "000",
+    "674",
+    "537"
   ],
   "tool_url": "https://github.com/PKHarsimran/website-downloader",
   "tool_name": "Website Downloader",
   "rewind": {
     "previous": {
-      "generated_at": "2026-11-02T19:30:23Z",
-      "projects": [
-        {
-          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 16,
-          "latest_commit_at": "2026-11-02T12:56:42Z"
-        },
-        {
-          "repo": "IOC-Inspector",
-          "release": "v0.2.0",
-          "ci": "PASSING",
-          "stars": 1,
-          "latest_commit_at": "2026-10-28T00:10:26Z"
-        },
-        {
-          "repo": "website-downloader",
-          "release": "v2.7.0",
-          "ci": "PASSING",
-          "stars": 231,
-          "latest_commit_at": "2026-10-25T14:52:26Z"
-        }
-      ]
-    },
-    "current": {
       "generated_at": "2026-11-03T17:04:45Z",
       "projects": [
         {
@@ -123,18 +97,38 @@
         }
       ]
     },
+    "current": {
+      "generated_at": "2026-11-04T17:16:19Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-11-04T16:27:00Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.2.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-10-28T00:10:26Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.7.0",
+          "ci": "PASSING",
+          "stars": 232,
+          "latest_commit_at": "2026-10-25T14:52:26Z"
+        }
+      ]
+    },
     "changes": [
       {
         "project": "SwiftIOC",
         "field": "latest_commit_at",
-        "before": "2026-11-02T12:56:42Z",
-        "after": "2026-11-03T15:49:06Z"
-      },
-      {
-        "project": "Website Downloader",
-        "field": "stars",
-        "before": 231,
-        "after": 232
+        "before": "2026-11-03T15:49:06Z",
+        "after": "2026-11-04T16:27:00Z"
       }
     ]
   },
