@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T17:16:19Z",
+  "generated_at": "2026-11-05T17:25:47Z",
   "scope": "three selected public repositories",
   "projects": [
     {
@@ -9,7 +9,7 @@
       "url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector",
       "default_branch": "main",
       "stars": 16,
-      "latest_commit_at": "2026-11-04T16:27:00Z",
+      "latest_commit_at": "2026-11-05T12:47:13Z",
       "release": "v0.1.0",
       "release_state": "published",
       "release_url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector/releases/tag/v0.1.0",

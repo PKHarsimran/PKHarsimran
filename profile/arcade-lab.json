@@ -1,13 +1,12 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-11-04T17:16:19Z",
-  "calendar_observed_at": "2026-11-04T17:16:19Z",
-  "fingerprint": "c706a890642148fad5bd5a2d2d0b9ed5e18db35fc94a1ec89fbced4faf71cf98",
-  "serial": "C706A890",
-  "asset_id": "c706a890642148fa",
+  "generated_at": "2026-11-05T17:25:47Z",
+  "calendar_observed_at": "2026-11-05T17:25:47Z",
+  "fingerprint": "da0232d94e4d900b6c02e7ab6b90e7d8d618a2e1857a70eb9129137abf964a85",
+  "serial": "DA0232D9",
+  "asset_id": "da0232d94e4d900b",
   "retained": [
-    "03497abad1e63e57",
     "95a4b08b07ef5258",
     "b585c3841cb66215",
     "8c4846f70de30c7b",
@@ -20,41 +19,42 @@
     "8409d10f3b70f011",
     "6a6038814fac3b3e",
     "c1cc091593c3fde7",
-    "c706a890642148fa"
+    "c706a890642148fa",
+    "da0232d94e4d900b"
   ],
   "assets": {
-    "heist": "arcade/heist-c706a890642148fa.svg",
-    "mobile": "arcade/heist-c706a890642148fa-mobile.svg",
-    "relic": "arcade/relic-c706a890642148fa.svg"
+    "heist": "arcade/heist-da0232d94e4d900b.svg",
+    "mobile": "arcade/heist-da0232d94e4d900b-mobile.svg",
+    "relic": "arcade/relic-da0232d94e4d900b.svg"
   },
-  "relic_name": "Log Sprite",
+  "relic_name": "Port Nomad",
   "gates": [
     {
       "id": "A",
       "label": "RELEASE",
-      "source": "Website Downloader",
-      "display": "v2.7.0",
+      "source": "IOC Inspector",
+      "display": "v0.2.0",
       "hint": "Minor version: ones digit.",
-      "value": 7,
-      "digit": 7
+      "value": 2,
+      "digit": 2
     },
     {
       "id": "B",
       "label": "CALENDAR",
-      "source": "Last 30 days / contributions",
-      "display": "355",
+      "source": "Days with activity",
+      "display": "361",
       "hint": "Take the ones digit.",
-      "value": 355,
-      "digit": 5
+      "value": 361,
+      "digit": 1
     },
     {
       "id": "C",
       "label": "BUILD RADAR",
-      "source": "Passing checks / selected 3",
-      "display": "3",
+      "source": "Stars / selected 3 projects",
+      "display": "249",
       "hint": "Take the ones digit.",
-      "value": 3,
-      "digit": 3
+      "value": 249,
+      "digit": 9
     }
   ],
   "route": [
@@ -62,42 +62,16 @@
     "C",
     "A"
   ],
-  "solution": "537",
+  "solution": "192",
   "choices": [
-    "000",
-    "674",
-    "537"
+    "329",
+    "192",
+    "655"
   ],
-  "tool_url": "https://github.com/PKHarsimran/website-downloader",
-  "tool_name": "Website Downloader",
+  "tool_url": "https://github.com/PKHarsimran/IOC-Inspector",
+  "tool_name": "IOC Inspector",
   "rewind": {
     "previous": {
-      "generated_at": "2026-11-03T17:04:45Z",
-      "projects": [
-        {
-          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 16,
-          "latest_commit_at": "2026-11-03T15:49:06Z"
-        },
-        {
-          "repo": "IOC-Inspector",
-          "release": "v0.2.0",
-          "ci": "PASSING",
-          "stars": 1,
-          "latest_commit_at": "2026-10-28T00:10:26Z"
-        },
-        {
-          "repo": "website-downloader",
-          "release": "v2.7.0",
-          "ci": "PASSING",
-          "stars": 232,
-          "latest_commit_at": "2026-10-25T14:52:26Z"
-        }
-      ]
-    },
-    "current": {
       "generated_at": "2026-11-04T17:16:19Z",
       "projects": [
         {
@@ -123,12 +97,38 @@
         }
       ]
     },
+    "current": {
+      "generated_at": "2026-11-05T17:25:47Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-11-05T12:47:13Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.2.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-10-28T00:10:26Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.7.0",
+          "ci": "PASSING",
+          "stars": 232,
+          "latest_commit_at": "2026-10-25T14:52:26Z"
+        }
+      ]
+    },
     "changes": [
       {
         "project": "SwiftIOC",
         "field": "latest_commit_at",
-        "before": "2026-11-03T15:49:06Z",
-        "after": "2026-11-04T16:27:00Z"
+        "before": "2026-11-04T16:27:00Z",
+        "after": "2026-11-05T12:47:13Z"
       }
     ]
   },
