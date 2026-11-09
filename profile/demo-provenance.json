@@ -1,5 +1,5 @@
 {
-  "week": "2026-W45",
+  "week": "2026-W46",
   "sources": {
     "inspector": {
       "repo": "IOC-Inspector",
@@ -29,47 +29,47 @@
     "fonts/space-grotesk-buttons-600.woff2": "3d106765eeb228521ae6077d840e079502bfa7f18946b96160f1e1365cb63f92",
     "fonts/ibm-plex-mono-500.ttf": "fe5309e701fc1820dbe7adf04efc572ef6d4bc01ba45c5c8bc16096ca798cf7a"
   },
-  "fingerprint": "5a3d085173be1b9e71a418c5bd47405a17e79b3977ba3b4a3e1053ff220db485",
-  "recorded_at": "2026-11-02T20:32:25.266615+00:00",
+  "fingerprint": "ec3371ca0559095ce84b69477e289de7c8d3a9bda001a73101c5998c8ca8ce6b",
+  "recorded_at": "2026-11-09T21:04:37.724151+00:00",
   "method": "VHS records guided terminal presentations of actual released CLI executions. Commands use the isolated venv Python; results come from verified generated files, not canned product output.",
   "reels": {
     "inspector": {
-      "sha256": "cb6606f5df277f36f765a20f43039c5d8038b5161a1807ca0b540ffd1db8992c",
+      "sha256": "1425ff495558598173c02ae0c97277295d47ac5360b5ff0678cff75b8853836c",
       "width": 964,
       "height": 858,
-      "duration_ms": 14720,
-      "bytes": 211648
+      "duration_ms": 14120,
+      "bytes": 201139
     },
     "inspector-mobile": {
-      "sha256": "9b0ba593fdb99322778ebfdb974ff8f7ced8ff90ba50d5e5f25a7082ecca5760",
+      "sha256": "755948db99d917d643fedab30f3fd56431e358eb1a63646c7c023836880efbfb",
       "width": 656,
       "height": 858,
-      "duration_ms": 14800,
-      "bytes": 211261
+      "duration_ms": 14200,
+      "bytes": 199748
     },
     "downloader": {
-      "sha256": "39efdc9f1225718f63f63724e155ac37b8739929811afce103fcee6b8733ea82",
+      "sha256": "0dc13915892d3a4af7ebf7f69cc1bebc89b1c76189ea0b7a4e02ab33c9b0b5cc",
       "width": 964,
       "height": 858,
-      "duration_ms": 14440,
-      "bytes": 218260
+      "duration_ms": 14360,
+      "bytes": 217575
     },
     "downloader-mobile": {
-      "sha256": "60290556310292f6d79c048eb640b6acc72483dbc6adf2105c81d9ac3960ec25",
+      "sha256": "fe297691c1d93abdb4f286d8eb89be39ef8d90e159feb745cb25f93f268266d1",
       "width": 656,
       "height": 858,
-      "duration_ms": 14440,
-      "bytes": 217194
+      "duration_ms": 14360,
+      "bytes": 216134
     }
   },
   "transcripts": {
     "inspector": {
       "path": "inspector-demo.md",
-      "sha256": "4763b3aac975f111c610e98c2629aaad212997354371b7b030e324abc611d93f"
+      "sha256": "eb77adb86fdbdb2496770c06cd20bfe2ff8f7fe7e2aadaa8afa1fa439404ab77"
     },
     "downloader": {
       "path": "downloader-demo.md",
-      "sha256": "2d9220a5867c330f739f445be48bcb3db5c6599b455222ec1a2638cd1f68f520"
+      "sha256": "59008ea2c32f62d1f43ad3072cb6c6982142d5ffdcc3c0c19b0d84dda8913c21"
     }
   }
 }

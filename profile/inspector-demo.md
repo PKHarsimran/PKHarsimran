@@ -9,7 +9,7 @@ One PDF. What is hiding inside?
 Owned fixture / static analysis
 
 $ python main.py \
-  --file ../invoice.pdf \
+  --file ../delivery.pdf \
   --report --json
 
 [ok] process exited successfully
@@ -18,13 +18,11 @@ $ python main.py \
 ## 02 / READ THE FINDINGS
 
 ```text
-3 UNIQUE URLs / 1 IP
+2 UNIQUE URLs / 1 IP
 
-hxxp://192[.]0[.]2[.]42/receipt
+hxxp://198[.]51[.]100[.]23/tracking
 
-hxxps://example[.]org/help
-
-hxxps://portal[.]example[.]com/invoice
+hxxps://example[.]com/parcel
 
 Links defanged for display.
 Source: generated JSON report.
@@ -33,7 +31,7 @@ Source: generated JSON report.
 ## 03 / CLOSE THE CASE
 
 ```text
-[ok] 3 URLs / 1 IP verified
+[ok] 2 URLs / 1 IP verified
 [ok] 0 embedded / 0 JavaScript
 [ok] JSON + Markdown written
 
