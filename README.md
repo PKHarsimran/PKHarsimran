@@ -300,15 +300,35 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 
 <p>
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-c68547afbeac60e0-mobile.svg">
-  <img src="./profile/arcade/heist-c68547afbeac60e0.svg" alt="Signal Heist. Route: A, then C, then B. Gate A: IOC Inspector, v0.2.0. Minor version: ones digit. Gate B: Last 30 days / contributions, 329. Take the ones digit. Gate C: Stars / selected 3 projects, 251. Take the ones digit. Choose a three-digit code below." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-f633b527d7eac308-mobile.svg">
+  <img src="./profile/arcade/heist-f633b527d7eac308.svg" alt="Signal Heist. Route: C, then B, then A. Gate A: IOC Inspector, v0.2.0. Minor version: ones digit. Gate B: Days with activity, 366. Take the ones digit. Gate C: Passing checks / selected 3, 3. Take the ones digit. Choose a three-digit code below." width="100%">
 </picture>
 </p>
 
 **Three clues → one code → a tiny creature.** Take each gate’s digit, follow the printed route, and open a code hatch.
 
 <details>
-<summary><strong>🔐 Hatch 01</strong> · <code>356</code></summary>
+<summary><strong>🔐 Hatch 01</strong> · <code>362</code></summary>
+<br>
+
+🔓 **Signal recovered.** C → B → A gives **362**.
+
+| Gate | Clue | Digit |
+| --- | --- | ---: |
+| A | IOC Inspector: v0.2.0 | 2 |
+| B | Days with activity: 366 | 6 |
+| C | Passing checks / selected 3: 3 | 3 |
+
+**Next side quest:** [Explore IOC Inspector](https://github.com/PKHarsimran/IOC-Inspector) — the real tool behind gate A.
+
+<p><img src="./profile/arcade/relic-f633b527d7eac308.svg" alt="Snapshot relic F633B527: Cache Goblin, a symmetric pixel creature drawn from this public snapshot." width="600"></p>
+
+[Open your creature art](./profile/arcade/relic-f633b527d7eac308.svg)
+
+</details>
+
+<details>
+<summary><strong>🔐 Hatch 02</strong> · <code>499</code></summary>
 <br>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
@@ -316,27 +336,7 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 </details>
 
 <details>
-<summary><strong>🔐 Hatch 02</strong> · <code>219</code></summary>
-<br>
-
-🔓 **Signal recovered.** A → C → B gives **219**.
-
-| Gate | Clue | Digit |
-| --- | --- | ---: |
-| A | IOC Inspector: v0.2.0 | 2 |
-| B | Last 30 days / contributions: 329 | 9 |
-| C | Stars / selected 3 projects: 251 | 1 |
-
-**Next side quest:** [Explore IOC Inspector](https://github.com/PKHarsimran/IOC-Inspector) — the real tool behind gate A.
-
-<p><img src="./profile/arcade/relic-c68547afbeac60e0.svg" alt="Snapshot relic C68547AF: Cache Goblin, a symmetric pixel creature drawn from this public snapshot." width="600"></p>
-
-[Open your creature art](./profile/arcade/relic-c68547afbeac60e0.svg)
-
-</details>
-
-<details>
-<summary><strong>🔐 Hatch 03</strong> · <code>682</code></summary>
+<summary><strong>🔐 Hatch 03</strong> · <code>825</code></summary>
 <br>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
@@ -347,11 +347,12 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 <summary><strong>⏪ Checkpoint rewind</strong> <sub>· what changed?</sub></summary>
 <br>
 
-Snapshots: **2026-11-08 15:59:10** → **2026-11-09 19:50:28** UTC. Comparing the three selected public projects.
+Snapshots: **2026-11-09 19:50:28** → **2026-11-10 17:04:08** UTC. Comparing the three selected public projects.
 
 | Project | Signal | Before | Now |
 | --- | --- | --- | --- |
-| SwiftIOC | latest commit at | 2026-11-08T14:44:47Z | 2026-11-09T13:26:10Z |
+| SwiftIOC | latest commit at | 2026-11-09T13:26:10Z | 2026-11-10T13:03:26Z |
+| Website Downloader | stars | 234 | 235 |
 
 </details>
 
