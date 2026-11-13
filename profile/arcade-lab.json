@@ -1,13 +1,12 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-11-12T17:36:11Z",
-  "calendar_observed_at": "2026-11-12T17:36:11Z",
-  "fingerprint": "9bca7450f0226f717fe490ec8d4a0988a00901e02986713bb37625358aa6641d",
-  "serial": "9BCA7450",
-  "asset_id": "9bca7450f0226f71",
+  "generated_at": "2026-11-13T17:13:52Z",
+  "calendar_observed_at": "2026-11-13T17:13:52Z",
+  "fingerprint": "9b8cd0486ec1cc334e74a496b14ac065632ba3fb92ebbae6192b756ddf7fe040",
+  "serial": "9B8CD048",
+  "asset_id": "9b8cd0486ec1cc33",
   "retained": [
-    "5a8cb98b662609fa",
     "03c07df03af2a039",
     "8409d10f3b70f011",
     "6a6038814fac3b3e",
@@ -20,20 +19,21 @@
     "c68547afbeac60e0",
     "f633b527d7eac308",
     "e7887c6f50ad0d00",
-    "9bca7450f0226f71"
+    "9bca7450f0226f71",
+    "9b8cd0486ec1cc33"
   ],
   "assets": {
-    "heist": "arcade/heist-9bca7450f0226f71.svg",
-    "mobile": "arcade/heist-9bca7450f0226f71-mobile.svg",
-    "relic": "arcade/relic-9bca7450f0226f71.svg"
+    "heist": "arcade/heist-9b8cd0486ec1cc33.svg",
+    "mobile": "arcade/heist-9b8cd0486ec1cc33-mobile.svg",
+    "relic": "arcade/relic-9b8cd0486ec1cc33.svg"
   },
-  "relic_name": "Packet Pixie",
+  "relic_name": "Port Nomad",
   "gates": [
     {
       "id": "A",
       "label": "RELEASE",
-      "source": "Website Downloader",
-      "display": "v2.7.0",
+      "source": "SwiftIOC",
+      "display": "v0.1.0",
       "hint": "Patch version: ones digit.",
       "value": 0,
       "digit": 0
@@ -41,11 +41,11 @@
     {
       "id": "B",
       "label": "CALENDAR",
-      "source": "Last 30 days / contributions",
-      "display": "315",
+      "source": "Days with activity",
+      "display": "369",
       "hint": "Take the ones digit.",
-      "value": 315,
-      "digit": 5
+      "value": 369,
+      "digit": 9
     },
     {
       "id": "C",
@@ -58,46 +58,20 @@
     }
   ],
   "route": [
-    "A",
     "B",
+    "A",
     "C"
   ],
-  "solution": "053",
+  "solution": "903",
   "choices": [
-    "190",
-    "516",
-    "053"
+    "040",
+    "366",
+    "903"
   ],
-  "tool_url": "https://github.com/PKHarsimran/website-downloader",
-  "tool_name": "Website Downloader",
+  "tool_url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector",
+  "tool_name": "SwiftIOC",
   "rewind": {
     "previous": {
-      "generated_at": "2026-11-11T17:09:55Z",
-      "projects": [
-        {
-          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 16,
-          "latest_commit_at": "2026-11-11T15:49:30Z"
-        },
-        {
-          "repo": "IOC-Inspector",
-          "release": "v0.2.0",
-          "ci": "PASSING",
-          "stars": 1,
-          "latest_commit_at": "2026-10-28T00:10:26Z"
-        },
-        {
-          "repo": "website-downloader",
-          "release": "v2.7.0",
-          "ci": "PASSING",
-          "stars": 236,
-          "latest_commit_at": "2026-10-25T14:52:26Z"
-        }
-      ]
-    },
-    "current": {
       "generated_at": "2026-11-12T17:36:11Z",
       "projects": [
         {
@@ -123,12 +97,44 @@
         }
       ]
     },
+    "current": {
+      "generated_at": "2026-11-13T17:13:52Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-11-13T12:39:54Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.2.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-10-28T00:10:26Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.7.0",
+          "ci": "PASSING",
+          "stars": 237,
+          "latest_commit_at": "2026-10-25T14:52:26Z"
+        }
+      ]
+    },
     "changes": [
       {
         "project": "SwiftIOC",
         "field": "latest_commit_at",
-        "before": "2026-11-11T15:49:30Z",
-        "after": "2026-11-12T16:33:24Z"
+        "before": "2026-11-12T16:33:24Z",
+        "after": "2026-11-13T12:39:54Z"
+      },
+      {
+        "project": "Website Downloader",
+        "field": "stars",
+        "before": 236,
+        "after": 237
       }
     ]
   },
