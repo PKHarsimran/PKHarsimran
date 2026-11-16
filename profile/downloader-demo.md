@@ -8,10 +8,10 @@ Released version: `v2.7.0`. Guided presentation of a real run on an owned fixtur
 Three pages. Take them offline.
 Owned localhost fixture
 
-$ base=http://127.0.0.1:44653
+$ base=http://127.0.0.1:34605
 $ python -m website_downloader \
   --url "$base/index.html" \
-  --destination mirror/3804 \
+  --destination mirror/3876 \
   --max-pages 3 --respect-robots
 
 [ok] process exited successfully

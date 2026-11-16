@@ -1,9 +1,9 @@
 {
-  "week": "2026-W46",
-  "title": "The delivery note with a repeated link",
-  "prompt": "Does repeating a link create another finding?",
-  "fixture": "delivery.pdf",
-  "fixture_sha256": "338b89fc91f5804f65a69d812cd1b476b400e92b380360ee82703edbb98ba496",
+  "week": "2026-W47",
+  "title": "The meeting invite with a quiet hyperlink",
+  "prompt": "Can static inspection find a link behind ordinary text?",
+  "fixture": "meeting.pdf",
+  "fixture_sha256": "f3addc9b8aea60b80fd90aed3494cf953a580dcd24fee43c768737e830768da9",
   "source": {
     "repo": "IOC-Inspector",
     "tag": "v0.2.0",
@@ -12,11 +12,11 @@
   "findings": {
     "type": "pdf",
     "urls": [
-      "http://198.51.100.23/tracking",
-      "https://example.com/parcel"
+      "http://203.0.113.17/meeting",
+      "https://example.org/agenda"
     ],
     "ips": [
-      "198.51.100.23"
+      "203.0.113.17"
     ],
     "embedded_files": 0,
     "js_count": 0,
@@ -30,11 +30,11 @@
         "not_found": 0,
         "skipped": 2,
         "indicators": {
-          "http://198.51.100.23/tracking": {
+          "http://203.0.113.17/meeting": {
             "status": "skipped",
             "reason": "no_api_key"
           },
-          "https://example.com/parcel": {
+          "https://example.org/agenda": {
             "status": "skipped",
             "reason": "no_api_key"
           }
@@ -49,7 +49,7 @@
         "not_found": 0,
         "skipped": 1,
         "indicators": {
-          "198.51.100.23": {
+          "203.0.113.17": {
             "status": "skipped",
             "reason": "no_api_key"
           }
