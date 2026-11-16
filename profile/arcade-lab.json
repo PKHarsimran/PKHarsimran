@@ -1,13 +1,12 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-11-15T16:23:17Z",
-  "calendar_observed_at": "2026-11-15T16:23:17Z",
-  "fingerprint": "a7d1ce57367178058eccc928273c29ad66f7570e4c278ee13826170cf9b4b9dd",
-  "serial": "A7D1CE57",
-  "asset_id": "a7d1ce5736717805",
+  "generated_at": "2026-11-16T19:37:44Z",
+  "calendar_observed_at": "2026-11-16T19:37:44Z",
+  "fingerprint": "600ae38ac0f58a4e7010c7d9d0511e84f865ac3a78462fb1a85543a352eb17cd",
+  "serial": "600AE38A",
+  "asset_id": "600ae38ac0f58a4e",
   "retained": [
-    "6a6038814fac3b3e",
     "c1cc091593c3fde7",
     "c706a890642148fa",
     "da0232d94e4d900b",
@@ -20,32 +19,33 @@
     "9bca7450f0226f71",
     "9b8cd0486ec1cc33",
     "54f0e73cbd5f78d0",
-    "a7d1ce5736717805"
+    "a7d1ce5736717805",
+    "600ae38ac0f58a4e"
   ],
   "assets": {
-    "heist": "arcade/heist-a7d1ce5736717805.svg",
-    "mobile": "arcade/heist-a7d1ce5736717805-mobile.svg",
-    "relic": "arcade/relic-a7d1ce5736717805.svg"
+    "heist": "arcade/heist-600ae38ac0f58a4e.svg",
+    "mobile": "arcade/heist-600ae38ac0f58a4e-mobile.svg",
+    "relic": "arcade/relic-600ae38ac0f58a4e.svg"
   },
-  "relic_name": "Patch Imp",
+  "relic_name": "Signal Sprout",
   "gates": [
     {
       "id": "A",
       "label": "RELEASE",
       "source": "Website Downloader",
       "display": "v2.7.0",
-      "hint": "Minor version: ones digit.",
-      "value": 7,
-      "digit": 7
+      "hint": "Patch version: ones digit.",
+      "value": 0,
+      "digit": 0
     },
     {
       "id": "B",
       "label": "CALENDAR",
       "source": "Days with activity",
-      "display": "364",
+      "display": "365",
       "hint": "Take the ones digit.",
-      "value": 364,
-      "digit": 4
+      "value": 365,
+      "digit": 5
     },
     {
       "id": "C",
@@ -62,42 +62,16 @@
     "A",
     "C"
   ],
-  "solution": "473",
+  "solution": "503",
   "choices": [
-    "936",
-    "473",
-    "610"
+    "966",
+    "640",
+    "503"
   ],
   "tool_url": "https://github.com/PKHarsimran/website-downloader",
   "tool_name": "Website Downloader",
   "rewind": {
     "previous": {
-      "generated_at": "2026-11-14T15:49:33Z",
-      "projects": [
-        {
-          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 16,
-          "latest_commit_at": "2026-11-14T11:49:38Z"
-        },
-        {
-          "repo": "IOC-Inspector",
-          "release": "v0.2.0",
-          "ci": "PASSING",
-          "stars": 1,
-          "latest_commit_at": "2026-10-28T00:10:26Z"
-        },
-        {
-          "repo": "website-downloader",
-          "release": "v2.7.0",
-          "ci": "PASSING",
-          "stars": 237,
-          "latest_commit_at": "2026-10-25T14:52:26Z"
-        }
-      ]
-    },
-    "current": {
       "generated_at": "2026-11-15T16:23:17Z",
       "projects": [
         {
@@ -123,12 +97,44 @@
         }
       ]
     },
+    "current": {
+      "generated_at": "2026-11-16T19:37:44Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-11-16T17:51:36Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.2.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-10-28T00:10:26Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.7.0",
+          "ci": "PASSING",
+          "stars": 238,
+          "latest_commit_at": "2026-10-25T14:52:26Z"
+        }
+      ]
+    },
     "changes": [
       {
         "project": "SwiftIOC",
         "field": "latest_commit_at",
-        "before": "2026-11-14T11:49:38Z",
-        "after": "2026-11-15T15:17:15Z"
+        "before": "2026-11-15T15:17:15Z",
+        "after": "2026-11-16T17:51:36Z"
+      },
+      {
+        "project": "Website Downloader",
+        "field": "stars",
+        "before": 237,
+        "after": 238
       }
     ]
   },
