@@ -1,13 +1,12 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-11-19T18:18:11Z",
-  "calendar_observed_at": "2026-11-19T18:18:11Z",
-  "fingerprint": "ecb0462f37d7f90746763b57cde4fbe176d67dfef272413e42d8caed38d9d132",
-  "serial": "ECB0462F",
-  "asset_id": "ecb0462f37d7f907",
+  "generated_at": "2026-11-20T17:50:06Z",
+  "calendar_observed_at": "2026-11-20T17:50:06Z",
+  "fingerprint": "c5e352ca7af1b7e61843d4a7aa231b360ea0e8f918f392e4a23b88e5e504f09a",
+  "serial": "C5E352CA",
+  "asset_id": "c5e352ca7af1b7e6",
   "retained": [
-    "69a1d1dbfb0583b4",
     "ee2afe693b99d213",
     "d4982609f69e9846",
     "c68547afbeac60e0",
@@ -20,14 +19,15 @@
     "600ae38ac0f58a4e",
     "0d4e6a13fd0b6860",
     "a70bc976a245be11",
-    "ecb0462f37d7f907"
+    "ecb0462f37d7f907",
+    "c5e352ca7af1b7e6"
   ],
   "assets": {
-    "heist": "arcade/heist-ecb0462f37d7f907.svg",
-    "mobile": "arcade/heist-ecb0462f37d7f907-mobile.svg",
-    "relic": "arcade/relic-ecb0462f37d7f907.svg"
+    "heist": "arcade/heist-c5e352ca7af1b7e6.svg",
+    "mobile": "arcade/heist-c5e352ca7af1b7e6-mobile.svg",
+    "relic": "arcade/relic-c5e352ca7af1b7e6.svg"
   },
-  "relic_name": "Null Navigator",
+  "relic_name": "Signal Sprout",
   "gates": [
     {
       "id": "A",
@@ -41,11 +41,11 @@
     {
       "id": "B",
       "label": "CALENDAR",
-      "source": "Days with activity",
-      "display": "368",
+      "source": "Last 30 days / contributions",
+      "display": "237",
       "hint": "Take the ones digit.",
-      "value": 368,
-      "digit": 8
+      "value": 237,
+      "digit": 7
     },
     {
       "id": "C",
@@ -62,42 +62,16 @@
     "C",
     "B"
   ],
-  "solution": "298",
+  "solution": "297",
   "choices": [
-    "435",
-    "298",
-    "761"
+    "297",
+    "434",
+    "760"
   ],
   "tool_url": "https://github.com/PKHarsimran/IOC-Inspector",
   "tool_name": "IOC Inspector",
   "rewind": {
     "previous": {
-      "generated_at": "2026-11-18T18:06:03Z",
-      "projects": [
-        {
-          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 16,
-          "latest_commit_at": "2026-11-18T16:56:49Z"
-        },
-        {
-          "repo": "IOC-Inspector",
-          "release": "v0.2.0",
-          "ci": "PASSING",
-          "stars": 1,
-          "latest_commit_at": "2026-10-28T00:10:26Z"
-        },
-        {
-          "repo": "website-downloader",
-          "release": "v2.7.0",
-          "ci": "PASSING",
-          "stars": 241,
-          "latest_commit_at": "2026-10-25T14:52:26Z"
-        }
-      ]
-    },
-    "current": {
       "generated_at": "2026-11-19T18:18:11Z",
       "projects": [
         {
@@ -123,18 +97,38 @@
         }
       ]
     },
+    "current": {
+      "generated_at": "2026-11-20T17:50:06Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-11-20T16:39:39Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.2.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-10-28T00:10:26Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.7.0",
+          "ci": "PASSING",
+          "stars": 242,
+          "latest_commit_at": "2026-10-25T14:52:26Z"
+        }
+      ]
+    },
     "changes": [
       {
         "project": "SwiftIOC",
         "field": "latest_commit_at",
-        "before": "2026-11-18T16:56:49Z",
-        "after": "2026-11-19T13:57:51Z"
-      },
-      {
-        "project": "Website Downloader",
-        "field": "stars",
-        "before": 241,
-        "after": 242
+        "before": "2026-11-19T13:57:51Z",
+        "after": "2026-11-20T16:39:39Z"
       }
     ]
   },
