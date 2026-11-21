@@ -1,13 +1,12 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-11-20T17:50:06Z",
-  "calendar_observed_at": "2026-11-20T17:50:06Z",
-  "fingerprint": "c5e352ca7af1b7e61843d4a7aa231b360ea0e8f918f392e4a23b88e5e504f09a",
-  "serial": "C5E352CA",
-  "asset_id": "c5e352ca7af1b7e6",
+  "generated_at": "2026-11-21T16:48:31Z",
+  "calendar_observed_at": "2026-11-21T16:48:31Z",
+  "fingerprint": "d061abe51aa1e7f24b7652ad0b5406aeec62c8759cd185a14898ae4e1d45e816",
+  "serial": "D061ABE5",
+  "asset_id": "d061abe51aa1e7f2",
   "retained": [
-    "ee2afe693b99d213",
     "d4982609f69e9846",
     "c68547afbeac60e0",
     "f633b527d7eac308",
@@ -20,32 +19,33 @@
     "0d4e6a13fd0b6860",
     "a70bc976a245be11",
     "ecb0462f37d7f907",
-    "c5e352ca7af1b7e6"
+    "c5e352ca7af1b7e6",
+    "d061abe51aa1e7f2"
   ],
   "assets": {
-    "heist": "arcade/heist-c5e352ca7af1b7e6.svg",
-    "mobile": "arcade/heist-c5e352ca7af1b7e6-mobile.svg",
-    "relic": "arcade/relic-c5e352ca7af1b7e6.svg"
+    "heist": "arcade/heist-d061abe51aa1e7f2.svg",
+    "mobile": "arcade/heist-d061abe51aa1e7f2-mobile.svg",
+    "relic": "arcade/relic-d061abe51aa1e7f2.svg"
   },
-  "relic_name": "Signal Sprout",
+  "relic_name": "Log Sprite",
   "gates": [
     {
       "id": "A",
       "label": "RELEASE",
-      "source": "IOC Inspector",
-      "display": "v0.2.0",
+      "source": "Website Downloader",
+      "display": "v2.7.0",
       "hint": "Minor version: ones digit.",
-      "value": 2,
-      "digit": 2
+      "value": 7,
+      "digit": 7
     },
     {
       "id": "B",
       "label": "CALENDAR",
-      "source": "Last 30 days / contributions",
-      "display": "237",
+      "source": "Days with activity",
+      "display": "370",
       "hint": "Take the ones digit.",
-      "value": 237,
-      "digit": 7
+      "value": 370,
+      "digit": 0
     },
     {
       "id": "C",
@@ -58,46 +58,20 @@
     }
   ],
   "route": [
-    "A",
     "C",
+    "A",
     "B"
   ],
-  "solution": "297",
+  "solution": "970",
   "choices": [
-    "297",
-    "434",
-    "760"
+    "433",
+    "107",
+    "970"
   ],
-  "tool_url": "https://github.com/PKHarsimran/IOC-Inspector",
-  "tool_name": "IOC Inspector",
+  "tool_url": "https://github.com/PKHarsimran/website-downloader",
+  "tool_name": "Website Downloader",
   "rewind": {
     "previous": {
-      "generated_at": "2026-11-19T18:18:11Z",
-      "projects": [
-        {
-          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 16,
-          "latest_commit_at": "2026-11-19T13:57:51Z"
-        },
-        {
-          "repo": "IOC-Inspector",
-          "release": "v0.2.0",
-          "ci": "PASSING",
-          "stars": 1,
-          "latest_commit_at": "2026-10-28T00:10:26Z"
-        },
-        {
-          "repo": "website-downloader",
-          "release": "v2.7.0",
-          "ci": "PASSING",
-          "stars": 242,
-          "latest_commit_at": "2026-10-25T14:52:26Z"
-        }
-      ]
-    },
-    "current": {
       "generated_at": "2026-11-20T17:50:06Z",
       "projects": [
         {
@@ -123,12 +97,38 @@
         }
       ]
     },
+    "current": {
+      "generated_at": "2026-11-21T16:48:31Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-11-21T13:04:39Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.2.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-10-28T00:10:26Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.7.0",
+          "ci": "PASSING",
+          "stars": 242,
+          "latest_commit_at": "2026-10-25T14:52:26Z"
+        }
+      ]
+    },
     "changes": [
       {
         "project": "SwiftIOC",
         "field": "latest_commit_at",
-        "before": "2026-11-19T13:57:51Z",
-        "after": "2026-11-20T16:39:39Z"
+        "before": "2026-11-20T16:39:39Z",
+        "after": "2026-11-21T13:04:39Z"
       }
     ]
   },
