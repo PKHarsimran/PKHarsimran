@@ -1,13 +1,12 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-11-21T16:48:31Z",
-  "calendar_observed_at": "2026-11-21T16:48:31Z",
-  "fingerprint": "d061abe51aa1e7f24b7652ad0b5406aeec62c8759cd185a14898ae4e1d45e816",
-  "serial": "D061ABE5",
-  "asset_id": "d061abe51aa1e7f2",
+  "generated_at": "2026-11-22T17:10:23Z",
+  "calendar_observed_at": "2026-11-22T17:10:23Z",
+  "fingerprint": "b88dd5ec8f643bc84cfe456a8a4f006579ff8407b34a8459e4c9fe7731792279",
+  "serial": "B88DD5EC",
+  "asset_id": "b88dd5ec8f643bc8",
   "retained": [
-    "d4982609f69e9846",
     "c68547afbeac60e0",
     "f633b527d7eac308",
     "e7887c6f50ad0d00",
@@ -20,32 +19,33 @@
     "a70bc976a245be11",
     "ecb0462f37d7f907",
     "c5e352ca7af1b7e6",
-    "d061abe51aa1e7f2"
+    "d061abe51aa1e7f2",
+    "b88dd5ec8f643bc8"
   ],
   "assets": {
-    "heist": "arcade/heist-d061abe51aa1e7f2.svg",
-    "mobile": "arcade/heist-d061abe51aa1e7f2-mobile.svg",
-    "relic": "arcade/relic-d061abe51aa1e7f2.svg"
+    "heist": "arcade/heist-b88dd5ec8f643bc8.svg",
+    "mobile": "arcade/heist-b88dd5ec8f643bc8-mobile.svg",
+    "relic": "arcade/relic-b88dd5ec8f643bc8.svg"
   },
-  "relic_name": "Log Sprite",
+  "relic_name": "Cache Goblin",
   "gates": [
     {
       "id": "A",
       "label": "RELEASE",
       "source": "Website Downloader",
       "display": "v2.7.0",
-      "hint": "Minor version: ones digit.",
-      "value": 7,
-      "digit": 7
+      "hint": "Patch version: ones digit.",
+      "value": 0,
+      "digit": 0
     },
     {
       "id": "B",
       "label": "CALENDAR",
       "source": "Days with activity",
-      "display": "370",
+      "display": "364",
       "hint": "Take the ones digit.",
-      "value": 370,
-      "digit": 0
+      "value": 364,
+      "digit": 4
     },
     {
       "id": "C",
@@ -58,46 +58,20 @@
     }
   ],
   "route": [
-    "C",
     "A",
-    "B"
+    "B",
+    "C"
   ],
-  "solution": "970",
+  "solution": "049",
   "choices": [
-    "433",
-    "107",
-    "970"
+    "049",
+    "512",
+    "186"
   ],
   "tool_url": "https://github.com/PKHarsimran/website-downloader",
   "tool_name": "Website Downloader",
   "rewind": {
     "previous": {
-      "generated_at": "2026-11-20T17:50:06Z",
-      "projects": [
-        {
-          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 16,
-          "latest_commit_at": "2026-11-20T16:39:39Z"
-        },
-        {
-          "repo": "IOC-Inspector",
-          "release": "v0.2.0",
-          "ci": "PASSING",
-          "stars": 1,
-          "latest_commit_at": "2026-10-28T00:10:26Z"
-        },
-        {
-          "repo": "website-downloader",
-          "release": "v2.7.0",
-          "ci": "PASSING",
-          "stars": 242,
-          "latest_commit_at": "2026-10-25T14:52:26Z"
-        }
-      ]
-    },
-    "current": {
       "generated_at": "2026-11-21T16:48:31Z",
       "projects": [
         {
@@ -123,12 +97,38 @@
         }
       ]
     },
+    "current": {
+      "generated_at": "2026-11-22T17:10:23Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-11-22T12:54:22Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.2.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-10-28T00:10:26Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.7.0",
+          "ci": "PASSING",
+          "stars": 242,
+          "latest_commit_at": "2026-10-25T14:52:26Z"
+        }
+      ]
+    },
     "changes": [
       {
         "project": "SwiftIOC",
         "field": "latest_commit_at",
-        "before": "2026-11-20T16:39:39Z",
-        "after": "2026-11-21T13:04:39Z"
+        "before": "2026-11-21T13:04:39Z",
+        "after": "2026-11-22T12:54:22Z"
       }
     ]
   },
