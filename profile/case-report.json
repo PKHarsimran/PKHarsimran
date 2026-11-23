@@ -1,9 +1,9 @@
 {
-  "week": "2026-W47",
-  "title": "The meeting invite with a quiet hyperlink",
-  "prompt": "Can static inspection find a link behind ordinary text?",
-  "fixture": "meeting.pdf",
-  "fixture_sha256": "f3addc9b8aea60b80fd90aed3494cf953a580dcd24fee43c768737e830768da9",
+  "week": "2026-W48",
+  "title": "The invoice with two destinations",
+  "prompt": "Which links and IPs survive static triage?",
+  "fixture": "invoice.pdf",
+  "fixture_sha256": "40946b5ff9c082430692dd6c58fa1e9b6a1a76e75d90262fcdbeacdd770997c6",
   "source": {
     "repo": "IOC-Inspector",
     "tag": "v0.2.0",
@@ -12,11 +12,12 @@
   "findings": {
     "type": "pdf",
     "urls": [
-      "http://203.0.113.17/meeting",
-      "https://example.org/agenda"
+      "http://192.0.2.42/receipt",
+      "https://example.org/help",
+      "https://portal.example.com/invoice"
     ],
     "ips": [
-      "203.0.113.17"
+      "192.0.2.42"
     ],
     "embedded_files": 0,
     "js_count": 0,
@@ -24,17 +25,21 @@
       "virustotal": {
         "status": "skipped",
         "reason": "no_api_key",
-        "total": 2,
+        "total": 3,
         "succeeded": 0,
         "failed": 0,
         "not_found": 0,
-        "skipped": 2,
+        "skipped": 3,
         "indicators": {
-          "http://203.0.113.17/meeting": {
+          "http://192.0.2.42/receipt": {
             "status": "skipped",
             "reason": "no_api_key"
           },
-          "https://example.org/agenda": {
+          "https://example.org/help": {
+            "status": "skipped",
+            "reason": "no_api_key"
+          },
+          "https://portal.example.com/invoice": {
             "status": "skipped",
             "reason": "no_api_key"
           }
@@ -49,7 +54,7 @@
         "not_found": 0,
         "skipped": 1,
         "indicators": {
-          "203.0.113.17": {
+          "192.0.2.42": {
             "status": "skipped",
             "reason": "no_api_key"
           }
