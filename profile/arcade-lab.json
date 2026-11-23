@@ -1,13 +1,12 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-11-22T17:10:23Z",
-  "calendar_observed_at": "2026-11-22T17:10:23Z",
-  "fingerprint": "b88dd5ec8f643bc84cfe456a8a4f006579ff8407b34a8459e4c9fe7731792279",
-  "serial": "B88DD5EC",
-  "asset_id": "b88dd5ec8f643bc8",
+  "generated_at": "2026-11-23T21:27:44Z",
+  "calendar_observed_at": "2026-11-23T21:27:44Z",
+  "fingerprint": "3ad532125d89277465f9f5d1b35d2522ac17446c2c566e8a8165e847d9c087ee",
+  "serial": "3AD53212",
+  "asset_id": "3ad532125d892774",
   "retained": [
-    "c68547afbeac60e0",
     "f633b527d7eac308",
     "e7887c6f50ad0d00",
     "9bca7450f0226f71",
@@ -20,84 +19,59 @@
     "ecb0462f37d7f907",
     "c5e352ca7af1b7e6",
     "d061abe51aa1e7f2",
-    "b88dd5ec8f643bc8"
+    "b88dd5ec8f643bc8",
+    "3ad532125d892774"
   ],
   "assets": {
-    "heist": "arcade/heist-b88dd5ec8f643bc8.svg",
-    "mobile": "arcade/heist-b88dd5ec8f643bc8-mobile.svg",
-    "relic": "arcade/relic-b88dd5ec8f643bc8.svg"
+    "heist": "arcade/heist-3ad532125d892774.svg",
+    "mobile": "arcade/heist-3ad532125d892774-mobile.svg",
+    "relic": "arcade/relic-3ad532125d892774.svg"
   },
-  "relic_name": "Cache Goblin",
+  "relic_name": "Byte Moth",
   "gates": [
     {
       "id": "A",
       "label": "RELEASE",
-      "source": "Website Downloader",
-      "display": "v2.7.0",
-      "hint": "Patch version: ones digit.",
-      "value": 0,
-      "digit": 0
+      "source": "SwiftIOC",
+      "display": "v0.1.0",
+      "hint": "Minor version: ones digit.",
+      "value": 1,
+      "digit": 1
     },
     {
       "id": "B",
       "label": "CALENDAR",
       "source": "Days with activity",
-      "display": "364",
+      "display": "365",
       "hint": "Take the ones digit.",
-      "value": 364,
-      "digit": 4
+      "value": 365,
+      "digit": 5
     },
     {
       "id": "C",
       "label": "BUILD RADAR",
-      "source": "Stars / selected 3 projects",
-      "display": "259",
+      "source": "Passing checks / selected 3",
+      "display": "3",
       "hint": "Take the ones digit.",
-      "value": 259,
-      "digit": 9
+      "value": 3,
+      "digit": 3
     }
   ],
   "route": [
+    "C",
     "A",
-    "B",
-    "C"
+    "B"
   ],
-  "solution": "049",
+  "solution": "315",
   "choices": [
-    "049",
-    "512",
-    "186"
+    "452",
+    "315",
+    "778"
   ],
-  "tool_url": "https://github.com/PKHarsimran/website-downloader",
-  "tool_name": "Website Downloader",
+  "tool_url": "https://github.com/PKHarsimran/SwiftIOC-Automated-Threat-Intelligence-Collector",
+  "tool_name": "SwiftIOC",
   "rewind": {
     "previous": {
-      "generated_at": "2026-11-21T16:48:31Z",
-      "projects": [
-        {
-          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 16,
-          "latest_commit_at": "2026-11-21T13:04:39Z"
-        },
-        {
-          "repo": "IOC-Inspector",
-          "release": "v0.2.0",
-          "ci": "PASSING",
-          "stars": 1,
-          "latest_commit_at": "2026-10-28T00:10:26Z"
-        },
-        {
-          "repo": "website-downloader",
-          "release": "v2.7.0",
-          "ci": "PASSING",
-          "stars": 242,
-          "latest_commit_at": "2026-10-25T14:52:26Z"
-        }
-      ]
-    },
-    "current": {
       "generated_at": "2026-11-22T17:10:23Z",
       "projects": [
         {
@@ -123,12 +97,44 @@
         }
       ]
     },
+    "current": {
+      "generated_at": "2026-11-23T21:27:44Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-11-23T19:47:16Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.2.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-10-28T00:10:26Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.7.0",
+          "ci": "PASSING",
+          "stars": 243,
+          "latest_commit_at": "2026-10-25T14:52:26Z"
+        }
+      ]
+    },
     "changes": [
       {
         "project": "SwiftIOC",
         "field": "latest_commit_at",
-        "before": "2026-11-21T13:04:39Z",
-        "after": "2026-11-22T12:54:22Z"
+        "before": "2026-11-22T12:54:22Z",
+        "after": "2026-11-23T19:47:16Z"
+      },
+      {
+        "project": "Website Downloader",
+        "field": "stars",
+        "before": 242,
+        "after": 243
       }
     ]
   },
