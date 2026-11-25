@@ -1,13 +1,12 @@
 {
   "schema": 1,
   "recipe": "signal-heist-v1",
-  "generated_at": "2026-11-24T20:10:34Z",
-  "calendar_observed_at": "2026-11-24T20:10:34Z",
-  "fingerprint": "a0d8e054b0fa3b9c46c767fa4815ad580d3ed78c536a3ad84e8d1a3d15dbe752",
-  "serial": "A0D8E054",
-  "asset_id": "a0d8e054b0fa3b9c",
+  "generated_at": "2026-11-25T19:18:43Z",
+  "calendar_observed_at": "2026-11-25T19:18:43Z",
+  "fingerprint": "3cd757d92a7fae667bf031a73bbbae9e6c88b137d76d005043e3969af4f6c54f",
+  "serial": "3CD757D9",
+  "asset_id": "3cd757d92a7fae66",
   "retained": [
-    "e7887c6f50ad0d00",
     "9bca7450f0226f71",
     "9b8cd0486ec1cc33",
     "54f0e73cbd5f78d0",
@@ -20,14 +19,15 @@
     "d061abe51aa1e7f2",
     "b88dd5ec8f643bc8",
     "3ad532125d892774",
-    "a0d8e054b0fa3b9c"
+    "a0d8e054b0fa3b9c",
+    "3cd757d92a7fae66"
   ],
   "assets": {
-    "heist": "arcade/heist-a0d8e054b0fa3b9c.svg",
-    "mobile": "arcade/heist-a0d8e054b0fa3b9c-mobile.svg",
-    "relic": "arcade/relic-a0d8e054b0fa3b9c.svg"
+    "heist": "arcade/heist-3cd757d92a7fae66.svg",
+    "mobile": "arcade/heist-3cd757d92a7fae66-mobile.svg",
+    "relic": "arcade/relic-3cd757d92a7fae66.svg"
   },
-  "relic_name": "Byte Moth",
+  "relic_name": "Signal Sprout",
   "gates": [
     {
       "id": "A",
@@ -42,62 +42,36 @@
       "id": "B",
       "label": "CALENDAR",
       "source": "Days with activity",
-      "display": "366",
+      "display": "367",
       "hint": "Take the ones digit.",
-      "value": 366,
-      "digit": 6
+      "value": 367,
+      "digit": 7
     },
     {
       "id": "C",
       "label": "BUILD RADAR",
-      "source": "Stars / selected 3 projects",
-      "display": "260",
+      "source": "Passing checks / selected 3",
+      "display": "3",
       "hint": "Take the ones digit.",
-      "value": 260,
-      "digit": 0
+      "value": 3,
+      "digit": 3
     }
   ],
   "route": [
-    "C",
     "B",
-    "A"
+    "A",
+    "C"
   ],
-  "solution": "067",
+  "solution": "773",
   "choices": [
-    "530",
-    "067",
-    "204"
+    "773",
+    "236",
+    "910"
   ],
   "tool_url": "https://github.com/PKHarsimran/website-downloader",
   "tool_name": "Website Downloader",
   "rewind": {
     "previous": {
-      "generated_at": "2026-11-23T21:27:44Z",
-      "projects": [
-        {
-          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
-          "release": "v0.1.0",
-          "ci": "PASSING",
-          "stars": 16,
-          "latest_commit_at": "2026-11-23T19:47:16Z"
-        },
-        {
-          "repo": "IOC-Inspector",
-          "release": "v0.2.0",
-          "ci": "PASSING",
-          "stars": 1,
-          "latest_commit_at": "2026-10-28T00:10:26Z"
-        },
-        {
-          "repo": "website-downloader",
-          "release": "v2.7.0",
-          "ci": "PASSING",
-          "stars": 243,
-          "latest_commit_at": "2026-10-25T14:52:26Z"
-        }
-      ]
-    },
-    "current": {
       "generated_at": "2026-11-24T20:10:34Z",
       "projects": [
         {
@@ -123,12 +97,44 @@
         }
       ]
     },
+    "current": {
+      "generated_at": "2026-11-25T19:18:43Z",
+      "projects": [
+        {
+          "repo": "SwiftIOC-Automated-Threat-Intelligence-Collector",
+          "release": "v0.1.0",
+          "ci": "PASSING",
+          "stars": 16,
+          "latest_commit_at": "2026-11-25T14:59:32Z"
+        },
+        {
+          "repo": "IOC-Inspector",
+          "release": "v0.2.0",
+          "ci": "PASSING",
+          "stars": 1,
+          "latest_commit_at": "2026-10-28T00:10:26Z"
+        },
+        {
+          "repo": "website-downloader",
+          "release": "v2.7.0",
+          "ci": "PASSING",
+          "stars": 244,
+          "latest_commit_at": "2026-10-25T14:52:26Z"
+        }
+      ]
+    },
     "changes": [
       {
         "project": "SwiftIOC",
         "field": "latest_commit_at",
-        "before": "2026-11-23T19:47:16Z",
-        "after": "2026-11-24T19:19:22Z"
+        "before": "2026-11-24T19:19:22Z",
+        "after": "2026-11-25T14:59:32Z"
+      },
+      {
+        "project": "Website Downloader",
+        "field": "stars",
+        "before": 243,
+        "after": 244
       }
     ]
   },

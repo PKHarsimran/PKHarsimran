@@ -300,15 +300,35 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 
 <p>
 <picture>
-  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-a0d8e054b0fa3b9c-mobile.svg">
-  <img src="./profile/arcade/heist-a0d8e054b0fa3b9c.svg" alt="Signal Heist. Route: C, then B, then A. Gate A: Website Downloader, v2.7.0. Minor version: ones digit. Gate B: Days with activity, 366. Take the ones digit. Gate C: Stars / selected 3 projects, 260. Take the ones digit. Choose a three-digit code below." width="100%">
+  <source media="(max-width: 600px)" srcset="./profile/arcade/heist-3cd757d92a7fae66-mobile.svg">
+  <img src="./profile/arcade/heist-3cd757d92a7fae66.svg" alt="Signal Heist. Route: B, then A, then C. Gate A: Website Downloader, v2.7.0. Minor version: ones digit. Gate B: Days with activity, 367. Take the ones digit. Gate C: Passing checks / selected 3, 3. Take the ones digit. Choose a three-digit code below." width="100%">
 </picture>
 </p>
 
 **Three clues → one code → a tiny creature.** Take each gate’s digit, follow the printed route, and open a code hatch.
 
 <details>
-<summary><strong>🔐 Hatch 01</strong> · <code>530</code></summary>
+<summary><strong>🔐 Hatch 01</strong> · <code>773</code></summary>
+<br>
+
+🔓 **Signal recovered.** B → A → C gives **773**.
+
+| Gate | Clue | Digit |
+| --- | --- | ---: |
+| A | Website Downloader: v2.7.0 | 7 |
+| B | Days with activity: 367 | 7 |
+| C | Passing checks / selected 3: 3 | 3 |
+
+**Next side quest:** [Explore Website Downloader](https://github.com/PKHarsimran/website-downloader) — the real tool behind gate A.
+
+<p><img src="./profile/arcade/relic-3cd757d92a7fae66.svg" alt="Snapshot relic 3CD757D9: Signal Sprout, a symmetric pixel creature drawn from this public snapshot." width="600"></p>
+
+[Open your creature art](./profile/arcade/relic-3cd757d92a7fae66.svg)
+
+</details>
+
+<details>
+<summary><strong>🔐 Hatch 02</strong> · <code>236</code></summary>
 <br>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
@@ -316,27 +336,7 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 </details>
 
 <details>
-<summary><strong>🔐 Hatch 02</strong> · <code>067</code></summary>
-<br>
-
-🔓 **Signal recovered.** C → B → A gives **067**.
-
-| Gate | Clue | Digit |
-| --- | --- | ---: |
-| A | Website Downloader: v2.7.0 | 7 |
-| B | Days with activity: 366 | 6 |
-| C | Stars / selected 3 projects: 260 | 0 |
-
-**Next side quest:** [Explore Website Downloader](https://github.com/PKHarsimran/website-downloader) — the real tool behind gate A.
-
-<p><img src="./profile/arcade/relic-a0d8e054b0fa3b9c.svg" alt="Snapshot relic A0D8E054: Byte Moth, a symmetric pixel creature drawn from this public snapshot." width="600"></p>
-
-[Open your creature art](./profile/arcade/relic-a0d8e054b0fa3b9c.svg)
-
-</details>
-
-<details>
-<summary><strong>🔐 Hatch 03</strong> · <code>204</code></summary>
+<summary><strong>🔐 Hatch 03</strong> · <code>910</code></summary>
 <br>
 
 ↺ **Decoy hatch.** Check the ones digits and the route order. Another hatch awaits.
@@ -347,11 +347,12 @@ The tools do useful work. Hacker Bender handles the side quests. Crack today’s
 <summary><strong>⏪ Checkpoint rewind</strong> <sub>· what changed?</sub></summary>
 <br>
 
-Snapshots: **2026-11-23 21:27:44** → **2026-11-24 20:10:34** UTC. Comparing the three selected public projects.
+Snapshots: **2026-11-24 20:10:34** → **2026-11-25 19:18:43** UTC. Comparing the three selected public projects.
 
 | Project | Signal | Before | Now |
 | --- | --- | --- | --- |
-| SwiftIOC | latest commit at | 2026-11-23T19:47:16Z | 2026-11-24T19:19:22Z |
+| SwiftIOC | latest commit at | 2026-11-24T19:19:22Z | 2026-11-25T14:59:32Z |
+| Website Downloader | stars | 243 | 244 |
 
 </details>
 
