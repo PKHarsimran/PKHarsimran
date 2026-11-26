@@ -1,12 +1,12 @@
 # SwiftIOC intelligence conveyor
 
-Collection: 2026-11-25T13:49:32Z. Observed: 2026-11-25T20:08:54Z.
+Collection: 2026-11-26T18:03:21Z. Observed: 2026-11-26T19:48:48Z.
 
-- Retained observables: 8,022
-- Retained CVEs: 1,978
-- Duplicates removed in collection: 4,490
-- Last interval: {'added': 1049, 'updated': 116, 'removed': 1049}
-- Latest collection attempt: accepted at 2026-11-25T13:49:25Z
+- Retained observables: 6,776
+- Retained CVEs: 3,224
+- Duplicates removed in collection: 3,758
+- Last interval: {'added': 3586, 'updated': 402, 'removed': 3586}
+- Latest collection attempt: accepted at 2026-11-26T18:03:15Z
 
 Retained snapshot and one collection interval; not threats detected or local incidents. Removed means absent from the retained feed, not benign. Counts do not establish compromise. The conveyor is an illustration.
 
